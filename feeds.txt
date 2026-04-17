@@ -1,0 +1,7 @@
+# 每行一个 RSS/Atom 源。
+# 格式一：名称 | URL
+# 格式二：URL，此时会自动用域名作为名称
+
+Last Week in AI | https://lastweekin.ai/feed
+OpenAI News | https://openai.com/news/rss.xml
+阮一峰的网络日志 | http://www.ruanyifeng.com/blog/atom.xml

@@ -1,0 +1,5 @@
+.env
+__pycache__/
+*.py[cod]
+.rss_collector.sqlite3
+rss-downloads/
