@@ -95,3 +95,53 @@ python3 daily_report.py \
   --input ./rss-downloads \
   --output ./reports
 ```
+
+## 每日工作流
+
+`daily_workflow.py` 会编排完整流程：
+
+1. 拉取 `feeds.txt` 中的 RSS。
+2. 生成前一天的日报。
+3. 通过 SMTP 把日报正文和 Markdown 附件发送到邮箱。
+
+在 `.env` 中补充邮件配置：
+
+```bash
+SMTP_HOST="smtp.example.com"
+SMTP_PORT="465"
+SMTP_USERNAME="your-email@example.com"
+SMTP_PASSWORD="your-smtp-password"
+SMTP_USE_SSL="true"
+SMTP_USE_STARTTLS="false"
+MAIL_FROM="your-email@example.com"
+MAIL_TO="recipient@example.com"
+MAIL_SUBJECT_PREFIX="RSS 日报"
+```
+
+手动运行完整流程：
+
+```bash
+python3 daily_workflow.py
+```
+
+默认会处理“昨天”的日报，并且每个 RSS 源最多拉取 100 条，避免首次运行时从大型 RSS 源回填过多历史内容。也可以指定日期：
+
+```bash
+python3 daily_workflow.py --date 2026-04-19
+```
+
+只采集和生成日报，不发送邮件：
+
+```bash
+python3 daily_workflow.py --no-send
+```
+
+macOS 每天早上 4 点定时运行可使用 `launchd/com.info-collector.daily.plist` 模板：
+
+```bash
+mkdir -p logs
+cp launchd/com.info-collector.daily.plist ~/Library/LaunchAgents/
+launchctl load ~/Library/LaunchAgents/com.info-collector.daily.plist
+```
+
+定时任务日志会写入 `logs/`。

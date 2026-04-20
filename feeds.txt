@@ -5,3 +5,5 @@
 Last Week in AI | https://lastweekin.ai/feed
 OpenAI News | https://openai.com/news/rss.xml
 阮一峰的网络日志 | http://www.ruanyifeng.com/blog/atom.xml
+V2EX | https://v2ex.com/index.xml
+AnyFeeder Matrix | https://plink.anyfeeder.com/ssapi/matrix
