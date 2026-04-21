@@ -7,3 +7,6 @@ OpenAI News | https://openai.com/news/rss.xml
 阮一峰的网络日志 | http://www.ruanyifeng.com/blog/atom.xml
 V2EX | https://v2ex.com/index.xml
 AnyFeeder Matrix | https://plink.anyfeeder.com/ssapi/matrix
+美团技术 | https://tech.meituan.com/feed/
+华尔街日报 | https://plink.anyfeeder.com/wsj/cn
+Obsidian Changelog | https://obsidian.md/changelog.xml
