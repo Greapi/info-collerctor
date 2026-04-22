@@ -10,3 +10,4 @@ AnyFeeder Matrix | https://plink.anyfeeder.com/ssapi/matrix
 美团技术 | https://tech.meituan.com/feed/
 华尔街日报 | https://plink.anyfeeder.com/wsj/cn
 Obsidian Changelog | https://obsidian.md/changelog.xml
+Elon Musk | http://127.0.0.1:1200/twitter/user/elonmusk
