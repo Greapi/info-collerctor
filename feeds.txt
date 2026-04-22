@@ -11,3 +11,10 @@ AnyFeeder Matrix | https://plink.anyfeeder.com/ssapi/matrix
 华尔街日报 | https://plink.anyfeeder.com/wsj/cn
 Obsidian Changelog | https://obsidian.md/changelog.xml
 Elon Musk | http://127.0.0.1:1200/twitter/user/elonmusk
+Sam Altman | http://127.0.0.1:1200/twitter/user/sama
+Google Gemini | http://127.0.0.1:1200/twitter/user/GeminiApp
+Anthropic | http://127.0.0.1:1200/twitter/user/AnthropicAI
+Donald J. Trump | http://127.0.0.1:1200/twitter/user/realDonaldTrump
+OpenAI X | http://127.0.0.1:1200/twitter/user/OpenAI
+Andrej Karpathy | http://127.0.0.1:1200/twitter/user/karpathy
+kepano | http://127.0.0.1:1200/twitter/user/kepano
