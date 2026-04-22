@@ -1,0 +1,54 @@
+services:
+  rsshub:
+    image: ${RSSHUB_IMAGE:-diygod/rsshub:latest}
+    container_name: ${RSSHUB_CONTAINER_NAME:-info-collector-rsshub}
+    restart: unless-stopped
+    ports:
+      - "${RSSHUB_HOST:-127.0.0.1}:${RSSHUB_PORT:-1200}:1200"
+    env_file:
+      - .env.rsshub
+    environment:
+      NODE_ENV: production
+      CACHE_TYPE: redis
+      REDIS_URL: redis://redis:6379/
+      PUPPETEER_WS_ENDPOINT: ws://browserless:3000
+    depends_on:
+      redis:
+        condition: service_healthy
+      browserless:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:1200/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  browserless:
+    image: ${BROWSERLESS_IMAGE:-browserless/chrome:latest}
+    container_name: ${BROWSERLESS_CONTAINER_NAME:-info-collector-browserless}
+    restart: unless-stopped
+    ulimits:
+      core:
+        hard: 0
+        soft: 0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/pressure"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  redis:
+    image: ${REDIS_IMAGE:-redis:7-alpine}
+    container_name: ${REDIS_CONTAINER_NAME:-info-collector-redis}
+    restart: unless-stopped
+    volumes:
+      - rsshub-redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 5s
+
+volumes:
+  rsshub-redis-data:

@@ -38,6 +38,31 @@ rss-downloads/
 
 Markdown 文件会包含 YAML front matter、标题、RSS 条目正文/摘要，以及原始链接。
 
+## 使用 RSSHub 扩展 RSS 来源
+
+如果目标网站没有原生 RSS，可以同时部署 RSSHub，让 RSSHub 负责把网站路由转换成 RSS，再由本项目采集。
+
+本项目已提供 Docker Compose 配置：
+
+```bash
+cp .env.rsshub.example .env.rsshub
+docker compose --env-file .env.rsshub -f docker-compose.rsshub.yml up -d
+```
+
+启动后访问：
+
+```text
+http://127.0.0.1:1200
+```
+
+把 RSSHub 路由写进 `feeds.txt`：
+
+```text
+DIYgod GitHub Activity | http://127.0.0.1:1200/github/activity/DIYgod
+```
+
+更多说明见 `docs/rsshub-deployment.md`，示例源见 `feeds.rsshub.example.txt`。
+
 ## 配置格式
 
 `feeds.txt` 支持注释和空行：

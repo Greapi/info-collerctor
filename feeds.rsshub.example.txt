@@ -1,0 +1,15 @@
+# RSSHub feed examples.
+# Start RSSHub, then copy the routes you need into feeds.txt.
+
+# GitHub user activities. This route does not need extra config.
+DIYgod GitHub Activity | http://127.0.0.1:1200/github/activity/DIYgod
+
+# GitHub trending requires GITHUB_ACCESS_TOKEN in .env.rsshub.
+# GitHub Trending Python | http://127.0.0.1:1200/github/trending/daily/python
+
+# X / Twitter user route usually requires route-specific credentials or cookies.
+# Example only; check RSSHub route docs before enabling.
+# X User Example | http://127.0.0.1:1200/twitter/user/DIYgod
+
+# YouTube channel route may require YouTube API configuration depending on the route.
+# YouTube Example | http://127.0.0.1:1200/youtube/channel/UCBJycsmduvYEL83R_U4JriQ
