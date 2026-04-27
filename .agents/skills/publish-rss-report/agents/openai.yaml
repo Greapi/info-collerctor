@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish RSS Report"
+  short_description: "Build and publish RSS reports to GitHub Pages"
+  default_prompt: "Use $publish-rss-report to generate the latest RSS report, build the GitHub Pages site, and publish it from the local repo."
