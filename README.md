@@ -170,3 +170,39 @@ launchctl load ~/Library/LaunchAgents/com.info-collector.daily.plist
 ```
 
 定时任务日志会写入 `logs/`。
+
+## GitHub Pages 在线查看
+
+本项目可以把 `reports/*.md` 构建成静态 HTML，发布到 GitHub Pages。
+
+生成静态站点：
+
+```bash
+python3 build_site.py
+```
+
+输出位置：
+
+```text
+docs/
+  index.html
+  reports/
+    2026-04-22.html
+```
+
+在 GitHub 仓库设置里开启 Pages：
+
+1. 进入 `Settings` -> `Pages`。
+2. `Source` 选择 `Deploy from a branch`。
+3. `Branch` 选择你的主分支，目录选择 `/docs`。
+4. 保存后等待 GitHub Pages 发布。
+
+本地生成并发布日报的推荐流程：
+
+```bash
+python3 daily_workflow.py --no-send
+python3 build_site.py
+git add reports docs
+git commit -m "Add daily report YYYY-MM-DD"
+git push
+```

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <h1>RSS 日报</h1>
+    <p class="meta">共 11 篇日报，按日期倒序排列。</p>
+    <div class="reports">
+      <a class="report-card" href="reports/2026-04-22.html">
+        <strong>2026-04-22 RSS 日报</strong>
+        <span>今日科技领域焦点集中于 OpenAI 与特斯拉的产品技术更新。OpenAI 密集发布多项更新，包括面向临床医生的免费 ChatGPT、用于自动化工作流的 Workspace Agents、隐私过滤模型及 API 性能优化。特斯拉则公布了 2026 年第一季度股东更新，展示了 FSD、Optimus 机器人、AI 芯片及 Robotaxi 业务的显著进展。社会...</span>
+      </a>
+      <a class="report-card" href="reports/2026-04-21.html">
+        <strong>2026-04-21 RSS 日报</strong>
+        <span>今日焦点集中于AI对内容创作与开发领域的冲击、科技巨头的人事与战略变动，以及一系列新产品动态。内容创作者面临生存模式转型，开发者利用AI工具对抗职业焦虑。苹果公司宣布CEO更迭，SpaceXAI与Cursor AI达成重要合作，OpenAI预告即将发布新产品。同时，社区中关于技术应用与生活体验的讨论活跃。</span>
+      </a>
+      <a class="report-card" href="reports/2026-04-20.html">
+        <strong>2026-04-20 RSS 日报</strong>
+        <span>今日信息主要围绕企业动态、AI/开发者工具讨论、产品更新、技术问题及社区生活展开。企业层面，OpenAI宣布与凯悦酒店集团合作，而拼多多因“幽灵外卖”系列案被处以高额罚款。开发者社区中，关于AI工具（如Harness、Claude、Codex）的适用性、成本及订阅策略的讨论活跃，同时涌现了一批新的个人开发工具与产品。社区生活方面，涉及家庭关系、职业困惑及个人...</span>
+      </a>
+      <a class="report-card" href="reports/2026-04-19.html">
+        <strong>2026-04-19 RSS 日报</strong>
+        <span>今日材料聚焦于人工智能，特别是大语言模型和机器翻译，对翻译行业及语言工作者的深刻影响。一位从业者从自身经验出发，分析了人机关系的演变、当前行业困境及未来隐忧。</span>
+      </a>
+      <a class="report-card" href="reports/2026-04-17.html">
+        <strong>2026-04-17 RSS 日报</strong>
+        <span>查看这一天的 RSS 日报。</span>
+      </a>
+      <a class="report-card" href="reports/2026-04-16.html">
+        <strong>2026-04-16 RSS 日报</strong>
+        <span>今日信息主要围绕 OpenAI 发布的多项新产品与功能更新，以及科技评论中关于“脑腐”现象、AI 版权、科技动态等广泛议题的讨论。OpenAI 在网络安全、开发者工具和生命科学领域均有重要发布，显示出其技术生态的持续扩张。同时，科技评论揭示了当前数字内容消费对认知能力的潜在影响，以及 AI 在艺术创作等领域带来的新挑战。</span>
+      </a>
+      <a class="report-card" href="reports/2026-04-15.html">
+        <strong>2026-04-15 RSS 日报</strong>
+        <span>今日，OpenAI 发布了其 Agents SDK 的重要更新，引入了原生沙箱执行和模型原生框架，旨在提升开发者在构建跨文件和工具的安全、长期运行智能体时的体验与安全性。</span>
+      </a>
+      <a class="report-card" href="reports/2026-04-14.html">
+        <strong>2026-04-14 RSS 日报</strong>
+        <span>今日主要事件聚焦于人工智能在网络安全领域的应用进展。OpenAI宣布扩大其网络安全可信访问计划，并推出了新的专用模型。</span>
+      </a>
+      <a class="report-card" href="reports/2026-04-13.html">
+        <strong>2026-04-13 RSS 日报</strong>
+        <span>查看这一天的 RSS 日报。</span>
+      </a>
+      <a class="report-card" href="reports/2026-04-12.html">
+        <strong>2026-04-12 RSS 日报</strong>
+        <span>查看这一天的 RSS 日报。</span>
+      </a>
+      <a class="report-card" href="reports/2026-04-11.html">
+        <strong>2026-04-11 RSS 日报</strong>
+        <span>查看这一天的 RSS 日报。</span>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
