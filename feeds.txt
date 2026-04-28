@@ -11,6 +11,7 @@ AnyFeeder Matrix | https://plink.anyfeeder.com/ssapi/matrix
 华尔街日报 | https://plink.anyfeeder.com/wsj/cn
 Obsidian Changelog | https://obsidian.md/changelog.xml
 GitHub Trending Daily Any | http://127.0.0.1:1200/github/trending/daily/any
+Hacker News | http://127.0.0.1:1200/hackernews
 Elon Musk | http://127.0.0.1:1200/twitter/user/elonmusk
 Sam Altman | http://127.0.0.1:1200/twitter/user/sama
 Google Gemini | http://127.0.0.1:1200/twitter/user/GeminiApp
