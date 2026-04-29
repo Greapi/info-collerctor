@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-04-28 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-04-28 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>4月28日，科技与监管领域同步出现关键动态。政策面，加州海岸委员会因政治偏见言论向SpaceX及马斯克正式道歉并达成和解。AI领域，OpenAI产品矩阵登陆AWS，Codex额度频繁重置引发开发者狂欢。社区关于AI编程工具成本与方案的讨论随计费模式变革持续升温；基础设施方面，<code>.icu</code>域名在国内遭遇大范围阻断。消费端，特斯拉FSD在韩国的海外首测获得超预期评价。</p>
+      <h2>重点事件</h2>
+      <ul>
+      <li><strong>加州海岸委员会向SpaceX道歉</strong>：加州海岸委员会就此前在监管决策中对SpaceX及马斯克发表政治偏见言论正式道歉，承诺未来不再考虑其政治观点。双方已就联邦诉讼达成和解，为SpaceX在范登堡的发射任务扫清监管不确定性。<a href="https://x.com/elonmusk/status/2049269983700738335">来源</a></li>
+      <li><strong>OpenAI产品上线AWS</strong>：OpenAI的GPT系列模型、Codex及Managed Agents现已在AWS上可用，企业可在自有云环境中构建安全的AI服务。<a href="https://openai.com/index/openai-on-aws">来源</a></li>
+      <li><strong>Codex迎来逃逸速度，开发者社区响应热烈</strong>：OpenAI高层宣布Codex已实现“逃逸速度”，将持续快速改进，并为所有付费用户重置速率限制以庆祝GPT-5.5的成功。社区反馈中，有用户因Codex 5.5在编程任务上的表现优于Claude Opus 4.7而更改AI订阅计划；同时，Codex免费版周额度约256K成为热议话题。</li>
+      <li><a href="https://x.com/sama/status/2049122740532363331">Codex额度重置公告</a></li>
+      <li><a href="https://x.com/sama/status/2048966832812659128">Codex实现逃逸速度</a></li>
+      <li><a href="https://www.v2ex.com/t/1209093#reply0">用户Vibe Coding配置讨论</a></li>
+      <li><strong>中国网络封锁与基础设施动态</strong>：</li>
+      <li><strong>域名封锁</strong>：<code>.icu</code>域名在国内遭到无差别阻断，波及范围包括已备案域名，有用户反馈全网<code>.icu</code>网站均无法打开。<a href="https://www.v2ex.com/t/1209117#reply2">来源1</a> | <a href="https://www.v2ex.com/t/1209130#reply6">来源2</a></li>
+      <li><strong>运营商限制</strong>：有浙江用户反馈，其webdav及nasweb服务疑遭运营商阻断，境外挂代理可正常访问；另有用户报告联通宽带访问特定链接时被替换为反诈界面。<a href="https://www.v2ex.com/t/1209144#reply0">来源1</a> | <a href="https://www.v2ex.com/t/1209205#reply1">来源2</a></li>
+      <li><strong>其他故障</strong>：Google搜索的<code>site:</code>指定参数在账号登录后失效；阿里云镜像站的epel库中7zip软件包再次出现404问题。<a href="https://www.v2ex.com/t/1209219#reply4">来源1</a> | <a href="https://www.v2ex.com/t/1209119#reply1">来源2</a></li>
+      <li><strong>特斯拉FSD韩国首测获好评</strong>：一名韩国记者首次体验该国版特斯拉FSD（监督版），称其在遵守交通信号、保持车道、规避障碍物等方面“完美地完成了所有任务”，表现超出预期。<a href="https://x.com/elonmusk/status/2049012216591188136">来源</a></li>
+      <li><strong>Scaleway宣布涨价</strong>：云服务商Scaleway宣布自2026年6月1日起涨价，其中STARDUST1-S实例费用上涨4倍，从€0.00015/小时涨至€0.0006/小时。<a href="https://www.v2ex.com/t/1209199#reply1">来源</a></li>
+      <li><strong>GPT Image 2案例库发布</strong>：作者整理了343个GPT Image 2真实案例，构建了包含Prompt和图生视频素材的可复用库，核心推荐工作流为“先稳定出图，再图生视频”。<a href="https://www.v2ex.com/t/1209082#reply0">来源</a></li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>AI编程工具的商业模式加速变革</strong>：随着GitHub Copilot暂停新用户注册并转向Token计费，以及Cursor、Windsurf等转向按量付费，开发者社区围绕“是否保留”及“OpenCode+API Key是否更省钱”展开激烈讨论。Codex的免费/低成本策略与高频率迭代正在重塑市场格局，引发开发者重新评估订阅方案。<a href="https://www.v2ex.com/t/1209121#reply0">Copilot讨论</a> | <a href="https://www.v2ex.com/t/1209187#reply10">OpenCode讨论</a> | <a href="https://www.v2ex.com/t/1209201#reply3">AI编程省钱方案</a></li>
+      <li><strong>开发者工具自主化、开源化趋势显现</strong>：为应对本地开源模型在编程辅助中的短板（如无限循环），社区发起了KWCode项目，采用MoE架构将代码定位与验证交由确定性算法完成，核心功能通过率极高。同时，终端工具Warp也已开源，显示开发者对可控、高性能工具的追求。<a href="https://www.v2ex.com/t/1209195#reply62">KWCode项目</a> | <a href="https://www.v2ex.com/t/1209220#reply3">Warp开源</a></li>
+      <li><strong>网络治理趋紧影响日常服务</strong>：本周多地用户报告特定服务（webdav、<code>.icu</code>域名、反诈页面）被无差别阻断或干扰，表明网络环境审查仍在持续收紧，对依赖公网访问的技术服务构成挑战。</li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>HTML in Canvas提案进展</strong>：该下一代Web图形开发范式已在Chromium实现，Firefox、Safari尚未支持，其发展将深刻影响前端开发。 <a href="https://www.v2ex.com/t/1209109">来源</a></li>
+      <li><strong>AI编程工具本土化方案</strong>：如KWCode等针对本地开源模型的编程Agent项目，其是否能解决模型推理弱的问题，值得关注。<a href="https://github.com/val1813/kwcode">来源</a></li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li>x.com: <a href="https://x.com/elonmusk/status/2049009537752109373">Elon Musk转发加州税收信息</a>, <a href="https://x.com/elonmusk/status/2048985040772829562">Grok广告评价</a>, <a href="https://x.com/elonmusk/status/2049240211880825161">Starlink与T-Mobile合作</a>, <a href="https://x.com/sama/status/2049122740532363331">Codex速率限制重置</a>, <a href="https://x.com/sama/status/2048966832812659128">Codex逃逸速度</a>, <a href="https://x.com/elonmusk/status/2049012216591188136">特斯拉FSD韩国体验</a>, <a href="https://x.com/elonmusk/status/2049269983700738335">加州海岸委员会道歉</a>, <a href="https://x.com/GeminiApp/status/2049172783452635507">Google无障碍功能更新</a></li>
+      <li>openai.com: <a href="https://openai.com/index/openai-on-aws">OpenAI产品上线AWS</a>, <a href="https://openai.com/index/our-commitment-to-community-safety">社区安全承诺</a></li>
+      <li>v2ex.com: <a href="https://www.v2ex.com/t/1209093#reply0">Vibe Coding配置讨论</a>, <a href="https://www.v2ex.com/t/1209117#reply2">.icu域名无差别阻断</a> / <a href="https://www.v2ex.com/t/1209130#reply6">全网打不开</a>, <a href="https://www.v2ex.com/t/1209119#reply1">阿里云镜像站7zip失联</a>, <a href="https://www.v2ex.com/t/1209121#reply0">GitHub Copilot去留讨论</a>, <a href="https://www.v2ex.com/t/1209220#reply3">Warp开源</a>, <a href="https://www.v2ex.com/t/1209199#reply1">Scaleway涨价</a>, <a href="https://www.v2ex.com/t/1209144#reply0">WebDAV遭阻断</a> / <a href="https://www.v2ex.com/t/1209205#reply1">反诈界面</a>, <a href="https://www.v2ex.com/t/1209082#reply0">GPT Image 2案例库</a>, <a href="https://www.v2ex.com/t/1209201#reply3">AI编程方案与成本讨论</a> / <a href="https://www.v2ex.com/t/1209187#reply10">OpenCode+API Key</a>, <a href="https://www.v2ex.com/t/1209195#reply62">KWCode项目</a>, <a href="https://www.v2ex.com/t/1209109">HTML in Canvas</a>, <a href="https://www.v2ex.com/t/1209141#reply3">呼吸机使用经历</a>, <a href="https://www.v2ex.com/t/1209222#reply11">SCA3疾病求助</a>, <a href="https://www.v2ex.com/t/1209202#reply16">洁牙器推荐</a>, <a href="https://www.v2ex.com/t/1209112#reply6">Codex免费额度重置</a> / <a href="https://www.v2ex.com/t/1209090#reply23">周额度刷新</a>, <a href="https://www.v2ex.com/t/1209188#reply0">AI Agent阅读小组</a>, <a href="https://www.v2ex.com/t/1209083#reply2">用AI打平AI</a>, <a href="https://www.v2ex.com/t/1209088#reply5">奇怪网络问题</a>, <a href="https://www.v2ex.com/t/1209214#reply2">AnyChat工具</a>, <a href="https://www.v2ex.com/t/1209212#reply0">Nono-Cowork项目</a>, <a href="https://www.v2ex.com/t/1209215#reply3">闪卡词典App</a>, <a href="https://www.v2ex.com/t/1209191#reply5">AI音频分离站</a>, <a href="https://www.v2ex.com/t/1209193#reply0">Tritree写作工具</a>, <a href="https://www.v2ex.com/t/1209190#reply1">鸿蒙激励计划互助</a>, <a href="https://www.v2ex.com/t/1209197#reply0">crTerm v146发布</a>, <a href="https://www.v2ex.com/t/1209126#reply0">Logi Options+故障</a>, <a href="https://www.v2ex.com/t/1209206#reply2">抖音教程被判违规</a>, <a href="https://www.v2ex.com/t/1209107">Node.js资源消耗讨论</a>, <a href="https://www.v2ex.com/t/1209092">中文排版测验</a>, <a href="https://www.v2ex.com/t/1209225#reply8">MacBook Air运行大模型</a>, <a href="https://www.v2ex.com/t/1209194#reply0">Bybit卡注册</a>, <a href="https://www.v2ex.com/t/1209204#reply0">众安银行开户返现</a>, <a href="https://www.v2ex.com/t/1209113#reply14">全屋定制价格</a>, <a href="https://www.v2ex.com/t/1209203#reply5">Velo银行开户</a></li>
+      <li>招聘: <a href="https://www.v2ex.com/t/1209100">三七互娱</a> | <a href="https://www.v2ex.com/t/1209129">React Native远程</a> | <a href="https://www.v2ex.com/t/1209133">东京IT</a> | <a href="https://www.v2ex.com/t/1209110">西安嵌入式</a></li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
