@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-05-03 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-05-03 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日重点集中在 AI 行业动态，特斯拉全自动驾驶（FSD）里程突破 100 亿英里大关，同时多位关键人物就技术与社会议题发声。开发者社区对 AI 工具成本控制、模型版本迭代及国产模型协议变更表达了高度关注，相关讨论在 V2EX 持续发酵。此外，科技职场与求职技巧也是今日热点。</p>
+      <h2>重点事件</h2>
+      <p><strong>特斯拉 FSD / 星链里程碑</strong></p>
+      <ul>
+      <li><strong>FSD 里程破百亿</strong>：特斯拉宣布在其监督下的全自动驾驶（FSD）累计行驶里程正式突破 100 亿英里，标志着其自动驾驶技术的重要数据积累节点。[10B]</li>
+      <li><strong>星链性能升级</strong>：星链现有航空终端实际飞行下载速度约 220 Mbps，而最新支持双通道的终端可实现最高 1 Gbps 的峰值下载速度，性能大幅提升。[RT Michael Nicolls]</li>
+      <li><strong>SpaceX 成功发射</strong>：猎鹰 9 号火箭从加州成功执行 CAS500-2 任务，将 45 个有效载荷送入预定轨道。[RT SpaceX]</li>
+      </ul>
+      <p><strong>AI 行业与开发者生态</strong></p>
+      <ul>
+      <li><strong>AI 使用成本争议</strong>：有团队反映 AI 工具使用成本失控，存在个人账号分散订阅、工具选择混乱等问题，如 Cursor Ultra 账户频繁轮换导致费用高达每月 1000 美元以上。[如何解决团队 AI 使用成本失控与账号管理混乱的问题？]</li>
+      <li><strong>国产模型协议变更</strong>：有用户指出某“G 开头”国产模型厂（疑似智谱）修改了其 coding plan 协议，旧套餐于 4 月 30 日下架，新套餐调用次数被大幅削减（每 5 小时 400 次，每周上限 2000 次），被指违反老用户续订承诺。[都说 Anthropic 不做人，现在国产模型厂也不做人]</li>
+      <li><strong>产品与技术评价</strong>：</li>
+      <li>Sam Altman 评价 “Agents SDK 2.0” 是一款被低估的产品，并认可了用户关于 “@openclaw with @OpenAI Codex 5.5” 使用流畅的反馈。[Agents SDK 2.0 is underrated] [it really is!]</li>
+      <li>Google Gemini 宣布成为频道 “The Switch” 的合作伙伴。[RT Kevin Pietersen]</li>
+      <li>Claude 平台目前已暂停新用户注册。[Claude 现在是完全不给新用户用了？]</li>
+      </ul>
+      <p><strong>社会与职场洞察</strong></p>
+      <ul>
+      <li><strong>男女意识形态分歧</strong>：埃隆·马斯克转发了一项社会调查数据，指出美国男性观点保守化增加 1 点，而女性自由化倾向增加 23 点，引发对两性意识形态分化的讨论。[RT Wilfred Reilly]</li>
+      <li><strong>带薪休假政策进展</strong>：据报道，包括云南在内的 7 个省份正推动带薪休假政策落地，云南要求不得因用工形式、职级差异等区别对待员工。[7 省份推动带薪休假落地，云南要求不得因用工形式、职级差异等区别对待]</li>
+      <li><strong>简历筛选陷阱</strong>：一份针对招聘 ATS（申请人跟踪系统）的调研指出，简历失败的核心原因往往是格式而非内容。30 份样本中 13 份因模块名不规范丢失核心信息，6 份因联系方式标签或排版导致信息抓取不全，此外含照片及图片化关键信息也易被 ATS 标记或无法解析。[翻了 30 份 ATS 系统文档之后，我才发现简历卡掉的真正原因]</li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ol>
+      <li><strong>AI 编程工具的“成本-效益”挑战加剧</strong>：随着 Cursor、Claude Code 等 AI 编程工具的深度普及，团队使用成本呈现失控态势，出现个人账户滥用与账单“爆表”现象。未来，企业对统一、可控的 AI 工具管理平台和预算规划的需求将显著增长。[如何解决团队 AI 使用成本失控与账号管理混乱的问题？]</li>
+      <li><strong>本土模型厂商商业策略面临信任考验</strong>：部分国产模型厂商在未充分沟通的情况下，通过更改协议下架老套餐并缩减服务限额，这一行为正在引发核心开发者用户的强烈不满与信任危机。社区反应表明，稳定的定价策略和尊重早期用户权益是 AI 模型服务商维持公信力的关键。[都说 Anthropic 不做人，现在国产模型厂也不做人]</li>
+      <li><strong>硬件性能与真实体验的鸿沟</strong>：从星链公布的数据来看，理论峰值性能（如 400-500 Mbps 或新的 1 Gbps）与用户实际飞行中感知的共享速度（220 Mbps）存在差距。在技术宣发中，如何平衡理论极值与实际场景指标，成为影响用户预期管理的关键。[RT Michael Nicolls]</li>
+      </ol>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Anthropic 新用户暂停注册</strong>：Claude 暂停新用户注册所反映的算力承载或商业策略调整问题，需关注其后续开放时间及对竞争格局的影响。</li>
+      <li><strong>StarLink 航空网络表现</strong>：新的 1 Gbps 双通道终端虽已公布，但其在商业航班大规模部署后的实际带宽共享情况及稳定性值得长期观察。</li>
+      <li><strong>国内带薪休假落地</strong>：7 省份推动带薪休假政策，特别是云南强调不得区别对待的具体执行情况，可能对当地乃至全国的劳动就业环境产生示范效应。</li>
+      <li><strong>AI 时代的品牌风险</strong>：百度“文心一言”被指优先抓取网络虚假负面信息的争议，预示着 AI 内容生成时代，品牌被恶意抹黑及“生成引擎优化（GEO）投毒”的风险日益增大。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li><strong>Elon Musk / 特斯拉与航天</strong>：<a href="https://x.com/elonmusk/status/2051007141012783518">10B</a> | <a href="https://x.com/elonmusk/status/2051056182400614607">RT Michael Nicolls</a> | <a href="https://x.com/elonmusk/status/2050965994420703244">RT SpaceX</a> | <a href="https://x.com/elonmusk/status/2051058630422929453">RT Wilfred Reilly</a> (及其他 Elon Musk 相关转发)</li>
+      <li><strong>Google Gemini</strong>：<a href="https://x.com/GeminiApp/status/2051058555982344653">RT Kevin Pietersen</a></li>
+      <li><strong>Sam Altman / OpenAI</strong>：<a href="https://x.com/sama/status/2050998576671859003">Agents SDK 2.0 is underrated</a> | <a href="https://x.com/sama/status/2050958845913227474">it really is!</a></li>
+      <li><strong>V2EX 开发者社区</strong>：<a href="https://www.v2ex.com/t/1210111">如何解决团队 AI 使用成本失控</a> | <a href="https://www.v2ex.com/t/1210113">都说 Anthropic 不做人，现在国产模型厂也不做人</a> | <a href="https://www.v2ex.com/t/1210116">Claude 暂停新用户注册</a> | <a href="https://www.v2ex.com/t/1210150">简历筛选内幕</a> | <a href="https://www.v2ex.com/t/1210151">带薪休假政策</a> | <a href="https://www.v2ex.com/t/1210142">Agent 开发在做什么</a> | <a href="https://www.v2ex.com/t/1210121">“找到了！”是危险信号吗</a> | <a href="https://www.v2ex.com/t/1210126">DeepSeek V4 对比</a> | <a href="https://www.v2ex.com/t/1210115">Claude Code 兼容接口</a> | <a href="https://www.v2ex.com/t/1210139">Spectral 开源音频项目</a> | <a href="https://www.v2ex.com/t/1210108">全地形 micro-VM</a> | <a href="https://www.v2ex.com/t/1210123">NodeBits 骗子曝光台</a> | <a href="https://www.v2ex.com/t/1210124">在线视频转 MP3</a> | <a href="https://www.v2ex.com/t/1210143">应届生 Offer 选择</a> | <a href="https://www.v2ex.com/t/1210141">《异环》外服登录</a> | <a href="https://www.v2ex.com/t/1210099">对律师群体的评价</a> | <a href="https://www.v2ex.com/t/1210130">APNs 推送异常分析</a> | <a href="https://www.v2ex.com/t/1210112">分享发现 文心一言</a> | <a href="https://www.v2ex.com/t/1210134">codesesh 会话浏览器</a></li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
