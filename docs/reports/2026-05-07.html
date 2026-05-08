@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-05-07 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-05-07 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>2026年5月7日，人工智能领域在安全工具、模型功能和开发范式上密集迭代，航天与电动车亦有关键进展。<strong>Anthropic</strong> 公开了此前运行于私密社区的漏洞赏金计划，并将对齐工具 Petri 捐赠给独立实验室；<strong>OpenAI</strong> 同时发布新的实时语音模型、安全联系人功能，并通过 GPT-5.5-Cyber 拓展可信网络防御；<strong>xAI</strong> 则推出面向开发者的 Grok Computer 与客户支持语音代理。在产业端，<strong>SpaceX</strong> 完成星舰全推力静态点火、Starlink 点亮东帝汶偏远村庄，<strong>Tesla Semi</strong> 新增电动取力器功能；企业服务与工程实践方面，基于 OpenAI 的语音客服、Codex 开发流程，以及美团用 Agent 评测方法管理 31 万行 AI 重构的经验，都标志着 AI 正深度嵌入技术工作流。</p>
+      <h2>重点事件</h2>
+      <ul>
+      <li><strong>Anthropic 安全和对齐工具双轨推进</strong></li>
+      <p>漏洞赏金计划在 HackerOne 上正式公开，此前已在安全研究社区私密运行，现在任何人都可以报告并获得奖励。同时，开源对齐工具 Petri 被捐赠给 @meridianlabs_ai，双方合作发布的更新提升了测试的适应性、真实性和深度。 <a href="https://x.com/AnthropicAI/status/2052466175540629965">Our security bug bounty program is now public on HackerOne</a> <a href="https://x.com/AnthropicAI/status/2052494460966019137">We&#x27;re donating Petri to @meridianlabs_ai</a></p>
+      </ul>
+      <ul>
+      <li><strong>OpenAI 语音智能与服务安全齐更新</strong></li>
+      <p>在 API 中推出可推理、翻译和转录的新实时语音模型；ChatGPT 新增可选安全特性“信任联系人”，可在检测到严重的自我伤害问题时通知指定联系人。 <a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api">Advancing voice intelligence with new models in the API</a> <a href="https://openai.com/index/introducing-trusted-contact-in-chatgpt">Introducing Trusted Contact in ChatGPT</a></p>
+      </ul>
+      <ul>
+      <li><strong>GPT-5.5 系列专为网络防御开放可信访问</strong></li>
+      <p>OpenAI 扩展“Trusted Access for Cyber”计划，推出 GPT-5.5 和 GPT-5.5-Cyber，帮助认证防御者加速漏洞研究与关键基础设施保护。 <a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber">Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber</a></p>
+      </ul>
+      <ul>
+      <li><strong>xAI 发布 Grok Computer 与 Grok Voice</strong></li>
+      <p>Grok Computer 为 SuperGrok Heavy 用户提供完整文件系统和命令行界面，可直接读写文件、重构代码、调试崩溃，被定位为“结对编程与创意伙伴”。同时，Grok Voice“Think Fast 1.0”语音代理发布，面向客户支持，能在嘈杂环境中保持速度和准确性。 <a href="https://x.com/elonmusk/status/2052523562247016788">RT X Freeze: Grok Computer just released</a> <a href="https://x.com/elonmusk/status/2052530063913189879">Try Grok Voice for your customer support</a></p>
+      </ul>
+      <ul>
+      <li><strong>SpaceX 星舰静态点火与 Starlink 全球扩展</strong></li>
+      <p>“超级重型 V3”助推器完成 33 台发动机全推力、全时长静态点火测试；Starlink 已为东帝汶超过 450 个偏远村庄提供高速互联网，助力数字政府、教育和医疗。 <a href="https://x.com/elonmusk/status/2052523463680880912">Starship Static Fire</a> <a href="https://x.com/elonmusk/status/2052460531114705028">Over 450 remote villages in Timor-Leste now have Starlink</a></p>
+      </ul>
+      <ul>
+      <li><strong>Tesla Semi 电动取力器与工业应用</strong></li>
+      <p>Tesla Semi 卡车现在可通过 ePTO 为冷藏拖车等提供高达 25kW 电力，解锁更多商用场景。 <a href="https://x.com/elonmusk/status/2052523667612135845">Tesla Semi</a></p>
+      </ul>
+      <ul>
+      <li><strong>基于 OpenAI 的企业语音与开发加速</strong></li>
+      <p>Parloa 基于 OpenAI 模型构建可扩展的语音 AI 客服，支持设计、模拟与部署实时交互；Simplex 利用 ChatGPT Enterprise 和 Codex 缩短软件开发的设计、构建与测试周期。 <a href="https://openai.com/index/parloa">Parloa builds service agents customers want to talk to</a> <a href="https://openai.com/index/simplex">Simplex rethinks software development with Codex</a></p>
+      </ul>
+      <ul>
+      <li><strong>开发者工具与工程实践新动向</strong></li>
+      <p>Codex 已支持在 macOS 和 Windows 的 Chrome 浏览器中直接运行，可跨标签页并行执行任务。美团技术团队分享 31 万行代码的 AI 重构经验，通过 Agent 评测思路、规则建设与 Pre‑PR 机制，将重构变为日常迭代动作。同时，阮一峰周刊指出 AI 催生了“神秘屋”式的高度个性化开发模式，当周大模型流行度前三为 Claude Opus 4.7、GPT 5.5 和 Claude Sonnet，并有用户发现 Chrome 浏览器静默下载 4GB AI 模型。 <a href="https://x.com/sama/status/2052482715010949288">Codex now works directly in Chrome on macOS and Windows</a> <a href="https://x.com/sama/status/2052485051812909530">Sam Altman: helping developers evolve into superheroes</a> <a href="https://tech.meituan.com/2026/05/07/agent-ai-coding.html">用 Agent 评测思路管理 AI Coding</a> <a href="http://www.ruanyifeng.com/blog/2026/05/weekly-issue-395.html">科技爱好者周刊第 395 期</a></p>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>AI 安全正在从封闭走向开放协同，并与模型发布深度绑定</strong></li>
+      <p>Anthropic 将漏洞赏金从私密转为完全公开，OpenAI 专门为网络防御推出定制模型（GPT-5.5-Cyber），同时给消费产品加上“信任联系人”这样的主动干预机制。这表明头部实验室已把可验证的安全基础设施看作模型部署的前提，而不再只是事后补丁。</p>
+      </ul>
+      <ul>
+      <li><strong>代理能力从对话向直接操作环境演进，编程范式再次被冲击</strong></li>
+      <p>Grok Computer 直接在文件系统和 CLI 层操作，Codex 在浏览器后台跨标签页执行任务，配合美团从 AI 重构中总结的 Agent 评测方法论，一个“模型即协同操作员”的趋势正在成型。Sam Altman 那句“帮助开发者进化成超级英雄，比取代他们更酷”，反映出业界当前的叙事重心——不是削减人力，而是把个体产能放大到前所未见的量级。</p>
+      </ul>
+      <ul>
+      <li><strong>航天和电动车的“向前兼容”思维继续强化</strong></li>
+      <p>星舰从全推力点火到 Starlink 的实际连接，Tesla Semi 通过 ePTO 为外围设备供电，都显示出工程体系在设计时就预留了扩展接口。这种“先搭建基础能力，再逐步释放应用”的节奏，很可能成为下一代工程基础设施的通用模板。</p>
+      </ul>
+      <ul>
+      <li><strong>基础设施厂商正将 AI 能力沉淀为隐性后台服务</strong></li>
+      <p>Chrome 静默下载 4GB 的 AI 模型，结合浏览器内直接运行 Codex 的能力，预示 AI 功能将越来越像操作系统组件。用户可能在无感知的情况下就获得了强大的本地智能，这同时带来关于透明度和资源占用的新讨论。</p>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>GPT-5.5-Cyber 在实际网络防御场景中的效果和限制</strong>：该模型仅面向认证防御者开放，其合作模式与响应速度是否足以应对真实攻击，将直接影响后续的访问范围。</li>
+      <li><strong>捐赠后的 Petri 对齐工具能否保持社区驱动与中立性</strong>：Anthropic 将 Petri 交由独立机构运营，其后续更新是否仍能服务于多个模型的对齐评估，值得跟踪。</li>
+      <li><strong>Grok Computer 和 Codex 浏览器版的开发者接纳度</strong>：二者均试图将 AI 直接嵌入开发环境的核心环节，后续的开发者反馈与生态扩展将决定这类“操作型代理”能否成为标配。</li>
+      <li><strong>Chrome 内置 AI 模型的透明度争议</strong>：浏览器静默下载大模型的实践是否会引起隐私与资源管理的公开讨论，可能成为下一轮监管或用户选择的触发点。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li><a href="https://x.com/AnthropicAI/status/2052466175540629965">Our security bug bounty program is now public on HackerOne.</a> — Anthropic</li>
+      <li><a href="https://x.com/AnthropicAI/status/2052494460966019137">We’re donating Petri, our open-source alignment tool, to @meridianlabs_ai...</a> — Anthropic</li>
+      <li><a href="https://sspai.com/post/109450">MX Master3 2000天换壳继续服役</a> — anyfeeder-matrix</li>
+      <li><a href="https://sspai.com/post/109367">甘南秘境，大白高国：我的甘南自由行记</a> — anyfeeder-matrix</li>
+      <li><a href="https://x.com/elonmusk/status/2052471998480281902">RT Alice Smith: ...Cultural appropriation...</a> — elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2052502301781414261">RT Cybertruck: Badass tank...</a> — elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2052648421790752883">RT David Senra: ...SpaceX’s Raptor evolution...</a> — elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2052460446381457446">RT Mike Solana: ...political alpha...</a> — elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2052643426953503136">RT Rothmus 🏴: Civilization...</a> — elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2052460531114705028">RT Sawyer Merritt: Over 450 remote villages... now have high-speed internet access thanks to Starlink...</a> — elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2052644796347650316">RT The Babylon Bee: Woman Terrified Of White Men...</a> — elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2052523562247016788">RT X Freeze: Grok Computer just released...</a> — elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2052523463680880912">🔥🔥🔥 Starship Static Fire 🔥🔥🔥</a> — elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2052523667612135845">Tesla Semi</a> — elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2052530063913189879">Try Grok Voice for your customer support</a> — elon-musk</li>
+      <li><a href="https://x.com/GeminiApp/status/2052413304262537306">RT Noemi: My mom published her first picture book for kids...</a> — google-gemini</li>
+      <li><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api">Advancing voice intelligence with new models in the API</a> — openai-news</li>
+      <li><a href="https://openai.com/index/introducing-trusted-contact-in-chatgpt">Introducing Trusted Contact in ChatGPT</a> — openai-news</li>
+      <li><a href="https://openai.com/index/parloa">Parloa builds service agents customers want to talk to</a> — openai-news</li>
+      <li><a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber">Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber</a> — openai-news</li>
+      <li><a href="https://openai.com/index/simplex">Simplex rethinks software development with Codex</a> — openai-news</li>
+      <li><a href="https://x.com/OpenAI/status/2052480203172274593">RT jason liu: 新しいリアルタイム翻訳モデル...</a> — openai-x</li>
+      <li><a href="https://x.com/OpenAI/status/2052454114911756687">RT Micah Carroll: ...CoT grading...</a> — openai-x</li>
+      <li><a href="https://x.com/sama/status/2052482715010949288">RT OpenAI: Codex now works directly in Chrome on macOS and Windows...</a> — sam-altman</li>
+      <li><a href="https://x.com/sama/status/2052485051812909530">way cooler to help software developers pokemon-evolve into superheroes...</a> — sam-altman</li>
+      <li><a href="https://tech.meituan.com/2026/05/07/agent-ai-coding.html">用Agent评测思路管理AI Coding —— 31万行代码AI重构的实践</a> — 美团技术</li>
+      <li><a href="http://www.ruanyifeng.com/blog/2026/05/weekly-issue-395.html">科技爱好者周刊（第 395 期）：软件开发的第三种方式</a> — 阮一峰的网络日志</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
