@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-05-28 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-05-28 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日信息密度极高，AI 领域同日迎来关键模型迭代与治理框架发布，开发者生态围绕编程方法论和上下文工具展开密集实践。基础设施侧，香港金管局正式收紧内地投资者账户管理，电信套餐与订阅管理话题亦有不小热度。</p>
+      <h2>重点事件</h2>
+      <ul>
+      <li><strong>Anthropic 发布 Claude Opus 4.8</strong></li>
+      <p>新模型在 Opus 4.7 基础上提升了判断力、对自身进展的坦诚度及更长时间独立工作的能力，且维持原价。社区已展开讨论，关注其实际能力表现。 <a href="https://x.com/AnthropicAI/status/2060042792399770030">来源：RT Claude</a> · <a href="https://www.v2ex.com/t/1216300">社区讨论</a></p>
+      </ul>
+      <ul>
+      <li><strong>OpenAI 发布前沿治理框架</strong></li>
+      <p>框架尝试将 AI 安全与风险实践同欧盟、加州等新兴法规进行对齐，是当前模型能力提升背景下治理路径的明确表态。 <a href="https://openai.com/index/openai-frontier-governance-framework">来源：OpenAI’s Frontier Governance Framework</a> · <a href="https://x.com/OpenAI/status/2060032839991914619">OpenAI X</a></p>
+      </ul>
+      <ul>
+      <li><strong>香港金管局新增内地投资者账户三项监管措施</strong></li>
+      <p>要求关闭使用可疑文件开立且识别自 2023 年 1 月起的投资账户；关闭零结余不动投资账户（截至 2026 年 5 月 22 日无余额且前 12 个月无活动）；新开户须书面声明资金源自内地以外合法来源。措施仅针对个人投资账户。讨论区同步出现“香港还能否开到银行卡”的咨询，政策落地影响开始显现。 <a href="https://www.v2ex.com/t/1216053">来源：v2ex</a> · <a href="https://www.v2ex.com/t/1216248">相关询问</a></p>
+      </ul>
+      <ul>
+      <li><strong>AI 编程方法论激辩：从 TDD 到元工程</strong></li>
+      <p>社区焦点之一为“测试驱动开发（TDD）是否是提高 AI 编程准确率的唯一解法”，讨论指向将 TDD 作为自动闭环纠错机制。同一日内，有文章介绍“元工程 harness”七层架构（校准、验证、执行等），试图解决 AI 编写长期运行软件的缺陷，强调代码质量取决于契约完备性，并提示模型盲点、上下文漂移等风险。 <a href="https://www.v2ex.com/t/1216257">来源：TDD 探讨</a> · <a href="https://www.v2ex.com/t/1216271">元工程论点</a></p>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>AI Coding Agent 工具链加速成熟</strong></li>
+      <p><a href="https://www.v2ex.com/t/1216255">Cairn</a> 一行命令为 Claude Code/Codex/Cursor 增加 session 接力、文件锁、任务交接等功能；<a href="https://www.v2ex.com/t/1216247">anytocontext-ce</a> 将代码库转为可查询知识库；《<a href="https://www.v2ex.com/t/1216289">织经</a>》深度剖析 Claude Code Workflows 达 29 章。三者共同显示，围绕 Agent 的稳定运行、上下文质量与工程化落地，正在形成丰富的外围工具层。</p>
+      <li><strong>上下文共享成为产品创新焦点</strong></li>
+      <p>无论是 <a href="https://www.v2ex.com/t/1216254">VibeShell</a> 让人类与 AI 共用 SSH/SFTP 远程上下文，还是 <a href="https://www.v2ex.com/t/1216297">Marginalia</a> 用图书馆学思路检索私人资料库，都体现出“让 AI 理解个人工作环境”已从概念走向工具落地。</p>
+      <li><strong>办公场景的 AI Skill 化与成本意识并行</strong></li>
+      <p><a href="https://www.v2ex.com/t/1216292">商汤开源办公 Skills 包</a>（信息图、PPT、数据分析），<a href="https://www.v2ex.com/t/1216259">Claude Code 中文技术文档写作规范 Skill</a> 等，都显示 Skill 形态正在被行业接受。同时，阿里云 Token Plan 用户反馈“两小时消耗约 30%”以及 <a href="https://www.v2ex.com/t/1216263">OpenCode Go 付费方案分析</a> 的精细计算，表明开发者对 Token 消耗的敏感度持续上升，成本优化成为日常操作。</p>
+      <li><strong>通讯与订阅管理需求稳定</strong></li>
+      <p>从 <a href="https://www.v2ex.com/t/1216252">WhatsApp 体验回归</a> 到 <a href="https://www.v2ex.com/t/1216266">Talkatone 零成本保号</a>，再到 <a href="https://www.v2ex.com/t/1216281">续费鸭</a> 管理订阅提醒，反映出用户对通讯稳定性和支出透明度的长期诉求。</p>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>北京移动 18 元魔卡月底停售</strong>，此后最低保号套餐仅剩 8 元档位，对保号成本敏感的用户需尽快决策。<a href="https://www.v2ex.com/t/1216250">来源</a></li>
+      <li><strong>比亚迪为天神之眼 A/B 城区智驾提供 1 年兜底权益</strong>，APP 已更新，后续实际赔付案例和用户反馈值得观察。<a href="https://www.v2ex.com/t/1216274">来源</a></li>
+      <li><strong>香港金管局新规落地影响</strong>，尤其是已有账户的清理节奏和新开户的实际执行尺度。<a href="https://www.v2ex.com/t/1216053">来源</a></li>
+      <li><strong>AI 编程长期稳定性的元工程方法</strong>，论文思路能否转化为实际可用工具仍待验证。<a href="https://www.v2ex.com/t/1216271">来源</a></li>
+      <li><strong>Grok 生成不当图片的提示词在社区流传</strong>，可能引发平台层面的内容管控调整。<a href="https://www.v2ex.com/t/1216261">来源</a></li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li><a href="https://x.com/AnthropicAI/status/2060042792399770030">RT Claude: Introducing Claude Opus 4.8...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2059873440212124071">Grok Build improvements</a></li>
+      <li><a href="https://x.com/elonmusk/status/2059906032940482687">RT Beff (e/acc): The rarest object type...</a></li>
+      <li><a href="https://x.com/kepano/status/2060024892372943234">(and many iterations)</a></li>
+      <li><a href="https://openai.com/index/openai-frontier-governance-framework">OpenAI’s Frontier Governance Framework</a></li>
+      <li><a href="https://x.com/OpenAI/status/2060032839991914619">R&amp;D Part 1: Here to Win</a></li>
+      <li>[[AI Agent 智能体] 想请教下 agent 和 skill 的区别？](https://www.v2ex.com/t/1216299#reply0)</li>
+      <li>[[Apple] [apple 礼品卡] apple pay 报支付方式错误了](https://www.v2ex.com/t/1216285#reply1)</li>
+      <li>[[Apple] 在一台 ivy bridge 计算机上安装 20 个操作系统](https://www.v2ex.com/t/1216275#reply2)</li>
+      <li>[[Claude] Anthropic 发布了 Claude Opus 4.8](https://www.v2ex.com/t/1216300#reply11)</li>
+      <li>[[Claude] 想换一种方式充 Claude，想问下有没有老哥这么操作过](https://www.v2ex.com/t/1216302#reply1)</li>
+      <li>[[iPhone] 各位现在的主力手机是哪款？](https://www.v2ex.com/t/1216280#reply27)</li>
+      <li>[[OpenAI] 个人充值 chatgpt/claude API 的方法有哪些呀](https://www.v2ex.com/t/1216296#reply3)</li>
+      <li>[[Surge] 有什么优雅的方式，解决 surge 并发 dns 查询返回国外 cdn ip 的问题](https://www.v2ex.com/t/1216277#reply4)</li>
+      <li>[[☕Vibe Coding🤖] 有使用 aliyun 的 token plan 的吗？两小时用了 30%左右](https://www.v2ex.com/t/1216270#reply6)</li>
+      <li>[[VPS] DigVPS 测评 - 100TB 新增美国 Los Angeles - Global Tier1 产品...](https://www.v2ex.com/t/1216057#reply0)</li>
+      <li>[[WhatsApp] [体验分享] 从 TG、Signal 折腾一圈后，还是觉得 WhatsApp 最均衡](https://www.v2ex.com/t/1216252#reply2)</li>
+      <li>[[分享创造] Marginalia：一个面向私人异构资料库的 AI 检索 / 调查系统](https://www.v2ex.com/t/1216297#reply0)</li>
+      <li>[[分享创造] tavafa2.0.0 支持 PS 图层编辑功能](https://www.v2ex.com/t/1216258#reply0)</li>
+      <li>[[分享创造] 做了一个 AI 内容分享工具：把 ChatGPT / Claude 对话变成可公开访问网页](https://www.v2ex.com/t/1216269#reply0)</li>
+      <li>[[分享创造] 做了一个开源 SSH/SFTP 桌面工具，想解决人和 AI 共用远程上下文的问题](https://www.v2ex.com/t/1216254#reply0)</li>
+      <li>[[分享创造] 做了个 macOS 网站与应用拦截器, 保持专注.](https://www.v2ex.com/t/1216052#reply0)</li>
+      <li>[[分享创造] [分享] 想把分散的需求整理成可被联系的信息，做了个实验性平台](https://www.v2ex.com/t/1216262#reply0)</li>
+      <li>[[分享创造] 分享一个新鲜出炉的制作双语字幕的 Skills](https://www.v2ex.com/t/1216278#reply1)</li>
+      <li>[[分享创造] 刚刚不是说要薅微信公众号的羊毛作为图床吗？](https://www.v2ex.com/t/1216305#reply0)</li>
+      <li>[[分享创造] 周末撸了个赛博斗蛐蛐：让 AI 写 JS 心法去打武侠擂台](https://www.v2ex.com/t/1216273#reply1)</li>
+      <li>[[分享创造] 我做了一个给超级个体 / OPC 用的 AI 智能体商业化平台](https://www.v2ex.com/t/1216246#reply3)</li>
+      <li>[[分享创造] 探讨：测试驱动开发（TDD）是否是目前提高 AI 编程准确率的唯一解？](https://www.v2ex.com/t/1216257#reply1)</li>
+      <li>[[分享创造] 用 DeepSeek 做了个用量页面个小插件...](https://www.v2ex.com/t/1216253#reply0)</li>
+      <li>[[分享创造] 程序员创业产品免费试用，一款带笔记、农历节气、节假日调休的清爽日历](https://www.v2ex.com/t/1216260#reply1)</li>
+      <li>[[分享创造] 让 Claude Code 写出符合规范的中文技术文档，一行命令搞定](https://www.v2ex.com/t/1216259#reply0)</li>
+      <li>[[分享创造] 那么多 md 复制到公众号的，我搞了个 html 复制到公众号~](https://www.v2ex.com/t/1216301#reply0)</li>
+      <li>[[分享发现] [收藏] 商汤科技开源了一系列办公场景的 Skills 包](https://www.v2ex.com/t/1216292#reply0)</li>
+      <li>[[北京] 💔再见了！北京移动 18 元魔卡月底下架](https://www.v2ex.com/t/1216250#reply1)</li>
+      <li>[[小米] 有没有安卓玩机高手请教点问题](https://www.v2ex.com/t/1216051#reply3)</li>
+      <li>[[微信] [自荐] 一个帮你管理订阅和提醒扣费的小工具 微信小程序：续费鸭](https://www.v2ex.com/t/1216281#reply0)</li>
+      <li>[[技术栈] 发现个 grok 可以生成漏点（13）照片的提示词 速来！大饱眼福了！](https://www.v2ex.com/t/1216261#reply5)</li>
+      <li>[[投资] 香港金管局：就内地投资者投资账户新增三项监管措施 开户核查倒查至 2023 年 1 月](https://www.v2ex.com/t/1216053#reply0)</li>
+      <li>[[推广] 💥 007 First Light 游戏已发售！了解价格比 Steam 低的平台 (只要 260)](https://www.v2ex.com/t/1216294#reply0)</li>
+      <li>[[推广] [FK Claude] 满血 Claude 中转站](https://www.v2ex.com/t/1216287#reply0)</li>
+      <li>[[推广] 零成本保号美国实体手机号！ Talkatone 注册教程及虚拟号检测方法](https://www.v2ex.com/t/1216266#reply0)</li>
+      <li>[[机场] 正想求个稳定的机场，就发现有大佬建了这个节点，那就求推荐吧😉](https://www.v2ex.com/t/1216256#reply3)</li>
+      <li>[[汽车] 比亚迪为天神之眼 A、B 城区智驾兜底 1 年](https://www.v2ex.com/t/1216274#reply2)</li>
+      <li>[[生活] 我发现 it 类工作者是最严重的性压抑群体 包括我自己 it 类的工作者](https://www.v2ex.com/t/1216049#reply18)</li>
+      <li>[[程序员] OpenCode x MiMo V2.5 - 限时免费](https://www.v2ex.com/t/1216056#reply1)</li>
+      <li>[[程序员] 一行命令给 Claude/Codex 加上 session 接力、文件锁、任务交接、凭据扫描、完成验证和知识记忆](https://www.v2ex.com/t/1216255#reply0)</li>
+      <li>[[程序员] [开源] 《织经》—— Claude Code Workflows 深度剖析， 29 章实战手册](https://www.v2ex.com/t/1216289#reply1)</li>
+      <li>[[程序员] 我开源了一个项目：把任何资料，安全的变成 AI 的上下文](https://www.v2ex.com/t/1216247#reply1)</li>
+      <li>[[程序员] 推荐一下 OpenCode Go Token Plan 5$ 换 60$ DeepSeek/MiMo 额度](https://www.v2ex.com/t/1216263#reply8)</li>
+      <li>[[程序员] 用 AI 写生成长期运行的软件](https://www.v2ex.com/t/1216271#reply1)</li>
+      <li>[[职场话题] 外包离职，发现还需要手写指定内容的离职信并邮寄给人事外包单位...](https://www.v2ex.com/t/1216283#reply0)</li>
+      <li>[[购物] 618 求推荐显示器，戴尔 U2725 当前是否还值得购买](https://www.v2ex.com/t/1216293#reply0)</li>
+      <li>[[酷工作] 找爬虫工程师](https://www.v2ex.com/t/1216290#reply0)</li>
+      <li>[[酷工作] 百度封控 / 渠道回传 / 无痕浏览 技术需求](https://www.v2ex.com/t/1216249#reply1)</li>
+      <li>[[酷工作] [远程] Moonveil Entertainment - web3 游戏工作室招聘 区块链工程师](https://www.v2ex.com/t/1216304#reply0)</li>
+      <li>[[问与答] kiro 付款被限制](https://www.v2ex.com/t/1216282#reply0)</li>
+      <li>[[问与答] 借钱给公户，公户再打到我私户，税收问题是不是不用关注？](https://www.v2ex.com/t/1216272#reply5)</li>
+      <li>[[问与答] 做了一个耐旱草种的网站，有需求么](https://www.v2ex.com/t/1216284#reply0)</li>
+      <li>[[问与答] 有用 Taro 真的做出来成品 App 的人吗](https://www.v2ex.com/t/1216303#reply0)</li>
+      <li>[[问与答] 现在的你有哪些骄傲和无奈呢](https://www.v2ex.com/t/1216055#reply2)</li>
+      <li>[[问与答] 看到现在人力资源比较廉价](https://www.v2ex.com/t/1216288#reply12)</li>
+      <li>[[问与答] 请问一下大家用 ai 做 qt 应用的时候有什么 skill 或者方法改进 ui 吗？](https://www.v2ex.com/t/1216295#reply1)</li>
+      <li>[[香港] 请问现在去香港还能开到银行卡吗](https://www.v2ex.com/t/1216248#reply11)</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
