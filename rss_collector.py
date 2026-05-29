@@ -268,8 +268,8 @@ def mark_saved(conn: sqlite3.Connection, entry: Entry, file_path: Path) -> None:
     )
 
 
-def save_entry(entry: Entry, output_dir: Path) -> Path:
-    date_part = date_for_path(entry.published)
+def save_entry(entry: Entry, output_dir: Path, date_fallback: str | None = None) -> Path:
+    date_part = date_for_path(entry.published, fallback=date_fallback)
     feed_dir = output_dir / entry.feed_name / date_part
     feed_dir.mkdir(parents=True, exist_ok=True)
     filename = f"{slugify(entry.title) or stable_hash(entry.entry_id)[:12]}.md"
@@ -300,7 +300,7 @@ def render_markdown(entry: Entry) -> str:
     return "\n".join(metadata) + title + "\n" + body.strip() + source
 
 
-def collect(config: Path, output: Path, db_path: Path, timeout: int, limit: int | None) -> int:
+def collect(config: Path, output: Path, db_path: Path, timeout: int, limit: int | None, default_date: str | None = None) -> int:
     feeds = read_feeds(config)
     output.mkdir(parents=True, exist_ok=True)
     conn = init_db(db_path)
@@ -320,7 +320,7 @@ def collect(config: Path, output: Path, db_path: Path, timeout: int, limit: int 
             for entry in entries:
                 if already_saved(conn, entry):
                     continue
-                file_path = save_entry(entry, output)
+                file_path = save_entry(entry, output, date_fallback=default_date)
                 mark_saved(conn, entry, file_path)
                 saved_count += 1
                 print(f"  saved: {file_path}")
@@ -391,14 +391,16 @@ def normalize_date(value: str) -> str:
     return value
 
 
-def date_for_path(value: str) -> str:
+def date_for_path(value: str, fallback: str | None = None) -> str:
     if not value:
-        return "undated"
+        return fallback or "undated"
     try:
         return dt.datetime.fromisoformat(value).date().isoformat()
     except ValueError:
         match = re.search(r"\d{4}-\d{2}-\d{2}", value)
-        return match.group(0) if match else "undated"
+        if match:
+            return match.group(0)
+    return fallback or "undated"
 
 
 def slugify(value: str) -> str:

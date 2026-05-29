@@ -341,6 +341,7 @@ def generate_report(
             db_path=db_path,
             timeout=timeout,
             limit=fetch_limit,
+            default_date=report_date,
         )
 
     articles = load_articles(input_dir, report_date)
