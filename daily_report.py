@@ -67,25 +67,41 @@ def unquote_front_matter(value: str) -> str:
     return value.replace('\\"', '"').replace("\\\\", "\\")
 
 
-def load_articles(input_dir: Path, report_date: str) -> list[Article]:
+def load_articles(input_dir: Path, report_date: str, previous_date: str | None = None) -> list[Article]:
     articles: list[Article] = []
     if not input_dir.exists():
         return articles
 
     for path in sorted(input_dir.glob(f"*/{report_date}/*.md")):
-        markdown = path.read_text(encoding="utf-8")
-        metadata, body = parse_front_matter(markdown)
-        articles.append(
-            Article(
-                title=metadata.get("title") or first_heading(body) or path.stem,
-                feed=metadata.get("feed") or path.parent.parent.name,
-                link=metadata.get("link") or "",
-                published=metadata.get("published") or report_date,
-                body=strip_source_footer(body),
-                path=path,
+        articles.append(_parse_article(path, report_date))
+
+    if previous_date:
+        for path in sorted(input_dir.glob(f"*/{previous_date}/*.md")):
+            article = _parse_article(path, previous_date)
+            article = Article(
+                title=f"[昨日补遗] {article.title}",
+                feed=article.feed,
+                link=article.link,
+                published=article.published,
+                body=article.body,
+                path=article.path,
             )
-        )
+            articles.append(article)
+
     return articles
+
+
+def _parse_article(path: Path, fallback_date: str) -> Article:
+    markdown = path.read_text(encoding="utf-8")
+    metadata, body = parse_front_matter(markdown)
+    return Article(
+        title=metadata.get("title") or first_heading(body) or path.stem,
+        feed=metadata.get("feed") or path.parent.parent.name,
+        link=metadata.get("link") or "",
+        published=metadata.get("published") or fallback_date,
+        body=strip_source_footer(body),
+        path=path,
+    )
 
 
 def first_heading(markdown: str) -> str:
@@ -101,6 +117,10 @@ def strip_source_footer(markdown: str) -> str:
 
 def today_local() -> str:
     return dt.datetime.now().date().isoformat()
+
+
+def previous_date(date_str: str) -> str:
+    return (dt.date.fromisoformat(date_str) - dt.timedelta(days=1)).isoformat()
 
 
 def load_env_file(path: Path) -> dict[str, str]:
@@ -344,7 +364,11 @@ def generate_report(
             default_date=report_date,
         )
 
-    articles = load_articles(input_dir, report_date)
+    articles = load_articles(
+        input_dir,
+        report_date,
+        previous_date=previous_date(report_date),
+    )
     if not articles:
         path = write_no_articles_report(output_dir, report_date, input_dir)
         print(f"No articles found for {report_date}. Wrote {path}.")
