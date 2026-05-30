@@ -87,62 +87,70 @@
     <article>
       <h1>2026-05-29 RSS 日报</h1>
       <h2>今日概览</h2>
-      <p>AI 模型密集发布、AI 编程成本争议与行业乱象成为今日焦点。xAI、Anthropic、Liquid AI 均有新模型亮相，而 OpenAI 员工披露的旗舰模型月消耗可达 130 万美元，引发对 AI 编程可持续性的广泛讨论。开源工具生态活跃，多款 AI 记忆、可视化及开发辅助项目涌现；同时，企业强推 AI 引发的职场形式主义、宽带限速、VC 下场自研等话题，折射出 AI 热潮下的多重张力。</p>
+      <p>AI 大模型与代理工具密集更新：Anthropic 正式发布 Claude Opus 4.8，Google 向全美 AI Ultra 订阅者推出自主代理 Gemini Spark，OpenAI 启动生物防御项目 Rosalind Biodefense 并让 Codex 支持 Windows，xAI 开放 grok-build-0.1 编码模型 API。政策方面，加州议会通过游戏保护法案，Robinhood 允许 AI 代理自主交易引发广泛讨论。同时，AI 服务的高昂 Token 成本与职场强制推行 AI 成为社区焦点。</p>
       <h2>重点事件</h2>
+      <h3>大模型与 AI 产品</h3>
       <ul>
-      <li><strong>xAI 发布 grok-build-0.1 模型，专注代理编码</strong>：该模型已通过 xAI API 进入公开测试阶段，专注 agentic coding。API定价为每百万输入Tokens 1美元，输出Tokens 2美元。 <a href="https://x.com/elonmusk/status/2060451655301132662">来源</a></li>
+      <li><strong>Claude Opus 4.8 发布</strong>：Anthropic 发布新版本，主要提升判断力、长时间独立工作与代理编码能力，<a href="https://www.v2ex.com/t/1216353#reply0">价格保持不变</a>。社区反馈其 Token 消耗较快，<a href="https://www.v2ex.com/t/1216351#reply0">少量修复即耗用大量额度</a>；多起案例显示通过 API 调用时<a href="https://www.v2ex.com/t/1216588#reply3">模型偶尔会自称“Qwen”</a>，疑为幻觉。</li>
+      <li><strong>Gemini Spark 上线</strong>：谷歌的 24/7 个人 AI 代理已<a href="https://x.com/GeminiApp/status/2060405496872579115">向美国 Google AI Ultra 订阅者开放</a>，可跨数字生态自主执行任务。同时谷歌<a href="https://x.com/GeminiApp/status/2060173327201890662">修复了配额消耗过快的问题</a>。</li>
+      <li><strong>OpenAI 多项发布</strong>：启动 <a href="https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense">Rosalind Biodefense 项目</a>，向开发者与政府合作方开放 GPT-Rosalind 用于生物防御与公共卫生；<a href="https://x.com/OpenAI/status/2060428604727771421">Codex 计算机使用功能现已支持 Windows</a>；发布<a href="https://openai.com/index/trustworthy-third-party-evaluations-foundations">第三方前沿 AI 评估指南</a>。</li>
+      <li><strong>xAI Grok Build API 公测</strong>：grok-build-0.1 模型<a href="https://x.com/elonmusk/status/2060451655301132662">通过 API 公开测试</a>，专注智能编码，定价为输入 $1/百万 tokens、输出 $2/百万 tokens；<a href="https://x.ai/build/changelog">每日更新日志可在线查看</a>。</li>
+      <li><strong>Liquid AI 开源混合专家模型</strong>：<a href="https://www.liquid.ai/blog/lfm2-5-8b-a1b">8B-A1B MoE 模型发布</a>，基于 38T 数据训练。</li>
+      <li><strong>Kog AI 实时推理</strong>：在标准 GPU 上实现<a href="https://blog.kog.ai/real-time-llm-inference-on-standard-gpus-3-000-tokens-s-per-request/">每请求 3,000 tokens/s 的实时 LLM 推理</a>。</li>
       </ul>
+      <h3>政策与监管</h3>
       <ul>
-      <li><strong>Anthropic 推出 Claude Opus 4.8</strong>：新版本强调更强判断力与长时间独立工作能力，在代理编码、终端操作等方面提升显著，价格保持不变。但有用户反馈 Token 消耗极快，甚至出现模型自称 Qwen 的异常。 <a href="https://www.v2ex.com/t/1216353#reply0">来源 Claude Opus 4.8 发布</a> | <a href="https://www.v2ex.com/t/1216351#reply0">Token 计算问题</a> | <a href="https://www.v2ex.com/t/1216588#reply3">自称 Qwen</a></li>
+      <li><strong>加州通过《保护我们的游戏法案》</strong>：加州众议院通过 <a href="https://www.invenglobal.com/articles/22330/stop-killing-games-movement-gains-momentum-california-assembly-passes-game-protection-bill">Protect Our Games Act</a>，限制游戏发行商在停服后导致玩家无法访问已购游戏的行为。</li>
+      <li><strong>白宫研究拨款新规</strong>：提出规则赋予政治任命官员<a href="https://www.scientificamerican.com/article/white-house-proposes-new-rules-giving-political-appointees-final-say-on-research-grants/">对研究拨款的最终批准权</a>，引发科研界关注。</li>
       </ul>
+      <h3>行业应用与商业动态</h3>
       <ul>
-      <li><strong>Liquid AI 发布 8B-A1B MoE 模型</strong>：该模型在 38T 数据上训练，采用混合专家架构。 <a href="https://www.liquid.ai/blog/lfm2-5-8b-a1b">来源</a></li>
+      <li><strong>Robinhood 允许 AI 代理交易股票</strong>：Robinhood 宣布<a href="https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks/">用户 AI 代理可自主进行股票交易</a>，社区激烈讨论其潜在风险。</li>
+      <li><strong>特斯拉 FSD 进入爱沙尼亚</strong>：成为<a href="https://x.com/elonmusk/status/2060349039099469896">第三个批准全自动驾驶的欧洲国家</a>（继荷兰、立陶宛后）。</li>
+      <li><strong>Shift 公司用免费清洁换训练数据</strong>：初创公司 Shift <a href="https://www.theverge.com/ai-artificial-intelligence/939765/ai-training-data-startup-shift-free-cleaning">为用户免费清洁房屋以收集数据</a>，用于未来机器人训练。</li>
+      <li><strong>波士顿儿童医院利用 AI 诊断罕见病</strong>：通过 OpenAI 技术<a href="https://openai.com/index/boston-childrens-hospital">成功诊断超过 40 例罕见病</a>。</li>
+      <li><strong>鸿蒙生态设备超 13 亿</strong>：开源鸿蒙开发者大会公布<a href="https://www.v2ex.com/t/1216329#reply31">生态设备累计出货超 13 亿台，市场份额连续 7 季度领先 iOS</a>。</li>
       </ul>
+      <h3>开发工具与开源</h3>
       <ul>
-      <li><strong>OpenAI 启动 Rosalind Biodefense 项目</strong>：扩展 GPT-Rosalind 访问权限，面向受信任的开发者与美国政府合作伙伴，推进生物防御与流行病防范工作。同时，波士顿儿童医院利用 OpenAI 技术已帮助诊断超 40 例罕见病。 <a href="https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense">来源</a></li>
-      </ul>
-      <ul>
-      <li><strong>特斯拉 FSD 在欧洲再下一城</strong>：继荷兰和立陶宛之后，FSD 在爱沙尼亚获批，成为欧洲第三个批准国。 <a href="https://x.com/elonmusk/status/2060349039099469896">来源</a></li>
-      </ul>
-      <ul>
-      <li><strong>加州州议会通过《保护我们的游戏法案》</strong>：该法案旨在保护消费者对已购数字游戏的持续访问权，防止厂商远程关闭游戏。 <a href="https://www.invenglobal.com/articles/22330/stop-killing-games-movement-gains-momentum-california-assembly-passes-game-protection-bill">来源</a></li>
-      </ul>
-      <ul>
-      <li><strong>白宫提议政治任命官员拥有科研拨款最终审批权</strong>：新规将赋予政治任命官员对研究拨款的最终决定权，引发学界担忧。 <a href="https://www.scientificamerican.com/article/white-house-proposes-new-rules-giving-political-appointees-final-say-on-research-grants/">来源</a></li>
+      <li><strong>iOS 小组件工具 Await</strong>：<a href="https://sspai.com/post/110106">用 TypeScript 快速创建可交互小组件</a>，无需 Xcode，降低创作门槛。</li>
+      <li><strong>“口袋植物”App 上线</strong>：聚焦<a href="https://sspai.com/post/109936">养护日记与植物成长相册</a>，源自播客社群反馈。</li>
+      <li><strong>Claude Code Workflow 原理</strong>：<a href="https://www.v2ex.com/t/1216558#reply0">由主模型生成 JS 编排脚本，本地 Runtime 执行</a>，并非模型间直接并发。</li>
+      <li><strong>开源项目 MobileGym</strong>：纯前端<a href="https://www.v2ex.com/t/1216344#reply10">浏览器安卓仿真系统</a>，28 个仿真 App，单实例 400 MB 内存，用于 GUI Agent 研究。</li>
+      <li><strong>PAM-OS 开源</strong>：<a href="https://www.v2ex.com/t/1216374#reply0">本地优先 AI 记忆操作系统</a>，拆离模型记忆层，支持 CLI/API/MCP。</li>
+      <li><strong>Hermes Memory Sidecar v3.0</strong>：<a href="https://www.v2ex.com/t/1216371#reply0">为任意 AI 智能体加装长期记忆</a>，支持分层召回，已处理超 12,600 会话。</li>
+      <li><strong>GitHub 热门项目</strong>：<a href="https://github.com/anthropics/claude-code">anthropics/claude-code</a>（终端代理编程）、<a href="https://github.com/DataTalksClub/data-engineering-zoomcamp">DataTalksClub/data-engineering-zoomcamp</a>（数据工程训练营）、<a href="https://github.com/Crosstalk-Solutions/project-nomad">Crosstalk-Solutions/project-nomad</a>（离线生存计算机）等。</li>
       </ul>
       <h2>趋势与判断</h2>
       <ul>
-      <li><strong>AI 编程成本引发商业模式拷问</strong>：据 OpenAI 员工案例，程序员不限量使用旗舰模型月消耗 Token 价值可达 130 万美元；即便改用国产开源模型，每人每年也至少花费 200 万至 300 万元。Uber 今年头四个月已花完全年 34 亿美元 AI 预算，微软也因费用超标放弃 Claude Code。AI 编程的高昂成本可能迫使企业限制员工不限量使用外部模型。 <a href="http://www.ruanyifeng.com/blog/2026/05/weekly-issue-398.html">来源</a></li>
-      </ul>
-      <ul>
-      <li><strong>AI 落地出现“形式主义”与信任危机</strong>：一方面，有企业 CTO 强推 AI 要求研发提效 100%，但因生成内容质量低，员工被迫通宵重做后汇报为“AI 提效”；另一方面，Turso 公司因难以应对 AI 生成的虚假漏洞报告和引发的无尽争论，被迫终止漏洞赏金计划。 <a href="https://www.v2ex.com/t/1216367#reply0">企业 AI 乱象</a> | <a href="http://www.ruanyifeng.com/blog/2026/05/weekly-issue-398.html">赏金计划终止</a></li>
-      </ul>
-      <ul>
-      <li><strong>“AI 记忆”与个人上下文工具成新方向</strong>：Hermes Memory Sidecar v3.0、PAM-OS、OpenContext 等多个项目涌现，旨在为 AI Agent 提供外挂长期记忆或统一的个人行为上下文，反映出多 Agent 协作场景下对状态持久化与个性化记忆的强烈需求。</li>
-      </ul>
-      <ul>
-      <li><strong>基础设施限速问题凸显</strong>：上海电信 2000M/300M 精品网宽带存在达量限速问题，上行约 1TB 即触发，单 IPv4 限速约 1.1MB/s。Cloudflare 则分享了大规模编排 AI 代码审查的经验，显示基础设施在 AI 时代面临双向挑战。 <a href="https://www.v2ex.com/t/1216332#reply6">上海电信限速</a> | <a href="https://blog.cloudflare.com/ai-code-review/">Cloudflare AI 代码审查</a></li>
-      </ul>
-      <ul>
-      <li><strong>开源项目生态迁移苗头初现</strong>：CodeMirror 作者将所有仓库在 GitHub 上存档并迁移至自建服务，原因是对 GitHub 长期不满；有开源项目被用于钓鱼攻击，引发对开源滥用风险的新讨论。 <a href="https://www.v2ex.com/t/1216539#reply3">CodeMirror 迁移</a> | <a href="https://andrej.sh/posts/phishing-through-my-open-source-project">钓鱼事件</a></li>
+      <li><strong>AI Token 成本成为重大瓶颈</strong>：阮一峰周刊援引数据指出，若不限量使用顶级模型，单个程序员每月可<a href="http://www.ruanyifeng.com/blog/2026/05/weekly-issue-398.html">消耗 130 万美元 Token</a>；Uber 今年前四个月花完全年 34 亿美元 AI 预算；微软因费用超标放弃外部 Claude Code。Google Gemini API 两轮对话即耗费 $4.92，<a href="https://www.v2ex.com/t/1216386#reply1">用户直呼太贵</a>。</li>
+      <li><strong>AI 代理自主化加速，但信任与风险并存</strong>：从 Gemini Spark 的后台自主执行到 Robinhood 的 AI 交易，代理正在深入关键场景。同时，社区<a href="https://www.v2ex.com/t/1216537#reply0">列出金融行情数据接入的 7 大工程风险</a>，包括字段漂移、幻觉“编造数字”等，提醒落地需谨慎。</li>
+      <li><strong>职场强制 AI 引发矛盾</strong>：多地出现领导强推 AI、硬性加班学习 AI 的现象，有<a href="https://www.v2ex.com/t/1216381#reply14">研发团队因此被延迟调薪</a>，员工嘲讽“AI 生成垃圾，员工通宵重做”。同时，开发者<a href="https://www.v2ex.com/t/1216578#reply12">月均消费 1200 元订阅 AI 工具</a>，产生重度依赖。</li>
+      <li><strong>开源安全问题浮现</strong>：开发者<a href="https://andrej.sh/posts/phishing-through-my-open-source-project">开源项目被用于网络钓鱼</a>，Turso 因 AI 生成无效漏洞报告泛滥而<a href="http://www.ruanyifeng.com/blog/2026/05/weekly-issue-398.html">终止漏洞赏金计划</a>。</li>
+      <li><strong>跨端开发框架选择出现分化</strong>：对 24 个已上架 App 的调研显示，<a href="https://www.v2ex.com/t/1216376#reply2">独立开发者中原生（Swift/SwiftUI）使用比例最高</a>，其次为 Flutter 和 Tauri。</li>
+      <li><strong>模型幻觉与身份混淆</strong>：Claude Opus 4.8 自称 Qwen 的案例，以及 ChatGPT Temporary Chat 的输出逻辑缺陷，表明大模型在可靠性与行为一致性上仍有明显短板。</li>
       </ul>
       <h2>值得继续关注</h2>
       <ul>
-      <li><strong>Robinhood 允许 AI 代理进行股票交易</strong>：这一功能的上线将考验 AI Agent 在金融交易领域的实际表现与风险控制。 <a href="https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks">来源</a></li>
-      <li><strong>加州大学 STEM 专业要求恢复 SAT</strong>：因学生数学能力严重不足，加州大学教职员要求 STEM 专业重新引入 SAT 考试，反映 AI 时代基础教育的张力。 <a href="https://www.latimes.com/california/story/2026-05-27/uc-math-professors-demand-return-of-sat-for-stem-admissions">来源</a></li>
-      <li><strong>日本石脑油短缺影响扩大</strong>：作为石化产业基础原料的石脑油短缺，可能对日本制造业产生连锁影响。 <a href="https://www.nippon.com/en/japan-data/h02783/">来源</a></li>
-      <li><strong>Gemini 配额问题修复进展</strong>：Google 团队正推出多项措施解决用户使用配额快速耗尽的问题，后续效果值得关注。 <a href="https://x.com/GeminiApp/status/2060173327201890662">来源</a></li>
+      <li>Claude Opus 4.8 在实际开发中的表现及 Token 消耗优化。</li>
+      <li>Gemini Spark 全美开放后的用户反馈与配额调整效果。</li>
+      <li>加州游戏保护法案的后续立法进程。</li>
+      <li>Robinhood AI 代理交易功能的安全性与监管回应。</li>
+      <li>OpenAI Rosalind Biodefense 项目的应用落地情况。</li>
+      <li>AI 记忆系统（PAM-OS、Hermes 等）与代理工具的整合进展。</li>
+      <li>鸿蒙生态在多终端适配计划下的开发者增长。</li>
       </ul>
       <h2>来源索引</h2>
       <ul>
-      <li>anyfeeder-matrix: <a href="https://sspai.com/post/110106">Await 发布</a> | <a href="https://sspai.com/post/109936">口袋植物 App</a></li>
-      <li>elon-musk: <a href="https://x.com/elonmusk/status/2060451655301132662">grok-build-0.1 发布</a> | <a href="https://x.com/elonmusk/status/2060487070729048239">Starlink 投资回报分析</a> | <a href="https://x.com/elonmusk/status/2060349039099469896">FSD 爱沙尼亚获批</a> | <a href="https://x.com/elonmusk/status/2060360257906278909">机器智能发展速度</a> | <a href="https://x.com/elonmusk/status/2060487009890680906">媒体双重标准评论</a> | <a href="https://x.com/elonmusk/status/2060453763530301742">纽瓦克抗议争议</a> | <a href="https://x.com/elonmusk/status/2060349773937275006">英国政治争议</a> | <a href="https://x.com/elonmusk/status/2060483139374358651">星链太阳能发电</a></li>
-      <li>google-gemini: <a href="https://x.com/GeminiApp/status/2060405496872579115">Gemini Spark 开放</a> | <a href="https://x.com/GeminiApp/status/2060173327201890662">配额修复</a></li>
-      <li>hacker-news: <a href="https://www.liquid.ai/blog/lfm2-5-8b-a1b">Liquid AI 8B-A1B</a> | <a href="https://research.roundtable.ai/captchas-detect-ai/">CAPTCHAs 检测 AI</a> | <a href="https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks">Robinhood AI 交易</a> | <a href="https://blog.cloudflare.com/ai-code-review/">Cloudflare AI 代码审查</a> | <a href="https://rockstarintel.com/gta-6-developers-announce-rockstar-games-union/">GTA 6 工会</a> | <a href="https://www.404media.co/headway-therapy-facial-scan-biometric-data-identity-verification/">Headway 面部扫描</a> | <a href="https://www.latimes.com/california/story/2026-05-27/uc-math-professors-demand-return-of-sat-for-stem-admissions">加州 SAT 恢复</a> | <a href="https://www.nippon.com/en/japan-data/h02783/">日本石脑油短缺</a> | <a href="https://www.quandri.io/engineering-blog/mcp-is-dead">MCP 协议争议</a> | <a href="https://blog.kog.ai/real-time-llm-inference-on-standard-gpus-3-000-tokens-s-per-request/">实时 LLM 推理</a> | <a href="https://www.tensorzero.com/blog/even-very-noisy-llm-evaluators-are-useful-for-improving-ai-agents/">LLM 评估器</a> | <a href="https://blog.emberjs.com/ember-released-7-0/">Ember.js 7.0</a> | <a href="https://blog.prusa3d.com/our-new-open-source-colormix-model-in-prusaslicer-and-easyprint_136079/">PrusaSlicer ColorMix</a> | <a href="https://andrej.sh/posts/phishing-through-my-open-source-project">开源钓鱼事件</a> | <a href="https://obeli.sk/blog/sqlite-is-all-you-need-for-durable-workflows/">SQLite 持久化工作流</a> | <a href="https://www.invenglobal.com/articles/22330/stop-killing-games-movement-gains-momentum-california-assembly-passes-game-protection-bill">游戏法案通过</a> | <a href="https://www.scientificamerican.com/article/white-house-proposes-new-rules-giving-political-appointees-final-say-on-research-grants/">白宫科研拨款新规</a></li>
-      <li>openai-news: <a href="https://openai.com/index/trustworthy-third-party-evaluations-foundations">第三方评估指南</a> | <a href="https://openai.com/index/boston-childrens-hospital">波士顿儿童医院</a> | <a href="https://openai.com/index/braintrust">Braintrust 案例</a> | <a href="https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense">Rosalind Biodefense</a></li>
-      <li>openai-x: <a href="https://x.com/OpenAI/status/2060376598642405492">Rosalind Biodefense 官宣</a> | <a href="https://x.com/OpenAI/status/2060428604727771421">Codex Windows 支持</a></li>
-      <li>v2ex: 涵盖 Claude Opus 4.8 反馈、Claude Code 工作流分析、企业 AI 乱象、职场话题、开源项目推荐、宽带限速、AI 订阅消费等，详见日报内链接。</li>
-      <li>阮一峰的网络日志: <a href="http://www.ruanyifeng.com/blog/2026/05/weekly-issue-398.html">科技爱好者周刊第 398 期</a></li>
+      <li><a href="https://sspai.com/post/110106">少数派 Matrix：Await</a></li>
+      <li><a href="https://sspai.com/post/109936">少数派 Matrix：口袋植物</a></li>
+      <li><a href="https://x.com/elonmusk/status/2060266691418849346">Elon Musk 推文及转推（合集）</a> 等</li>
+      <li><a href="https://github.com/anthropics/claude-code">GitHub Trending：anthropics/claude-code</a> 等</li>
+      <li><a href="https://x.com/GeminiApp/status/2060405496872579115">Google Gemini 官方推文</a></li>
+      <li><a href="https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks/">Hacker News 文章链接</a> 等</li>
+      <li><a href="https://openai.com/index/trustworthy-third-party-evaluations-foundations">OpenAI 官方新闻及推文</a> 等</li>
+      <li><a href="https://www.v2ex.com/t/1216537#reply0">V2EX 讨论帖</a> 等</li>
+      <li><a href="http://www.ruanyifeng.com/blog/2026/05/weekly-issue-398.html">阮一峰的网络日志：科技爱好者周刊第 398 期</a></li>
       </ul>
     </article>
   </main>
