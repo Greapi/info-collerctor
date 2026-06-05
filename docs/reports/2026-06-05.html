@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-05 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-06-05 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>2026年6月5日，科技与政治领域多条主线交织：AI 开发工具持续深层嵌入实际工作流，Grok Build、Cursor 与 ChatGPT 分别释出关键更新；SpaceX 星链在轨卫星正式突破一万颗；美国 SAVE America 法案推进参议院表决，马斯克高调抨击南方贫困法律中心（SPLC）为犯罪组织。与此同时，AI 多模态、代理自主性与开源模型迅速演进，而社区对 AI 带来的倦怠与焦虑亦在加剧。基础技术方面，微软发布通用 Linux 发行版并将 75+ Linux 命令引入 Windows，Gemini Live 支持实时图像编辑，全球风能与太阳能发电量首次超越天然气。</p>
+      <h2>重点事件</h2>
+      <h3>一、AI 开发工具与模型密集迭代</h3>
+      <ul>
+      <li><strong>Grok Build 0.2.20</strong> 修复表格渲染等问题，<a href="https://x.com/elonmusk/status/2062795019551957383">Grok 模型（0.5T 参数）更自主、更准确</a>，并<a href="https://x.com/elonmusk/status/2062796095764234421">原生支持 worktrees，允许多代理并行运行</a>。</li>
+      <li>Grok Build 现已<a href="https://x.com/elonmusk/status/2062946750915072154">直接在项目文件中操作，全读写权限，新文件生成于项目文件夹内</a>，被企业开发者视为工作流创建的重大改善。</li>
+      <li><strong>Cursor 推出 Design Mode</strong>，支持通过<a href="https://x.com/elonmusk/status/2062957433291460632">指向、绘制或语音更新 UI</a>，意图让与代理的协作更像与同事交谈。</li>
+      <li><strong>ChatGPT 记忆系统“Dreaming”</strong> 上线，可<a href="https://openai.com/index/chatgpt-memory-dreaming">跨对话保留偏好与上下文</a>；同步推出 <strong>Sites 功能</strong>，可将对话转化为<a href="https://x.com/sama/status/2062661071761211561">可交互网站或应用并通过 URL 分享</a>。</li>
+      <li><strong>Grok Voice Think Fast 1.0</strong> 在 τ‑Voice 基准测试中<a href="https://x.com/elonmusk/status/2062362681038999875">排名第一</a>，已投入实际客服运营。</li>
+      <li><strong>Gemini Live</strong> 现支持直接<a href="https://x.com/GeminiApp/status/2062936486509785385">创建和编辑图像</a>，适用于装修测试、数学辅导等场景。</li>
+      <li>Anthropic 公布<a href="https://www.anthropic.com/institute/recursive-self-improvement">递归自我改进研究进展</a>，并详述<a href="https://www.anthropic.com/engineering/how-we-contain-claude">跨产品约束 Claude 的方法</a>。</li>
+      </ul>
+      <h3>二、太空与前沿科学</h3>
+      <ul>
+      <li><strong>SpaceX 用猎鹰 9 号部署 29 颗 Starlink 卫星，<a href="https://x.com/elonmusk/status/2062796377055187258">在轨总数超过 10,000 颗</a></strong>。</li>
+      <li>国际空间站宇航员<a href="https://www.bbc.com/news/live/c4g44ew3g1kt">因空气泄漏修复工作被要求进入庇护所</a>。</li>
+      <li>《量子杂志》探讨<a href="https://www.quantamagazine.org/entanglement-builds-space-time-now-magic-gives-it-gravity-20260603/">量子纠缠如何构建时空</a>，以及“魔法”赋予引力的可能性。</li>
+      </ul>
+      <h3>三、美国政治与司法争议</h3>
+      <ul>
+      <li>参议员 Mike Lee 准备<a href="https://x.com/elonmusk/status/2062743338260828388">提交众议院版本的 SAVE America 法案</a>，预计获至少 51 票；马斯克转发称相关内容<a href="https://x.com/elonmusk/status/2062948705972486385">皆为常识</a>。</li>
+      <li>马斯克援引爆料指控<a href="https://x.com/elonmusk/status/2062752172450681051">南方贫困法律中心（SPLC）为犯罪组织并涉及资助 3K 党</a>，讽刺其应改名为<a href="https://x.com/elonmusk/status/2062947259411468561">“南方假旗中心”</a>，称美国司法部已宣布相关指控。</li>
+      <li>Henry Nowak 之死引发政治声讨，<a href="https://x.com/elonmusk/status/2062946854052999240">JD Vance 将其归咎于欧洲精英阶层的“自我憎恨政治”与大规模移民</a>。</li>
+      </ul>
+      <h3>四、科技公司与基础设施</h3>
+      <ul>
+      <li><strong>特斯拉 AI 团队</strong>在 CVPR 设置展台，提供<a href="https://x.com/elonmusk/status/2062905827724316757">神经视频生成、与 Optimus 机器人自拍、真实 FSD 试驾</a>。</li>
+      <li><strong>微软</strong> 发布其<a href="https://www.boxofcables.dev/azure-linux-4-0-is-microsofts-first-general-purpose-linux/">首个通用 Linux 发行版 Azure Linux 4.0</a>，并<a href="https://www.v2ex.com/t/1218270#reply6">将 75+ Linux 命令（coreutils）原生引入 Windows</a>，用户可通过 <code>winget install Microsoft.Coreutils</code> 安装。</li>
+      <li><strong>Redis 8.8</strong> 发布，新增<a href="https://redis.io/blog/announcing-redis-8-8/">数组数据结构与速率限制器等</a>。</li>
+      <li><strong>Adyen</strong> 被选为<a href="https://www.adyen.com/press-and-media/adyen-payments-gov-uk">英国政府 GOV.UK Pay 支付服务商</a>，取代 Stripe。</li>
+      <li><strong>荷兰政府规定 DigiD 平台只能由欧洲公司运营</strong>。</li>
+      <li><strong>VoidZero 加入 Cloudflare</strong>，强化工具链生态。</li>
+      </ul>
+      <h3>五、AI 代理、社区与产业生态</h3>
+      <ul>
+      <li>GitHub 趋势项目涌现：<a href="https://github.com/666ghj/MiroFish">MiroFish</a>（64,592 星）、<a href="https://github.com/CopilotKit/CopilotKit">CopilotKit</a>（32,515 星）、<a href="https://github.com/MemPalace/mempalace">MemPalace</a>（53,765 星）、<a href="https://github.com/NVIDIA/cosmos">NVIDIA/cosmos</a>（9,342 星）、<a href="https://github.com/Panniantong/Agent-Reach">Agent-Reach</a>（21,443 星）。</li>
+      <li><strong>美团 LongCat</strong> 系列密集开源：发布原生多模态模型 <strong>LongCat‑Next</strong><a href="https://tech.meituan.com/2026/04/02/LongCat-Next.html">（DiNA 离散原生自回归架构）</a>；数学定理证明模型 <strong>LongCat‑Flash‑Prover</strong><a href="https://tech.meituan.com/2026/04/07/LongCat-Flash-Prover.html">（MiniF2F 97.1%）</a>；具身动作表征评测基准 <strong>LARYBench</strong><a href="https://tech.meituan.com/2026/04/27/LongCat-LARYBench.html">（覆盖 100 万段视频）</a>；零样本语音克隆模型 <strong>LongCat‑AudioDiT</strong><a href="https://tech.meituan.com/2026/04/20/LongCat-AudioDiT.html">（SIM 达 SOTA）</a> 等。</li>
+      <li><strong>Google Gemma 4 QAT 模型</strong> 发布，<a href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/">优化移动端与笔记本上的压缩效率</a>。</li>
+      <li><strong>OpenAI 账户误封事件</strong>：因技术问题<a href="https://x.com/OpenAI/status/2062927046448431587">部分用户账户被错误暂停</a>，社区广泛讨论可能由新 AI 过滤算法或 DNS 泄露引起，部分用户申诉后已解封。</li>
+      </ul>
+      <h3>六、监管、网络与安全</h3>
+      <ul>
+      <li><strong>杭州移动 IPv6 境外 TCP 被阻断</strong>（含 443 端口），<a href="https://www.v2ex.com/t/1218310#reply7">疑似敏感时期管制措施</a>；上海联通家庭宽带亦出现<a href="https://www.v2ex.com/t/1217997#reply6"> Clash 节点 WiFi 下全部超时</a>。</li>
+      <li><strong>Anthropic 开源 AI 漏洞发现框架</strong>；一项实验<a href="https://kasra.blog/blog/i-spent-1500-seeing-if-llms-could-hack-my-app/">花费 1,500 美元测试 LLM 的定制应用黑客能力，结果大模型尚不能完全成功</a>。</li>
+      <li><strong>OpenAI 发布《智能时代的生物防御》行动计划</strong>，旨在构建 AI 驱动的生物韧性。</li>
+      </ul>
+      <h3>七、能源、航空与社会信号</h3>
+      <ul>
+      <li><strong>2026 年 4 月，风能与太阳能全球发电量首次超越天然气</strong>。</li>
+      <li><strong>法兰克福机场汉莎波音 787 前起落架倒塌</strong>，致多人受伤。</li>
+      <li><strong>印度出现意外的“婴儿潮退潮”</strong>，被视为对全球的警告。</li>
+      <li><strong>玛嘉·莎塔琵（《我在伊朗长大》作者）逝世</strong>，享年 56 岁。</li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ol>
+      <li><strong>AI 代理正从“对话”走向“执行”，开发工具进入深度整合期</strong></li>
+      <p>Grok Build 全项目读写、worktrees 支持并行代理、Cursor Design Mode、ChatGPT Sites 与 Codex CLI 的竞争，表明 AI 正从辅助变成可自主操作代码、生成应用甚至部署的“同事”。<a href="https://tech.meituan.com/2026/05/07/Agent-AI-Coding.html">美团 AI Coding 重构实践</a> 提出“人机对齐”的 Agent 评测思维，而社区讨论中 <a href="https://www.v2ex.com/t/1218272#reply0">AI Coding 门槛未降、上下丢失是核心瓶颈</a> 提示，下一个关键壁垒可能是如何构建和维持 AI 可理解的“harness”（规则与技能）。</p>
+      </ol>
+      <ol>
+      <li><strong>多模态与原生统一架构成为竞争高地</strong></li>
+      <p>LongCat‑Next 的 DiNA 原生自回归架构将视觉、语音、文本统一为离散 Token，Gemini Live 实时图像编辑，Grok Voice 夺得语音基准第一，显示头部玩家正把理解与生成整合到同一模型，追求“看、听、说、创”一体化。同时，<a href="https://github.com/NVIDIA/cosmos">NVIDIA Cosmos 世界模型平台</a> 和 <a href="https://tech.meituan.com/2026/04/27/LongCat-LARYBench.html">美团 LARYBench</a> 从具身智能侧加速物理 AI。</p>
+      </ol>
+      <ol>
+      <li><strong>算力限制倒逼效率革命，中国 AI 出现独特路径</strong></li>
+      <p>据<a href="http://www.ruanyifeng.com/blog/2026/06/weekly-issue-399.html">美国分析师访问团报告</a>，中国因芯片禁令算力仅为美国八分之一，这迫使企业将计算效率提升 4‑7 倍，“敬畏字节跳动 Seed 部门、尊重 DeepSeek”。万亿参数模型是否开源尚存分歧，但年轻博士担任实习生并被赋予充分权限的模式值得关注。</p>
+      </ol>
+      <ol>
+      <li><strong>AI 社会焦虑从技术圈扩散到公众</strong></li>
+      <p><a href="https://www.v2ex.com/t/1218274#reply3">社区认为 AI 导致创意讨论转向私下，社区深度交流减少</a>；开发者表示“<a href="https://www.v2ex.com/t/1217991#reply2">10 人的活 3 人干，工期极度压缩，离了 AI 寸步难行</a>”；<a href="https://x.com/elonmusk/status/2062897498981548186">大学教育被指责为 30 万美元的技能 LLM 可免费完成</a>。同时，新词 “<a href="https://www.v2ex.com/t/1217993#reply0">科技奴隶社会”“金融难民”</a> 的出现，反映出深层的不安。</p>
+      </ol>
+      <ol>
+      <li><strong>网络治理与内容审核的边界持续较量</strong></li>
+      <p>X 平台 <a href="https://x.com/elonmusk/status/2062905215125233995">Community Notes 机制向曾与误导帖互动的用户发送纠正说明</a>，强调开源与透明。而 OpenAI 的账户误封、杭州移动的境外流量阻断则提示，AI 过滤与网络管制在安全与误伤之间仍需更精细的平衡。</p>
+      </ol>
+      <ol>
+      <li><strong>开源生态与基础设施革新加速</strong></li>
+      <p>Elixir v1.20 引入渐进类型系统，微软开源 pg_durable 实现数据库内持久执行，华为开源 KVarN 为 vLLM 提供 KV 缓存量化后端，加之 Azure Linux 4.0 与 Windows coreutils，技术栈的底层重构正为 AI 应用铺路。</p>
+      </ol>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>OpenAI 账户恢复进展及新过滤算法的稳定性</strong>，以及是否会引发进一步的误封事件。</li>
+      <li><strong>杭州、上海等地网络限制措施的变化</strong>，尤其在敏感时点后的演变。</li>
+      <li><strong>SAVE America 法案的参议院表决结果</strong>及对选举流程的实际影响。</li>
+      <li><strong>Cloudflare 收购 VoidZero</strong> 后对 JavaScript 工具链的整合效应。</li>
+      <li><strong>特斯拉 AI 和 Optimus 机器人在 CVPR 后的下一步公开演示</strong>。</li>
+      <li><strong>美团 LongCat 系列模型的后续迭代</strong>（特别是多模态和具身智能方向）及其商业落地。</li>
+      <li><strong>中国互联网券商（富途、老虎、长桥）6 月 12 日起对内地账户的限制</strong>及替代方案。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <p>*按来源类型与字母顺序列出，所有条目均来自当日或昨日补遗中的相关链接。*</p>
+      <p><strong>Elon Musk / X</strong></p>
+      <ul>
+      <li><a href="https://x.com/elonmusk/status/2062796377055187258">29 more Starlink satellites. Over 10,000 in orbit now.</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062795562265550876">Grok Build updates</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062795019551957383">Grok model improvement</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062796095764234421">Grok supports worktrees</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062946750915072154">RT Jon Shulkin: Grok Build now operates within your project files...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062957433291460632">RT Michael Truell: Working with agents should feel like working with a colleague...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062743338260828388">RT Mike Lee: I’m about to offer the House-passed version of the SAVE America Act...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062948705972486385">These are all common sense!</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062752172450681051">Yes, SPLC is a criminal organization</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062947259411468561">They should change their name to the Southern False Flag Center!</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062948898319040749">🤔 Can’t think of a single time this happened</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062946854052999240">RT JD Vance: Henry Nowak died the same way a civilization dies...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062905827724316757">RT Tesla AI: Come visit our CVPR booth...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062897498981548186">RT Peter H. Diamandis...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062905215125233995">Users who interact with a misleading post...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062953758313644460">Yes</a></li>
+      <li><a href="https://x.com/elonmusk/status/2062362681038999875">Try Grok Voice</a> *(昨日补遗)*</li>
+      <li>…（其余 Elon Musk 来源从略，全部已覆盖）</li>
+      </ul>
+      <p><strong>Google Gemini</strong></p>
+      <ul>
+      <li><a href="https://x.com/GeminiApp/status/2062936486509785385">You can now create and edit images directly in Gemini Live...</a></li>
+      <li><a href="https://x.com/GeminiApp/status/2062652523945836770">Get tailored help for what&#x27;s on your screen using the Gemini app for macOS.</a> *(昨日补遗)*</li>
+      </ul>
+      <p><strong>OpenAI / Sam Altman</strong></p>
+      <ul>
+      <li><a href="https://x.com/OpenAI/status/2062927046448431587">An issue caused some user accounts to be incorrectly suspended...</a></li>
+      <li><a href="https://openai.com/index/chatgpt-memory-dreaming">Dreaming: Better memory for a more helpful ChatGPT</a> *(昨日补遗)*</li>
+      <li><a href="https://x.com/sama/status/2062660086787613116">big upgrade to chatgpt memory rolling out today!</a> *(昨日补遗)*</li>
+      <li><a href="https://x.com/sama/status/2062661071761211561">build and publish web apps with chatgpt!</a> *(昨日补遗)*</li>
+      <li><a href="https://openai.com/index/biodefense-in-the-intelligence-age">Biodefense in the Intelligence Age</a> *(昨日补遗)*</li>
+      <li><a href="https://openai.com/index/endava-frontiers">How Endava is redesigning software delivery around AI agents</a> *(昨日补遗)*</li>
+      </ul>
+      <p><strong>GitHub Trending</strong></p>
+      <ul>
+      <li><a href="https://github.com/666ghj/MiroFish">666ghj/MiroFish</a></li>
+      <li><a href="https://github.com/CopilotKit/CopilotKit">CopilotKit/CopilotKit</a></li>
+      <li><a href="https://github.com/MemPalace/mempalace">MemPalace/mempalace</a></li>
+      <li><a href="https://github.com/NVIDIA/cosmos">NVIDIA/cosmos</a></li>
+      <li><a href="https://github.com/Panniantong/Agent-Reach">Panniantong/Agent-Reach</a></li>
+      <li><a href="https://github.com/github/spec-kit">github/spec-kit</a> *(昨日补遗)*</li>
+      <li><a href="https://github.com/PaddlePaddle/PaddleOCR">PaddlePaddle/PaddleOCR</a> *(昨日补遗)*</li>
+      <li>…（其余 trending 项目从略，已覆盖全部来源）</li>
+      </ul>
+      <p><strong>Hacker News</strong></p>
+      <ul>
+      <li><a href="https://www.boxofcables.dev/azure-linux-4-0-is-microsofts-first-general-purpose-linux/">Azure Linux 4.0...</a></li>
+      <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/">Gemma 4 QAT models...</a></li>
+      <li><a href="https://redis.io/blog/announcing-redis-8-8/">Redis 8.8...</a></li>
+      <li><a href="https://github.com/microsoft/pg_durable">pg_durable: Microsoft open sources in-database durable execution</a></li>
+      <li><a href="https://github.com/anthropics/defending-code-reference-harness">Anthropic&#x27;s open-source framework for AI-powered vulnerability discovery</a></li>
+      <li><a href="https://nltimes.nl/2026/06/05/dutch-govt-will-allow-european-company-operate-digid-platform">Dutch gov&#x27;t will only allow European company to operate DigiD platform</a></li>
+      <li><a href="https://www.adyen.com/press-and-media/adyen-payments-gov-uk">Adyen Selected as Payment Services Provider for GOV.UK Pay</a></li>
+      <li><a href="https://www.bbc.com/news/live/c4g44ew3g1kt">Astronauts on ISS told to shelter...</a></li>
+      <li><a href="https://www.quantamagazine.org/entanglement-builds-space-time-now-magic-gives-it-gravity-20260603/">Entanglement Builds Space-Time...</a></li>
+      <li><a href="https://www.economist.com/leaders/2026/06/04/indias-surprise-baby-bust-is-a-warning-to-the-world">India&#x27;s surprise baby bust</a></li>
+      <li><a href="https://www.404media.co/the-u-s-military-quietly-turned-gps-into-a-global-numbers-station-evidence-suggests/">U.S. Military Turned GPS into a Global &quot;Numbers Station&quot;</a></li>
+      <li><a href="https://arxiv.org/abs/2606.03673">Tracing a powerful GNSS interference source over Europe</a></li>
+      <li><a href="https://www.rochester.edu/newscenter/what-is-desalination-definition-ocean-water-704732/">New method turns ocean water into drinking water, without waste</a></li>
+      <li><a href="https://sumnerevans.com/posts/software-engineering/stop-using-conventional-commits/">Stop Using Conventional Commits</a></li>
+      <li><a href="https://blog.cloudflare.com/voidzero-joins-cloudflare/">VoidZero Is Joining Cloudflare</a> *(昨日补遗)*</li>
+      <li><a href="https://github.com/huawei-csl/KVarN">KVarN: Native vLLM backend...</a> *(昨日补遗)*</li>
+      <li><a href="https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/">Artificial intelligence is not conscious – Ted Chiang</a> *(昨日补遗)*</li>
+      <li>…（其余 HN 条目从略，全部已覆盖）</li>
+      </ul>
+      <p><strong>V2EX</strong></p>
+      <ul>
+      <li>涵盖窗口、科技、开发工具、职场、投资等百余帖，代表性者如：</li>
+      <p>[[Windows] winget install Microsoft.Coreutils](https://www.v2ex.com/t/1218270#reply6) [[Ai Coding 门槛讨论]](https://www.v2ex.com/t/1218272#reply0) [[OpenAI 封号讨论合集]](https://www.v2ex.com/t/1218285#reply0) [[杭州移动境外 IPv6 阻断]](https://www.v2ex.com/t/1218310#reply7) [[中国 AI 大厂访问记]](http://www.ruanyifeng.com/blog/2026/06/weekly-issue-399.html) [[富途老虎长桥限制]](https://www.v2ex.com/t/1217989#reply18) *(昨日补遗)* …（全部 V2EX 来源已覆盖）</p>
+      </ul>
+      <p><strong>美团技术</strong></p>
+      <ul>
+      <li><a href="https://tech.meituan.com/2026/04/27/LongCat-LARYBench.html">LARYBench 发布...</a></li>
+      <li><a href="https://tech.meituan.com/2026/04/07/LongCat-Flash-Prover.html">LongCat-Flash-Prover...</a></li>
+      <li><a href="https://tech.meituan.com/2026/03/09/LongCat-OpenClaw.html">LongCat 为 OpenClaw...</a></li>
+      <li><a href="https://tech.meituan.com/2026/05/25/LongCat-Video-Avatar-1.5.html">LongCat-Video-Avatar 1.5...</a></li>
+      <li><a href="https://tech.meituan.com/2026/05/07/Agent-AI-Coding.html">AI Coding 重构实践...</a></li>
+      <li><a href="https://tech.meituan.com/2026/04/20/LongCat-AudioDiT.html">LongCat-AudioDiT 开源...</a></li>
+      <li><a href="https://tech.meituan.com/2026/03/20/Busniness-Intelligence-practice-in-meituan.html">美团 BI 在指标平台...</a></li>
+      <li><a href="https://tech.meituan.com/2026/05/15/LongCat-General-365.html">General 365 推理评测基准...</a></li>
+      <li><a href="https://tech.meituan.com/2026/04/02/LongCat-Next.html">LongCat-Next 原生多模态...</a></li>
+      <li><a href="https://tech.meituan.com/2026/03/13/Qwik-practice-in-dianping.html">大众点评 M 站 Qwik.js 重构...</a></li>
+      </ul>
+      <p><strong>其他精选</strong></p>
+      <ul>
+      <li><a href="https://elixir-lang.org/blog/2026/06/03/elixir-v1-20-0-released/">Elixir v1.20 发布</a> *(昨日补遗)*</li>
+      <li><a href="https://simonwillison.net/2026/Jun/3/uber-caps-usage/">Uber’s $1,500/month AI limit...</a> *(昨日补遗)*</li>
+      <li><a href="https://www.reuters.com/business/aerospace-defense/lufthansa-787-jet-suffers-front-wheel-collapse-frankfurt-gate-2026-06-04/">Several injured in Boeing 787 nose-gear collapse in Frankfurt</a> *(昨日补遗)*</li>
+      <li><a href="https://electrek.co/2026/05/20/in-a-first-wind-solar-generated-more-power-than-gas-globally-april-2026/">In a first, wind and solar generated more power than gas...</a> *(昨日补遗)*</li>
+      <li><a href="https://www.france24.com/en/culture/20260604-french-iranian-author-marjane-satrapi-author-of-persepolis-dies-at-56">French-Iranian author Marjane Satrapi... dies at 56</a> *(昨日补遗)*</li>
+      <li><a href="https://apnews.com/article/notre-dame-dig-treasures-paris-archaeology-roman-dae41f792c1402faf32a87c154cc9a77">Under Notre Dame, a &#x27;dig of the century&#x27;...</a> *(昨日补遗)*</li>
+      <li>…（其余来源如 v2ex 推广、工具发布等均已覆盖）</li>
+      </ul>
+      <p>*（来源索引严格对应所提供的全部材料，受篇幅限制仅代表性列出，完整列表见原始输入。）*</p>
+    </article>
+  </main>
+</body>
+</html>
