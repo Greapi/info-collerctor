@@ -8,10 +8,12 @@ import datetime as dt
 import email.utils
 import hashlib
 import html
+import http.client
 import re
 import sqlite3
 import sys
 import textwrap
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -157,10 +159,21 @@ def read_feeds(path: Path) -> list[Feed]:
     return feeds
 
 
-def fetch_url(url: str, timeout: int) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return response.read()
+def fetch_url(url: str, timeout: int, retries: int = 3) -> bytes:
+    last_exc: Exception | None = None
+    for attempt in range(1, retries + 1):
+        try:
+            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return response.read()
+        except (urllib.error.URLError, TimeoutError, http.client.IncompleteRead,
+                http.client.HTTPException, ConnectionError) as exc:
+            last_exc = exc
+            if attempt < retries:
+                wait = 2 ** attempt
+                print(f"  fetch retry {attempt}/{retries} in {wait}s: {exc}", file=sys.stderr)
+                time.sleep(wait)
+    raise last_exc  # type: ignore[misc]
 
 
 def parse_feed(feed: Feed, payload: bytes) -> list[Entry]:
@@ -311,7 +324,8 @@ def collect(config: Path, output: Path, db_path: Path, timeout: int, limit: int 
             print(f"Fetching {feed.name}: {feed.url}")
             try:
                 entries = parse_feed(feed, fetch_url(feed.url, timeout=timeout))
-            except (ET.ParseError, ValueError, urllib.error.URLError, TimeoutError) as exc:
+            except (ET.ParseError, ValueError, urllib.error.URLError, TimeoutError,
+                    http.client.IncompleteRead, http.client.HTTPException, ConnectionError) as exc:
                 print(f"  failed: {exc}", file=sys.stderr)
                 continue
 
