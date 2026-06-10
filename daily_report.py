@@ -5,11 +5,13 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import http.client
 import json
 import os
 import re
 import sys
 import textwrap
+import time
 import urllib.error
 import urllib.request
 from dataclasses import dataclass
@@ -207,7 +209,9 @@ def build_batches(articles: list[Article]) -> list[list[Article]]:
     return batches
 
 
-def chat_completion(config: OpenAIConfig, messages: list[dict[str, str]], timeout: int) -> str:
+def chat_completion(config: OpenAIConfig, messages: list[dict[str, str]], timeout: int, retries: int | None = None) -> str:
+    if retries is None:
+        retries = 3
     payload = json.dumps(
         {
             "model": config.model,
@@ -225,19 +229,31 @@ def chat_completion(config: OpenAIConfig, messages: list[dict[str, str]], timeou
         },
         method="POST",
     )
-    try:
-        with urllib.request.urlopen(request, timeout=timeout) as response:
-            data = json.loads(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        body = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Model request failed with HTTP {exc.code}: {body}") from exc
-    except urllib.error.URLError as exc:
-        raise RuntimeError(f"Model request failed: {exc}") from exc
+    last_exc: Exception | None = None
+    for attempt in range(1, retries + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                data = json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            body = exc.read().decode("utf-8", errors="replace")
+            raise RuntimeError(f"Model request failed with HTTP {exc.code}: {body}") from exc
+        except urllib.error.URLError:
+            raise
+        except (http.client.IncompleteRead, http.client.HTTPException, TimeoutError, ConnectionError) as exc:
+            last_exc = exc
+            if attempt < retries:
+                wait = 2 ** attempt
+                print(f"  chat retry {attempt}/{retries} in {wait}s: {exc}", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            raise RuntimeError(f"Model request failed after {retries} retries: {exc}") from exc
 
-    try:
-        return data["choices"][0]["message"]["content"].strip()
-    except (KeyError, IndexError, TypeError) as exc:
-        raise RuntimeError(f"Unexpected model response: {data}") from exc
+        try:
+            return data["choices"][0]["message"]["content"].strip()
+        except (KeyError, IndexError, TypeError) as exc:
+            raise RuntimeError(f"Unexpected model response: {data}") from exc
+
+    raise last_exc  # type: ignore[misc]
 
 
 def summarize_batch(config: OpenAIConfig, report_date: str, batch: list[Article], timeout: int) -> str:
