@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-18 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-06-18 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>本日技术社区围绕 AI 模型落地、开发者工具革新与基础设施投资展开。OpenAI 发布罕见病诊断研究，Noam Shazeer 正式加入；xAI 推出 Grok Imagine Video 1.5 并将 Grok 接入 Databricks；Meta 与 TerraPower 签订大规模先进核电站协议。工具侧，Meows 等个人效率工具涌现，GitHub 热门项目覆盖时间序列预测、代理式工程平台及音视频生成。Hacker News 热议微软新版 Outlook 性能退化、GitHub 恶意软件仓库事件及 DeepSeek 视觉功能。招聘市场出现 AI 技能要求强化与部分企业降薪停薪的分化。</p>
+      <h2>重点事件</h2>
+      <ul>
+      <li><strong>OpenAI 推理模型协助诊断儿童罕见病</strong></li>
+      <p>基于扩展测试时计算的推理模型已帮助识别 18 例此前未确诊的罕见遗传病，Sam Altman 转评强调该技术在医疗领域的价值。 <a href="https://openai.com/index/diagnose-rare-childhood-diseases">OpenAI 研究</a> · <a href="https://x.com/sama/status/2067654924884754926">Sam Altman 转发</a></p>
+      </ul>
+      <ul>
+      <li><strong>Noam Shazeer 加入 OpenAI</strong></li>
+      <p>Sam Altman 称期待已久，并幽默表示“不对 Noam 们为何擅长 AI 提供解释”。 <a href="https://x.com/sama/status/2067427421083652131">Sam Altman 帖子</a> · <a href="https://x.com/sama/status/2067427678529974740">欢迎词</a></p>
+      </ul>
+      <ul>
+      <li><strong>xAI 密集更新</strong></li>
+      <li><a href="https://x.com/elonmusk/status/2067502258816733258">Grok Imagine Video 1.5</a> 发布，提升真实感与物理效果。</li>
+      <li><a href="https://x.com/elonmusk/status/2067438023894253721">Grok Build v0.2.55</a> 新增全禁用 hunk tracker，修复多项缺陷。</li>
+      <li><a href="https://x.com/elonmusk/status/2067646181379854418">Grok 上线 Databricks Agent Bricks</a>，将 xAI 模型带入企业数据环境。</li>
+      </ul>
+      <ul>
+      <li><strong>Meta 与 TerraPower 核电协议</strong></li>
+      <p>TerraPower 将为 Meta 建造 8 座 345 MW Natrium 先进核电站，瑞士同一日 <a href="https://www.bluewin.ch/en/news/switzerland/parliament-lifts-ban-on-new-nuclear-power-plants-3257535.html">解除新建核电站禁令</a>。 <a href="https://neutronbytes.com/2026/01/09/terrapower-in-mega-deal-with-meta-for-eight-natrium-345-mw-advanced-nuclear-plants/">报道详情</a></p>
+      </ul>
+      <ul>
+      <li><strong>微软新版 Outlook 性能遭集中批评</strong></li>
+      <p>经典版即时完成的操作在新版中需约 10 秒，引发用户对性能退化的不满。 <a href="https://news.ycombinator.com/item?id=48584207">Hacker News 讨论</a> · <a href="https://www.windowslatest.com/2026/06/15/microsofts-new-outlook-takes-10-seconds-to-do-what-outlook-classic-does-instantly-on-windows/">WindowsLatest 报道</a></p>
+      </ul>
+      <ul>
+      <li><strong>GitHub 上发现万余仓库传播木马</strong></li>
+      <p>安全研究者报告 10k+ 仓库分发恶意软件，引发供应链安全关注。 <a href="https://news.ycombinator.com/item?id=48583928">Hacker News 讨论</a> · <a href="https://orchidfiles.com/github-repositories-distributing-malware/">详细报告</a></p>
+      </ul>
+      <ul>
+      <li><strong>个人开发者工具涌现</strong></li>
+      <li><a href="https://sspai.com/post/111054">Meows</a>：原生 Android SSH 服务器监控 App，买断 $4.99，利用 Android Keystore 硬件加密。</li>
+      <li><a href="https://www.v2ex.com/t/1221446">NovaScale</a>：内置 Tailscale 的 iOS 应用，新增 Remote Codex 远程编程，618 折扣至 128 元。</li>
+      <li><a href="https://www.v2ex.com/t/1221449">yuanbao-acp</a>：一行命令将 Claude Code 等 11 种 AI 智能体桥接到腾讯元宝，MIT 协议开源。</li>
+      <li><a href="https://www.v2ex.com/t/1221403">Office Open</a>：纯 TypeScript docx/pptx/xlsx 库，生成性能优于同类。</li>
+      <li><a href="https://sspai.com/post/111182">Kitestring</a>：通过 symlink 在多 AI 编程工具间同步 Skills。</li>
+      <li><a href="https://sspai.com/post/111128">UniGetUI</a>：Windows 包管理器图形界面，整合 WinGet、Scoop 等。</li>
+      </ul>
+      <ul>
+      <li><strong>Craigslist 创始人捐赠 5 亿美元</strong></li>
+      <p>Craig Newmark 累计捐款已达 5 亿美元。 <a href="https://www.independent.co.uk/us/money/craigslist-multimillionaire-craig-newmark-b2980681.html">Independent 报道</a></p>
+      </ul>
+      <ul>
+      <li><strong>Gemini 演示与加州生育率、X 新闻排名</strong></li>
+      <p>Google Gemini 团队将演示 <a href="https://x.com/GeminiApp/status/2067323529318809751">Gemini Live</a> 连续对话与中途接入工具；Elon Musk 转发 <a href="https://x.com/elonmusk/status/2067456232076509562">加州生育率降至 1.48</a> 及 <a href="https://x.com/elonmusk/status/2067501678903832812">X 成为英国第一大新闻应用</a>。</p>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>AI 向高价值领域延伸</strong></li>
+      <p>OpenAI 在罕见病诊断上的突破、基于 GPT-5.4 的 <a href="https://openai.com/index/ai-chemist-improves-reaction">近自主 AI 化学家研究</a> 以及 <a href="https://openai.com/index/introducing-life-sci-bench">LifeSciBench</a> 基准的发布，显示 AI 正系统性地进入生命科学与药物研发。</p>
+      </ul>
+      <ul>
+      <li><strong>AI 代理与编码工具深度嵌入工作流</strong></li>
+      <p>Jensen Huang 称 Nvidia 工程师 <a href="https://x.com/elonmusk/status/2067487439426302400">100% 使用 AI 编码助手</a>；Cursor 支持 <a href="https://x.com/elonmusk/status/2067436677019422914">将本地代理迁移至云端</a>，实现合上笔记本后持续工作。同时，社区出现 <a href="https://www.v2ex.com/t/1221436">担忧过度依赖 AI 导致技能退化</a> 的声音，牛客网举办 <a href="https://www.v2ex.com/t/1221406">Vibe Coding 大赛</a>，表明 AI Coding 正在从工具上升为正式技能评价标准。</p>
+      </ul>
+      <ul>
+      <li><strong>核能投资重启</strong></li>
+      <p>瑞士解除核电禁令，叠加科技巨头直接采购先进核电（Meta-TerraPower 协议），显示企业正绕过传统电网，锁定清洁稳定能源。</p>
+      </ul>
+      <ul>
+      <li><strong>移动端运维与集成工具成熟</strong></li>
+      <p>从 Meows 的无线 SSH 监控到 NovaScale 的 Tailscale 联远程 Codex，再到 xxMac 等 Vibe Coding 产物，表明移动设备正成为开发者操作服务器与 AI 终端的入口。</p>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li>OpenAI 的 LifeSciBench 后续评测结果及对 AI for Science 的影响。</li>
+      <li>Grok Imagine Video 1.5 实际能力反馈与 Grok Build 后续更新。</li>
+      <li>GitHub 恶意软件仓库事件的调查进展与平台应对措施。</li>
+      <li>苹果 iOS 27 Beta 锁屏键盘 Bug 是否在下一版本修复。</li>
+      <li>国内外 AI 编程招聘市场分化：部分公司 <a href="https://www.v2ex.com/t/1221429">拖欠工资数月</a>，而 <a href="https://www.v2ex.com/t/1221423">Atlas Cloud</a>、<a href="https://www.v2ex.com/t/1221428">SHEIN</a> 等仍在强化 AI 相关招聘。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li><a href="https://sspai.com/post/111054">Meows 介绍</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067426896414208365">Elon Musk 关于报告冰山的帖子</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067431278006391066">Elon Musk “理应如此”</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067427013527580863">Elon Musk 推荐《Suicidal Empathy》</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067646181379854418">Grok on Databricks</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067422433251078480">Elon Musk 转 WSJ 评论</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067424406247485777">Elon Musk “无人能救你”</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067456232076509562">Elon Musk 转发加州生育率</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067501678903832812">Elon Musk 转发 X 成英国新闻第一应用</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067432573836652699">Elon Musk 其他帖子</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067668467512123663">Elon Musk 转发晚期罗马</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067488391533371732">Elon Musk 转发 Grok Imagine 1.5</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067438979667140620">Elon Musk 无标题帖子</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067426268984009187">Elon Musk “与西方价值观不可调和”</a></li>
+      <li><a href="https://github.com/DeusData/codebase-memory-mcp">codebase-memory-mcp</a></li>
+      <li><a href="https://github.com/dotnet/aspnetcore">aspnetcore</a></li>
+      <li><a href="https://github.com/google-research/timesfm">timesfm</a></li>
+      <li><a href="https://github.com/Kilo-Org/kilocode">kilocode</a></li>
+      <li><a href="https://github.com/Kong/insomnia">insomnia</a></li>
+      <li><a href="https://github.com/LibreTranslate/LibreTranslate">LibreTranslate</a></li>
+      <li><a href="https://github.com/Lightricks/LTX-2">LTX-2</a></li>
+      <li><a href="https://github.com/makeplane/plane">plane</a></li>
+      <li><a href="https://github.com/owainlewis/awesome-artificial-intelligence">awesome-artificial-intelligence</a></li>
+      <li><a href="https://github.com/withastro/flue">flue</a></li>
+      <li><a href="https://github.com/zai-org/GLM-5">GLM-5</a></li>
+      <li><a href="https://x.com/GeminiApp/status/2067654431953547590">Gemini 3.5 Flash 构建时差策略</a></li>
+      <li><a href="https://www.submission.directory/">Submission.directory</a></li>
+      <li><a href="https://www.cs.cornell.edu/courses/cs6120/2025fa/self-guided/">自导式高级编译器课程</a></li>
+      <li><a href="https://chat.deepseek.com/">DeepSeek 视觉功能</a></li>
+      <li><a href="https://www.rahuljuliato.com/posts/emacs-31-around-the-corner">Emacs 31 变化</a></li>
+      <li><a href="https://xvw.lol/en/articles/emacs-start.html">Emacs 之旅</a></li>
+      <li><a href="https://nelson.cloud/.gitignore-isnt-the-only-way-to-ignore-files-in-git/">Git 忽略文件另类方法</a></li>
+      <li><a href="https://blog.elenarossini.com/w-social-public-institutions-and-the-theater-of-european-digital-sovereignty/">W Social 闭源？</a></li>
+      <li><a href="https://www.kcl.ac.uk/news/hospitals-and-universities-repurposing-drugs-at-90-lower-cost">药物再利用成本降低 90%</a></li>
+      <li><a href="https://worksinprogress.co/issue/albertas-war-on-rats/">阿尔伯塔省如何根除老鼠</a></li>
+      <li><a href="https://orchidfiles.com/github-repositories-distributing-malware/">1 万 GitHub 仓库分发木马</a></li>
+      <li><a href="https://tester.army/">TesterArmy (YC P26)</a></li>
+      <li><a href="https://blog.alexellis.io/local-ai-is-not-opus/">本地 Qwen 不是更差的 Opus</a></li>
+      <li><a href="https://www.windowslatest.com/2026/06/15/microsofts-new-outlook-takes-10-seconds-to-do-what-outlook-classic-does-instantly-on-windows/">微软新版 Outlook 需 10 秒</a></li>
+      <li><a href="https://www.midjourney.com/medical/blogpost">Midjourney 医疗</a></li>
+      <li><a href="https://hermes-agent.nousresearch.com/docs/guides/migrate-from-openclaw">从 OpenClaw 迁移</a></li>
+      <li><a href="https://rednafi.com/misc/chezmoi/">从 GNU Stow 迁移至 Chezmoi</a></li>
+      <li><a href="https://spectrum.ieee.org/modos-e-paper-monitor">Modos 彩色电子纸显示器</a></li>
+      <li><a href="https://collabfund.com/blog/our-achilles-heel/">投资者的阿喀琉斯之踵</a></li>
+      <li><a href="https://www.quantamagazine.org/seven-perfect-shuffles-randomize-a-deck-of-cards-but-how-many-sloppy-ones-20260617/">不完美洗牌随机化次数</a></li>
+      <li><a href="https://gerrymandle.cc/">Gerrymandle 选区谜题游戏</a></li>
+      <li><a href="https://www.bluewin.ch/en/news/switzerland/parliament-lifts-ban-on-new-nuclear-power-plants-3257535.html">瑞士议会解除核电禁令</a></li>
+      <li><a href="https://kiesow.net/tech-ceos-are-breaking-the-law/">科技 CEO 违法</a></li>
+      <li><a href="https://neutronbytes.com/2026/01/09/terrapower-in-mega-deal-with-meta-for-eight-natrium-345-mw-advanced-nuclear-plants/">TerraPower 与 Meta 核电协议</a></li>
+      <li><a href="https://www.independent.co.uk/us/money/craigslist-multimillionaire-craig-newmark-b2980681.html">Craigslist 创始人捐赠 5 亿</a></li>
+      <li><a href="https://tim.blog/2024/02/09/harajuku-moment/">Harajuku Moment</a></li>
+      <li><a href="https://mroczek.dev/articles/the-token-compression-illusion-why-im-skeptical-of-rtk/">Token 压缩幻觉</a></li>
+      <li><a href="https://blog.ui.com/article/introducing-enterprise-nas">Ubiquiti 企业 NAS</a></li>
+      <li><a href="https://aras-p.info/blog/2026/06/11/Unity-vs-floating-point/">Unity 与浮点数</a></li>
+      <li><a href="https://vinyl-cache.org/organization/on_vinyl_cache_and_varnish_cache.html#org-vinyl-varnish">Vinyl Cache 与 Varnish Cache</a></li>
+      <li><a href="https://www.elastic.co/search-labs/blog/agent-memory-elasticsearch">基于 Elasticsearch 的智能体记忆层</a></li>
+      <li><a href="https://openai.com/index/diagnose-rare-childhood-diseases">OpenAI 诊断罕见病研究</a></li>
+      <li><a href="https://x.com/sama/status/2067427421083652131">Sam Altman 欢迎 Noam Shazeer</a></li>
+      <li><a href="https://x.com/sama/status/2067654924884754926">Sam Altman 转推测试时计算</a></li>
+      <li><a href="https://x.com/sama/status/2067427678529974740">Sam Altman 调侃 Noam</a></li>
+      <li><a href="https://www.v2ex.com/t/1221456">苹果低电量提醒</a></li>
+      <li><a href="https://www.v2ex.com/t/1221413">iOS 27 Beta 锁屏 Bug</a></li>
+      <li><a href="https://www.v2ex.com/t/1221422">Claude 订阅询问</a></li>
+      <li><a href="https://www.v2ex.com/t/1221408">Codex 消耗速度</a></li>
+      <li><a href="https://www.v2ex.com/t/1221419">AutoLua 技术分享</a></li>
+      <li><a href="https://www.v2ex.com/t/1221414">Mac Mini 高温风扇不转</a></li>
+      <li><a href="https://www.v2ex.com/t/1221459">Juno 语音输入工具</a></li>
+      <li><a href="https://www.v2ex.com/t/1221436">AI 编码担忧</a></li>
+      <li><a href="https://www.v2ex.com/t/1221430">让 AI 写出可维护代码</a></li>
+      <li><a href="https://www.v2ex.com/t/1221441">行政人员 AI 培训</a></li>
+      <li><a href="https://www.v2ex.com/t/1221435">高铁管家乱扣费</a></li>
+      <li><a href="https://www.v2ex.com/t/1221437">xxMac 效率工具</a></li>
+      <li><a href="https://www.v2ex.com/t/1221462">Mac 边缘流光效果</a></li>
+      <li><a href="https://www.v2ex.com/t/1221446">NovaScale iOS App</a></li>
+      <li><a href="https://www.v2ex.com/t/1221434">导航站 Vibe Coding</a></li>
+      <li><a href="https://www.v2ex.com/t/1221449">yuanbao-acp</a></li>
+      <li><a href="https://www.v2ex.com/t/1221403">Office Open TypeScript 库</a></li>
+      <li><a href="https://www.v2ex.com/t/1221445">EvoMap 领 token</a></li>
+      <li><a href="https://www.v2ex.com/t/1221404">Vibe Coding 小游戏</a></li>
+      <li><a href="https://www.v2ex.com/t/1221406">Vibe Coding 大赛</a></li>
+      <li><a href="https://www.v2ex.com/t/1221409">独立开发用户获取</a></li>
+      <li><a href="https://www.v2ex.com/t/1221465">广东移动宽带套餐</a></li>
+      <li><a href="https://www.v2ex.com/t/1221442">北斗卫星短信</a></li>
+      <li><a href="https://www.v2ex.com/t/1221458">微信删除历史头像</a></li>
+      <li><a href="https://www.v2ex.com/t/1221452">BYBIT EU 推广</a></li>
+      <li><a href="https://www.v2ex.com/t/1221412">零度云推广</a></li>
+      <li><a href="https://www.v2ex.com/t/1221460">A6API 推广</a></li>
+      <li><a href="https://www.v2ex.com/t/1221411">深圳周边游玩</a></li>
+      <li><a href="https://www.v2ex.com/t/1221450">时间飞逝感慨</a></li>
+      <li><a href="https://www.v2ex.com/t/1221433">Win 迷你主机体验</a></li>
+      <li><a href="https://www.v2ex.com/t/1221415">GLM max 套餐慢</a></li>
+      <li><a href="https://www.v2ex.com/t/1221432">Java CompletableFuture</a></li>
+      <li><a href="https://www.v2ex.com/t/1221405">MiniMax M3</a></li>
+      <li><a href="https://www.v2ex.com/t/1221447">Go 应用部署云服务器</a></li>
+      <li><a href="https://www.v2ex.com/t/1221424">学习做小游戏</a></li>
+      <li><a href="https://www.v2ex.com/t/1221407">大模型提升效率</a></li>
+      <li><a href="https://www.v2ex.com/t/1221463">书房布置</a></li>
+      <li><a href="https://www.v2ex.com/t/1221429">拖欠工资</a></li>
+      <li><a href="https://www.v2ex.com/t/1221457">路由器推荐</a></li>
+      <li><a href="https://www.v2ex.com/t/1221423">Atlas Cloud 前端招聘</a></li>
+      <li><a href="https://www.v2ex.com/t/1221428">SHEIN 内推</a></li>
+      <li><a href="https://www.v2ex.com/t/1221443">Web3 测试招聘</a></li>
+      <li><a href="https://www.v2ex.com/t/1221416">AI 产品经理招聘</a></li>
+      <li><a href="https://www.v2ex.com/t/1221421">Epic Fab 开发者上架</a></li>
+      <li><a href="https://www.v2ex.com/t/1221455">GPT Pro 订阅转发</a></li>
+      <li><a href="https://www.v2ex.com/t/1221417">25 岁结婚讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1221461">AI 编程信息茧房</a></li>
+      <li><a href="https://www.v2ex.com/t/1221453">保险咨询</a></li>
+      <li><a href="https://www.v2ex.com/t/1221425">端午值班</a></li>
+      <li><a href="https://sspai.com/post/111128">UniGetUI 补遗</a></li>
+      <li><a href="https://sspai.com/post/111182">Kitestring 补遗</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067436677019422914">Cursor 云端代理补遗</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067487439426302400">Jensen Huang 论 Cursor 补遗</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067460143139237988">JD Vance 言论补遗</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067426405391237170">Grok Imagine 1.5 幕后补遗</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067431040940167408">Elon Musk 文化言论补遗</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067438023894253721">Grok Build 更新补遗</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067502258816733258">Grok Imagine Video 1.5 补遗</a></li>
+      <li><a href="https://x.com/GeminiApp/status/2067323529318809751">Gemini Live 预告</a></li>
+      <li><a href="https://openai.com/index/ai-chemist-improves-reaction">AI 化学家研究补遗</a></li>
+      <li><a href="https://openai.com/index/introducing-life-sci-bench">LifeSciBench 补遗</a></li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
