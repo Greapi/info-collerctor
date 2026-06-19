@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-19 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-06-19 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日重点围绕商业航天里程碑、AI 开发工具演进、科技公司重大收购与政策变化展开。SpaceX 以 $2.1万亿市值登陆纳斯达克；现代汽车完成对波士顿动力的收购；Chrome 确认移除 Manifest V2 时间表；X 平台支持中国身份认证；AI 代理开发环境 Grok Build 大幅升级。</p>
+      <h2>重点事件</h2>
+      <ul>
+      <li><strong>SpaceX 纳斯达克上市，市值达 $2.1万亿</strong>：SpaceX（$SPCX）在纳斯达克上市，融资 857亿美元，市值达 2.1万亿美元，首日交易超5亿股。穆迪授予其 Baa1 投资级信用评级，略高于 Tesla 的 Baa3。支撑估值的核心资产包括 Starship 项目、Starlink 经常性收入及美国防务合同。<a href="https://x.com/elonmusk/status/2067773901451522109">来源</a> <a href="https://x.com/elonmusk/status/2067772283003818202">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>Falcon 9 成功发射 NROL-179</strong>：6月19日，SpaceX 从加州 4E 发射台使用 Falcon 9 将 NRO 的 NROL-179 载荷送入轨道，一级火箭在 LZ-4 成功着陆。<a href="https://x.com/elonmusk/status/2067985394176508352">来源</a> <a href="https://x.com/elonmusk/status/2067988682657714271">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>现代汽车 3.25 亿美元收购波士顿动力</strong>：软银退出，现代完全控股波士顿动力，计划 2028 年前将 Atlas 人形机器人部署到汽车工厂。<a href="https://startupfortune.com/hyundai-takes-full-control-of-boston-dynamics-as-softbank-exits-for-325-million/">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>Chrome 将彻底移除 Manifest V2</strong>：2026年6月30日 Chrome 150 移除相关功能，7月 Chrome 151 彻底淘汰，uBlock Origin 等基于 MV2 的广告拦截器将无法工作。<a href="https://www.v2ex.com/t/1221573#reply1">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>Grok Build 功能显著升级</strong>：从编码 CLI 演进为完整的终端原生代理工作区，新增计划/审查/审批流程、项目感知上下文（AGENTS.md）、插件市场（MongoDB、Vercel、Sentry、Cloudflare 等首批合作）、终端内渲染层（支持 LaTeX、Mermaid、UML）、Agent Dashboard 多会话管理及 MCP 服务器恢复能力。<a href="https://x.com/elonmusk/status/2067842288747769930">来源</a></li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>商业航天进入资本市场快车道</strong>：SpaceX 以 $2.1万亿市值上市、获得投资级评级，星舰一旦实现每小时发射，入轨质量将是所有其他提供商总和的约100倍，标志着商业航天已从技术验证进入大规模资本化阶段。<a href="https://x.com/elonmusk/status/2067773901451522109">来源</a> <a href="https://x.com/elonmusk/status/2067993010743247265">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>AI 代理开发环境加速成熟</strong>：Grok Build 从单点 CLI 工具向完整开发者工作区演进，结合开源代理框架（BuilderIO/agent-native）、代码智能 MCP 服务器（DeusData/codebase-memory-mcp）等生态，AI 编程正从“助手”向“代理工作环境”跃迁。<a href="https://x.com/elonmusk/status/2067842288747769930">来源</a> <a href="https://github.com/BuilderIO/agent-native">来源</a> <a href="https://github.com/DeusData/codebase-memory-mcp">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>平台治理与合规加速收紧</strong>：Chrome 移除 MV2 影响广告拦截生态，Google Workspace 威胁屏蔽 Firefox 访问，Stripe 对“礼品卡”字眼的严格审核，均表明主流平台在安全、隐私与合规上的管控持续强化。<a href="https://www.v2ex.com/t/1221573#reply1">来源</a> <a href="https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html">来源</a> <a href="https://www.v2ex.com/t/1221571#reply0">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>Starlink 应用场景加速拓展</strong>：航空合作伙伴从2022年2家增至2026年Q2的41家（United、American、Lufthansa 等主流航司），同时为地面蜂窝基站提供备份连接，显示卫星互联网正从消费者宽带向航空、应急通信等垂直领域渗透。<a href="https://x.com/elonmusk/status/2067771630403625214">来源</a> <a href="https://x.com/elonmusk/status/2067675411383763399">来源</a></li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>AI 模型竞争加剧</strong>：DeepSeek 推出视觉功能，OpenAI 发布 GPT-5.5 Instant（提升健康推理），GLM 5.2 获口碑争议（用户反馈话痨、重复、项目掌控力不足），Claude 频繁性能降级且额度多次重置。<a href="https://chat.deepseek.com/">来源</a> <a href="https://openai.com/index/improving-health-intelligence-in-chatgpt">来源</a> <a href="https://www.v2ex.com/t/1221519#reply9">来源</a> <a href="https://www.v2ex.com/t/1221523#reply3">来源</a> <a href="https://www.v2ex.com/t/1221492#reply5">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>伪装 reCAPTCHA 诈骗引发重装系统</strong>：用户被诱导执行终端恶意命令，弹出伪装的钓鱼弹窗，最终在天才吧全盘格式化重装系统。<a href="https://www.v2ex.com/t/1221581#reply12">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>DNI Tulsi Gabbard 卸任当天指控 Fauci</strong>：发布文件指控 Anthony Fauci 用美国纳税人资金资助武汉实验室进行功能增益研究。<a href="https://x.com/elonmusk/status/2067994311195586612">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>能源与核能发展</strong>：瑞士议会解除新建核电厂禁令，TerraPower 与 Meta 签署协议建造八座 Natrium 345 MW 先进核电站，Elon Musk 强调算力瓶颈是电力、变电站和电网容量。<a href="https://www.bluewin.ch/en/news/switzerland/parliament-lifts-ban-on-new-nuclear-power-plants-3257535.html">来源</a> <a href="https://neutronbytes.com/2026/01/09/terrapower-in-mega-deal-with-meta-for-eight-natrium-345-mw-advanced-nuclear-plants/">来源</a> <a href="https://x.com/elonmusk/status/2067808872341876873">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>X 平台支持中国身份证认证</strong>：Web 端 Premium 认证证件选择支持中国，系统自动拍摄证件及面部验证。<a href="https://www.v2ex.com/t/1221567#reply5">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>世界杯 4K 直播被指虚假宣传</strong>：用户发现实际播放为低码率、低帧率 1080p 画质，多平台普遍存在。<a href="https://www.v2ex.com/t/1221552#reply8">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>法国记者因《萨缪尔·帕蒂法》获刑</strong>：Erik Tegnér 被判处6个月监禁缓刑及1万欧元罚款。<a href="https://x.com/elonmusk/status/2067778229839052922">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>Apple 生态问题</strong>：macOS 27 无法显示 iCloud 家庭存储选项，老 iPhone 8 Plus 升级后无故被锁数据无法恢复，Mac mini M4 高温106°C时风扇转速仍仅20%。<a href="https://www.v2ex.com/t/1221536#reply0">来源</a> <a href="https://www.v2ex.com/t/1221587#reply1">来源</a> <a href="https://www.v2ex.com/t/1221414#reply6">来源</a></li>
+      </ul>
+      <ul>
+      <li><strong>GitHub 发现 10,000 个仓库分发木马恶意软件</strong>。<a href="https://orchidfiles.com/github-repositories-distributing-malware/">来源</a></li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li><a href="https://x.com/elonmusk">elon-musk 推文</a></li>
+      <li><a href="https://github.com">GitHub Trending</a></li>
+      <li><a href="https://news.ycombinator.com">Hacker News</a></li>
+      <li><a href="https://www.v2ex.com">V2EX</a></li>
+      <li><a href="https://openai.com">OpenAI 官方博客</a></li>
+      <li><a href="https://x.com/sama">Sam Altman 推文</a></li>
+      <li><a href="https://sspai.com">少数派 sspai</a></li>
+      <li><a href="https://x.com/GeminiApp">Gemini App 推文</a></li>
+      <li><a href="https://chat.deepseek.com">DeepSeek 官方</a></li>
+      <li><a href="https://www.midjourney.com">Midjourney 官方</a></li>
+      <li><a href="https://www.elastic.co">Elastic 官方博客</a></li>
+      <li><a href="https://www.eff.org">EFF</a></li>
+      <li><a href="https://startupfortune.com">Startup Fortune</a></li>
+      <li><a href="https://eandt.theiet.org">The IET</a></li>
+      <li><a href="https://tales.fromprod.com">Tales from Prod</a></li>
+      <li><a href="https://overreacted.io">Overreacted</a></li>
+      <li><a href="https://www.windowslatest.com">Windows Latest</a></li>
+      <li><a href="https://orchidfiles.com">Orchid Files</a></li>
+      <li><a href="https://www.bluewin.ch">Bluewin</a></li>
+      <li><a href="https://neutronbytes.com">Neutron Bytes</a></li>
+      <li><a href="https://spectrum.ieee.org">IEEE Spectrum</a></li>
+      <li><a href="https://blog.ui.com">Ubiquiti Blog</a></li>
+      <li><a href="https://www.independent.co.uk">Independent</a></li>
+      <li><a href="https://www.kcl.ac.uk">King&#x27;s College London</a></li>
+      <li><a href="https://worksinprogress.co">Works in Progress</a></li>
+      <li><a href="https://tester.army">Tester Army</a></li>
+      <li>[其他上述链接中的来源]</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
