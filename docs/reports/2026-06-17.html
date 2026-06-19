@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-17 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-06-17 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日（2026年6月17日）核心事件围绕 <strong>AI 产业整合与产品发布</strong> 展开：<strong>SpaceX 以 600 亿美元全股收购 AI 编程工具 Cursor</strong> 震动业界；<strong>OpenAI 披露基于 GPT‑5.4 的近乎自主 AI 化学家</strong>并推出生命科学基准 LifeSciBench；<strong>xAI 发布 Grok Imagine Video 1.5</strong> 与 Grok Build 更新；<strong>Google Gemini Live 活动即将演示多工具对话与图像生成</strong>。同时行业安全与监管议题密集涌现：<strong>哪吒监控面板曝出 CVSS 9.1 严重漏洞</strong>；<strong>复旦大学全面禁止论文使用 AI</strong>，英国计划禁止 16 岁以下青少年使用社交媒体；数据隐私罚款案例“强制同意”再引关注。此外，<strong>Anthropic 以短视频发布 Claude Fable 5 宣传片</strong>，多个开源工具（UniGetUI、Kitestring、zvec、iroh 等）与社区生态动态值得关注。</p>
+      <h2>重点事件</h2>
+      <h3>SpaceX 600 亿美元收购 Cursor</h3>
+      <p>SpaceX 已行使选择权，<strong>以全股票交易方式收购 AI 编程助手 Cursor，交易金额 600 亿美元</strong>，目标是构建“世界上最有用的 AI 模型”。此前双方已共同训练模型，改进将很快在 Cursor 与 Grok Build 中发布。Cursor 的云端代理、手机提示、并行运行等特性与企业采用（Jensen Huang 称其为“最喜欢的企业 AI 服务”）使这笔收购成为 AI 编程赛道标志性整合。</p>
+      <ul>
+      <li><a href="https://www.v2ex.com/t/1220907">SpaceX 将以 600 亿美元全股票收购 Cursor</a></li>
+      <li><a href="https://www.reuters.com/legal/transactional/spacex-buy-anysphere-60-billion-2026-06-16/">SpaceX to buy Cursor for $60B</a></li>
+      <li><a href="https://x.com/elonmusk/status/2066880781587562839">RT Cursor: We&#x27;re excited to join forces with @SpaceX</a></li>
+      </ul>
+      <h3>OpenAI 发布 AI 化学家与 LifeSciBench</h3>
+      <p>OpenAI 与 Molecule.one 合作的<strong>近乎自主 AI 化学家</strong>基于 GPT‑5.4 改进了药物合成反应，同时推出 <strong>LifeSciBench</strong>——由领域专家编写和评审的生命科学基准，用于评估 AI 处理真实研究任务的能力。Codex 也在向欧洲扩展 Computer Use、Chrome 扩展、个性化记忆等功能。</p>
+      <ul>
+      <li><a href="https://openai.com/index/ai-chemist-improves-reaction">A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry</a></li>
+      <li><a href="https://openai.com/index/introducing-life-sci-bench">Introducing LifeSciBench</a></li>
+      <li><a href="https://x.com/OpenAI/status/2066930552255729928">RT OpenAI Developers: More of Codex is rolling out across Europe</a></li>
+      </ul>
+      <h3>xAI 发布 Grok Imagine Video 1.5</h3>
+      <p>xAI 推出图像到视频模型 <strong>Grok Imagine Video 1.5</strong>，宣称具备更清晰的真实感、更好的物理效果和更快的生成速度。同时 <strong>Grok Build 更新至 v0.2.55</strong>，修复 Windows 安装脚本错误、Mermaid 图表渲染等问题，并新增禁用 hunk tracker 等功能。</p>
+      <ul>
+      <li><a href="https://x.com/elonmusk/status/2067502258816733258">RT xAI: Grok Imagine Video 1.5 is here</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067438023894253721">RT X Freeze: Grok Build just got new update</a></li>
+      </ul>
+      <h3>哪吒监控严重漏洞（CVE-2026-53519）</h3>
+      <p>开源监控面板 <strong>Nezha</strong> 被通报 CVSS 9.1 漏洞：攻击者可通过路径遍历读取配置文件，<strong>无需认证即可获取 jwt_secret_key 并伪造管理员 JWT，完全控制仪表盘</strong>，影响所有低于 2.0.13 的版本。</p>
+      <ul>
+      <li><a href="https://www.v2ex.com/t/1220915">哪吒监控严重漏洞 CVE-2026-53519</a></li>
+      </ul>
+      <h3>监管与隐私：AI 论文禁令、青少年社媒禁令与强制同意案</h3>
+      <p><strong>复旦大学</strong> 2024 年底提出“六个禁止”，全面禁止学生在研究设计、数据分析、正文生成及语言润色等环节使用 AI，被视为面对检测困境的“非常手段”。<strong>英国首相计划 2027 年前禁止 16 岁以下青少年使用社交媒体</strong>，并与英国通信管理局就 X 平台展开调查。此外，北欧家电零售商 <strong>Elkjøp 因强制同意隐私条款被罚款 180 万欧元</strong>，隐私倡导者五年前的警告终获印证。</p>
+      <ul>
+      <li><a href="https://sspai.com/post/111005">非常之形势，需要非常之手段——有关AI应用的思考</a></li>
+      <li><a href="https://x.com/elonmusk/status/2066896054407356690">RT Muskonomy: NEWS: Two years ago, an internal document...</a></li>
+      <li><a href="https://www.thatprivacyguy.com/blog/elkjop-forced-consent-fine/">I told them forced consent was unlawful. 5 years later it cost Elkjop €1.8M</a></li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <h3>AI 编程工具从模型竞争走向 Harness 与生态整合</h3>
+      <p>SpaceX 收购 Cursor、OpenAI Codex 周活用户达 500 万且非开发者增速为开发者 3 倍、Grok Build 频繁迭代，以及 Anthropic Fable 5 的发布，都显示 <strong>AI 编程助手正深度嵌入开发工作流</strong>，比拼重心从单纯模型性能转向<strong>工具链、插件生态、云端代理、权限管理</strong>等整体 Harness 体验。正如分析所指，Codex 已更接近通用 AI Agent 形态。</p>
+      <ul>
+      <li><a href="https://sspai.com/post/111020">为什么我觉得 Codex 更接近通用 AI Agent 的理想形态</a></li>
+      <li><a href="https://x.com/elonmusk/status/2066880262668247091">AI will achieve Stockfish-level coding and generalized computer use</a></li>
+      </ul>
+      <h3>AI 监管与伦理对抗升级</h3>
+      <p>“一刀切”的学术禁令、青少年保护立法、平台审查扩展与“强制同意”罚款，构成 <strong>AI 应用面临的多维度合规压力</strong>。与此同时，马斯克等对审查、政治追捕的尖锐批评也折射出<strong>技术治理与言论自由</strong>的剧烈碰撞。企业出海与学术使用均需密切关注各国政策变化。</p>
+      <ul>
+      <li><a href="https://x.com/elonmusk/status/2066925445699002662">Censorship always comes with a “protect the children” lie</a></li>
+      <li><a href="https://x.com/elonmusk/status/2066926124446400659">The politicians imprison people to hide their crimes</a></li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Fable 5 访问权限</strong>：传闻将在 48 小时内恢复，社区对“修复此代码”提示引发的安全恐慌持续热议。<a href="https://www.v2ex.com/t/1220919">Fable 5 即将回归？！</a> | <a href="https://www.theregister.com/security/2026/06/15/feds-freaked-over-fable-5-after-simple-fix-this-code-prompt-not-jailbreak-says-researcher/5255827">Feds freaked over Fable 5 after &#x27;fix this code&#x27;...</a></li>
+      <li><strong>Claude 服务异常</strong>：多个模型错误率升高，官方已通报事件。<a href="https://status.claude.com/incidents/xmhsglsz3h3w">Claude: Elevated errors across many models</a></li>
+      <li><strong>AI 视频生成</strong>：本地自动化视频工具出现，可能影响内容创作生态。<a href="https://www.v2ex.com/t/1220930">我用开发了 AI 本地视频生成软件！</a></li>
+      <li><strong>Java 项目 Valhalla 最终在 JDK 28 中交付</strong>，将对语言生态产生深远影响。<a href="https://www.jvm-weekly.com/p/project-valhalla-explained-how-a">Project Valhalla, Explained: How a Decade of Work Arrives in JDK 28</a></li>
+      <li><strong>AUR 软件仓库被投毒</strong>，提醒开发者警惕供应链安全。<a href="https://www.v2ex.com/t/1220936">AUR 被投毒了</a></li>
+      <li><strong>Gemini Live 社区活动</strong>将于 6 月 18 日演示新功能。<a href="https://x.com/GeminiApp/status/2067323529318809751">Gemini Live has entered the chat.</a></li>
+      </ul>
+      <h2>来源索引</h2>
+      <p>（以下按材料批次与类型列出全部来源，部分推文无标题，取起始文本代替）</p>
+      <h3>产品与工具</h3>
+      <ul>
+      <li><a href="https://sspai.com/post/111128">UniGetUI —— 可能是 Windows 下最好用的应用商店</a></li>
+      <li><a href="https://sspai.com/post/111182">别再复制 Skills 文件夹了，我做了一个叫 Kitestring 的小工具</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067436677019422914">RT Cursor: It’s now easier to move local agents to the cloud...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067487439426302400">RT DogeDesigner: &quot;My favorite enterprise AI service is Cursor...&quot;</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067842478279901271">RT Elon Musk: Re @PseudoMnemonic It has been so long since the hobbits faced real danger...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067460143139237988">RT JD Vance: Doctors and hospitals used junk science from WPATH...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067426405391237170">RT Kara: Behind the scenes: many other cool shots from the 1.5 video launch...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067807730555842850">RT Robert Sterling: Afghan Army commanders brought their child sex slaves onto US bases...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067431040940167408">RT Taya Bass: Elon Musk: ”I think there are great things in every culture...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067438023894253721">RT X Freeze: Grok Build just got new update...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2067502258816733258">RT xAI: Grok Imagine Video 1.5 is here...</a></li>
+      <li><a href="https://x.com/GeminiApp/status/2067323529318809751">Gemini Live has entered the chat. At our next Discord community event...</a></li>
+      <li><a href="https://dfdxlabs.com/research/2026/robotics-setup/">Building a robotics research setup that lives next to my desk</a></li>
+      <li><a href="https://americanexpress.io/cell-based-architecture-for-resilient-payment-systems/">Cell-based architecture for resilient payment systems</a></li>
+      <li><a href="https://simonwillison.net/2026/Jun/18/datasette-apps/">Datasette Apps: Host custom HTML applications inside Datasette</a></li>
+      <li><a href="https://www.greybeam.ai/blog/duckdb-internals-part-1">DuckDB Internals: Why Is DuckDB Fast? (Part 1)</a></li>
+      <li><a href="https://pypi.org/project/prylint/">Fable Converted Pylint to Rust</a></li>
+      <li><a href="https://www.flexport.com/company/careers/">Flexport (YC W14) Is Hiring in Indonesia, India, and Thailand</a></li>
+      <li><a href="https://mickael.canouil.fr/posts/2026-06-15-gribouille-0-3/">Gribouille 0.3.0: A Grammar of Graphics for Typst</a></li>
+      <li><a href="https://arun.is/blog/jr-logo/">How Japan&#x27;s railways stayed one while splitting apart</a></li>
+      <li><a href="https://www.thatprivacyguy.com/blog/elkjop-forced-consent-fine/">I told them forced consent was unlawful. 5 years later it cost Elkjop €1.8M</a></li>
+      <li><a href="https://www.jacc.org/doi/10.1016/j.jaccas.2025.104885">Ice water drowning survival of young patient (2025)</a></li>
+      <li><a href="http://paulbuchheit.blogspot.com/2010/02/if-your-product-is-great-it-doesnt-need.html">If your product is Great, it doesn&#x27;t need to be Good (2010)</a></li>
+      <li><a href="https://www.jvm-weekly.com/p/project-valhalla-explained-how-a">Project Valhalla, Explained: How a Decade of Work Arrives in JDK 28</a></li>
+      <li><a href="https://www.intheweights.com/">Show HN: Are You in the Weights?</a></li>
+      <li><a href="https://github.com/cajal-technologies/talos">Show HN: Talos – Open-source WASM interpreter for Lean</a></li>
+      <li><a href="https://mnot.net/blog/2026/well_known_uris">So You Want to Define a Well-Known URI</a></li>
+      <li><a href="https://clickhouse.com/blog/open-source-10">Ten years of ClickHouse in open source</a></li>
+      <li><a href="https://www.theescapenewsletter.com/p/the-airpods-effect">The AirPods Effect</a></li>
+      <li><a href="https://www.wired.com/story/sk-telecom-anthropic-mythos-export-controls/">The Korean telecom giant at the center of Anthropic&#x27;s Mythos controversy</a></li>
+      <li><a href="https://raku.foundation/">The Raku Foundation is born</a></li>
+      <li><a href="https://news.mit.edu/2026/to-study-how-chips-really-work-mit-researchers-built-their-own-operating-system-0610">To study how chips work, MIT researchers built their own operating system</a></li>
+      <li><a href="https://blog.jxmo.io/p/zen-and-the-art-of-machine-learning">Zen and the Art of Machine Learning Research</a></li>
+      <li><a href="https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/">Zero-Touch OAuth for MCP</a></li>
+      </ul>
+      <h3>OpenAI 与 AI 科研</h3>
+      <ul>
+      <li><a href="https://openai.com/index/ai-chemist-improves-reaction">A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry</a></li>
+      <li><a href="https://openai.com/index/introducing-life-sci-bench">Introducing LifeSciBench</a></li>
+      <li>[[昨日补遗] 为什么我觉得 Codex 更接近通用 AI Agent 的理想形态](https://sspai.com/post/111020)</li>
+      <li>[[昨日补遗] 小狗需要日记：为什么我觉得还值得做宠物APP？](https://sspai.com/post/111077)</li>
+      <li>[[昨日补遗] 「弯道超车」赛车入门指北 01： 赛车世界的全景地图](https://sspai.com/post/111053)</li>
+      <li>[[昨日补遗] 逐帧拆解Claude Fable 5发布片：Anthropic画30个5干嘛？](https://sspai.com/post/110994)</li>
+      <li>[[昨日补遗] 非常之形势，需要非常之手段——有关AI应用的思考](https://sspai.com/post/111005)</li>
+      </ul>
+      <h3>马斯克与 xAI 动态</h3>
+      <ul>
+      <li>[[昨日补遗] AI will achieve Stockfish-level coding and generalized computer use](https://x.com/elonmusk/status/2066880262668247091)</li>
+      <li>[[昨日补遗] Censorship always comes with a “protect the children” lie](https://x.com/elonmusk/status/2066925445699002662)</li>
+      <li>[[昨日补遗] It is humbling to consider that if we harness just 1 millionth of the Sun’s power for AI...](https://x.com/elonmusk/status/2066891067899944993)</li>
+      <li>[[昨日补遗] Made with Grok Imagine](https://x.com/elonmusk/status/2066887006068834541)</li>
+      <li>[[昨日补遗] RT Cursor: We&#x27;re excited to join forces with @SpaceX...](https://x.com/elonmusk/status/2066880781587562839)</li>
+      <li>[[昨日补遗] RT DHH: Another fun/insane anecdote from the peak-woke era...](https://x.com/elonmusk/status/2066899461406880073)</li>
+      <li>[[昨日补遗] RT Grok: Re Stockfish is the world&#x27;s strongest chess engine...](https://x.com/elonmusk/status/2066887228639621391)</li>
+      <li>[[昨日补遗] RT Michael Truell: Lots to do together. Excited to be joining forces with @SpaceX...](https://x.com/elonmusk/status/2066881355938742329)</li>
+      <li>[[昨日补遗] RT Mike Lee: SPLC = hateful , fraudulent enterprise](https://x.com/elonmusk/status/2066884352773095768)</li>
+      <li>[[昨日补遗] RT Muskonomy: NEWS: Two years ago, an internal document from the Center for Countering Digital Hate...](https://x.com/elonmusk/status/2066896054407356690)</li>
+      <li>[[昨日补遗] RT Rupert Lowe MP: The Rape Gang Inquiry Report...](https://x.com/elonmusk/status/2066883054434681310)</li>
+      <li>[[昨日补遗] RT Steve Jurvetson: Mission: Expanding the Scope and Scale of Consciousness...](https://x.com/elonmusk/status/2066890106594873615)</li>
+      <li>[[昨日补遗] The politicians imprison people to hide their crimes](https://x.com/elonmusk/status/2066926124446400659)</li>
+      <li>[[昨日补遗] The politicians who turned a blind eye to the Rape of Britain must go to prison](https://x.com/elonmusk/status/2066925294238519531)</li>
+      <li>[[昨日补遗] This actually happened and still happens](https://x.com/elonmusk/status/2066925635721974156)</li>
+      <li>[[昨日补遗] Those who knew must go to prison for a long time](https://x.com/elonmusk/status/2066925869155963189)</li>
+      <li>[[昨日补遗] (untitled)](https://x.com/elonmusk/status/2066894517933142235)</li>
+      <li>[[昨日补遗] Wow, this is crazy!](https://x.com/elonmusk/status/2066882313926176913)</li>
+      </ul>
+      <h3>GitHub 热门项目</h3>
+      <ul>
+      <li>[[昨日补遗] alibaba/zvec](https://github.com/alibaba/zvec)</li>
+      <li>[[昨日补遗] n0-computer/iroh](https://github.com/n0-computer/iroh)</li>
+      <li>[[昨日补遗] rmyndharis/OpenWA](https://github.com/rmyndharis/OpenWA)</li>
+      <li>[[昨日补遗] Universal-Debloater-Alliance/universal-android-debloater-next-generation](https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation)</li>
+      </ul>
+      <h3>Google 与 Gemini</h3>
+      <ul>
+      <li>[[昨日补遗] RT Josh Woodward: Our mic icon just got way better on Android and iOS!...](https://x.com/GeminiApp/status/2066673782715216269)</li>
+      <li>[[昨日补遗] RT Made by Google: Hey creators...](https://x.com/GeminiApp/status/2066955296023408832)</li>
+      </ul>
+      <h3>安全、漏洞与监管</h3>
+      <ul>
+      <li>[[昨日补遗] A backdoor in a LinkedIn job offer](https://roman.pt/posts/linkedin-backdoor/)</li>
+      <li>[[昨日补遗] After AI Takes Everything](https://ursb.me/en/posts/after-ai-takes-everything/)</li>
+      <li>[[昨日补遗] An interview with an Apple emoji designer](https://shadycharacters.co.uk/2026/06/ollie-wagner/)</li>
+      <li>[[昨日补遗] Apple&#x27;s weird anti-nausea dots cured my car sickness](https://www.theverge.com/tech/942854/apple-vehicle-motion-cues-review-really-work)</li>
+      <li>[[昨日补遗] Banned book library in a wi-fi smart light bulb](https://www.richardosgood.com/posts/banned-book-library/)</li>
+      <li>[[昨日补遗] But yak shaving is fun](https://parksb.github.io/en/article/32.html)</li>
+      <li>[[昨日补遗] Claude: Elevated errors across many models](https://status.claude.com/incidents/xmhsglsz3h3w)</li>
+      <li>[[昨日补遗] Correlated randomness in Slay the Spire 2](https://tck.mn/blog/correlated-randomness-sts2/)</li>
+      <li>[[昨日补遗] Feds freaked over Fable 5 after &#x27;fix this code&#x27;, not jailbreak, say researchers](https://www.theregister.com/security/2026/06/15/feds-freaked-over-fable-5-after-simple-fix-this-code-prompt-not-jailbreak-says-researcher/5255827)</li>
+      <li>[[昨日补遗] Formal Methods and the Future of Programming](https://blog.janestreet.com/formal-methods-at-jane-street-index/)</li>
+      <li>[[昨日补遗] Gamers beware: malicious wallpapers on Steam found stealing accounts](https://securelist.com/dozens-of-malicious-wallpapers-found-on-steam-workshop/120186/)</li>
+      <li>[[昨日补遗] GateGPT: 56k tokens per second Transformer (KV cache) on FPGA at 80 MHz](https://twitter.com/fguzmanai/status/2065832668172845209)</li>
+      <li>[[昨日补遗] Getting Creative with Perlin Noise Fields](https://sighack.com/post/getting-creative-with-perlin-noise-fields)</li>
+      <li>[[昨日补遗] &#x27;Ghost jobs&#x27; could soon be illegal in New York](https://www.fastcompany.com/91558427/ghost-jobs-could-soon-be-illegal-in-new-york)</li>
+      <li>[[昨日补遗] I admire Fabrice Bellard. He is almost certainly a better overall programmer](https://twitter.com/ID_AA_Carmack/status/2064095424420487226)</li>
+      <li>[[昨日补遗] I hacked into the worst e-bike and fixed it [video]](https://www.youtube.com/watch?v=hPrtVGimBYs)</li>
+      <li>[[昨日补遗] Making ast.walk 220x Faster](https://reflex.dev/blog/why-ast-walk-when-you-can-ast-sprint/)</li>
+      <li>[[昨日补遗] Making espresso with ultrasound](https://www.unsw.edu.au/newsroom/news/2026/06/New-way-making-espresso)</li>
+      <li>[[昨日补遗] Mechanical Watch (2022)](https://ciechanow.ski/mechanical-watch/)</li>
+      <li>[[昨日补遗] Qwen-Robot Suite: A Foundation Model Suite for Physical World Intelligence](https://qwen.ai/blog?id=qwen-robotsuite)</li>
+      <li>[[昨日补遗] Running local models is good now](https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/)</li>
+      <li>[[昨日补遗] SpaceX to buy Cursor for $60B](https://www.reuters.com/legal/transactional/spacex-buy-anysphere-60-billion-2026-06-16/)</li>
+      <li>[[昨日补遗] Specs Augmented Reality Glasses](https://newsroom.snap.com/introducing-specs-augmented-reality-glasses)</li>
+      <li>[[昨日补遗] SubQ 1.1 Small](https://subq.ai/subq-1-1-small-technical-report)</li>
+      <li>[[昨日补遗] The Manhoff Archives: Color photos of Stalin-era USSR taken by a US diplomat](https://www.rferl.org/a/the-manhoff-archive/28359558.html)</li>
+      <li>[[昨日补遗] The octopus architecture for AI agents](https://blog.goodman.dev/blog/octopus-agent-architecture/)</li>
+      <li>[[昨日补遗] The time the x86 emulator team found code so bad they fixed it during emulation](https://devblogs.microsoft.com/oldnewthing/20260615-00/?p=112419)</li>
+      <li>[[昨日补遗] TIL: You can make HTTP requests without curl using Bash /dev/TCP](https://mareksuppa.com/til/bash-dev-tcp-http-without-curl/)</li>
+      <li>[[昨日补遗] Unicorn – The Ultimate CPU Emulator](https://www.unicorn-engine.org/)</li>
+      <li>[[昨日补遗] Why is Meta destroying its engineering organization?](https://newsletter.pragmaticengineer.com/p/why-is-meta-destroying-its-engineering)</li>
+      <li>[[昨日补遗] Predicting model behavior before release by simulating deployment](https://openai.com/index/deployment-simulation)</li>
+      <li>[[昨日补遗] RT OpenAI Developers: More of Codex is rolling out across Europe this week...](https://x.com/OpenAI/status/2066930552255729928)</li>
+      </ul>
+      <h3>V2EX 社区话题</h3>
+      <ul>
+      <li>[[昨日补遗] [Android] 2026 年有哪些安卓手机原生就支持 Google 框架？...](https://www.v2ex.com/t/1220885)</li>
+      <li>[[昨日补遗] [Cursor] Cursor 开源替代推荐](https://www.v2ex.com/t/1220940)</li>
+      <li>[[昨日补遗] [Cursor] SpaceX 将以 600 亿美元全股票收购 Cursor](https://www.v2ex.com/t/1220907)</li>
+      <li>[[昨日补遗] [Cursor] SpaceX 已行使选择权，通过全股票交易收购 cursor](https://www.v2ex.com/t/1220920)</li>
+      <li>[[昨日补遗] [DeepSeek] deepseek 资源又跟去年一样紧张啦？](https://www.v2ex.com/t/1220887)</li>
+      <li>[[昨日补遗] [Linux] Linux 服务器有何安全监控软件？](https://www.v2ex.com/t/1220897)</li>
+      <li>[[昨日补遗] [OpenAI] 又二验了，土区的号要废了...](https://www.v2ex.com/t/1220937)</li>
+      <li>[[昨日补遗] [OpenAI] [求助] codex 这是怎么了 有人遇到吗？](https://www.v2ex.com/t/1220894)</li>
+      <li>[[昨日补遗] [V2EX] edge.v2ex.com 和 v2ex.com 的区别是啥](https://www.v2ex.com/t/1220918)</li>
+      <li>[[昨日补遗] [上海] 上海- 2026 亚马逊云科技峰会 预约参会-最后两个名额](https://www.v2ex.com/t/1220916)</li>
+      <li>[[昨日补遗] [信息安全] 哪吒监控严重漏洞 CVE-2026-53519](https://www.v2ex.com/t/1220915)</li>
+      <li>[[昨日补遗] [分享创造] 24 小时，用 AI Studio 手搓一个 2000 年西方哲学宇宙交互网状图](https://www.v2ex.com/t/1220917)</li>
+      <li>[[昨日补遗] [分享创造] [Chrome 插件] 我做了一个在网页输入框里直接改英文的写作辅助工具：言修](https://www.v2ex.com/t/1220925)</li>
+      <li>[[昨日补遗] [分享创造] 做了一款内容订阅与发现应用，名字叫“芦苇”...](https://www.v2ex.com/t/1220904)</li>
+      <li>[[昨日补遗] [分享创造] 关于 vibe coding 如何提升代码效率和质量的技巧之 skill](https://www.v2ex.com/t/1220892)</li>
+      <li>[[昨日补遗] [分享创造] 我用开发了 AI 本地视频生成软件！](https://www.v2ex.com/t/1220930)</li>
+      <li>[[昨日补遗] [分享创造] 或许你也有多 Gradle 项目多 JDK 要求混用的痛点？不妨试试我这个 patch project， gradlew-jdk-local](https://www.v2ex.com/t/1220938)</li>
+      <li>[[昨日补遗] [分享发现] 看到有 V 友做了拼豆站，手痒也 Vibe Coding 了一个拼豆图纸生成器](https://www.v2ex.com/t/1220906)</li>
+      <li>[[昨日补遗] [加密货币] 开源分享：我用 Flutter 打造了一款现代化多链加密钱包](https://www.v2ex.com/t/1220891)</li>
+      <li>[[昨日补遗] [北京] 帝都到底怎么了，自进入 2026 年以来，短视频上看到太多的各类社会突发事件！](https://www.v2ex.com/t/1220922)</li>
+      <li>[[昨日补遗] [华为] 今年有人拿到鸿蒙激励计划的奖励么？](https://www.v2ex.com/t/1220890)</li>
+      <li>[[昨日补遗] [推广] AI 太空站 — 国内直连 GPT-5.5/Claude Opus/Gemini，微信充值...](https://www.v2ex.com/t/1220932)</li>
+      <li>[[昨日补遗] [推广] https://v2api.top 中转 gpt pro 号池 0.25 倍率](https://www.v2ex.com/t/1220895)</li>
+      <li>[[昨日补遗] [搜索引擎优化] 想搞点有质量的外链太难了！哭死！](https://www.v2ex.com/t/1220883)</li>
+      <li>[[昨日补遗] [机场] justmysocks 最近好不稳定。只是 justmysocks，还是墙更强了？](https://www.v2ex.com/t/1220931)</li>
+      <li>[[昨日补遗] [生活] 大家千万不要小看牙痛，医院躺了四天了医生不让走](https://www.v2ex.com/t/1220908)</li>
+      <li>[[昨日补遗] [硬件] IPS 屏幕 边角紫红色 属于寿终正寝?](https://www.v2ex.com/t/1220934)</li>
+      <li>[[昨日补遗] [程序员] 400 只鸭子与田埂上的歌](https://www.v2ex.com/t/1220939)</li>
+      <li>[[昨日补遗] [程序员] DeepSeek 还是比较耐用的](https://www.v2ex.com/t/1220929)</li>
+      <li>[[昨日补遗] [程序员] Fable 5 即将回归？！](https://www.v2ex.com/t/1220919)</li>
+      <li>[[昨日补遗] [程序员] PM 做对这 5 件事，从被研发吐槽到被认可](https://www.v2ex.com/t/1220900)</li>
+      <li>[[昨日补遗] [程序员] vibe coding 占领编程领域后是浇灭了“你”的技术研究热情还是激发鼓励了“你”的探索热情呢](https://www.v2ex.com/t/1220896)</li>
+      <li>[[昨日补遗] [程序员] 做了个小模型训练平台](https://www.v2ex.com/t/1220893)</li>
+      <li>[[昨日补遗] [程序员] 老 Java 转行路线请有经验的人指点一下](https://www.v2ex.com/t/1220926)</li>
+      <li>[[昨日补遗] [程序员] 还是选择开通了 Z.ai 的年度 MAX 套餐](https://www.v2ex.com/t/1220903)</li>
+      <li>[[昨日补遗] [职场话题] 应届 offer 该如何选，求助（迷茫）](https://www.v2ex.com/t/1220921)</li>
+      <li>[[昨日补遗] [职场话题] [杭州/远程] 11 年全栈&amp;前端架构， Cursor 月 10 亿 Token 重度用户...](https://www.v2ex.com/t/1220933)</li>
+      <li>[[昨日补遗] [股票] 大家做交易下单的时候会刻意选个吉利数字吗？](https://www.v2ex.com/t/1220923)</li>
+      <li>[[昨日补遗] [酷工作] 兄弟们 找工作关于自己值多少钱陷入迷茫了](https://www.v2ex.com/t/1220884)</li>
+      <li>[[昨日补遗] [酷工作] 找 Agent/AI 应用开发工作， base 无要求](https://www.v2ex.com/t/1220912)</li>
+      <li>[[昨日补遗] [酷工作] 语音工程师招聘（MBZUAI 合作实验室博士项目）](https://www.v2ex.com/t/1220899)</li>
+      <li>[[昨日补遗] [问与答] AUR 被投毒了，有受到影响的吗](https://www.v2ex.com/t/1220936)</li>
+      <li>[[昨日补遗] [问与答] Intel 的 npu 有啥实际作用吗？](https://www.v2ex.com/t/1220911)</li>
+      <li>[[昨日补遗] [问与答] iphone18 又是新 2nm 工艺还敢不敢抢首发](https://www.v2ex.com/t/1220905)</li>
+      <li>[[昨日补遗] [问与答] microsoft store 发布 msix 应用,属性 总是未完成](https://www.v2ex.com/t/1220910)</li>
+      <li>[[昨日补遗] [问与答] Tauri v2 Android build 后图片无法显示，但 dev 模式正常（PC 正常）](https://www.v2ex.com/t/1220882)</li>
+      <li>[[昨日补遗] [问与答] 大龄读博，科研、工作、生活路在何方？](https://www.v2ex.com/t/1220935)</li>
+      <li>[[昨日补遗] [问与答] 梯子开蜂窝数据连接不上，但是开 wifi 就可以连上...](https://www.v2ex.com/t/1220924)</li>
+      <li>[[昨日补遗] [问与答] 街上跑的无人快递车和特斯拉无人驾驶有什么区别](https://www.v2ex.com/t/1220902)</li>
+      <li>[[昨日补遗] [问与答] 过段时间会不会有很多人出 mac mini？](https://www.v2ex.com/t/1220913)</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
