@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-23 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-06-23 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>本日焦点集中于AI行业竞争加剧与服务稳定性挑战、政治争议持续发酵（尤其围绕USAID存废的各方论战），以及开发者工具领域的活跃创新。Anthropic发布团队协作功能Claude Tag，但服务同步出现故障；OpenAI发布安全套件Daybreak并披露多个应用案例；Meta进军预测市场，数字欧元取得关键进展。</p>
+      <h2>重点事件</h2>
+      <p><strong>AI行业动态</strong></p>
+      <ul>
+      <li><strong>Anthropic 发布 Claude Tag</strong>：团队可将Claude添加为Slack成员，通过@标记委派任务并配置渠道与工具权限。同日Claude多个模型错误率升高，出现服务中断。 <a href="https://www.anthropic.com/news/introducing-claude-tag">来源</a> | <a href="https://status.claude.com/incidents/jbhf20wjmzrf">故障报告</a></li>
+      <li><strong>OpenAI 发布 Daybreak 安全套件</strong>：包含 Codex Security 和 GPT-5.5-Cyber 模型，旨在帮助组织大规模发现、验证和修复漏洞，并启动“Patch the Planet”开源维护者支持倡议。 <a href="https://openai.com/index/daybreak-securing-the-world">来源</a> | <a href="https://x.com/sama/status/2069121360744550796">Sam Altman 推文</a></li>
+      <li><strong>Mistral 发布 OCR 4 模型</strong>：专注于光学字符识别。 <a href="https://mistral.ai/news/ocr-4/">来源</a></li>
+      <li><strong>三星展示3D堆叠FET技术</strong>：在42nm节点实现三层纳米片沟道工艺，将晶体管扩展至第三维度。 <a href="https://semiconductor.samsung.com/news-events/tech-blog/from-gaa-to-3d-stacked-fet-expanding-the-transistor-into-the-third-dimension/">来源</a></li>
+      <li><strong>百度开源 Unlimited OCR</strong>：实现一次性长文本解析。 <a href="https://github.com/baidu/Unlimited-OCR">来源</a></li>
+      <li><strong>VibeThinker 发布</strong>：30亿参数小模型，在推理任务上声称超越 Opus 4.5。 <a href="https://arxiv.org/abs/2606.16140">来源</a></li>
+      </ul>
+      <p><strong>政治与商业</strong></p>
+      <ul>
+      <li><strong>USAID 争议持续升级</strong>：马斯克与多方集中抨击USAID，指控其资金资助武汉病毒研究所功能增益研究，可能催生COVID-19；提及USAID/NIH向武汉科学家提供4400万美元、向EcoHealth Alliance拨款5300万美元。参议员Rand Paul称福奇签字并撒谎。争论中引用《柳叶刀》方法论推算USAID导致1.87亿人死亡，或资助本·拉登的穆贾赫丁致470万人死亡；马斯克则称无一死亡，削减USAID停止了欺诈、生物武器资助与外国政府干涉，好项目已移交国务院，且墨西哥总统同意并庆祝USAID关闭。斯蒂芬·米勒批评USAID缺乏问责，马斯克赞同将其改称USCON。 <a href="https://x.com/elonmusk/status/2069475387529437325">马斯克推文1</a> | <a href="https://x.com/elonmusk/status/2069473322014838789">推文2</a> | <a href="https://x.com/elonmusk/status/2069474708056375458">推文3</a> | <a href="https://x.com/elonmusk/status/2069471468623184116">推文4</a> | <a href="https://x.com/elonmusk/status/2069477706593604018">推文5</a> | <a href="https://x.com/elonmusk/status/2069471263190393104">推文6</a> | <a href="https://x.com/elonmusk/status/2069464074950205769">推文7</a> | <a href="https://x.com/elonmusk/status/2069472831688044671">推文8</a> | <a href="https://x.com/elonmusk/status/2069475545218437512">推文9</a></li>
+      <li><strong>马斯克与议员Ro Khanna冲突</strong>：马斯克抨击民主党议员Ro Khanna为“抢劫犯”，称其是国会头号股票交易员且去年交易量达5900万美元。马斯克宣布将起诉Khanna，因Khanna声称DOGE削减导致“450万儿童死亡”。马斯克反驳称DOGE标准仅是要求提供援助接收者联系方式以验证无欺诈。 <a href="https://x.com/elonmusk/status/2069089477511790812">马斯克推文1</a> | <a href="https://x.com/elonmusk/status/2069096920597880838">推文2</a> | <a href="https://x.com/elonmusk/status/2069087335824699744">推文3</a> | <a href="https://x.com/elonmusk/status/2069105888741265738">推文4</a></li>
+      <li><strong>Meta进军预测市场</strong>：扎克伯格指示团队创建预测市场应用。 <a href="https://www.nytimes.com/2026/06/23/technology/meta-prediction-markets-app.html">来源</a></li>
+      <li><strong>数字欧元获关键支持</strong>：欧洲议会为数字欧元扫除关键障碍，以减少对美国信用卡依赖。 <a href="https://finance.yahoo.com/markets/currencies/articles/ecb-secures-key-parliamentary-backing-102718449.html">来源</a></li>
+      <li><strong>美国国家科学基金会（NSF）削减研究项目</strong>：据内部人士透露，NSF为支持新技术计划而大砍原有研究项目。 <a href="https://www.science.org/content/article/exclusive-nsf-slashes-research-programs-support-new-tech-initiative-insiders-say">来源</a></li>
+      <li><strong>SpaceX获投资级信用评级</strong>：Fitch给予SpaceX BBB+评级，至此三大评级机构均将其债务评为投资级，报道提及SpaceX在创纪录IPO后持有超1000亿美元现金。 <a href="https://x.com/elonmusk/status/2069066240669180283">来源</a></li>
+      <li><strong>Neuralink 第26位接受者</strong>：加拿大温哥华警察中士Lee Marten成为首位接受N1脑机接口植入的加拿大人，他于2025年2月确诊渐冻症（ALS）。 <a href="https://x.com/elonmusk/status/2069066419602424224">来源</a></li>
+      <li><strong>Steam Machine 正式发布</strong>：Valve推出Steam Machine硬件。 <a href="https://store.steampowered.com/news/group/45479024/view/685257114654870245">来源</a> | <a href="https://www.lttlabs.com/articles/2026/06/22/the-newell-nucleus-steam-machine-ltt-companion-article">游戏测试</a></li>
+      </ul>
+      <p><strong>产品与技术</strong></p>
+      <ul>
+      <li><strong>特斯拉蝉联“最美国制造”</strong>：Model 3与Model Y被Cars.com评为2026年美国制造含量最高车型，特斯拉连续六年居首。 <a href="https://x.com/elonmusk/status/2069473899969122308">来源</a></li>
+      <li><strong>大型车致行人死亡激增</strong>：自2009年美国行人死亡数上升75%，主因是大尺寸卡车和SUV。 <a href="https://www.thedrive.com/news/75-more-pedestrians-have-been-killed-since-2009-giant-trucks-and-suvs-are-why">来源</a></li>
+      <li><strong>MSG被曝建立活动人士档案</strong>：麦迪逊广场花园公司针对反对其面部识别技术的活动人士制作档案。 <a href="https://www.404media.co/madison-square-garden-made-dossier-on-activists-who-opposed-facial-recognition/">来源</a></li>
+      <li><strong>隐私倡导者批评“年龄验证”</strong>：Cory Doctorow指出所谓“年龄验证”技术已演变为大规模监控。 <a href="https://pluralistic.net/2026/06/23/destroy-the-village/">来源</a></li>
+      <li><strong>DHL将启用风力驱动货船</strong>：DHL即将采用新型风力驱动货船，推动可持续商业实践。 <a href="https://www.wsj.com/pro/sustainable-business/dhl-set-to-transport-goods-on-new-wind-powered-cargo-ships-eca5d5a0">来源</a></li>
+      <li><strong>墨西哥展示廉价政府支持电动车</strong>：由政府支持的新型廉价电动汽车。 <a href="https://gizmodo.com/mexico-just-showed-off-a-new-extremely-cheap-government-backed-ev-2000769080">来源</a></li>
+      </ul>
+      <p><strong>GitHub热门项目</strong></p>
+      <ul>
+      <li><code>shanraisshan/claude-code-best-practice</code>（59263星）、<code>anthropics/claude-plugins-official</code>（30771星）、<code>firecrawl/firecrawl</code>（136965星）、<code>garrytan/gstack</code>（112930星）、<code>heygen-com/hyperframes</code>（29831星）、<code>JCodesMore/ai-website-cloner-template</code>（17584星）。</li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>AI代理生态加速分化</strong>：Anthropic通过Claude Tag深耕团队协作入口，OpenAI以Daybreak安全套件切入企业安全与开源维护，同时推出Codex-maxxing方法论支持长时间复杂任务 <a href="https://openai.com/index/codex-maxxing-long-running-work">来源</a>，竞争从单一模型能力转向工作流整合与垂直场景。</li>
+      <li><strong>AI编程工具引发技能退化担忧</strong>：多篇讨论指出长期使用AI编程导致项目掌控度下降、代码理解泛化 <a href="https://www.v2ex.com/t/1222066">V2EX讨论</a> 及交流能力碎片化 <a href="https://www.v2ex.com/t/1222098">V2EX讨论</a>，出现「wingman」等辅助记忆工具 <a href="https://github.com/lsshym/wingman.ai">GitHub</a>，折射开发者对AI依赖副作用的反思。</li>
+      <li><strong>多Agent架构走向成熟化</strong>：从OpenClaw到FastClaw的演进体现云原生、多租户、RBAC和资源效率等工程设计原则，Go语言实现使同硬件承载10倍流量 <a href="https://www.v2ex.com/t/1222063">V2EX讨论</a>，预示Agent框架工业化趋势。</li>
+      <li><strong>政治问责论战升级</strong>：对USAID的指控、Quote推算与反证形成激烈对抗，马斯克方以“验证联系信息”为标准回应“450万人死亡”指控，讨论涉及机构问责、疫情起源叙事与政府效率，此议题将持续影响公众舆论。</li>
+      <li><strong>中国经济增长担忧浮现</strong>：社区分析框架从人口、就业、制度、地缘政治出发，判断面临类日本长期衰退风险，青年就业是关键 <a href="https://www.v2ex.com/t/1222391">V2EX讨论</a>。</li>
+      <li><strong>AI生成内容质量保障体系成型</strong>：美团技术团队发布「生成-编辑-评判」完整技术体系，含PosterCraft（生成）、PosterOmni（编辑）、PosterReward（评估）三个已开源模型，评估准确率达86%，代表工业界AI落地成熟度提升 <a href="https://tech.meituan.com/2026/06/18/AIGC-poster.html">来源</a>。</li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Claude服务稳定性</strong>：故障后续修复与用户信任重建。</li>
+      <li><strong>马斯克诉Ro Khanna案</strong>：法律进展及对DOGE叙事的影响。</li>
+      <li><strong>数字欧元落地进程</strong>：后续实施细节与全球支付格局变化。</li>
+      <li><strong>NSF研究削减影响</strong>：涉及具体项目裁撤及学术界的反应。</li>
+      <li><strong>Steam Machine市场表现</strong>：Valve重回硬件领域的产品接受度。</li>
+      <li><strong>Codex日志写入Bug</strong>：可能向本地SSD写入TB级数据的影响范围 <a href="https://github.com/openai/codex/issues/28224">来源</a>。</li>
+      <li><strong>维基百科联合创始人Larry Sanger被封禁</strong>：原因不明，批评过程无正当程序 <a href="https://x.com/elonmusk/status/2069084108727226629">来源</a>。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <p><strong>推文（X/Twitter）</strong></p>
+      <ul>
+      <li>AnthropicAI：Claude Tag发布 <a href="https://x.com/AnthropicAI/status/2069469669929386160">链接</a></li>
+      <li>Elon Musk：多篇关于USAID、Ro Khanna、特斯拉、SpaceX、Neuralink、墨西哥总统庆祝USAID关闭等推文  <a href="https://x.com/elonmusk/status/2069471066058088505">链接1</a> | <a href="https://x.com/elonmusk/status/2069471468623184116">链接2</a> | <a href="https://x.com/elonmusk/status/2069473899969122308">链接3</a> | <a href="https://x.com/elonmusk/status/2069474382314148124">链接4</a> | <a href="https://x.com/elonmusk/status/2069475387529437325">链接5</a> | <a href="https://x.com/elonmusk/status/2069475896982118444">链接6</a> | <a href="https://x.com/elonmusk/status/2069477706593604018">链接7</a> | <a href="https://x.com/elonmusk/status/2069087335824699744">链接8</a> | <a href="https://x.com/elonmusk/status/2069089477511790812">链接9</a> | <a href="https://x.com/elonmusk/status/2069096920597880838">链接10</a> | <a href="https://x.com/elonmusk/status/2069105454030934321">链接11</a> | <a href="https://x.com/elonmusk/status/2069105888741265738">链接12</a> | <a href="https://x.com/elonmusk/status/2069066240669180283">链接13</a> | <a href="https://x.com/elonmusk/status/2069066419602424224">链接14</a> | <a href="https://x.com/elonmusk/status/2069066928556069040">链接15</a> | <a href="https://x.com/elonmusk/status/2069084108727226629">链接16</a> | <a href="https://x.com/elonmusk/status/2068885116064080018">链接17</a> | <a href="https://x.com/elonmusk/status/2068897990878597500">链接18</a> | <a href="https://x.com/elonmusk/status/2069075733821936089">链接19</a> | <a href="https://x.com/elonmusk/status/2069084444242186521">链接20</a> | <a href="https://x.com/elonmusk/status/2069105534418993325">链接21</a> | <a href="https://x.com/elonmusk/status/2069087660333728024">链接22</a> | <a href="https://x.com/elonmusk/status/2069472831688044671">链接24</a> | <a href="https://x.com/elonmusk/status/2069475545218437512">链接25</a> | <a href="https://x.com/elonmusk/status/2069476195583000738">链接26</a> | <a href="https://x.com/elonmusk/status/2069471761171718510">链接27</a> | <a href="https://x.com/elonmusk/status/2069472444763512875">链接28</a> | <a href="https://x.com/elonmusk/status/2069474262256406953">链接29</a> | <a href="https://x.com/elonmusk/status/2069470976136360205">链接30</a> | <a href="https://x.com/elonmusk/status/2069477887598886973">链接31</a> | <a href="https://x.com/elonmusk/status/2069477989814006252">链接32</a> | <a href="https://x.com/elonmusk/status/2068883812390441203">链接33</a> | <a href="https://x.com/elonmusk/status/2069075733821936089">链接34</a> | <a href="https://x.com/elonmusk/status/2069474708056375458">链接35</a> | <a href="https://x.com/elonmusk/status/2069471263190393104">链接36</a> | <a href="https://x.com/elonmusk/status/2069464074950205769">链接37</a></li>
+      <li>Sam Altman：GPT-5.5-Cyber与Daybreak <a href="https://x.com/sama/status/2069121360744550796">链接</a></li>
+      <li>GeminiApp：Gemini Omni功能 <a href="https://x.com/GeminiApp/status/2069436661755478418">链接1</a> | <a href="https://x.com/GeminiApp/status/2069114818980728902">链接2</a></li>
+      </ul>
+      <p><strong>新闻与博客</strong></p>
+      <ul>
+      <li>Hacker News：涵盖75%行人死亡增加 <a href="https://www.thedrive.com/news/75-more-pedestrians-have-been-killed-since-2009-giant-trucks-and-suvs-are-why">链接</a>、Claude Tag <a href="https://www.anthropic.com/news/introducing-claude-tag">链接</a>、数字欧元 <a href="https://finance.yahoo.com/markets/currencies/articles/ecb-secures-key-parliamentary-backing-102718449.html">链接</a>、Meta预测市场 <a href="https://www.nytimes.com/2026/06/23/technology/meta-prediction-markets-app.html">链接</a>、Mistral OCR 4 <a href="https://mistral.ai/news/ocr-4/">链接</a>、三星3D堆叠FET <a href="https://semiconductor.samsung.com/news-events/tech-blog/from-gaa-to-3d-stacked-fet-expanding-the-transistor-into-the-third-dimension/">链接</a>、Unlimited OCR <a href="https://github.com/baidu/Unlimited-OCR">链接</a>、VibeThinker <a href="https://arxiv.org/abs/2606.16140">链接</a>、IBM开源报告 <a href="https://community.ibm.com/community/user/blogs/elizabeth-k-joseph1/2026/06/18/linuxone-open-source-report-may-2026">链接</a>、Plotnine <a href="https://plotnine.org/">链接</a>、MSG活动人士档案 <a href="https://www.404media.co/madison-square-garden-made-dossier-on-activists-who-opposed-facial-recognition/">链接</a>、年龄验证即监控 <a href="https://pluralistic.net/2026/06/23/destroy-the-village/">链接</a>、Steam Machine <a href="https://store.steampowered.com/hardware/steammachine">链接</a>、Moebius <a href="https://hustvl.github.io/Moebius/">链接</a>、Zig基金会捐赠 <a href="https://mitchellh.com/writing/zig-donation-2026">链接</a>、DHL风力货船 <a href="https://www.wsj.com/pro/sustainable-business/dhl-set-to-transport-goods-on-new-wind-powered-cargo-ships-eca5d5a0">链接</a>、墨西哥EV <a href="https://gizmodo.com/mexico-just-showed-off-a-new-extremely-cheap-government-backed-ev-2000769080">链接</a>、NSF削减研究 <a href="https://www.science.org/content/article/exclusive-nsf-slashes-research-programs-support-new-tech-initiative-insiders-say">链接</a>、格林斯潘去世 <a href="https://www.washingtonpost.com/obituaries/2026/06/22/alan-greenspan-most-powerful-central-banker-modern-times-dies-100/">链接</a>、贝恩测试AI副本 <a href="https://www.ft.com/content/e5bac4d1-b1f8-43a4-bd54-b182d5357af0">链接</a>、Codex日志Bug <a href="https://github.com/openai/codex/issues/28224">链接</a>、Steam Machine游戏测试 <a href="https://www.lttlabs.com/articles/2026/06/22/the-newell-nucleus-steam-machine-ltt-companion-article">链接</a> 等。</li>
+      <li>少数派：Windows配置规范 <a href="https://sspai.com/post/111300">链接</a>、美加墨世界杯分析 <a href="https://sspai.com/post/111086">链接</a></li>
+      <li>美团技术：海报生成AIGC技术创新与实践 <a href="https://tech.meituan.com/2026/06/18/AIGC-poster.html">链接</a></li>
+      </ul>
+      <p><strong>OpenAI 官方</strong></p>
+      <ul>
+      <li>GPT-5免疫学突破 <a href="https://openai.com/index/gpt-5-immunology-mystery">链接</a></li>
+      <li>Omio对话式旅游 <a href="https://openai.com/index/omio">链接</a></li>
+      <li>Daybreak安全套件 <a href="https://openai.com/index/daybreak-securing-the-world">链接</a></li>
+      <li>Patch the Planet <a href="https://openai.com/index/patch-the-planet">链接</a></li>
+      <li>Codex-maxxing <a href="https://openai.com/index/codex-maxxing-long-running-work">链接</a></li>
+      </ul>
+      <p><strong>V2EX 社区</strong></p>
+      <ul>
+      <li>Claude服务状态 <a href="https://www.v2ex.com/t/1222376">链接1</a> | <a href="https://www.v2ex.com/t/1222364">链接2</a> | <a href="https://www.v2ex.com/t/1222368">链接3</a></li>
+      <li>Claude版本对比 <a href="https://www.v2ex.com/t/1222373">链接</a></li>
+      <li>OpenClash DNS分析 <a href="https://www.v2ex.com/t/1222342">链接</a></li>
+      <li>MacBook磁盘写入 <a href="https://www.v2ex.com/t/1222379">链接</a></li>
+      <li>AWS Lightsail评测 <a href="https://www.v2ex.com/t/1222362">链接</a></li>
+      <li>Show HN项目：Treedocs <a href="https://dandylyons.github.io/treedocs/">链接</a>、TikZ Editor <a href="https://tikz.dev/editor/">链接</a>、Bun-sqlgen <a href="https://github.com/ilbertt/bun-sqlgen">链接</a>、Draft Pilot <a href="https://jiaicai2050.github.io/my-works/draft-pilot/">链接</a>、Locus Agent <a href="https://www.v2ex.com/t/1222338">链接</a>、Loopat.ai <a href="https://www.v2ex.com/t/1222358">链接</a>、OakReader <a href="https://www.v2ex.com/t/1222361">链接</a></li>
+      <li>分享创造：better-select <a href="https://www.v2ex.com/t/1222356">链接</a>、opencode_flutter <a href="https://www.v2ex.com/t/1222384">链接</a>、OopsPlayer <a href="https://www.v2ex.com/t/1222353">链接</a></li>
+      <li>推广与招聘：AI成本优化 <a href="https://www.v2ex.com/t/1222374">链接</a>、FK Claude <a href="https://www.v2ex.com/t/1222363">链接</a>、Token中转站 <a href="https://www.v2ex.com/t/1222337">链接</a>、上海Python开发 <a href="https://www.v2ex.com/t/1222367">链接</a>、AI初创招聘 <a href="https://www.v2ex.com/t/1222377">链接</a>、成都硬件工程师 <a href="https://www.v2ex.com/t/1222350">链接</a></li>
+      <li>安全提醒：Next.js漏洞 <a href="https://www.v2ex.com/t/1222357">链接</a></li>
+      <li>职场与教育：十年经验offer抉择 <a href="https://www.v2ex.com/t/1222389">链接</a>、高考志愿 <a href="https://www.v2ex.com/t/1222388">链接</a></li>
+      <li>生活与观察：联通营销争议 <a href="https://www.v2ex.com/t/1222360">链接</a>、论坛社区体验 <a href="https://www.v2ex.com/t/1222355">链接</a></li>
+      <li>经济与资产：中国经济预测 <a href="https://www.v2ex.com/t/1222391">链接</a>、FIRE资产配置 <a href="https://www.v2ex.com/t/1222351">链接</a></li>
+      <li>昨日补遗：AI编程经验 <a href="https://www.v2ex.com/t/1222066">链接</a>、多Agent架构 <a href="https://www.v2ex.com/t/1222063">链接</a>、CommentSVG <a href="https://www.v2ex.com/t/1222113">链接</a>、iOS Agent APP <a href="https://www.v2ex.com/t/1222108">链接</a>、ElectroBun &amp; Deno Desktop <a href="https://www.v2ex.com/t/1222080">链接</a>、Codeg V0.16.0 <a href="https://www.v2ex.com/t/1222101">链接</a>、电源踩坑 <a href="https://www.v2ex.com/t/1222054">链接</a>、AI生成站体验 <a href="https://www.v2ex.com/t/1222073">链接</a> 等。</li>
+      </ul>
+      <p><strong>GitHub Trending</strong></p>
+      <ul>
+      <li><code>anthropics/claude-plugins-official</code></li>
+      <li><code>shanraisshan/claude-code-best-practice</code></li>
+      <li><code>firecrawl/firecrawl</code></li>
+      <li><code>garrytan/gstack</code></li>
+      <li><code>heygen-com/hyperframes</code></li>
+      <li><code>JCodesMore/ai-website-cloner-template</code></li>
+      <li><code>Stirling-Tools/Stirling-PDF</code></li>
+      <li><code>future-file-format/f3</code></li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
