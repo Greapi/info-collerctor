@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-26 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-06-26 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日科技动态围绕三条主线展开：AI 领域，OpenAI 发布 GPT-5.6 Sol 预览，而 Anthropic 对 Claude 账户进行大规模封禁，引发模型蒸馏与护城河讨论；产品与工具方面，开源 macOS Dock 替代工具&quot;钨极&quot;发布，MatrixMedia 实现本地多平台视频一键发布；航天领域，SpaceX 完成星舰发动机全时长测试，美军进行未公开紧急卫星发射演习。此外，苹果因内存成本飙升上调 Mac/iPad 售价，IBM 发布亚 1 纳米芯片技术。</p>
+      <h2>重点事件</h2>
+      <h3>AI 与大模型</h3>
+      <ul>
+      <li><strong>OpenAI 预览 GPT-5.6 Sol</strong>：下一代模型，强化编程、科学与网络安全能力，配备最高安全栈。 <a href="https://openai.com/index/previewing-gpt-5-6-sol">OpenAI</a></li>
+      <li><strong>Claude 大规模封禁</strong>：多位用户报告 6-26 当天账户被 Anthropic 以&quot;违反支持国家政策&quot;为由暂停，包括新号与老号。 <a href="https://www.v2ex.com/t/1223223#reply5">V2EX 讨论1</a>、<a href="https://www.v2ex.com/t/1223208#reply5">V2EX 讨论2</a></li>
+      <li><strong>Cursor Composer 2.5</strong>：社区讨论该版本基于 Kimi K2.5 后训练，编程表现优异，但也有人担心会改乱已有代码。 <a href="https://www.v2ex.com/t/1223217#reply4">V2EX 讨论</a></li>
+      <li><strong>Claude 注册登录放宽</strong>：当日通过谷歌账号注册 Claude Code 不再需要验证海外手机号。 <a href="https://www.v2ex.com/t/1222876#reply9">V2EX</a></li>
+      </ul>
+      <h3>产品与工具</h3>
+      <ul>
+      <li><strong>钨极 Tungsten Edge</strong>：开源 macOS Dock 替代工具，多窗口时展开为独立卡片显示标题，支持一键切换，内存占用约 38MB。 <a href="https://sspai.com/post/111435">少数派</a></li>
+      <li><strong>MatrixMedia</strong>：本地运行的多平台视频矩阵发布工具，支持 7 个平台一键发布及 HTTP API 接入。 <a href="https://www.v2ex.com/t/1223233#reply0">V2EX</a></li>
+      <li><strong>flare.design 事件</strong>：独立开发者烧掉 100 亿 Token 打造的动效产品上线次日遭 Figma Motion 碾压。 <a href="https://www.v2ex.com/t/1222930#reply1">V2EX</a></li>
+      <li><strong>百度千帆 Coding Plan</strong>：上线仅 4 个月即宣布停止续费。 <a href="https://www.v2ex.com/t/1222929#reply0">V2EX</a></li>
+      <li><strong>Yeah Music v2.0.0</strong>：开源跨平台本地音乐播放器发布新版本。 <a href="https://www.v2ex.com/t/1222921#reply0">V2EX</a></li>
+      <li><strong>Foxmail 更新</strong>：Mac 版终支持 Apple Silicon。 <a href="https://www.v2ex.com/t/1223181#reply0">V2EX</a></li>
+      <li><strong>GemmaTrans</strong>：基于 MLX 和 Gemma 4 的本地翻译工具，全程不联网。 <a href="https://www.v2ex.com/t/1223195#reply4">V2EX</a></li>
+      <li><strong>Project Brain / Knowhere</strong>：开发者社区分享为 Codex 增强上下文及 RAG 全流程的工具。 <a href="https://www.v2ex.com/t/1223201#reply3">V2EX</a>、<a href="https://www.v2ex.com/t/1223185#reply1">V2EX</a></li>
+      </ul>
+      <h3>航天与国防</h3>
+      <ul>
+      <li><strong>SpaceX 星舰发动机测试</strong>：完成单发动机全时长静态点火测试。 <a href="https://x.com/elonmusk/status/2070509762366554135">Elon Musk X</a></li>
+      <li><strong>SpaceX 2026 发射频次</strong>：已 76 次全成功，对比全球其他总计 55 次中失败 6 次。 (@X Freeze)</li>
+      <li><strong>美军太空演习</strong>：进行一次未公开通知的紧急卫星发射演习。<a href="https://arstechnica.com/space/2026/06/a-us-military-exercise-in-space-got-underway-with-barely-anyone-noticing/">Ars Technica</a></li>
+      </ul>
+      <h3>商业与基础设施</h3>
+      <ul>
+      <li><strong>苹果涨价</strong>：因内存成本飙升，iPad 3799元起、MacBook 系列 5499 元至 15999 元起。 <a href="https://www.v2ex.com/t/1222904#reply30">V2EX</a>，蒂姆·库克称成本跳升 40 多年来未见。(@X Tim Cook)</li>
+      <li><strong>IBM 亚 1 纳米芯片</strong>：发布全球首个亚 1 纳米芯片技术。 <a href="https://newsroom.ibm.com/2026-06-25-ibm-debuts-worlds-first-sub-1-nanometer-chip-technology">IBM</a></li>
+      <li><strong>Windows 10 延长支持</strong>：悄然额外获得一年支持与更新。 <a href="https://www.neowin.net/news/windows-10-quietly-gets-one-more-year-of-support-and-updates/">Neowin</a></li>
+      <li><strong>特斯拉柏林工厂</strong>：计划 10 月周产量再提升 20% 至 7500 辆，增聘 1000 人。 (@Sawyer Merritt)</li>
+      <li><strong>Framework 10G 模块</strong>：分析其暴露的 USB-C 复杂性。 <a href="https://www.jeffgeerling.com/blog/2026/framework-10g-ethernet-module-usb-c-complexity/">Jeff Geerling</a></li>
+      <li><strong>AWS Lambda MicroVMs</strong>：推出完全生命周期控制的隔离沙箱。 <a href="https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/">AWS</a></li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <h3>AI 模型护城河与生态竞合</h3>
+      <p><strong>模型蒸馏争议成焦点</strong>：Anthropic 指控阿里巴巴非法提取 Claude 模型能力 (<a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/">Reuters</a>)， Claude 随即大规模封号 (<a href="https://www.v2ex.com/t/1223234#reply1">V2EX</a>)，社区由此深入讨论闭源 AI 模型护城河的实际深度 (<a href="https://www.v2ex.com/t/1223203#reply12">V2EX</a>)。此事件叠加 Cursor Composer 2.5 的成功案例——掌握开发场景入口的应用公司（如 Cursor）基于开源基座模型经过后训练可锻造出极强的垂直模型 (<a href="https://www.v2ex.com/t/1222890#reply10">V2EX</a>)——正重塑产业逻辑：纯通用模型寡头的护城河可能被高昂的训练成本与数据版权争议双向弱化，而紧握工作流入口并完成微调闭环的&quot;应用层&quot;正在实质侵蚀基座模型的价值。与此同时，独立开发者产品 flare.design 上线即被 Figma Motion 冲垮的事件 (<a href="https://www.v2ex.com/t/1222930#reply1">V2EX</a>) 则证伪了仅靠 AI 生成即可建立壁垒的假设，大厂的快速跟进能力成为独立 AI 产品的直接威胁。</p>
+      <h3>技术岗位的价值迁移</h3>
+      <p><strong>AI 加速压缩执行层岗位</strong>：社区讨论显示，前端、测试、客户端等&quot;可描述、可验收&quot;的执行型技术工作正被 AI 工具显著压缩 (<a href="https://www.v2ex.com/t/1223205#reply2">V2EX</a>)。这迫令技术人的价值向&quot;懂业务、拆需求&quot;的上游迁移，而非简单担心被替代。同时，MCP 开发实践提醒，为 Agent 塞入过多 Tool（超两百）将导致模型遗漏 (<a href="https://www.v2ex.com/t/1222918#reply0">V2EX</a>)，侧面反映当前 Agent 的工程落地仍存碎片化挑战，提示专业分工的价值并未消失，尚待范式定型。</p>
+      <h3>网络治理与公民生活环境压力</h3>
+      <p><strong>宽带限速矛盾集中显现</strong>：今日多地用户集中反映上行带宽被运营商定向限速，包括上海联通被限至 5Mbps (<a href="https://www.v2ex.com/t/1222917#reply0">V2EX</a>)、福建移动限速 20M (<a href="https://www.v2ex.com/t/1222936#reply0">V2EX</a>)、西安电信回收动态公网 IP (<a href="https://www.v2ex.com/t/1222909#reply1">V2EX</a>) 及上海电信副宽被限 (<a href="https://www.v2ex.com/t/1223188#reply3">V2EX</a>)。这些事件呈现出 PCDN 治理压力正转化为普通用户的网络质量降级常态，而各运营商执行标准不一、用户投诉处理差异大，反映出运营商在商业带宽售卖与有限基础设施间的矛盾可能进一步持续，也暗示普通用户的家庭部署与使用成本可能持续上升。</p>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Claude 封号后续</strong>：Anthropic 的处置范围与用户申诉结果，以及是否激发合规与政策讨论。</li>
+      <li><strong>GPT-5.6 Sol 正式发布进程</strong>及其安全栈的实际效能检验。</li>
+      <li><strong>独立 AI 产品的大厂挤压效应</strong>：flare.design 与 Figma Motion 案例后续是否有更多幸存者策略或模式创新。</li>
+      <li><strong>内存成本飙升对消费电子定价的持续影响</strong>：苹果率先调价后，其他品牌是否跟进。</li>
+      <li><strong>各地运营商宽带限速的公众反馈与监管回应</strong>。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <p>此处以人工标记覆盖所有提供的 URL。鉴于数量庞大，本索引按域分类列出各主题的原始链接，确保每一项材料均可追溯：</p>
+      <ul>
+      <li><strong>少数派 (sspai.com)</strong></li>
+      <li><a href="https://sspai.com/post/111435">台前调度救不了我，所以我做了个 Dock——钨极 Tungsten Edge</a></li>
+      <li><a href="https://sspai.com/post/111432">一个 UX 设计师的自救：让中文「就地」变成英文文件名 / 搜索词</a></li>
+      <li><a href="https://sspai.com/post/111103">无用之美：我开发了个“没用”的电子风铃</a></li>
+      <li><a href="https://sspai.com/post/111519">桌游设计杂记（8）</a></li>
+      <li><a href="https://sspai.com/post/111349">风暖鸟声碎，日高花影重：我的昆明与腾冲行记</a></li>
+      </ul>
+      <ul>
+      <li><strong>V2EX (v2ex.com)</strong></li>
+      <li><a href="https://www.v2ex.com/t/1223233#reply0">MatrixMedia：本地运行的多平台视频矩阵发布工具</a></li>
+      <li><a href="https://www.v2ex.com/t/1223223#reply5">Claude 注册被封</a></li>
+      <li><a href="https://www.v2ex.com/t/1223208#reply5">Claude 4个月老号被封</a></li>
+      <li><a href="https://www.v2ex.com/t/1223203#reply12">AI 模型的护城河可能并不深</a></li>
+      <li><a href="https://www.v2ex.com/t/1223240#reply1">Linux 上的游戏网络加速</a></li>
+      <li><a href="https://www.v2ex.com/t/1223196#reply0">M4 Mac mini 二手价</a></li>
+      <li><a href="https://www.v2ex.com/t/1223225#reply1">codex 解决耳机问题</a></li>
+      <li><a href="https://www.v2ex.com/t/1223215#reply1">家庭物品录入 AI 快速索引</a></li>
+      <li><a href="https://www.v2ex.com/t/1223226#reply6">刷 OpenWrt 软路由推荐</a></li>
+      <li><a href="https://www.v2ex.com/t/1223237#reply1">Reddit china_irl 头像投票</a></li>
+      <li><a href="https://www.v2ex.com/t/1223236#reply2">搬瓦工换 IP</a></li>
+      <li><a href="https://www.v2ex.com/t/1223222#reply0">AI 处理 Word 格式</a></li>
+      <li><a href="https://www.v2ex.com/t/1223213#reply0">美团客服问题</a></li>
+      <li><a href="https://www.v2ex.com/t/1223210#reply3">雷神加速器崩了</a></li>
+      <li><a href="https://www.v2ex.com/t/1223239#reply0">MuseCanvas AI 生图工作台</a></li>
+      <li><a href="https://www.v2ex.com/t/1223186#reply0">gitstock：像看股票一样看 commit</a></li>
+      <li><a href="https://www.v2ex.com/t/1223195#reply4">GemmaTrans 本地翻译</a></li>
+      <li><a href="https://www.v2ex.com/t/1223218#reply0">鸣鹤 SIP 服务器</a></li>
+      <li><a href="https://www.v2ex.com/t/1223231#reply0">Agent 协作平台</a></li>
+      <li><a href="https://www.v2ex.com/t/1223181#reply0">Foxmail 更新</a></li>
+      <li><a href="https://www.v2ex.com/t/1223206#reply1">Phones Cloud</a></li>
+      <li><a href="https://www.v2ex.com/t/1223188#reply3">上海电信限速</a></li>
+      <li><a href="https://www.v2ex.com/t/1223235#reply2">TinyErase 去水印</a></li>
+      <li><a href="https://www.v2ex.com/t/1223191#reply9">codetoken.uk 中转</a></li>
+      <li><a href="https://www.v2ex.com/t/1223192#reply0">eirouter 中转</a></li>
+      <li><a href="https://www.v2ex.com/t/1223224#reply0">懒猫微服中奖</a></li>
+      <li><a href="https://www.v2ex.com/t/1223232#reply2">高考教育疑问</a></li>
+      <li><a href="https://www.v2ex.com/t/1223204#reply10">国产车企</a></li>
+      <li><a href="https://www.v2ex.com/t/1223234#reply1">Claude 新轮封号</a></li>
+      <li><a href="https://www.v2ex.com/t/1223216#reply2">Go 实现 AI Agent SDK</a></li>
+      <li><a href="https://www.v2ex.com/t/1223185#reply1">RAG 排查经验</a></li>
+      <li><a href="https://www.v2ex.com/t/1223229#reply5">VirPulse App 日活</a></li>
+      <li><a href="https://www.v2ex.com/t/1223201#reply3">codex-brain 外挂知识库</a></li>
+      <li><a href="https://www.v2ex.com/t/1223205#reply2">AI 压缩技术岗位</a></li>
+      <li><a href="https://www.v2ex.com/t/1223189#reply1">Mihomo 配置</a></li>
+      <li><a href="https://www.v2ex.com/t/1223198#reply0">智能合约工程师招聘</a></li>
+      <li><a href="https://www.v2ex.com/t/1223219#reply8">dmit 线路问题</a></li>
+      <li><a href="https://www.v2ex.com/t/1223230#reply7">梯子问题</a></li>
+      <li><a href="https://www.v2ex.com/t/1223202#reply6">成都小升初奥数</a></li>
+      <li><a href="https://www.v2ex.com/t/1223182#reply2">大模型输入限制</a></li>
+      <li><a href="https://www.v2ex.com/t/1223199#reply1">起诉小米</a></li>
+      <li><a href="https://www.v2ex.com/t/1223217#reply4">Cursor Composer 2.5</a></li>
+      <li><a href="https://www.v2ex.com/t/1223184#reply0">PDD 打印机维权</a></li>
+      <li><a href="https://www.v2ex.com/t/1223200#reply0">外包劳务合同</a></li>
+      <li><a href="https://www.v2ex.com/t/1223187#reply8">AI 赚钱统计</a></li>
+      <li><a href="https://www.v2ex.com/t/1222904#reply30">Apple 涨价</a></li>
+      <li><a href="https://www.v2ex.com/t/1222916#reply1">iOS &quot;团结&quot; 疑问</a></li>
+      <li><a href="https://www.v2ex.com/t/1222876#reply9">Claude Code 注册简化</a></li>
+      <li><a href="https://www.v2ex.com/t/1222899#reply3">codex 中转 API</a></li>
+      <li><a href="https://www.v2ex.com/t/1222935#reply0">GPT/Grok CDK</a></li>
+      <li><a href="https://www.v2ex.com/t/1222874#reply3">AI tokens 购买</a></li>
+      <li><a href="https://www.v2ex.com/t/1222910#reply0">MatrixMedia HTTP 接口</a></li>
+      <li><a href="https://www.v2ex.com/t/1222920#reply0">stokado 库</a></li>
+      <li><a href="https://www.v2ex.com/t/1222930#reply1">flare.design 事件</a></li>
+      <li><a href="https://www.v2ex.com/t/1222890#reply10">Composer 2.5 与微软</a></li>
+      <li><a href="https://www.v2ex.com/t/1222882#reply1">截图 API</a></li>
+      <li><a href="https://www.v2ex.com/t/1222927#reply0">MS Edge 日志</a></li>
+      <li><a href="https://www.v2ex.com/t/1222929#reply0">百度千帆停止续费</a></li>
+      <li><a href="https://www.v2ex.com/t/1222877#reply14">社会性死亡</a></li>
+      <li><a href="https://www.v2ex.com/t/1222917#reply0">上海联通限速</a></li>
+      <li><a href="https://www.v2ex.com/t/1222936#reply0">福建移动限速</a></li>
+      <li><a href="https://www.v2ex.com/t/1222909#reply1">西安电信回收公网</a></li>
+      <li><a href="https://www.v2ex.com/t/1222906#reply0">Oumomo AI 视频</a></li>
+      <li><a href="https://www.v2ex.com/t/1222926#reply0">云服务折扣</a></li>
+      <li><a href="https://www.v2ex.com/t/1222901#reply0">SEO 外链</a></li>
+      <li><a href="https://www.v2ex.com/t/1222894#reply3">高考志愿 630</a></li>
+      <li><a href="https://www.v2ex.com/t/1222915#reply11">高考志愿 677</a></li>
+      <li><a href="https://www.v2ex.com/t/1222914#reply4">智驾芯片分析</a></li>
+      <li><a href="https://www.v2ex.com/t/1222879#reply0">DELTARUNE 存档编辑</a></li>
+      <li><a href="https://www.v2ex.com/t/1222923#reply1">报志愿 15 年</a></li>
+      <li><a href="https://www.v2ex.com/t/1222918#reply0">MCP Tool 过多</a></li>
+      <li><a href="https://www.v2ex.com/t/1222905#reply7">Cursor Pro GLM 5.2</a></li>
+      <li><a href="https://www.v2ex.com/t/1222895#reply1">AGM 内测与对比</a></li>
+      <li><a href="https://www.v2ex.com/t/1222888#reply7">币圈入职</a></li>
+      <li><a href="https://www.v2ex.com/t/1222925#reply0">公众号炒股</a></li>
+      <li><a href="https://www.v2ex.com/t/1222896#reply1">OCBC 投资</a></li>
+      <li><a href="https://www.v2ex.com/t/1222875#reply1">Mercari 招聘</a></li>
+      <li><a href="https://www.v2ex.com/t/1222912#reply0">远程岗位招聘</a></li>
+      <li><a href="https://www.v2ex.com/t/1222932#reply0">codex 续费</a></li>
+      <li><a href="https://www.v2ex.com/t/1222902#reply1">手机膜推荐</a></li>
+      <li><a href="https://www.v2ex.com/t/1222922#reply8">程序员爱好</a></li>
+      <li><a href="https://www.v2ex.com/t/1222919#reply1">next.itellyou 故障</a></li>
+      <li><a href="https://www.v2ex.com/t/1222921#reply0">Yeah Music 播放器</a></li>
+      <li><a href="https://www.v2ex.com/t/1222887#reply8">小米迅雷 NAS 选型</a></li>
+      <li><a href="https://www.v2ex.com/t/1222905#reply7">OpenCode GO 额度</a></li>
+      <li><a href="https://www.v2ex.com/t/1222933#reply1">AI 算命网站</a></li>
+      <li><a href="https://www.v2ex.com/t/1222878#reply3">2D sprite 生成器</a></li>
+      <li><a href="https://www.v2ex.com/t/1222886#reply0">Lentora 记单词</a></li>
+      <li><a href="https://www.v2ex.com/t/1222889#reply7">电脑网页崩溃</a></li>
+      <li><a href="https://www.v2ex.com/t/1222885#reply4">土区 GPT 升 Pro</a></li>
+      </ul>
+      <ul>
+      <li><strong>Hacker News (news.ycombinator.com / GitHub 等)</strong></li>
+      <li><a href="https://github.com/commaai/openpilot">commaai/openpilot</a></li>
+      <li><a href="https://github.com/grafana/grafana">grafana/grafana</a></li>
+      <li><a href="https://github.com/ripienaar/free-for-dev">ripienaar/free-for-dev</a></li>
+      <li><a href="https://github.com/simplex-chat/simplex-chat">simplex-chat/simplex-chat</a></li>
+      <li><a href="https://github.com/inkeep/open-knowledge">Show HN: OpenKnowledge</a></li>
+      <li><a href="https://github.com/workweave/router">Show HN: Smart model routing</a></li>
+      <li><a href="https://github.com/DDecoene/WebBaseIII">Show HN: WebBase-III</a></li>
+      <li><a href="https://www.swiftlatex.com/">LaTeX.wasm</a></li>
+      <li><a href="https://graphicore.github.io/librebarcode/">Libre Barcode Project</a></li>
+      <li><a href="https://github.com/plbrault/youre-the-os">You&#x27;re the OS</a></li>
+      <li><a href="https://github.com/naver/lispe/wiki/2.7-FEXPR-vs.-vtable">FEXPRs vs. vtable</a></li>
+      <li><a href="https://akrites.org/letter/">We all depend on open source</a></li>
+      <li><a href="https://news.ycombinator.com/item?id=48687769">Ask HN: Copyright defense</a></li>
+      <li><a href="https://twitter.com/mfts0/status/2070080422482977095">Code theft controversy</a></li>
+      <li><a href="https://scottaaronson.blog/?p=9851">Bipartite Matching Is in NC</a></li>
+      <li><a href="https://gchandbook.org/">Garbage Collection Handbook</a></li>
+      <li><a href="https://www.jtekt.co.jp/e/products/capacitor/capacitor_about.html">Lithium-ion capacitor</a></li>
+      <li><a href="https://www.jeffgeerling.com/blog/2026/framework-10g-ethernet-module-usb-c-complexity/">Framework 10G Ethernet</a></li>
+      <li><a href="https://commerce.jolla.com/products/jolla-phone-october-2026">Jolla Phone</a></li>
+      <li><a href="https://alephneuro.com/blog/ultrasound-brain">Ultrasound imaging of the brain</a></li>
+      <li><a href="https://nesbitt.io/2026/06/26/incident-report-cve-2026-lgtm.html">Incident CVE-2026-LGTM</a></li>
+      <li><a href="https://om.co/2026/06/24/1966-2026/">Om Malik has died</a></li>
+      <li><a href="https://expression.fire.org/p/the-papers-please-era-of-the-internet">The &#x27;papers, please&#x27; era</a></li>
+      <li><a href="https://www.science.org/content/article/why-have-papers-one-history-s-most-famous-physicists-been-retracted">Springer Nature retracts</a></li>
+      <li><a href="https://www.fernandoi.cl/posts/hackmyclaw/">What happened after 2k people tried to hack my AI assistant</a></li>
+      <li><a href="https://www.fernandoi.cl/posts/hackmyclaw">AI Hack Post</a></li>
+      <li><a href="https://ziglang.org/devlog/2026/#2026-06-25">Zig&#x27;s new bitCast semantics</a></li>
+      <li><a href="https://pete.design/tw-fade">Tw-fade: pure CSS scroll-driven edge masking</a></li>
+      <li><a href="https://group.softbank/media/Project/sbg/sbg/pdf/ir/investors/shareholders/2026/shareholders-meeting_46_05_en.pdf">SoftBank 2026 AGM</a></li>
+      <li><a href="https://dev.karltryggvason.com/you-cant-unit-test-for-taste/">You can&#x27;t unit test for taste</a></li>
+      <li><a href="https://arxiv.org/abs/2603.15855">Mixing Visual and Textual Code</a></li>
+      <li><a href="https://www.crosscanon.com/">Bible as RAG Database</a></li>
+      <li><a href="https://princechazz.com/">Chess-Inspired Roguelike</a></li>
+      <li><a href="https://hackernewstrends.com/">Google Trends for HN</a></li>
+      <li><a href="https://minipcs.zip/">MiniPCs.zip</a></li>
+      <li><a href="https://lingochunk.com/try">Turn native language audio into flashcards</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/52-hertz_whale">52-hertz whale</a></li>
+      <li><a href="https://scrollprize.org/firstscroll">A Herculaneum scroll has been read</a></li>
+      <li><a href="https://github.com/decrazyo/anes">Advanced Nintendo Entertainment System</a></li>
+      <li><a href="https://hl2.slqnt.dev/">Half-Life 2 in a Browser</a></li>
+      <li><a href="https://en.andros.dev/blog/4b707a03/how-i-built-a-gpu-backend-for-emacs/">I built a GPU back end for Emacs</a></li>
+      <li><a href="https://explorer.oxide.computer/">Oxide computer 3D rack guided tour</a></li>
+      <li><a href="https://www.quantamagazine.org/how-physicists-track-and-trap-the-elusive-neutrino-20260624/">Physicists Track and Trap the Elusive Neutrino</a></li>
+      <li><a href="https://trakkr.ai/bias">Political bias in AI</a></li>
+      <li><a href="https://yllan.org/software/OS9Map/">OS9Map</a></li>
+      <li><a href="https://www.classicfm.com/composers/mozart/handwritten-notebook-discovered-major-paris/">Mozart&#x27;s handwritten notebook</a></li>
+      </ul>
+      <ul>
+      <li><strong>Ars Technica, Reuters, Neowin, Economist, Register, Science.org, ClassicFM, etc.</strong></li>
+      <li><a href="https://arstechnica.com/space/2026/06/a-us-military-exercise-in-space-got-underway-with-barely-anyone-noticing/">Ars Technica: A US military exercise in space</a></li>
+      <li><a href="https://www.reuters.com/world/asia-pacific/apple-raises-prices-macbooks-ipads-memory-costs-skyrocket-2026-06-25/">Reuters: Apple raises prices</a></li>
+      <li><a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/">Reuters: Anthropic says Alibaba illicitly extracted</a></li>
+      <li><a href="https://www.neowin.net/news/windows-10-quietly-gets-one-more-year-of-support-and-updates/">Neowin: Windows 10 gets one more year</a></li>
+      <li><a href="https://economist.com/interactive/1843/2026/06/19/the-strange-disappearance-of-japans-animators">Economist: The disappearance of Japan&#x27;s animators</a></li>
+      <li><a href="https://www.theregister.com/legal/2026/06/25/european-commission-lines-up-amazon-and-microsoft-for-cloud-gatekeeper-status/5262127">The Register: European Commission lines up Amazon and Microsoft</a></li>
+      <li><a href="https://www.science.org/content/article/why-have-papers-one-history-s-most-famous-physicists-been-retracted">Science.org: Springer Nature retracted Max Planck</a></li>
+      <li><a href="https://www.classicfm.com/composers/mozart/handwritten-notebook-discovered-major-paris/">ClassicFM: Mozart notebook</a></li>
+      <li><a href="https://openai.com/index/previewing-gpt-5-6-sol">OpenAI: GPT-5.6 Sol</a></li>
+      <li><a href="https://openai.com/index/how-agents-are-transforming-work">OpenAI: How agents are transforming work</a></li>
+      <li><a href="https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/">AWS Lambda MicroVMs</a></li>
+      <li><a href="https://blog.cloudflare.com/oauth-for-all/">Cloudflare OAuth</a></li>
+      <li><a href="https://deno.com/blog/v2.9">Deno 2.9</a></li>
+      <li><a href="https://9to5mac.com/2026/06/23/lastpass-notifies-users-of-yet-another-data-breach/">LastPass data breach</a></li>
+      <li><a href="https://newsroom.ibm.com/2026-06-25-ibm-debuts-worlds-first-sub-1-nanometer-chip-technology">IBM sub-1 nanometer chip tech</a></li>
+      <li><a href="https://www.ycombinator.com/library/SF-how-to-get-your-first-10-customers">Y Combinator Library: Get first customers</a></li>
+      </ul>
+      <ul>
+      <li><strong>阮一峰的网络日志</strong></li>
+      <li><a href="http://www.ruanyifeng.com/blog/2026/06/weekly-issue-401.html">科技爱好者周刊（第 401 期）</a></li>
+      </ul>
+      <ul>
+      <li><strong>Elon Musk X posts (涉及商业、航天、社会话题)</strong></li>
+      <li><a href="https://x.com/elonmusk/status/2070509762366554135">Full duration static fire test</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070560874067116157">USAID deaths claim</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070562012350824519">Media double standards</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070561905094128047">Equality of outcome</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070359743302889592">Children are a blessing</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070345275957248462">SpaceX launches 2026 stat</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070042705799831958">Starlink for Kazakhstan</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070342699274637574">Starlink for Venezuela earthquake</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070288480844820733">Music City Loop</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070042768240414766">Productive vs Parasitic class</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070288764425895959">USA political welfare analysis</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070349892308926748">German MSM criticism</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070187969453949298">Tim Cook cost jump</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070357247692029955">Grok Build /goal feature</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070185983664943183">Giga Berlin ramp to 7500/wk</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070248734047322313">Trump mail-voting executive order blocked</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070254035689410882">Soros donations</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070248656867910012">Dell moving HQ to Texas</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070049375347159552">Which countries are we missing</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070175356288377242">Griffin and Xavier 20 years ago</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070175432528351594">Justice for Louis</a></li>
+      </ul>
+      <ul>
+      <li><strong>Google Gemini App / Education</strong></li>
+      <li><a href="https://x.com/GeminiApp/status/2070189472017154517">Study notebooks</a></li>
+      <li><a href="https://x.com/GeminiApp/status/2070202190937907530">Classroom updates</a></li>
+      <li><a href="https://x.com/GeminiApp/status/2070202158465581529">Personalized quizzes</a></li>
+      <li><a href="https://x.com/GeminiApp/status/2070220098673967380">ACT and GRE free prep</a></li>
+      </ul>
+      <ul>
+      <li><strong>GitHub Trending (Other)</strong></li>
+      <li><a href="https://github.com/alibaba/page-agent">alibaba/page-agent</a></li>
+      <li><a href="https://github.com/aws/agent-toolkit-for-aws">aws/agent-toolkit-for-aws</a></li>
+      <li><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a></li>
+      <li><a href="https://github.com/mauriceboe/TREK">mauriceboe/TREK</a></li>
+      <li><a href="https://github.com/NanmiCoder/MediaCrawler">NanmiCoder/MediaCrawler</a></li>
+      <li><a href="https://github.com/opendatalab/MinerU">opendatalab/MinerU</a></li>
+      <li><a href="https://github.com/xbtlin/ai-berkshire">xbtlin/ai-berkshire</a></li>
+      </ul>
+      <ul>
+      <li><strong>Anthropic (昨日补遗)</strong></li>
+      <li><a href="https://x.com/AnthropicAI/status/2070183531612172697">Joining RAISE US</a></li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
