@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-27 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-06-27 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>美国政府对 Anthropic 最强网络安全模型 Claude Mythos 5 有条件放行；OpenAI 预览新一代 GPT-5.6 Sol 模型；Starship V3/V4 推力数据公布；社区热议 Claude 大规模封号与模型蒸馏护城河问题；开源工具与 GitHub 趋势项目持续涌现。</p>
+      <h2>重点事件</h2>
+      <h3>AI 安全与模型动态</h3>
+      <ul>
+      <li><strong>Claude Mythos 5 获准重新部署</strong>：Anthropic 宣布自 6 月 12 日起与美国政府密切合作，其最强网络安全模型 Claude Mythos 5 已获准重新部署给一批运营和防御关键基础设施的美国机构；通用模型 Fable 5 的全面恢复仍在协商中。<a href="https://x.com/AnthropicAI/status/2070665903440871779">来源</a> 业界对 Mythos 暂停事件后续影响保持关注。<a href="https://cephalosec.com/blog/cybersecurity-in-the-post-mythos-era-keep-calm-and-carry-on/">来源</a></li>
+      <li><strong>OpenAI 预览 GPT-5.6 Sol</strong>：称其在编程、科学及网络安全领域能力更强，配备最先进安全栈；系列中 Terra 性能达 5.5 级别但价格减半，Luna 价格更低。<a href="https://openai.com/index/previewing-gpt-5-6-sol/">来源</a> Sam Altman 透露本周已更新 ChatGPT 内置 5.5 即时模型。<a href="https://x.com/sama/status/2070612055225483692">来源</a></li>
+      <li><strong>Claude 大规模封号现象</strong>：社区大量反映 Claude 出现新一轮封号，新注册账号一小时内即被暂停，数月活跃账户亦被停用，提示违反其支持国家政策。有讨论称与阿里 Qwen 模型蒸馏相关。<a href="https://www.v2ex.com/t/1223234#reply1">来源</a> <a href="https://www.v2ex.com/t/1223208#reply5">来源</a> <a href="https://www.v2ex.com/t/1223203#reply12">来源</a></li>
+      <li><strong>DeepSeek 发布 DSpark 论文</strong>：通过推测解码加速大语言模型推理。<a href="https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf">来源</a></li>
+      </ul>
+      <h3>太空与前沿科技</h3>
+      <ul>
+      <li><strong>Starship V3/V4 推力数据</strong>：Elon Musk 转发并评论，V3 推力超过土星五号两倍，V4 将达到约三倍。<a href="https://x.com/elonmusk/status/2070741011358519325">来源</a> SpaceX 进行了星舰单引擎全程静态点火测试。<a href="https://x.com/elonmusk/status/2070509762366554135">来源</a></li>
+      <li><strong>AI 设计无线电芯片</strong>：IEEE Spectrum 报道 AI 正在设计人类无法想象的无线电芯片。<a href="https://spectrum.ieee.org/ai-radio-chip-design">来源</a></li>
+      <li><strong>新型像素技术</strong>：研究人员开发出能同时发射和分析光的新型像素。<a href="https://ethz.ch/en/news-and-events/eth-news/news/2026/06/a-new-type-of-pixel.html">来源</a></li>
+      </ul>
+      <h3>安全事件</h3>
+      <ul>
+      <li><strong>匿名账号公开 0-day 漏洞</strong>：GitHub 匿名账号 “bikini/exploitarium” 正在大量公开未披露的 0-day 漏洞，引发 Hacker News 讨论。<a href="https://github.com/bikini/exploitarium">来源</a></li>
+      <li><strong>CVE-2026-LGTM 安全事件报告</strong>发布。<a href="https://nesbitt.io/2026/06/26/incident-report-cve-2026-lgtm.html">来源</a></li>
+      </ul>
+      <h3>商业与收购</h3>
+      <ul>
+      <li><strong>埃森哲 12 亿美元收购 Speedtest</strong>：Speedtest 利用全球真实网速数据向电信运营商销售分析报告，单份报价达六位数美元，本质为数据生意。<a href="http://www.ruanyifeng.com/blog/2026/06/weekly-issue-401.html">来源</a></li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <h3>1. AI 模型“护城河”质疑升温</h3>
+      <p>社区从 Claude 封号与模型蒸馏现象出发，认为 AI 模型（包括闭源）的护城河可能并不深，可能引发行业泡沫破裂。<a href="https://www.v2ex.com/t/1223203#reply12">来源</a> 缓存策略差异显著：DeepSeek-v4 有 85% 对话支持输出缓存，GPT-5.5 仅 0.3%。<a href="https://www.v2ex.com/t/1223319#reply6">来源</a></p>
+      <h3>2. AI 重塑技术岗位价值</h3>
+      <p>观点认为前端、测试等低业务判断的执行型工作会被 AI 压缩，技术人价值向理解业务、拆解需求、风险判断等上游能力转移。<a href="https://www.v2ex.com/t/1223205#reply2">来源</a> RAG 工作经验分享强调重心应为 50% 评测、40% 数据整理、8% 业务接入，最后才是模型。<a href="https://www.v2ex.com/t/1223185#reply1">来源</a></p>
+      <h3>3. 开源工具生态持续活跃</h3>
+      <p>GitHub 趋势榜涌现大量高星项目：anomalyco/opencode (179,585 星)、Fission-AI/OpenSpec (57,030 星)、commaai/openpilot (61,717 星)、grafana/grafana (74,822 星) 等。AI 辅助开发工具（OpenKnowledge、codex-brain、MuseCanvas）和本地化 AI 工具（GemmaTrans、MatrixMedia）大量涌现。</p>
+      <h3>4. 网络审查与隐私挑战</h3>
+      <p>代理服务在 6 月 26 日晚出现大面积故障。<a href="https://www.v2ex.com/t/1223230#reply7">来源</a> <a href="https://www.v2ex.com/t/1223219#reply8">来源</a> 互联网被指正在进入 “papers, please” 时代，对个人隐私造成严重侵蚀。<a href="https://expression.fire.org/p/the-papers-please-era-of-the-internet">来源</a></p>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Claude 封号后续</strong>：账户暂停是否与模型蒸馏策略直接相关，以及 Anthropic 后续回应。</li>
+      <li><strong>GPT-5.6 Sol 正式发布</strong>：市场对 OpenAI 新旗舰模型的定价策略与实际表现反馈。</li>
+      <li><strong>Starship V3/V4 进展</strong>：SpaceX 星舰后续飞行测试计划与推力突破。</li>
+      <li><strong>加州流媒体广告音量禁令</strong>：7 月 1 日起生效，对流媒体行业影响待观察。<a href="https://arstechnica.com/gadgets/2026/06/streaming-services-obnoxiously-loud-ads-become-illegal-on-july-1-in-california/">来源</a></li>
+      <li><strong>HTTP QUERY 方法</strong>：正式引入为可携带数据体的 GET 方法，参数不会被服务器缓存。<a href="http://www.ruanyifeng.com/blog/2026/06/weekly-issue-401.html">来源</a></li>
+      </ul>
+      <h2>来源索引</h2>
+      <p><strong>AI 与模型</strong></p>
+      <ul>
+      <li><a href="https://x.com/AnthropicAI/status/2070665903440871779">Anthropic 关于 Claude Mythos 5/Fable 5 恢复声明</a></li>
+      <li><a href="https://openai.com/index/previewing-gpt-5-6-sol/">OpenAI GPT-5.6 Sol 预览</a></li>
+      <li><a href="https://x.com/sama/status/2070612055225483692">Sam Altman 推文 - 5.5 模型更新</a></li>
+      <li><a href="https://x.com/sama/status/2070665432814723299">Sam Altman 推文 - OpenAI Foundation 加入 Intercept</a></li>
+      <li><a href="https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf">DeepSeek DSpark 论文</a></li>
+      <li><a href="https://cephalosec.com/blog/cybersecurity-in-the-post-mythos-era-keep-calm-and-carry-on/">Post-Mythos Cybersecurity</a></li>
+      <li><a href="https://www.v2ex.com/t/1223234#reply1">Claude 封号讨论 1</a></li>
+      <li><a href="https://www.v2ex.com/t/1223208#reply5">Claude 封号讨论 2</a></li>
+      <li><a href="https://www.v2ex.com/t/1223223#reply5">Claude 封号讨论 3</a></li>
+      <li><a href="https://www.v2ex.com/t/1223203#reply12">AI 模型护城河讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1223319#reply6">缓存命中率讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1223205#reply2">AI 对技术岗位影响</a></li>
+      <li><a href="https://www.v2ex.com/t/1223185#reply1">RAG 排查经验</a></li>
+      <li><a href="https://www.v2ex.com/t/1223187#reply8">AI 赚钱调查</a></li>
+      <li><a href="https://www.v2ex.com/t/1223371#reply4">AI 工具成本讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1223222#reply0">AI 处理 Word 格式</a></li>
+      </ul>
+      <p><strong>Elon Musk 与 Space</strong></p>
+      <ul>
+      <li><a href="https://x.com/elonmusk/status/2070741011358519325">Starship V3 推力数据</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070509762366554135">Starship 静态点火测试</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070868415330554086">Musk 转发 UK 庇护制度</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070748103171539078">Musk 转发 UK 废除庇护</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070749037905707261">Musk 转发南非白人事件</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070740849651265862">Musk 转发海地移民讨论 1</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070562012350824519">Musk 转发海地移民讨论 2</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070560874067116157">Musk 转发 USAID 相关</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070741750835257749">Musk 转发冰岛移民反馈</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070748054752522397">Musk 转发进步派动机</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070758365048062053">Musk 转发同性恋精神科医生声明</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070723276398342559">Musk 转发 Paul Graham 推文</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070752765358514284">Musk 其他推文 1</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070746705834979352">Musk 其他推文 2</a></li>
+      <li><a href="https://x.com/elonmusk/status/2070735639331652005">Musk 其他推文 3-9</a> [及其他来源]</li>
+      </ul>
+      <p><strong>GitHub 趋势</strong></p>
+      <ul>
+      <li><a href="https://github.com/anomalyco/opencode">anomalyco/opencode</a></li>
+      <li><a href="https://github.com/Fission-AI/OpenSpec">Fission-AI/OpenSpec</a></li>
+      <li><a href="https://github.com/hugohe3/ppt-master">hugohe3/ppt-master</a></li>
+      <li><a href="https://github.com/commaai/openpilot">commaai/openpilot</a></li>
+      <li><a href="https://github.com/grafana/grafana">grafana/grafana</a></li>
+      <li><a href="https://github.com/ripienaar/free-for-dev">ripienaar/free-for-dev</a></li>
+      <li><a href="https://github.com/simplex-chat/simplex-chat">simplex-chat/simplex-chat</a></li>
+      <li><a href="https://github.com/keycloak/keycloak">keycloak/keycloak</a></li>
+      <li><a href="https://github.com/Anil-matcha/Open-Generative-AI">Anil-matcha/Open-Generative-AI</a></li>
+      </ul>
+      <p><strong>Hacker News</strong></p>
+      <ul>
+      <li><a href="https://spectrum.ieee.org/ai-radio-chip-design">AI 设计无线电芯片</a></li>
+      <li><a href="https://github.com/bikini/exploitarium">0-day 漏洞仓库</a></li>
+      <li><a href="https://ethz.ch/en/news-and-events/eth-news/news/2026/06/a-new-type-of-pixel.html">新型像素技术</a></li>
+      <li><a href="https://arstechnica.com/gadgets/2026/06/streaming-services-obnoxiously-loud-ads-become-illegal-on-july-1-in-california/">流媒体广告加州禁令</a></li>
+      <li><a href="https://pluralistic.net/2026/06/27/zuckerstreisand-2/">Zuckerberg 与举报人</a></li>
+      <li><a href="https://nesbitt.io/2026/06/26/incident-report-cve-2026-lgtm.html">CVE-2026-LGTM</a></li>
+      <li><a href="https://www.jeffgeerling.com/blog/2026/framework-10g-ethernet-module-usb-c-complexity/">Framework USB-C 复杂性</a></li>
+      <li><a href="https://expression.fire.org/p/the-papers-please-era-of-the-internet">Papers Please 时代</a></li>
+      <li><a href="https://arstechnica.com/space/2026/06/a-us-military-exercise-in-space-got-underway-with-barely-anyone-noticing/">美军太空演习</a></li>
+      <li>其他 HN 来源见材料</li>
+      </ul>
+      <p><strong>V2EX</strong></p>
+      <ul>
+      <li><a href="https://www.v2ex.com/t/1223326#reply12">GPT-5.6 讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1223358#reply4">半价 Plus 讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1223320#reply19">尼日利亚礼品卡</a></li>
+      <li><a href="https://www.v2ex.com/t/1223318#reply0">Cursor 账号问题</a></li>
+      <li><a href="https://www.v2ex.com/t/1223314#reply0">通联支付对接</a></li>
+      <li><a href="https://www.v2ex.com/t/1223184#reply0">PDD 打印机维权</a></li>
+      <li><a href="https://www.v2ex.com/t/1223199#reply1">小米手机投诉</a></li>
+      <li><a href="https://www.v2ex.com/t/1223204#reply10">国产车企讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1223188#reply3">上海电信限速</a></li>
+      <li>其他 V2EX 来源见材料</li>
+      </ul>
+      <p><strong>阮一峰网络日志</strong></p>
+      <ul>
+      <li><a href="http://www.ruanyifeng.com/blog/2026/06/weekly-issue-401.html">科技爱好者周刊（第 401 期）</a></li>
+      </ul>
+      <p><strong>其他</strong></p>
+      <ul>
+      <li><a href="https://sspai.com/post/111435">钨极 Tungsten Edge</a></li>
+      <li><a href="https://commerce.jolla.com/products/jolla-phone-october-2026">Jolla Phone</a></li>
+      <li><a href="https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/">AWS MicroVMs</a></li>
+      <li><a href="https://www.science.org/content/article/why-have-papers-one-history-s-most-famous-physicists-been-retracted">Springer Nature 撤稿</a></li>
+      <li><a href="https://om.co/2026/06/24/1966-2026/">Om Malik 逝世</a></li>
+      <li>其他来源详见材料原始链接</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
