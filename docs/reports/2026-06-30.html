@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-30 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-06-30 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日核心动态围绕 <strong>Claude Code 被曝存在环境指纹标记行为</strong> 引发的安全与信任危机，社区涌现多种规避方案。自动驾驶与航天领域，特斯拉 Cybercab 公开路测、FSD V14 Lite 推送引发“iPhone 时刻”讨论；SpaceX 完成年内第 60 次星链发射。AI 模型侧，Anthropic 推出 Claude Science、LongCat-2.0 发布、DeepSeek V4 预告涨价。美国最高法院削弱联邦监管结构，加密货币公司在大选中投入近 1.9 亿美元，宏观经济层面劳动力收入占比处于战后最低水平。</p>
+      <h2>重点事件</h2>
+      <h3>Claude Code 被曝嵌入“间谍软件”级环境指纹</h3>
+      <p>社区爆料称 Claude Code 自 <code>@anthropic-ai/claude-code@2.1.91</code> 起，会根据自定义 <code>ANTHROPIC_BASE_URL</code> 和本机时区改写 system prompt 中的 <code>currentDate</code>，被指专门检测中国用户和 API 网关。<a href="https://www.v2ex.com/t/1224016#reply42">来源</a> | <a href="https://www.reddit.com/r/ClaudeAI/comments/1ujila1/anthropic_embedded_spyware_in_claude_code_and/">Reddit 讨论</a> | <a href="https://random-walk.atoma.one/claude-code-prompt-marker/">技术分析</a> | <a href="https://dev.com.cn/posts/claude-code-5chk">中文分析</a></p>
+      <ul>
+      <li>社区分析认为 Anthropic 大规模封号可能并非只因 IP 问题，Claude Code 客户端存在用户环境指纹泄露风险。<a href="https://www.v2ex.com/t/1224025#reply14">来源</a></li>
+      <li>已有用户分享通过 Docker Sandbox 运行 Claude Code 并指定时区的规避方法。<a href="https://www.v2ex.com/t/1224056#reply1">来源</a></li>
+      <li>另有用户反映 Claude Code 在 opus 4.8 模型、思考级别 max 时出现严重幻觉，虚拟提交、推送和创建 PR 均为凭空编造。<a href="https://www.v2ex.com/t/1223775#reply3">来源</a></li>
+      </ul>
+      <h3>特斯拉 Cybercab 无方向盘公开路测</h3>
+      <p>特斯拉在得州奥斯汀进行 Cybercab（无方向盘、无踏板）公开道路测试，多人评论称其为自动驾驶的“iPhone 时刻”，未来有望大规模消除因方向盘导致的车祸伤亡。<a href="https://x.com/elonmusk/status/2071813050978480423">Elon Musk X</a> | <a href="https://x.com/elonmusk/status/2071836139556651512">Robert Scoble 转发</a></p>
+      <h3>美国最高法院大幅削弱联邦监管结构</h3>
+      <p>美国最高法院做出重锤裁决，大幅削弱联邦政府监管结构。同时裁定地理围栏搜查令（Geofence Warrants）需要宪法保护。<a href="https://www.npr.org/2026/06/29/nx-s1-5875161/supreme-court-takes-sledgehammer-to-much-of-federal-governments-regulatory-structure">NPR</a> | <a href="https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision">Guardian</a></p>
+      <h3>Starlink 多项进展</h3>
+      <ul>
+      <li>SpaceX 宣布为孟菲斯地区（因 SpaceX 收购 xAI 运营 Colossus 数据中心）提供 Starlink 标准月费 5 折优惠，新用户免硬件费用。<a href="https://x.com/elonmusk/status/2072015711635914948">X</a></li>
+      <li>菲律宾成为东南亚首个商用推出 Starlink 直连手机服务的国家，当地运营商 Globe 已获批准。<a href="https://x.com/elonmusk/status/2072015266746159442">X</a></li>
+      <li>SpaceX 2026 年上半年完成第 60 次专用星链发射，将约 1600 颗新卫星送入轨道。<a href="https://x.com/elonmusk/status/2071611309586542870">X</a></li>
+      </ul>
+      <h3>AI 模型与产品动态</h3>
+      <ul>
+      <li><strong>Anthropic 推出 Claude Science</strong>：面向科学计算的新产品。<a href="https://claude.com/product/claude-science">Claude 官网</a></li>
+      <li><strong>LongCat-2.0 发布</strong>：大规模 MoE 模型，总参数 1.6T，活跃参数 48B。<a href="https://longcat.chat/blog/longcat-2.0/">LongCat 博客</a></li>
+      <li><strong>DeepSeek V4 预告涨价</strong>：7 月中旬上线后将引入峰谷定价机制，高峰时段（9:00-12:00，14:00-18:00）价格翻倍，deepseek-v4-pro 百万 tokens 输出高峰价达 12 元。<a href="https://www.v2ex.com/t/1223737#reply0">来源</a></li>
+      <li><strong>Tesla FSD V14 Lite 推送</strong>：面向 AI3（HW3）硬件用户，将 HW4 V14 智能“蒸馏”至旧硬件，新增停车、倒车和速度模式功能。<a href="https://x.com/elonmusk/status/2071606213456859284">X</a></li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <h3>Claude Code 信任危机可能加速开发者迁移</h3>
+      <p>Claude Code 被曝通过 steganographic 技术标记请求、检测用户时区和代理 URL 的行为，<a href="https://thereallo.dev/blog/claude-code-prompt-steganography">技术分析</a> 已在开发者社区引发强烈反应。Anthropic CEO Dario Amodei 关于“AI 开源是伪命题”的言论更激化了矛盾，博主阮一峰透露其 Anthropic 账户因“违反政策”被暂停，认为存在歧视性政策。<a href="http://www.ruanyifeng.com/blog/2026/06/anthropic.html">阮一峰博客</a> 结合社区涌现的规避方案（Docker Sandbox）、防御性配置体系（cc-use-exp）和 API 中转方案，用户信任受损可能加速部分开发者向其他平台迁移。</p>
+      <h3>美国政治经济结构性调整信号密集</h3>
+      <p>最高法院削弱联邦监管结构、USAID 资金争议（削减后非洲死亡率未增反降）、2026 大选加密行业投入 1.89 亿美元 <a href="https://www.reuters.com/world/crypto-firms-have-spent-189-million-so-far-2026-us-election-report-says-2026-06-30/">Reuters</a>、劳动力收入占比处于战后最低水平 <a href="https://libertystreeteconomics.newyorkfed.org/2026/06/the-post-covid-decline-in-the-labor-share/">纽约联储</a> 等信号密集出现，显示美国制度层面正经历深刻调整。选举诚信争议（最高法院裁决被批为选举欺诈开绿灯）进一步加剧政治对立。</p>
+      <h3>AI 编码工具生态碎片化加剧</h3>
+      <p>Cursor 发布 iOS 版本支持云代理构建 <a href="https://x.com/elonmusk/status/2071650759330906253">X</a>，Google 发布 agents-cli 工具将编码助手转变为 Google Cloud AI 智能体专家 <a href="https://github.com/google/agents-cli">GitHub</a>，外加 Claude Code、Codex 等工具，开发者面临工具选择碎片化。火山方舟 Coding Plan 用户反馈显示模型“降智”可能受上下文膨胀、缓存等多种因素影响。<a href="https://www.v2ex.com/t/1223789#reply10">来源</a></p>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Anthropic Claude Code 隐写标记事件的官方回应</strong>：目前无 Anthropic 官方说明，社区舆论持续发酵。</li>
+      <li><strong>DeepSeek V4 峰谷定价落地影响</strong>：AI API 定价模式创新是否引发行业跟随效应。</li>
+      <li><strong>美国大选加密货币支出规模</strong>：1.89 亿美元投入对选举走向及监管政策的影响。</li>
+      <li><strong>特斯拉 Cybercab 后续进展</strong>：FSD V14 Lite 在旧硬件上的实际表现及 Cybercab 量产时间表。</li>
+      <li><strong>USAID 资金争议后续</strong>：资金削减与非洲健康指标的因果关系辩论。</li>
+      <li><strong>GitHub 热门项目</strong>：OmniRoute（160+模型免费 AI 网关）、herdr（终端智能体多路复用器）等项目快速涨星，反映开发者对模型网关和工具集成的需求旺盛。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li>少数派：Trimly 发布、Rokid YodaOS、Coding 动画实践、绿植养护小程序、Rokid 发布会等多篇</li>
+      <li>Elon Musk X 及转发：Cybercab、Starlink 优惠、菲律宾直连手机、USAID 争议、FSD V14、星链发射、Cursor iOS 等</li>
+      <li>V2EX：Claude Code 隐写标记相关讨论、各类分享创造与推广、招聘信息、技术问答等大量社区帖子</li>
+      <li>GitHub Trending：OmniRoute、herdr、exercises-dataset、Microsoft AI-For-Beginners 等</li>
+      <li>Hacker News：Claude Code Steganography、Zluda 6、Factorio 2.1、Snowflake PostgreSQL 19、NPR 最高法院裁决、Reuters 加密选举支出、纽约联储劳动力报告等</li>
+      <li>OpenAI 官方：GeneBench-Pro、ChatGPT 采用扩展、核心转储漏洞修复、欧洲 AI 劳动力报告</li>
+      <li>Claude 官网：Claude Science</li>
+      <li>美团技术团队：ICML 2026 论文精选、LongCat VitaBench 2.0</li>
+      <li>阮一峰网络日志：Dario Amodei 与 AI 开源争议</li>
+      <li>其他：Google Gemini 个性化图像、Rocket Lab 收购 Iridium、DeepSeek V4 涨价预告、美光财报、欧洲热浪讨论、英国社会问题等</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
