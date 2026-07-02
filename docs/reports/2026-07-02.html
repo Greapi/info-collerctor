@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-02 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-07-02 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日科技动态主要围绕 AI 代理与基础设施展开。Starlink 在应急通信与教育连接方面取得新进展，SpaceX 持续推进 Starship 与猎鹰火箭的里程碑。AI 领域，微软发布 Frontier Co. 构建自主 AI 系统，美团发布万亿参数模型 LongCat-2.0，Anthropic 应美国政府要求重新部署 Claude Fable 5。此外，日本最高院裁定 AI 不能作为专利发明人，西班牙下令封杀 Palantir，开源社区迎来多款新工具与基准测试。</p>
+      <h2>重点事件</h2>
+      <p><strong>Starlink 应急与连接扩展</strong></p>
+      <ul>
+      <li>日本正在测试由 <a href="https://x.com/elonmusk/status/2072695783397159396">Starlink 供电的消防栓标志</a>，将其作为灾后应急通信枢纽，目前仍处于早期技术验证阶段。</li>
+      <li><a href="https://x.com/elonmusk/status/2072703838247600227">巴拉圭与 Starlink 合作</a>，通过 MITIC 与 COPACO 将高速互联网接入超过 1600 所偏远学校，覆盖 5 万余名师生。</li>
+      </ul>
+      <p><strong>AI 大模型与企业动向</strong></p>
+      <ul>
+      <li>微软 CEO Satya Nadella 宣布推出 <a href="https://x.com/elonmusk/status/2072728192817795112">Frontier Co.</a>，帮助企业将知识、工作流与判断转化为持续改进的自主 AI 系统。</li>
+      <li><a href="https://tech.meituan.com/2026/06/30/LongCat2.0.html">美团 LongCat-2.0</a> 正式发布：万亿参数模型，在国产算力集群完成全流程训练，原生支持 1M 超长上下文，在 SWE-bench Pro 得分为 59.5。</li>
+      <li><a href="https://x.com/AnthropicAI/status/2072163884430229756">Anthropic 宣布 Claude Fable 5 全球重新上线</a>，部署了新的分类器以拦截网络安全任务。</li>
+      <li>xAI 推出 <a href="https://x.com/elonmusk/status/2072318859248644441">Grok Voice Agent Builder</a> 测试版，可在 2 分钟内零代码部署类人语音代理。</li>
+      </ul>
+      <p><strong>SpaceX 与特斯拉里程碑</strong></p>
+      <ul>
+      <li><a href="https://x.com/elonmusk/status/2072696059835367870">Starship 完成 60 秒静态点火</a>，为第 13 次飞行测试做准备。</li>
+      <li>猎鹰一级火箭的 <a href="https://x.com/elonmusk/status/2072505319633424772">第 1000 台 Merlin 1D 发动机</a> 完成制造和验收测试。</li>
+      <li>特斯拉超级充电网络 Q2 全球交付 <a href="https://x.com/elonmusk/status/2072444694882341044">2 太瓦时电力</a>，同比增长 17%。</li>
+      </ul>
+      <p><strong>政策与合规</strong></p>
+      <ul>
+      <li><a href="https://japannews.yomiuri.co.jp/science-nature/technology/20260306-314930/">日本最高法院裁定</a> AI 不得作为专利发明人列出。</li>
+      <li>西班牙下令公共和私营公司 <a href="https://clashreport.com/world/articles/spain-orders-blacklist-of-us-tech-giant-palantir-from-public-and-private-companies-fsnc2z17gjv">禁用并封杀 Palantir</a>。</li>
+      <li>有指控称 <a href="https://nsa.2026.action.cr.yp.to/">NSA 正试图削弱 ML-KEM 标准化过程</a>。</li>
+      <li>美国政府已成为 <a href="https://moeonmargin.substack.com/p/the-us-government-is-now-a-shareholder">26 家公司的股东</a>。</li>
+      </ul>
+      <p><strong>开发者工具与基础设施</strong></p>
+      <ul>
+      <li><a href="https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/">Kimi K2.7 Code</a> 在 GitHub Copilot 中全面可用。</li>
+      <li><a href="https://voidzero.dev/posts/announcing-vite-plus-beta">Vite+ Beta</a> 发布。</li>
+      <li><a href="https://github.com/agentskills/agentskills">Agent Skills 规范</a> 与文档已发布（21,520 星）。</li>
+      <li>Chrome DevTools 推出面向编程代理的 <a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">MCP 工具</a>（45,027 星）。</li>
+      <li><a href="https://github.com/langflow-ai/langflow">Langflow</a> 用于构建和部署 AI 代理及工作流（150,588 星）。</li>
+      </ul>
+      <p><strong>硬件与半导体</strong></p>
+      <ul>
+      <li>德国英飞凌 <a href="https://www.rfi.fr/en/international-news/20260702-germany-s-infineon-opens-major-chip-plant-as-eu-seeks-tech-autonomy">启用大型芯片制造厂</a>，在欧盟寻求技术自主的背景下推进。</li>
+      </ul>
+      <p><strong>安全问题</strong></p>
+      <ul>
+      <li><a href="https://mathstodon.xyz/@iblech/116769502749142438">自 Linux 6.9 起，LUKS suspend 不再从内存中擦除磁盘加密密钥</a>，带来安全风险。</li>
+      <li><a href="https://f-droid.org/2026/07/01/adv-malware.html">F-Droid 警告</a> “Android 开发者验证”实为伪装成保护措施的威胁。</li>
+      </ul>
+      <p><strong>学术与新基准</strong></p>
+      <ul>
+      <li>新基准 <a href="https://senior-swe-bench.snorkel.ai/">Senior SWE-Bench</a> 开源，用于评估代理是否具备高级工程师能力。</li>
+      <li><a href="https://cursor.com/evals">CursorBench 3.1</a> 发布。</li>
+      <li>研究揭示：<a href="https://www.quantamagazine.org/what-breaks-a-cells-ribs-can-make-it-stronger-20260629/">破坏细胞的“肋骨”反而能使其更强韧</a>。</li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <p><strong>AI 代理与桌面工具生态的系统性爆发</strong> 今日大量动态指向同一趋势：AI 正从对话式助手向可执行任务的“代理”演进。微软 Frontier Co. 的提出、Grok Voice Agent Builder 的零代码部署、Agent Skills 规范的发布、Chrome DevTools MCP 工具的出现，以及 Langflow 的高热度，共同表明业界正在为 AI 代理建立开发标准与基础设施。Claude Code / Codex 的会话管理工具 VibeTrail、ProofHound Cloud 的自动化 Prompt 优化，也反映出开发者工具链正在围绕代理工作流快速成熟。</p>
+      <p><strong>“技术主权”成为多国共同议题</strong> 今天多个事件从不同角度交叉印证了这一趋势：欧盟通过德国英飞凌芯片厂寻求技术自主，西班牙直接封杀美国科技公司 Palantir，日本最高法院对 AI 发明专利的法律界定，以及NSA被指干预加密标准。各国在半导体、数据主权、AI 治理和国家安全上的自主意识愈发强烈，技术领域的“去依赖化”正在从口号转为具体政策与司法判决。</p>
+      <p><strong>AI 模型竞争进入工程深水区</strong> 美团 LongCat-2.0 在国产算力集群上完成万亿参数模型的全流程训练，Kimi K2.7 接入 GitHub Copilot，Claude Fable 5 通过政府对话调整部署策略，以及 OpenAI Codex 插件与 Claude Code 的整合尝试，都说明大模型竞争的重心已从单纯的参数比拼，转向训练基础设施自主可控、部署合规、以及工具生态整合的综合工程能力较量。</p>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Claude Fable 5 重新上线后的后续</strong>：Anthropic 与美国政府对话后部署了新的分类器，短期内部分编码调试任务由 Opus 4.8 处理，其对开发者实际使用的影响需要持续观察。</li>
+      <li><strong>Codex 额度消耗与能力评价争议</strong>：用户反馈 Codex 额度消耗加速、复杂任务处理“诡异”，与 OpenAI 声称的修复形成矛盾，其实际可用性仍存疑。</li>
+      <li><strong>macOS 27 Beta 内存泄漏</strong>：dasd 进程内存占用高达 80GB，可能影响开发环境稳定性，需关注后续 Beta 版本修复情况。</li>
+      <li><strong>Linux kernel.org 删除 release tar 包</strong>：原因未知，已导致镜像站同步删除，对依赖传统 tar 包构建的流程有直接影响。</li>
+      <li><strong>微信封禁拉群动作</strong>：若力度持续加大，可能影响基于微信群的社群运营与用户增长模式。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li>RT DogeDesigner / Starlink 消防栓标志</li>
+      <li>RT X Freeze / 巴拉圭 Starlink 学校连接</li>
+      <li>Starship static fire</li>
+      <li>RT Satya Nadella / Microsoft Frontier 博客</li>
+      <li>Kimi K2.7 Code / GitHub Changelog</li>
+      <li>openai/codex-plugin-cc</li>
+      <li>JuliusBrussee/caveman</li>
+      <li>Asymmetric Quantization / Mixedbread</li>
+      <li>Senior SWE-Bench / Snorkel</li>
+      <li>CursorBench 3.1</li>
+      <li>AI can&#x27;t be listed as inventor / Japan News</li>
+      <li>Spain Orders Blacklist of Palantir</li>
+      <li>NSA tries to weaken mlkem standardisation</li>
+      <li>The US Government Is Now a Shareholder in 26 Companies</li>
+      <li>Germany’s Infineon opens major chip plant / RFI</li>
+      <li>Since Linux 6.9, LUKS suspend stopped wiping disk-encryption keys</li>
+      <li>Android Developer Verification / F‑Droid</li>
+      <li>Vite+ Beta / VoidZero</li>
+      <li>agentskills/agentskills</li>
+      <li>ChromeDevTools/chrome-devtools-mcp</li>
+      <li>langflow-ai/langflow</li>
+      <li>What Breaks a Cell&#x27;s Ribs Can Make It Stronger</li>
+      <li>WinPE as a stateless harness for Windows driver testing and fuzzing</li>
+      <li>[Apple] 纯粹翻译 App</li>
+      <li>[分享创造] AI 邮件生成与临时邮箱</li>
+      <li>[分享创造] yeero do</li>
+      <li>[分享创造] ProofHound Cloud</li>
+      <li>[分享创造] VibeTrail</li>
+      <li>[分享创造] BrandsBuy</li>
+      <li>[分享创造] 糖果梦热榜</li>
+      <li>[分享创造] FreeAudioToText.com</li>
+      <li>[分享创造] CineSub</li>
+      <li>[分享创造] Nano Banana Lite</li>
+      <li>[Android] 支持下行 PD/PPS 供电的扩展坞</li>
+      <li>[分享发现] AI 回复对比句</li>
+      <li>[分享发现] Codex 编码能力评价 / PicView</li>
+      <li>[分享发现] SenseNova-U1-8B-MoT-Infographic-V2</li>
+      <li>[分享发现] macOS 27 dasd 内存泄漏</li>
+      <li>[分享发现] 商汤 Token Plan 免费延长</li>
+      <li>Claude Fable 5 重新上线 / Anthropic</li>
+      <li>[程序员] Linux 官网删除 release tar 包</li>
+      <li>[宽带症候群] 西安联通拒绝安装宽带</li>
+      <li>[微信] 微信封拉群动作</li>
+      <li>[开源软件] 燕子启动器</li>
+      <li>[程序员] Claude Science 内置 32 个 skills</li>
+      <li>[程序员] Hermes Agent 飞书优化版</li>
+      <li>[雅思] 雅思写作批改网站</li>
+      <li>[远程工作] 马来西亚 Node.js/Vue 招聘</li>
+      <li>[酷工作] Execution Systems Dev 招聘</li>
+      <li>从 Axure HTML 到 Ardot：一次 AI 原型迁移实践</li>
+      <li>特斯拉超级充电网络 Q2 数据</li>
+      <li>猎鹰 Merlin 1D 发动机第 1000 台</li>
+      <li>Grok Voice Agent Builder</li>
+      <li>Grok Build v0.2.80 更新</li>
+      <li>Neuralink 与 Optimus 结合设想</li>
+      <li>Optimus 生产线</li>
+      <li>Starlink 孟菲斯半价优惠</li>
+      <li>美国联邦退休流程现代化</li>
+      <li>爱丽丝岛移民数据</li>
+      <li>allenai/olmocr</li>
+      <li>TencentCloud/CubeSandbox</li>
+      <li>togatoga/karukan</li>
+      <li>Gemini Spark macOS 更新</li>
+      <li>Claude Code 中国特殊处理代码回滚</li>
+      <li>Claude 封禁讨论</li>
+      <li>Codex 崩溃反馈</li>
+      <li>Codex 5.5 档位讨论</li>
+      <li>ChatGPT 土耳其区续费</li>
+      <li>eget 工具</li>
+      <li>PicGo 3.0.0</li>
+      <li>PicTrim</li>
+      <li>ppt-craft-editable</li>
+      <li>Chrome 150 Manifest V2 问题</li>
+      <li>Booko 微信读书笔记 App</li>
+      <li>字体墙工具</li>
+      <li>colordice.app</li>
+      <li>Yield 项目</li>
+      <li>zenlocks 2.0</li>
+      <li>轻量工作记录工具</li>
+      <li>京东后封机提醒</li>
+      <li>香港手机价格</li>
+      <li>PS5 Pro 购买咨询</li>
+      <li>VPS 内存问题</li>
+      <li>API 中转站搭建</li>
+      <li>Flutter 后台任务</li>
+      <li>个人博客复兴</li>
+      <li>美区 ID 订阅问题</li>
+      <li>美团 LongCat-2.0</li>
+      <li>Codex + Antigravity 重构 AI 伴侣项目</li>
+      <li>Codex 额度消耗过快</li>
+      <li>RPG Roleplay Platform</li>
+      <li>aitokensflux 推广</li>
+      <li>出海 SEO 外链分享</li>
+      <li>人形机器人美妆灵感</li>
+      <li>Pencil 设计稿还原问题</li>
+      <li>奔四人生建议</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
