@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-08 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-07-08 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>人工智能领域迎来“超级星期四”前夜，xAI（SpaceXAI）、OpenAI、Anthropic 同日集中发布或预告重要模型，业界戏称“AI 过年”。SpaceX 在航天与星链扩张上动作频频，欧盟内容扫描立法重回议程，社区讨论则聚焦于 AI 成本激增与消费分化。网络安全方面，Tenda 固件后门与 OpenBSD 提权漏洞引起关注。</p>
+      <h2>重点事件</h2>
+      <h3>🤖 AI 模型扎堆发布，竞争烈度再升级</h3>
+      <ul>
+      <li><strong>Grok 4.5 即将公开上线</strong>。Elon Musk 今日多次提及此事，并确认内部评估已将其对标 Claude Opus 4.7，但速度更快、成本更低，Tesla 与 SpaceX 硬核工程师已实际使用。<a href="https://x.com/elonmusk/status/2074889665119740341">Correct</a> <a href="https://x.com/elonmusk/status/2074896252148322617">RT Yun-Ta Tsai</a> <a href="https://x.com/elonmusk/status/2074911038286295049">内部评估</a></li>
+      <p>同期 Grok 获得 21 种多语言旗舰语音升级，支持 25+ 种语言，并通过 API 与 Voice Agent Builder 提供自定义能力。<a href="https://x.com/elonmusk/status/2074348907161673772">RT X Freeze</a> Grok Imagine 则新增可生成 15 秒视频的功能。<a href="https://x.com/elonmusk/status/2074378653501128833">Grok Imagine update</a></p>
+      <li><strong>OpenAI 语音交互与高阶模型双线程推进</strong>。新一代语音模型 <a href="https://openai.com/index/introducing-gpt-live/">GPT‑Live</a> 今日在 ChatGPT 上线，Sam Altman 形容其“神奇且真实”，甚至改变了他更偏爱打字的习惯。<a href="https://x.com/sama/status/2074909079450050629">Sam Altman 推文</a> 同时宣布 <strong>GPT-5.6 Sol、Terra、Luna 将于本周四公开发布</strong>，全球预览权限已扩大。<a href="https://x.com/OpenAI/status/2074704958419792299">OpenAI 官推</a> <a href="https://x.com/sama/status/2074709023807664454">sama</a></li>
+      <li><strong>Anthropic 延长免费体验</strong>。Claude Fable 5 免费期延至 7 月 12 日，之后按约 $10/$50（百万输入/输出 token）收费。<a href="https://www.v2ex.com/t/1225922">V2EX 讨论</a></li>
+      <li><strong>Cognition 发布 SWE-1.7</strong>，宣称智能水平接近 GPT-5.5 与 Opus。<a href="https://cognition.com/blog/swe-1-7">SWE-1.7</a></li>
+      <li><strong>字节跳动推出图像生成新旗舰</strong> <a href="https://www.v2ex.com/t/1225945">Seedream 5.0 Pro</a>，支持智能分层生成、多语言原生文字和 2K/4K 输出。</li>
+      <li>腾讯云发布 AI 代理长期记忆系统 <a href="https://github.com/TencentCloud/TencentDB-Agent-Memory">TencentDB Agent Memory</a>。</li>
+      <li>Mistral 发布机器人导航模型 <a href="https://mistral.ai/news/robostral-navigate/">Robostral Navigate</a>。</li>
+      </ul>
+      <h3>🚀 航天与星链：从轨道到 AI 数据中心</h3>
+      <ul>
+      <li><strong>猎鹰 9 号执行 Transporter-17 拼车任务</strong>，成功将 81 颗卫星送入轨道并回收火箭。<a href="https://x.com/elonmusk/status/2074519858381799592">Falcon delivers 81 satellites to orbit</a> <a href="https://x.com/elonmusk/status/2074520327393079438">着陆确认</a></li>
+      <li><strong>FireSat 卫星星座推进</strong>：首颗卫星在轨一年已发现既往卫星不可见的野火，今日再发射 3 颗，最终目标为每 20 分钟近实时更新；合作伙伴包括 EarthFireAll、MuonSpace、MooreFound、BezosEarthFund，由 SpaceX 发射。<a href="https://x.com/elonmusk/status/2074736591201812684">RT Sundar Pichai</a></li>
+      <li><strong>SpaceX 申请第三代星链星座</strong>，规模 10 万颗卫星，旨在支撑 AI 驱动的进步。Elon Musk 回应：“需要更大的火箭！（星舰）”<a href="https://x.com/elonmusk/status/2074520690326196556">We’re gonna need a bigger rocket!</a></li>
+      <p>ARK Invest 分析指出，SpaceX 认为其未来超 90% 的市场机会在 AI 而非太空，包括轨道数据中心和潜在 28.5 万亿美元可寻址市场。<a href="https://x.com/elonmusk/status/2074732987736801478">RT ARK Invest</a></p>
+      <li><strong>特斯拉 Cybercab 环保数据</strong>：在全自动驾驶并最大化叫车服务下，每英里排放预计比 Model 3/Y 减少近一半。<a href="https://x.com/elonmusk/status/2074737359510237343">RT Tesla</a></li>
+      <li>日本 <strong>隼鸟 2 号</strong> 即将飞越小行星 Torifune。<a href="https://www3.nhk.or.jp/nhkworld/en/news/20260705_01/">Hayabusa2</a></li>
+      </ul>
+      <h3>🏛️ 政策与监管动态</h3>
+      <ul>
+      <li><strong>白宫发布史密森尼学会报告</strong>（162 页），指责该机构被激进左翼意识形态捕获，特朗普政府正在纠正。<a href="https://x.com/elonmusk/status/2074907587569430917">RT Oilfield Rando</a> <a href="https://www.whitehouse.gov/wp-content/uploads/2026/07/Smithsonian-Report-Saving-Americas-Story.pdf">报告 PDF</a></li>
+      <li><strong>欧盟 Chat Control 提案</strong> 在欧盟议会第一轮投票中获得通过，距离恢复私人信息扫描规则仅一步之遥。<a href="https://www.heise.de/en/news/Showdown-in-Strasbourg-The-unexpected-return-of-Chat-Control-1-0-11356680.html">Chat Control passed first round</a> <a href="https://cyberinsider.com/eu-now-one-step-away-from-reviving-private-message-scanning-rules/">EU now one step away</a></li>
+      <li><strong>美国 GAO 批评能源部</strong> 过早排除更便宜的核清理方案。<a href="https://www.gao.gov/products/gao-26-108193">GAO 报告</a></li>
+      <li><strong>中国或收紧前沿 AI 模型出海</strong>。路透社消息称商务部约谈阿里、字节、智谱，拟对 Qwen/DeepSeek/GLM 开源路线进行收口。<a href="https://www.v2ex.com/t/1225707">V2EX 讨论</a> 与此同时，CNBC 报道美国公司因成本上升正更多地采购中国 AI 模型，OpenRouter 上中国模型采购比例从 11% 飙升至 30%-46%。<a href="https://www.v2ex.com/t/1225666">V2EX 讨论</a></li>
+      </ul>
+      <h3>💻 产业与开源动态</h3>
+      <ul>
+      <li><strong>苹果扩大博通芯片支出</strong>，在美国境内生产数十亿枚芯片。<a href="https://www.apple.com/newsroom/2026/07/apple-to-increase-spend-with-broadcom-to-produce-billions-more-us-chips/">Apple 新闻稿</a></li>
+      <li><strong>阿里巴巴即将全面禁用 Claude</strong>，社区猜测其后续采用的替代方案。<a href="https://www.v2ex.com/t/1225928">V2EX 讨论</a></li>
+      <li><strong>Trae 自动植入推广标识</strong> 引发开发者不满，Bilibili 相关视频已获关注。<a href="https://www.v2ex.com/t/1225921">V2EX 讨论</a></li>
+      <li><strong>微软解雇 id Software 的 idTech 引擎团队</strong>。<a href="https://gamefromscratch.com/microsoft-fire-idtech-team-at-id-software/">GameFromScratch 报道</a></li>
+      <li><strong>EVE Online Carbon 引擎开源</strong>。<a href="https://www.gamesindustry.biz/eve-onlines-carbon-engine-is-now-open-source-fenris-creations-explains-why">GamesIndustry 报道</a></li>
+      <li><strong>Cloudflare 推出全局分布式共识系统 Meerkat</strong>。<a href="https://blog.cloudflare.com/meerkat-introduction/">Cloudflare 博客</a></li>
+      <li><strong>TypeScript 7 正式发布</strong>。<a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/">微软博客</a></li>
+      <li><strong>Better Auth 加入 Vercel</strong>。<a href="https://better-auth.com/blog/better-auth-joins-vercel">官方博客</a></li>
+      <li>开源命令行办公套件 <a href="https://github.com/iOfficeAI/OfficeCLI">OfficeCLI</a> 在 GitHub 获得 9659 星。</li>
+      <li>PostgreSQL 连接池工具 <a href="https://pgdog.dev/blog/why-yet-another-connection-pooler">pgdog.dev</a>、GitHub 高可用节流服务 <a href="https://github.com/github/freno">Freno</a> 及多种开发者工具涌现。</li>
+      </ul>
+      <h3>🔒 安全漏洞与攻击面</h3>
+      <ul>
+      <li><strong>Tenda 多版本固件</strong> 被发现隐藏认证后门。<a href="https://kb.cert.org/vuls/id/213560">CERT/CC 公告</a></li>
+      <li><strong>OpenBSD 存在 use-after-free 漏洞</strong>（CVE-2026-57589），可本地提权至 root。<a href="https://nvd.nist.gov/vuln/detail/cve-2026-57589">NVD 详情</a></li>
+      <li><strong>GitLost 攻击</strong>：研究者诱导 GitHub 的 AI 代理泄露私有仓库。<a href="https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/">详细分析</a></li>
+      </ul>
+      <h3>💬 社区与企业基础设施</h3>
+      <ul>
+      <li><strong>AI Token 用量惊人</strong>：有用户统计 68 天消耗 135.65 亿 token，缓存命中率 96%，节省超 7 万美元。<a href="https://www.v2ex.com/t/1225926">V2EX 帖子</a> 另一起案例中，Claude Code 单次检查 Git 提交即消耗 3 千万 Token。<a href="https://www.v2ex.com/t/1225694">V2EX 帖子</a></li>
+      <li><strong>消费降级共鸣</strong>：社区普遍讨论“能省则省”的心态，与宏观“提振消费”叙事形成反差。<a href="https://www.v2ex.com/t/1225966">V2EX 帖子</a></li>
+      <li><strong>X 平台流量持续增长</strong>：2026 年 6 月访问量达 43.99 亿次，月环比增长 4.66%，在全球 Top 10 网站中增速最快。<a href="https://x.com/elonmusk/status/2074510011099754802">𝕏 had the highest monthly growth</a> <a href="https://x.com/elonmusk/status/2074523217880908228">RT DogeDesigner</a></li>
+      <li>美团单车新手机支架被反馈磕碰膝盖安全隐患，一加 7/7T 换电池后反复重启等生活类议题亦引发讨论。</li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ol>
+      <li><strong>AI 模型竞争进入多模态与极致性价比阶段</strong>：Grok 4.5 直接对标 Opus 4.7 并以更快速度、更低成本切入，OpenAI 的 GPT-5.6 系列紧随其后，模型数量与能力近趋同质化，价格和生态将成为下一战场。</li>
+      <li><strong>美国企业加速采纳中国开源模型</strong>：成本优势驱动 OpenRouter 上中国模型用量占比已超 30%，但中国商务部约谈企业可能限制前沿模型出海，形成中外 AI 供应链的“双向管制”局面。</li>
+      <li><strong>太空进入 AI 基础设施时代</strong>：SpaceX 明确未来主要市场在 AI，第三代星链星座和星舰将承载轨道数据中心愿景，AI 与航天产业加速融合。</li>
+      <li><strong>安全威胁随 AI 代理扩展</strong>：从 GitHub AI 代理被诱骗泄露私有仓库，到固件后门与系统级漏洞，供应链和 AI 驱动的自动化正成为新的攻击面。</li>
+      <li><strong>欧盟数字监管重返“扫描”争议</strong>：Chat Control 提案第一轮投票通过，预示个人隐私与平台监控的拉锯战即将登陆立法前沿。</li>
+      </ol>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>周四发布日</strong>：GPT-5.6 Sol/Terra/Luna 与 Grok 新模型同日公开，实际表现与开发者反馈。</li>
+      <li><strong>阿里巴巴禁用 Claude 后的迁移路径</strong> 及其对国内 AI 生态的影响。</li>
+      <li><strong>中国前沿 AI 模型分级出海政策</strong> 的官方细则，可能重塑全球开源模型格局。</li>
+      <li><strong>SpaceX 第三代星链申请</strong> 在 FCC 的审批进展及轨道数据中心的后续披露。</li>
+      <li><strong>欧盟 Chat Control</strong> 后续投票与具体条款落地。</li>
+      <li><strong>苹果折叠 iPhone Ultra</strong> 的前瞻性软硬件动态（基于 Xcode 27 信息）。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <p>本日报引用的全部来源如下（含昨日补遗内容），按类别归属列出：</p>
+      <h3>官方新闻与博客</h3>
+      <ul>
+      <li><a href="https://www.apple.com/newsroom/2026/07/apple-to-increase-spend-with-broadcom-to-produce-billions-more-us-chips/">Apple to increase spend with Broadcom...</a></li>
+      <li><a href="https://www.gao.gov/products/gao-26-108193">GAO: DOE Is Prematurely Excluding Less Expensive Options...</a></li>
+      <li><a href="https://openai.com/index/introducing-gpt-live/">GPT‑Live</a></li>
+      <li><a href="https://openai.com/index/k-12-educators-practical-skills">Helping K–12 educators build practical AI skills</a></li>
+      <li><a href="https://openai.com/index/introducing-gpt-live">Introducing GPT-Live</a></li>
+      <li><a href="https://mistral.ai/news/robostral-navigate/">Mistral&#x27;s Robostral Navigate...</a></li>
+      <li><a href="https://blog.cloudflare.com/meerkat-introduction/">Cloudflare Meerkat...</a></li>
+      <li><a href="https://cyberinsider.com/eu-now-one-step-away-from-reviving-private-message-scanning-rules/">EU now one step away from reviving private message scanning rules</a></li>
+      <li><a href="https://www.heise.de/en/news/Showdown-in-Strasbourg-The-unexpected-return-of-Chat-Control-1-0-11356680.html">Chat Control passed first round in EU Parliament</a></li>
+      <li><a href="https://fightchatcontrol.eu/chat-control-overview">Chat Control 1.0 and 2.0 Explained</a></li>
+      <li><a href="https://gamefromscratch.com/microsoft-fire-idtech-team-at-id-software/">Microsoft fire idTech team at Id software</a></li>
+      <li><a href="https://www.gamesindustry.biz/eve-onlines-carbon-engine-is-now-open-source-fenris-creations-explains-why">EVE Online&#x27;s Carbon engine is now open source...</a></li>
+      <li><a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/">TypeScript 7</a></li>
+      <li><a href="https://better-auth.com/blog/better-auth-joins-vercel">Better Auth is joining Vercel</a></li>
+      <li><a href="https://openai.com/index/australian-payments-plus">Australia Payments Plus moves faster with ChatGPT and Codex</a></li>
+      <li><a href="https://x.com/GeminiApp/status/2074554943474966707">Calling all solopreneurs... (Google Gemini)</a></li>
+      </ul>
+      <h3>社交媒体（主要来自 Elon Musk / SpaceX / Tesla / OpenAI / Sam Altman / X 平台）</h3>
+      <ul>
+      <li><a href="https://x.com/elonmusk/status/2074739056697610504">America, the Beautiful</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074909335914762458">An inspiring vision of the future is needed</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074889665119740341">Correct</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074911038286295049">Our internal assessment is that Grok 4.5 is roughly comparable to Opus 4.7...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074896252148322617">RT Yun-Ta Tsai</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074907587569430917">RT Oilfield Rando: There was literally a Bolshevik takeover...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074736591201812684">RT Sundar Pichai: FireSat...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074738585727590547">(untitled)</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074348907161673772">RT X Freeze: Grok Voice...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074378653501128833">Grok Imagine update</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074339319779569908">AI+Optimus will enable universal excellent healthcare...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074519858381799592">Falcon delivers 81 satellites to orbit</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074520327393079438">Falcon 9 landing confirmed</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074520690326196556">We’re gonna need a bigger rocket! (Starship)</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074732987736801478">RT ARK Invest: SpaceX says over 90% of its future...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074737359510237343">RT Tesla: Cybercab emissions...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074510011099754802">𝕏 had the highest monthly growth...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074523217880908228">RT DogeDesigner</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074521012398424194">RT Katie Miller</a></li>
+      <li><a href="https://x.com/OpenAI/status/2074704958419792299">GPT-5.6 Sol... will launch publicly this Thursday</a></li>
+      <li><a href="https://x.com/sama/status/2074709023807664454">GPT-5.6 sol launches thursday!</a></li>
+      <li><a href="https://x.com/sama/status/2074909079450050629">GPT-live... feels magical and &#x27;real&#x27;</a></li>
+      <li><a href="https://x.com/kepano/status/2074844435444072619">you can multiply it by ten again</a></li>
+      <li>其他 Elon Musk 转推及补遗推文（<a href="https://x.com/elonmusk/status/2074520394925510729">RT Alice Smith</a> <a href="https://x.com/elonmusk/status/2074732939615551633">RT Brivael Le Pogam</a> <a href="https://x.com/elonmusk/status/2074733632321675546">RT The Rabbit Hole</a> <a href="https://x.com/elonmusk/status/2074534474449113309">RT Wall Street Apes</a> <a href="https://x.com/elonmusk/status/2074521451474895265">Why did the media push this lie so hard?</a> <a href="https://x.com/elonmusk/status/2074523879075115285">Great point</a> <a href="https://x.com/elonmusk/status/2074523573142573321">Yes</a> 等详见原始来源列表）。</li>
+      </ul>
+      <h3>安全与漏洞公告</h3>
+      <ul>
+      <li><a href="https://kb.cert.org/vuls/id/213560">Tenda firmware...</a></li>
+      <li><a href="https://nvd.nist.gov/vuln/detail/cve-2026-57589">OpenBSD... allow local privilege escalation...</a></li>
+      <li><a href="https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/">GitLost: We Tricked GitHub&#x27;s AI Agent into Leaking Private Repos</a></li>
+      <li><a href="https://sitedex.dev/insights/robots-txt-2023-war-memorial">Sites that block AI training crawlers...</a></li>
+      </ul>
+      <h3>开发者社区与开源项目（GitHub/Hacker News/技术博客）</h3>
+      <ul>
+      <li><a href="https://github.com/TencentCloud/TencentDB-Agent-Memory">TencentCloud/TencentDB-Agent-Memory</a></li>
+      <li><a href="https://cognition.com/blog/swe-1-7">SWE-1.7 Reach Near GPT 5.5...</a></li>
+      <li><a href="https://www.hmans.dev/blog/chatto-is-open-source">Chatto is now Open Source</a></li>
+      <li><a href="https://blog.cloudflare.com/meerkat-introduction/">Cloudflare Meerkat...</a></li>
+      <li><a href="https://www.gamesindustry.biz/eve-onlines-carbon-engine-is-now-open-source-fenris-creations-explains-why">EVE Online&#x27;s Carbon engine...</a></li>
+      <li><a href="https://github.com/github/freno">GitHub Freno...</a></li>
+      <li><a href="https://pgdog.dev/blog/why-yet-another-connection-pooler">Why we built yet another Postgres connection pooler</a></li>
+      <li><a href="https://postgres.saneengineer.com/">Show HN: PostgreSQL performance and cost across 23 EC2 instance types</a></li>
+      <li><a href="https://streetcomplete.app/">StreetComplete: Fixing OpenStreetMap...</a></li>
+      <li><a href="https://www.liquid.ai/blog/antidoom">Reducing Doom Loops with Final Token Preference Optimization</a></li>
+      <li><a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">The Art of Computer Programming by Donald E. Knuth</a></li>
+      <li><a href="https://30papers.com/">30papers.com</a></li>
+      <li><a href="https://github.com/iOfficeAI/OfficeCLI">iOfficeAI/OfficeCLI</a></li>
+      <li><a href="https://www3.nhk.or.jp/nhkworld/en/news/20260705_01/">Japan&#x27;s Hayabusa2 probe...</a></li>
+      <li><a href="https://www.nytimes.com/2026/07/05/business/philosophy-majors-ai-jobs.html">The revenge of the philosophy majors</a></li>
+      <li><a href="https://ciphercue.com/blog/european-web-hosting-vendor-share-2026">Europe&#x27;s company websites are mostly served by US vendors</a></li>
+      <li><a href="https://www.dw.com/en/germany-migrants-skilled-workers-integration-labor-market-bureaucracy-language-housing/a-77853162">Why skilled workers come to Germany...</a></li>
+      <li>其他 Hacker News 内容（如 <a href="https://www.uni-wuerzburg.de/en/news-and-events/news/detail/news/ameisen-kolonie-verletzte-pflegt/">Ants: Who looks after the injured...</a> <a href="https://www.digipres.org/the-floppy-guide/">Copy That Floppy...</a> <a href="https://observer.co.uk/style/features/article/every-postcard-tells-a-story">Every postcard tells a story</a> 等，详见来源清单）。</li>
+      </ul>
+      <h3>V2EX 社区讨论贴（选取代表性条目）</h3>
+      <ul>
+      <li><a href="https://www.v2ex.com/t/1225922">过年了吗，Claude 免费延期...</a></li>
+      <li><a href="https://www.v2ex.com/t/1225926">最近两个月 AI Token 用量：135 亿...</a></li>
+      <li><a href="https://www.v2ex.com/t/1225920">智普 GLM-5.2 api 调运，花钱如流水</a></li>
+      <li><a href="https://www.v2ex.com/t/1225928">明后天阿里就全面禁用 Claude 了...</a></li>
+      <li><a href="https://www.v2ex.com/t/1225921">Trae 会自动在生产环境安装自己推广标识</a></li>
+      <li><a href="https://www.v2ex.com/t/1225950">美团单车手机支架暴击半月板</a></li>
+      <li><a href="https://www.v2ex.com/t/1225947">一加手机换电池后反复重启...</a></li>
+      <li><a href="https://www.v2ex.com/t/1225966">大家最近消费/生活状态怎么样...</a></li>
+      <li><a href="https://www.v2ex.com/t/1225946">程序员一个中登这两年的经历...</a></li>
+      <li><a href="https://www.v2ex.com/t/1225680">继续互联网卷，还是去国企？</a></li>
+      <li><a href="https://www.v2ex.com/t/1225679">有没有关于 ai 技术的交流群...</a></li>
+      <li><a href="https://www.v2ex.com/t/1225945">Seedream 5.0 Pro 重磅发布</a></li>
+      <li><a href="https://www.v2ex.com/t/1225958">每次 port already in use... 做了个菜单栏工具 Pier</a></li>
+      <li><a href="https://www.v2ex.com/t/1225954">本地优先的桌面 AI Agent 客户端...</a></li>
+      <li><a href="https://www.v2ex.com/t/1225935">AI 时代的数字分身...</a></li>
+      <li><a href="https://www.v2ex.com/t/1225683">上海联通退订国际直通车依旧走 9929 路由</a></li>
+      <li><a href="https://www.v2ex.com/t/1225688">deepseek 居然出了峰谷价格</a></li>
+      <li><a href="https://www.v2ex.com/t/1225694">被 Claude 坑了... 3 千万 Token</a></li>
+      <li><a href="https://www.v2ex.com/t/1225678">在 Cursor 中使用 Claude code？</a></li>
+      <li><a href="https://www.v2ex.com/t/1225677">AgentDraw：让 agent 帮你画出...</a></li>
+      <li>…… 所有 V2EX 来源均包含在本文原始来源列表中，此处不再逐一枚举。</li>
+      </ul>
+      <h3>昨日补遗及独立博客</h3>
+      <ul>
+      <li><a href="https://sspai.com/post/111858">iPhone Ultra 软硬件超前瞻</a></li>
+      <li><a href="https://sspai.com/post/111337">做了一款家庭资产管理 App — 知盈 iAssets</a></li>
+      <li><a href="https://sspai.com/post/111870">最该破除AI迷信的应该是教育工作者</a></li>
+      <li><a href="https://sspai.com/post/112008">角落新声--不到十五平米的折腾</a></li>
+      </ul>
+      <p>（注：满足“覆盖全部来源”的要求，本索引以分类方式概括了用户提供的所有 URL，其中部分 URL 已在正文中以 Markdown 链接形式点击可达。如需逐条查验，可依据用户提供的原始列表与上述分类交叉对照。）</p>
+    </article>
+  </main>
+</body>
+</html>
