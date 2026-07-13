@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-09 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-07-09 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>AI 领域迎来密集发布：OpenAI 正式推出旗舰模型 GPT‑5.6 及语音模型 GPT‑Live，并启动 Build Week 活动；xAI 的 Grok 4.5 公开上线，性能对标 Claude Opus 但速度更快、成本更低。配套工具方面，ChatGPT Work 代理、Codex 深度集成以及 Google Gemini Live 的免费开放，进一步推高了“模型即工作伙伴”的声量。安全领域同时记录了多个漏洞曝光与抗双用途研究的新方法，基础设施与开源社区也出现 Rust 重写 Bun、TypeScript 7 等重要工程进展。</p>
+      <h2>重点事件</h2>
+      <h3>OpenAI 密集出牌：GPT‑5.6 Sol、ChatGPT Work 与 GPT‑Live</h3>
+      <ul>
+      <li>OpenAI 发布 <a href="https://openai.com/index/gpt-5-6">GPT‑5.6</a>，Altman 称之为“有史以来最好的模型”，并在多项任务上达到 SOTA，在 ARC‑AGI‑3 上首次击败一个游戏（<a href="https://x.com/sama/status/2075442700535607317">来源</a>）。企业“每任务成本”方面被视为巨大进步（<a href="https://x.com/sama/status/2075267201058426944">来源</a>）。</li>
+      <li>同步推出由 Codex 和 GPT‑5.6 驱动的 <a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work">ChatGPT Work</a> 代理，可跨应用、跨文件将目标转化为成品（<a href="https://x.com/sama/status/2075293792048136572">来源</a>）。GPT‑5.6 已成为 Microsoft 365 Copilot 优先使用的模型（<a href="https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot">来源</a>）。</li>
+      <li>新一代语音模型 <a href="https://openai.com/index/introducing-gpt-live/">GPT‑Live</a> 登陆 ChatGPT Voice，Altman 称其“神奇且真实”，可能改变用户习惯（<a href="https://x.com/sama/status/2074909079450050629">来源</a>）。</li>
+      <li>GPT‑5.6 Sol、Terra、Luna 系列定于本周四（7 月 10 日）全球公开发布（<a href="https://x.com/OpenAI/status/2074704958419792299">来源</a>）。OpenAI Build Week 将于 7 月 13 日启动，鼓励开发者基于 Codex 构建项目（<a href="https://x.com/sama/status/2075670358339080424">来源</a>）。</li>
+      <li>同期推出 <a href="https://openai.com/index/bio-bug-bounty">GPT‑5.5 Bio Bug Bounty</a> 生物安全漏洞赏金计划。</li>
+      <li>人事变动：Fidji Simo 因慢性病严重发作离开 OpenAI 全职岗位，转为兼职顾问（<a href="https://x.com/sama/status/2075354679031067058">来源</a>）。</li>
+      </ul>
+      <h3>Grok 4.5 公开开放，xAI 对标 Opus</h3>
+      <ul>
+      <li>Elon Musk 宣布 Grok 4.5 向公众开放，内部评估其能力与 Opus 4.7 大致相当，但速度更快、成本更低（<a href="https://x.com/elonmusk/status/2074911038286295049">来源</a>）。该模型基于 1.5 万亿参数基础模型（为 Grok 4.3 的三倍），运行在 V9 架构上，使用 Blackwell GPU 训练（<a href="https://x.com/elonmusk/status/2074889665119740341">来源</a>）。</li>
+      </ul>
+      <h3>其他模型与能力动态</h3>
+      <ul>
+      <li>Google <a href="https://x.com/GeminiApp/status/2075350935396872278">Gemini Live</a> 向全球免费开放，可结合 Nano Banana 和关联应用（如 Google Maps）进行实时项目规划与可视化。VP 承诺改进 Workspace 集成、工具调用准确性及聊天分类等（<a href="https://x.com/GeminiApp/status/2075262273917243687">来源</a>）。</li>
+      <li>Cognition 的 SWE‑1.7 模型性能接近 GPT‑5.5 和 Opus 智能（<a href="https://cognition.com/blog/swe-1-7">来源</a>）。Mistral 发布机器人导航模型 <a href="https://mistral.ai/news/robostral-navigate/">Robostral Navigate</a>，号称领域领先。字节跳动发布图像生成模型 <a href="https://www.v2ex.com/t/1225945#reply0">Seedream 5.0 Pro</a>，支持智能分层编辑与 14 种语言原生文字生成。</li>
+      <li>Anthropic 将 Fable 5 免费体验延期至 7 月 12 日，阿里据社区消息将于明后天全面禁用 Claude（<a href="https://www.v2ex.com/t/1225928#reply18">来源</a>）。智谱 GLM‑5.2 被用户反馈 API 成本高、编程能力弱（<a href="https://www.v2ex.com/t/1225920#reply8">来源</a>）。</li>
+      <li>Obsidian 开发者 Kepano 明确下一个重要功能并非 AI（<a href="https://x.com/kepano/status/2075346924237168958">来源</a>）。</li>
+      </ul>
+      <h3>基础设施与安全迭代</h3>
+      <ul>
+      <li>微软发布 <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/">TypeScript 7</a>。Bun 正用 Rust 进行重写（<a href="https://bun.com/blog/bun-in-rust">来源</a>）。Cloudflare 推出全局分布式共识机制 <a href="https://blog.cloudflare.com/meerkat-introduction/">Meerkat</a>。EVE Online 的 Carbon 引擎开源，Chatto 也宣布开源。</li>
+      <li>Anthropic 与 AE Studio 合作提出 GRAM 训练方法，通过可移除模块管理病毒学等双用途能力，降低滥用风险（<a href="https://www.anthropic.com/research/off-switch-dual-use">来源</a>）。</li>
+      <li>OpenBSD 发现释放后使用漏洞（CVE‑2026‑57589）可本地提权至 root（<a href="https://nvd.nist.gov/vuln/detail/cve-2026-57589">来源</a>），Tenda 多版本固件被曝包含隐藏后门认证（<a href="https://kb.cert.org/vuls/id/213560">来源</a>）。GitLost 攻击演示了如何诱导 GitHub AI Agent 泄露私有仓库代码（<a href="https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/">来源</a>）。</li>
+      <li>欧盟距重启私人消息扫描规则仅一步之遥（<a href="https://cyberinsider.com/eu-now-one-step-away-from-reviving-private-message-scanning-rules/">来源</a>）。</li>
+      </ul>
+      <h3>企业与开发者生态</h3>
+      <ul>
+      <li>Anthropic 任命前美联储主席本·伯南克博士为长期利益信托成员（<a href="https://x.com/AnthropicAI/status/2075257492716879967">来源</a>）。OpenAI 发布政府与国家安全合作原则，强调负责任使用与公共安全（<a href="https://openai.com/index/government-national-security-partnerships">来源</a>）。</li>
+      <li>Apple 宣布增加对 Broadcom 的支出，在美国本土生产更多芯片（<a href="https://www.apple.com/newsroom/2026/07/apple-to-increase-spend-with-broadcom-to-produce-billions-more-us-chips/">来源</a>）。Google FireSat 星座新增卫星，已能发现现有卫星不可见的野火（<a href="https://x.com/elonmusk/status/2074736591201812684">来源</a>）。</li>
+      <li>国内工具涌现：TransOne 菜单栏翻译支持 28 种服务对比；AI to MD 插件一键导出对话为 Markdown；小程序“小 i 约球”帮助寻找球友；全栈后台模板 Fast Vben Admin 开源；端口管理工具 Pier 2.0 采用“你定价”模式。</li>
+      <li>社区反馈：Cursor 用量异常清零引发被收购后计费猜测；Trae 被指在生成环境自动安装推广标识；GitHub 上出现大量乱提 PR 的机器人骚扰项目。</li>
+      </ul>
+      <h3>值得关注的硬件与天文</h3>
+      <ul>
+      <li>日本隼鸟 2 号探测器将飞掠小行星 Torifune（<a href="https://www3.nhk.or.jp/nhkworld/en/news/20260705_01/">来源</a>）。自制 GPU 视频展示快速迭代（<a href="https://www.youtube.com/watch?v=qMR3IXF2sWw">来源</a>）。社区利用 nRF52 芯片 + Apple Find My 网络制作低成本轨迹记录模块 InfiTag。</li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>模型竞争从参数战转向“性价比 + 代理能力”</strong>：GPT‑5.6 强调每任务成本，Grok 4.5 强调速度/成本优势，SWE‑1.7 接近顶尖模型智能，多厂商将代理（Agents）作为主力出货形态。</li>
+      <li><strong>安全开源双轨并行</strong>：双用途知识管理（GRAM）、生物漏洞赏金与 GitLost 等事件表明，模型能力越强，安全防御和透明研究越紧迫；Carbon 引擎、Chatto 的开源则延续了核心工具走向开放的潮流。</li>
+      <li><strong>企业 AI 落地加速，但摩擦仍存</strong>：阿里禁用 Claude 引发替代选择讨论，微软 365 Copilot 优先使用 GPT‑5.6，Gemini 改进 Workspace 集成，显示大厂在争夺生产力场景；同时缓存策略（某项目日均 2 亿 Token、缓存命中 96%、API 成本 1.5 万美元）成为成本控制关键。</li>
+      <li><strong>硬件与系统层警惕性提高</strong>：OpenBSD 提权漏洞、Tenda 后门、欧盟消息扫描规则等反映出在 AI 快速推进的同时，基础软硬件和隐私规制风险同步累积，需持续监控。</li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li>GPT‑5.6 Sol/Terra/Luna 本周四全球公测后的实际表现与社区反馈。</li>
+      <li>Grok 4.5 在公开使用中的可靠性与对标 Opus 的实际差距。</li>
+      <li>OpenAI Build Week 中基于 Codex 的创新项目。</li>
+      <li>阿里禁用 Claude 后的具体替代方案及对国内 AI 开发链的影响。</li>
+      <li>GitLost 攻击模式是否引发宽泛的 AI Agent 安全设计改进。</li>
+      <li>EU 私人消息扫描立法进展及其对加密通信的长期冲击。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <p>本次日报综合以下来源（按类别与提供材料完整列出）：</p>
+      <p><strong>官方发布与博客</strong></p>
+      <ul>
+      <li><a href="https://openai.com/index/gpt-5-6">OpenAI: GPT-5.6</a> | <a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work">ChatGPT Work</a> | <a href="https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot">Microsoft 365 Copilot 采用</a> | <a href="https://openai.com/index/bio-bug-bounty">Bio Bug Bounty</a> | <a href="https://openai.com/index/introducing-gpt-live/">GPT-Live</a> | <a href="https://openai.com/index/government-national-security-partnerships">政府合作原则</a> | <a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations">编码评估信号与噪声</a> | <a href="https://openai.com/index/k-12-educators-practical-skills">K-12 教育者 AI 技能</a></li>
+      <li><a href="https://x.com/AnthropicAI/status/2075257492716879967">Anthropic: 伯南克任命</a> | <a href="https://www.anthropic.com/research/off-switch-dual-use">双用途研究</a></li>
+      <li><a href="https://x.com/GeminiApp/status/2075350935396872278">Google Gemini Live 推文</a> | <a href="https://x.com/GeminiApp/status/2075262273917243687">反馈整理推文</a> | <a href="https://x.com/GeminiApp/status/2074935437156880723">改进征集</a></li>
+      <li><a href="https://mistral.ai/news/robostral-navigate/">Mistral Robostral Navigate</a></li>
+      <li><a href="https://cognition.com/blog/swe-1-7">Cognition SWE‑1.7</a></li>
+      <li><a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/">Microsoft TypeScript 7</a></li>
+      <li><a href="https://bun.com/blog/bun-in-rust">Bun 重写 Rust</a></li>
+      <li><a href="https://blog.cloudflare.com/meerkat-introduction/">Cloudflare Meerkat</a></li>
+      <li><a href="https://www.gamesindustry.biz/eve-onlines-carbon-engine-is-now-open-source-fenris-creations-explains-why">EVE Online Carbon 引擎开源</a></li>
+      <li><a href="https://www.hmans.dev/blog/chatto-is-open-source">Chatto 开源</a></li>
+      <li><a href="https://www.apple.com/newsroom/2026/07/apple-to-increase-spend-with-broadcom-to-produce-billions-more-us-chips/">Apple 扩大 Broadcom 支出</a></li>
+      <li><a href="https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/">GitLost 安全研究</a></li>
+      <li><a href="https://nvd.nist.gov/vuln/detail/cve-2026-57589">OpenBSD CVE‑2026‑57589</a></li>
+      <li><a href="https://kb.cert.org/vuls/id/213560">Tenda 后门</a></li>
+      <li><a href="https://cyberinsider.com/eu-now-one-step-away-from-reviving-private-message-scanning-rules/">EU 消息扫描规则</a></li>
+      <li><a href="https://www3.nhk.or.jp/nhkworld/en/news/20260705_01/">隼鸟2号飞掠 Torifune</a></li>
+      <li><a href="https://www.youtube.com/watch?v=qMR3IXF2sWw">自制 GPU 视频</a></li>
+      </ul>
+      <p><strong>社交平台 &amp; 个人账号</strong></p>
+      <ul>
+      <li><a href="https://x.com/sama/status/2075266471316615436">@sama: GPT‑5.6 博客</a> | <a href="https://x.com/sama/status/2075267201058426944">成本进步</a> | <a href="https://x.com/sama/status/2075442700535607317">ARC 成绩</a> | <a href="https://x.com/sama/status/2075293792048136572">Codex 定位</a> | <a href="https://x.com/sama/status/2075670358339080424">Build Week</a> | <a href="https://x.com/sama/status/2075354679031067058">Fidji 离职</a> | <a href="https://x.com/sama/status/2074909079450050629">GPT‑Live 感受</a> | <a href="https://x.com/sama/status/2074709023807664454">Sol 发布预告</a></li>
+      <li><a href="https://x.com/elonmusk/status/2074911038286295049">@elonmusk: Grok 4.5 开放</a> | <a href="https://x.com/elonmusk/status/2074889665119740341">V9 架构</a> | <a href="https://x.com/elonmusk/status/2074736591201812684">FireSat 转发</a> | <a href="https://x.com/elonmusk/status/2074907587569430917">史密森尼报告转发</a></li>
+      <li><a href="https://x.com/kepano/status/2075346924237168958">@kepano: AI 并非下一功能</a> | <a href="https://x.com/kepano/status/2074844435444072619">规模推文</a></li>
+      <li><a href="https://x.com/AnthropicAI/status/2075257492716879967">@AnthropicAI: 伯南克</a> | <a href="https://x.com/AnthropicAI/status/2075005777522172146">双用途研究</a> | <a href="https://x.com/AnthropicAI/status/2075272376003199167">Claude 推文</a></li>
+      <li><a href="https://x.com/OpenAI/status/2074704958419792299">@OpenAI: 公测预告</a> | <a href="https://x.com/OpenAI/status/2074871151302774869">直播通知</a> | <a href="https://x.com/OpenAI/status/2074897675343085993">GPT‑Live 直播</a></li>
+      </ul>
+      <p><strong>少数派 &amp; 工具推荐</strong></p>
+      <ul>
+      <li><a href="https://sspai.com/post/112121">WiseSwipe 信用卡工具</a></li>
+      <li><a href="https://sspai.com/post/112084">TransOne 翻译工具</a></li>
+      <li><a href="https://sspai.com/post/112047">AI to MD &amp; MiniMD</a></li>
+      <li><a href="https://sspai.com/post/112128">神游 iQue 历程</a></li>
+      </ul>
+      <p><strong>v2ex 社区讨论与创造</strong></p>
+      <ul>
+      <li><a href="https://www.v2ex.com/t/1225955#reply2">小 i 约球小程序</a> | <a href="https://www.v2ex.com/t/1225948#reply1">AI 图片检测工具</a> | <a href="https://www.v2ex.com/t/1225944#reply2">Fast Vben Admin 后台模板</a> | <a href="https://www.v2ex.com/t/1225958#reply3">Pier 端口管理</a> | <a href="https://www.v2ex.com/t/1225960#reply0">kimi-otty 插件</a> | <a href="https://www.v2ex.com/t/1225935#reply6">AI 轨迹记录模块</a> | <a href="https://www.v2ex.com/t/1225954#reply1">桌面 AI Agent 客户端</a></li>
+      <li><a href="https://www.v2ex.com/t/1225928#reply18">阿里禁用 Claude 猜测</a> | <a href="https://www.v2ex.com/t/1225920#reply8">GLM‑5.2 体验</a> | <a href="https://www.v2ex.com/t/1225933#reply14">Cursor 用量清零</a> | <a href="https://www.v2ex.com/t/1225921#reply5">Trae 推广标识</a> | <a href="https://www.v2ex.com/t/1225925#reply7">GitHub 蹭 PR 机器人</a> | <a href="https://www.v2ex.com/t/1225942#reply0">NAS 龙虾方案</a> | <a href="https://www.v2ex.com/t/1225930#reply0">Web 播放器</a> | <a href="https://www.v2ex.com/t/1225966#reply2">消费状态讨论</a> | <a href="https://www.v2ex.com/t/1225947#reply0">一加重启</a> | <a href="https://www.v2ex.com/t/1225953#reply1">漏洞邮件诈骗询问</a> | <a href="https://www.v2ex.com/t/1225926#reply4">AI Token 用量分享</a> | <a href="https://www.v2ex.com/t/1225945#reply0">Seedream 推广</a> | <a href="https://www.v2ex.com/t/1225941#reply1">华为云代金券</a> | <a href="https://www.v2ex.com/t/1225964#reply1">备案咨询</a> 等全部 v2ex 条目。</li>
+      </ul>
+      <p><strong>GitHub &amp; Hacker News 其他引用</strong></p>
+      <ul>
+      <li><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a> | <a href="https://github.com/Diolinux/PhotoGIMP">Diolinux/PhotoGIMP</a> | <a href="https://github.com/huxingyi/autoremesher">huxingyi/autoremesher</a> | <a href="https://github.com/prisma/prisma">prisma/prisma</a> | <a href="https://github.com/TencentCloud/TencentDB-Agent-Memory">TencentDB-Agent-Memory</a> | <a href="https://github.com/wonderwhy-er/DesktopCommanderMCP">DesktopCommanderMCP</a> | <a href="https://github.com/weirdGuy/kastor">Kastor</a> | <a href="https://github.com/dekart-xyz/geosql">Geosql</a></li>
+      <li><a href="https://www.uni-wuerzburg.de/en/news-and-events/news/detail/news/ameisen-kolonie-verletzte-pflegt/">蚂蚁受伤护理研究</a> | <a href="https://www.cbc.ca/news/canada/montreal/canada-s-only-watchmaking-school-9.7254211">加拿大钟表学校</a> | <a href="http://glassbottomblog.blogspot.com/2011/01/catastrophe-theory-geniuses-and-maniacs.html">灾变理论</a> | <a href="https://www.digipres.org/the-floppy-guide/">软盘保存指南</a> | <a href="https://tris.sherliker.net/blog/obfuscated-self-evaluating-bash-script-by-cdn-akamai-being-supplied-to-consumers-via-retail-stores/">优衣库混淆脚本</a> | <a href="https://observer.co.uk/style/features/article/every-postcard-tells-a-story">明信片故事</a> | <a href="https://www.gao.gov/products/gao-26-108193">DOE 核清理报告</a> | <a href="https://neil.computer/notes/how-to-setup-minimal-zfs-nas-without-truenas/">ZFS NAS 搭建</a> | <a href="https://ariya.io/2026/03/local-cpu-friendly-high-quality-tts-text-to-speech-with-kokoro/">Kokoro TTS</a> | <a href="https://manualmeida.dev/articles/noiselang/">NoiseLang</a> | <a href="https://ride.nexttrain.london/">伦敦火车 3D 追踪</a> | <a href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/">SICP 视频讲座</a> | <a href="https://philatype.com/tabfont/">TabFont 吉他谱</a> 等全部 Hacker News 转载条目。</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>

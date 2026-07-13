@@ -87,107 +87,102 @@
     <article>
       <h1>2026-07-12 RSS 日报</h1>
       <h2>今日概览</h2>
-      <p>今日动态聚焦大型语言模型的能力突破与成本优化：Grok 4.5 在多项评测中跃升至头部阵营，GPT-5.6 的代理迁移已实现 2.2 倍提速与 27% 降本；同时，美团开源万亿参数大模型 LongCat-2.0，同步释放国产卡推理代码。太空探索方面，星舰第 13 次试飞计划首次部署 20 颗下一代星链 V3 卫星。安全领域爆出 Grok CLI 擅自上传用户整个主目录的事件，以及 Linux 内核潜伏 15 年的漏洞。此外，“互联网之父” Vint Cerf 宣布退休，演员 Sam Neill 逝世。</p>
+      <ul>
+      <li><strong>大模型竞争白热化</strong>：美团正式开源万亿参数模型 LongCat-2.0，主打国产算力；Grok 4.5 在浏览器场景评测中逼近 Claude Opus，且成本更低，并强调进一步迈向中立；GPT-5.6 Sol 被 Sam Altman 称为“世界最佳”，迁移实践带来 2.2 倍提速与 27% 降本。</li>
+      <li><strong>航天里程碑</strong>：Starship 第 13 次试飞下周将首次部署 20 颗 Starlink V3 卫星，部分搭载摄像头扫描防热罩。</li>
+      <li><strong>开发者工具涌现</strong>：Inkive 纸质书划线数字化、MeetAlarm 穿透静音的会议闹钟、GitZip Pro 强化下载插件等小工具集中亮相。</li>
+      <li><strong>人物与安全</strong>：互联网之父 Vint Cerf 退休，演员 Sam Neill 逝世；Linux 发现已存在 15 年的栈 UAF 漏洞 GhostLock；Grok CLI 被指上传用户整个主目录引发隐私争议。</li>
+      <li><strong>开源与社区</strong>：GitHub 趋势项目包括 <code>destructive_command_guard</code>（AI 安全守卫）、<code>Graphify</code>（知识图谱技能）、<code>OpenCut</code>（剪映开源替代）等。</li>
+      </ul>
       <h2>重点事件</h2>
-      <h3>🚀 星舰即将发射并首次部署 Starlink V3 卫星</h3>
-      <p>SpaceX 计划在下周的星舰第 13 次试飞中，首次搭载并部署 20 颗新一代 Starlink V3 卫星。这些测试卫星将尝试与南非地面站及星链星座建立连接，其中 6 颗还搭载了用于扫描星舰隔热盾的摄像头。马斯克表示星舰正在快速演进。<a href="https://x.com/elonmusk/status/2076102645823971373">来源：Elon Musk - Starship is evolving rapidly</a> 及 <a href="https://x.com/elonmusk/status/2076410318687776907">RT X Freeze: For the first time, Starship will carry 20 next-generation Starlink V3 satellites to space</a></p>
-      <h3>🧠 Grok 4.5 模型能力全面突破</h3>
+      <h3>大模型与 AI</h3>
       <ul>
-      <li><strong>浏览器使用任务达 Opus 级</strong>：评测称 Grok 4.5 已达 Opus 级别，性能超过 GPT-5.6-Sol，总成本仅比 Opus 便宜约 10%。<a href="https://x.com/elonmusk/status/2076411563116835245">来源</a></li>
-      <li><strong>视频工作室评估飞跃</strong>：在特定视频工作室评估中，Grok 4.5 成绩从 6/33 跃升至 23/33，且成本效率极高。<a href="https://x.com/elonmusk/status/2076564143558074616">来源：RT Miki Ovshievich...</a></li>
-      <li><strong>多任务领先 Fable</strong>：分析指出 Grok 4.5 在某些任务上已领先 Fable 且成本更低，将其排在第三位被认为是保守的。<a href="https://x.com/elonmusk/status/2076433522911244615">来源：RT Gavin Baker...</a></li>
-      <li><strong>Grok Build 更新</strong>：体验改进至 v0.2.99，优化导航与多行输入等。<a href="https://x.com/elonmusk/status/2076434715951689733">来源</a></li>
-      <li><strong>个性化播客播放器</strong>：有用户基于 Grok 4.5 开发了按主题聚合多个播客内容的应用。<a href="https://x.com/elonmusk/status/2076432602999722000">来源：Cool</a></li>
-      <li>另有信息显示，Grok 4.5 训练正在进一步向中立方向推进。<a href="https://x.com/elonmusk/status/2076102352751259651">来源：RT Samuel Cardillo...</a></li>
+      <li><strong>美团 LongCat-2.0 正式开源</strong>：总参数 1.6T，激活参数约 48B，宣称是首个在五万卡国产算力集群上完成推理的模型，并同步开放 BF16、FP8、INT8 精度及 GPU/NPU 推理代码，旨在盘活存量国产算力。（<a href="https://tech.meituan.com/2026/07/12/LongCat-2.0-Open-source.html">正式开源！美团 LongCat-2.0 同步开放国产卡推理代码</a>）</li>
+      <li><strong>Grok 4.5 性能评价与争议</strong>：评测指出 Grok 4.5 在浏览器使用场景下评分高于 GPT-5.6-Sol，仅次于 Claude Opus，且综合成本比 Opus 低 10% 左右。（<a href="https://x.com/elonmusk/status/2076411563116835245">Grok 4.5 is Opus class for browser use</a>）同时有观点称 Grok 4.5 训练正向中立方向推进，“是唯一处于中立区的模型”。（<a href="https://x.com/elonmusk/status/2076102352751259651">RT Samuel Cardillo</a>）但另一边，Grok CLI 被指将用户整个主目录上传至 xAI 的 GCS 服务器，引发强烈隐私担忧。（<a href="https://twitter.com/i/status/2076598897779020159">Grok CLI uploaded the whole home directory to GCS</a>）</li>
+      <li><strong>GPT-5.6 迁移实践与 Sam Altman 表态</strong>：Ploy.ai 迁移至 GPT-5.6，达成速度提升 2.2 倍、成本降低 27%。（<a href="https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6">Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper</a>）Sam Altman 公开征集基于 5.6 sol 构建的项目，将送 OpenAI 档案室特别礼物；（<a href="https://x.com/sama/status/2076398253332140410">i’d love to see interesting things…</a>）并声称多项基准表明 5.6 sol 是当前世界最好模型，调侃 Elon Musk 对此极为关注。（<a href="https://x.com/sama/status/2075983427019612242">there are a lot of benchmarks…</a>）此外，Altman 表示至今 AI 是净创造就业机会的，出乎其预期。（<a href="https://x.com/sama/status/2076036901824532530">so far at least…</a>）一项研究表明医生在 GPT-5.6 回复中发现的缺陷少于医生自己撰写的回复。（<a href="https://x.com/sama/status/2075985056846451123">physicians found fewer flaws…</a>）GPT-Live 功能已向全球 ChatGPT 用户全量推出，并在周末翻倍语音使用限额。（<a href="https://x.com/OpenAI/status/2075768868350677206">GPT-Live is now fully rolled out…</a>）</li>
       </ul>
-      <h3>⚡ GPT-5.6 系列加速落地，成本与就业观引争议</h3>
+      <h3>航天与硬件</h3>
       <ul>
-      <li><strong>生产代理迁移收益显著</strong>：有团队报告将生产环境 AI Agent 迁移至 GPT-5.6 后，实现 2.2 倍速度提升，成本降低 27%。<a href="https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6">来源</a></li>
-      <li><strong>GPT-5.6 Sol 被宣称为当前最强</strong>：多项基准表明其最强，而马斯克对奥尔特曼的重新关注被当作旁证。<a href="https://x.com/sama/status/2075983427019612242">来源：there are a lot of benchmarks that suggest 5.6 sol is the best model…</a></li>
-      <li><strong>医学领域表现优于医生</strong>：医生发现 GPT-5.6 的回复比医生自撰回答的缺陷更少。<a href="https://x.com/sama/status/2075985056846451123">来源</a></li>
-      <li><strong>奥特曼发起构建挑战</strong>：Sam Altman 邀请用户使用 GPT-5.6 Sol 构建有趣作品，优胜者将获赠 OpenAI 档案的特殊礼物。<a href="https://x.com/sama/status/2076398253332140410">来源</a></li>
-      <li><strong>GPT-Live 全面上线</strong>：语音功能向全球 ChatGPT 用户全量推出，周末语音限额翻倍。<a href="https://x.com/OpenAI/status/2075768868350677206">来源</a></li>
-      <li><strong>就业效应争议</strong>：奥尔特曼称“目前为止相当确信 AI 是净创造就业”，与他此前相对悲观的预期不同；同时 ChatGPT 桌面应用单日增长超过此前两周总和。<a href="https://x.com/sama/status/2076036901824532530">来源</a> 及 <a href="https://x.com/sama/status/2076034163418014199">whoa</a></li>
-      <li><strong>成本结构与太空数据中心互怼</strong>：达克斯团队反映使用 Sol 和 Fable 时 30% 的成本落在 Fable 上；马斯克与奥尔特曼就向公开市场兜售短期太空数据中心一事相互指责。<a href="https://x.com/sama/status/2075982820322025788">来源</a> 及 <a href="https://x.com/sama/status/2075982617976230043">homeboy you&#x27;re the one sellling...</a></li>
+      <li><strong>Starship 将首次部署 Starlink V3 卫星</strong>：Elon Musk 称 Starship 快速进化，第 13 次试飞下周将首次携带 20 颗下一代 Starlink V3，其中 6 颗加装摄像头扫描防热罩并回传图像。（<a href="https://x.com/elonmusk/status/2076410318687776907">For the first time, Starship will carry 20 next-generation Starlink V3 satellites…</a> <a href="https://x.com/elonmusk/status/2076102645823971373">Starship is evolving rapidly</a>）</li>
       </ul>
-      <h3>🏭 美团开源万亿参数大模型 LongCat-2.0，学术成果获 ACL 杰出论文</h3>
-      <p>美团正式开源 LongCat-2.0，总参数 1.6T，平均激活约 48B，专为 Agentic Coding 设计。该模型是首个在五万卡国产算力集群上完成推理的万亿参数模型，同步提供 BF16、FP8、INT8 多精度版本及国产芯片优化推理代码。美团 GeoRA 论文亦荣获 ACL 2026 杰出论文奖（全球仅 18 篇入选）。<a href="https://tech.meituan.com/2026/07/12/LongCat-2.0-Open-source.html">来源：正式开源！美团 LongCat-2.0...</a> 及 <a href="https://tech.meituan.com/2026/07/11/2026-meituan-32-papers.html">直播回放·含 ACL&#x27;26 杰出论文...</a></p>
-      <h3>🔒 安全警报：Grok CLI 擅自上传主目录，Linux 内核爆 15 年漏洞</h3>
+      <h3>开发者工具与新应用</h3>
       <ul>
-      <li><strong>Grok CLI 隐私争议</strong>：被曝在未经用户明确同意的情况下，将整个用户主目录上传至 xAI 的 GCS 服务器，引发广泛安全担忧。<a href="https://twitter.com/a_green_being/status/2076598897779020159">来源</a></li>
-      <li><strong>Linux 内核“GhostLock”漏洞</strong>：一个栈上释放后使用漏洞在全部 Linux 发行版中存在长达 15 年，现被曝光。<a href="https://nebusec.ai/research/ionstack-part-2/">来源</a></li>
+      <li><strong>Inkive：纸质书划线 → 数字笔记</strong>：iOS 应用通过本地模型识别手写划线，设备端 PPOCR 文字识别，导出 Markdown，95% 结果无需或只需轻微校对。（<a href="https://sspai.com/post/111936">App+1｜读完，拍完，带走：为了把纸书划线连接数字笔记，我打磨出了 Inkive</a>）</li>
+      <li><strong>MeetAlarm：穿透静音的会议闹钟</strong>：基于 iOS 26 AlarmKit 框架，自动读取日历生成系统级闹钟，支持飞书、腾讯会议等一键入会，可结合实时通勤时间提醒。（<a href="https://sspai.com/post/112196">因为总在静音下错过飞书会议，我用 iOS 26 的 AlarmKit 做了个「会议闹钟」</a>）</li>
+      <li><strong>GitZip Pro 强化下载插件</strong>：新增智能忽略 <code>node_modules</code> 等文件、五种预设下载场景、自定义 ZIP 命名、显示 GitHub 文件大小等功能，已上架 Chrome/Firefox/Edge 商店。（<a href="https://sspai.com/post/112210">用了 GitZip 这么多年，我动手做了一个「Pro」版</a>）</li>
+      <li><strong>GitHub 趋势项目</strong>：<code>destructive_command_guard</code> 阻止 AI 智能体执行危险命令；<code>Graphify</code> 将代码/文档等转为知识图谱；<code>OpenCut</code> 开源剪映替代品；<code>awesome-llm-apps</code> 获得 119,288 Star，提供百余个可运行 AI Agent 和 RAG 应用。（<a href="https://github.com/Dicklesworthstone/destructive_command_guard">destructive_command_guard</a> <a href="https://github.com/Graphify-Labs/graphify">graphify</a> <a href="https://github.com/OpenCut-app/OpenCut">OpenCut</a> <a href="https://github.com/Shubhamsaboo/awesome-llm-apps">awesome-llm-apps</a>）</li>
       </ul>
-      <h3>📱 应用与工具新发布</h3>
+      <h3>安全漏洞与隐私</h3>
       <ul>
-      <li><strong>Inkive</strong>：个人开发者推出的 iOS 应用，全本地处理纸书划线，识别并导入 Obsidian 等数字笔记，95% 结果无需或仅需轻微修改。<a href="https://sspai.com/post/111936">来源</a></li>
-      <li><strong>MeetAlarm</strong>：利用 iOS 26 新出 AlarmKit，将会议自动设为可穿透静音与专注模式的系统级闹钟，支持一键加入多种会议与应用通勤提醒。<a href="https://sspai.com/post/112196">来源</a></li>
-      <li><strong>GitZip Pro</strong>：开源浏览器插件，增加自动忽略特定文件、预设场景与自定义 ZIP 命名等功能。<a href="https://sspai.com/post/112210">来源</a></li>
-      <li><strong>可编程口袋设备 Kode Dot</strong>：面向创客、渗透测试者和极客发布。<a href="https://kode.diy/">来源</a></li>
-      <li><strong>Clawk</strong>：为编程 Agent 提供一次性 Linux 虚拟机，提升安全性。<a href="https://github.com/clawkwork/clawk">来源</a></li>
-      <li><strong>DOM-docx</strong>：MIT 许可的开源项目，将 HTML 转换为原生可编辑 Word 文档。<a href="https://github.com/floodtide/dom-docx">来源</a></li>
+      <li><strong>Linux 高危漏洞 GhostLock</strong>：一个栈 UAF 漏洞被发现已存在于所有 Linux 发行版长达 15 年。（<a href="https://nebusec.ai/research/ionstack-part-2/">GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years</a>）</li>
+      <li><strong>Grok CLI 隐私事件</strong>：用户投诉其整个主目录被自动上传至 xAI 服务器，隐私争议迅速发酵。（<a href="https://twitter.com/a_green_being/status/2076598897779020159">Grok uploaded my user directory to xAI’s servers</a>）</li>
       </ul>
-      <h3>📰 人物动态</h3>
+      <h3>人物与社区</h3>
       <ul>
-      <li><strong>“互联网之父” Vint Cerf 退休</strong>：TechCrunch 报道其即将退休。<a href="https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/">来源</a></li>
-      <li><strong>演员 Sam Neill 逝世</strong>：享年 78 岁，卫报等报道了这一消息。<a href="https://www.theguardian.com/film/2026/jul/13/sam-neill-death-actor-dies-aged-78">来源</a></li>
+      <li><strong>Vint Cerf 退休</strong>：被誉为“互联网之父”的 Vint Cerf 正式退休。（<a href="https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/">Vint Cerf, “father of the Internet”, is retiring</a>）</li>
+      <li><strong>演员 Sam Neill 逝世</strong>：享年 78 岁。（<a href="https://www.theguardian.com/film/2026/jul/13/sam-neill-death-actor-dies-aged-78">Sam Neill has died</a>）</li>
+      <li><strong>ACL 2026 杰出论文</strong>：美团履约技术团队的 GeoRA 论文入选，全球仅 18 篇。（<a href="https://tech.meituan.com/2026/07/11/2026-meituan-32-papers.html">直播回放·含 ACL&#x27;26 杰出论文</a>）</li>
+      </ul>
+      <h3>硬件评测与其他</h3>
+      <ul>
+      <li><strong>Surface Go 3 长期体验</strong>：作者因屏幕触控失灵最终退货；评测指出性能“不上不下”，续航仅 3.5–4 小时，国行 Go 4 代价格已涨至 6000 元以上，性价比较低，但小尺寸 Windows 平板几无竞品。（[[昨日补遗] 精准刀法还是精准定位——微软Surface Go 3代使用体验与测评](https://sspai.com/post/112180)）</li>
       </ul>
       <h2>趋势与判断</h2>
       <ul>
-      <li><strong>大模型能力评测窗口期缩短，成本与效率成新战场</strong>：Grok 4.5 在特定任务上达到头部水平的同时，强调成本效率；GPT-5.6 迁移案例显示降本 27% 与提速 2.2 倍；医疗领域直接对比更突显实用价值。模型间的竞争正从单纯跑分转向生产场景的费用-效果比。<a href="https://x.com/elonmusk/status/2076564143558074616">参见 Grok 4.5 评测</a> 与 <a href="https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6">迁移案例</a></li>
-      <li><strong>AI Agent 生态基建快速成型</strong>：从美团 LongCat-2.0 专攻 Agentic Coding，到 GitHub 上 11.9 万星的 AI Agent/RAG 应用集 <a href="https://github.com/Shubhamsaboo/awesome-llm-apps">awesome-llm-apps</a>，再到 Clawk 的安全运行沙箱，以及编程 Agent 危险命令拦截工具 <a href="https://github.com/Dicklesworthstone/destructive_command_guard">destructive_command_guard</a>，围绕 AI Agent 的开发、部署与安全的全链路工具正在密集涌现。</li>
-      <li><strong>开源与国产算力协同的新范式</strong>：LongCat-2.0 首次在五万卡国产集群上完成万亿参数推理，并提供多精度版本及优化推理代码，显示开源大模型正在与国产算力形成“模型-硬件”闭环，有助于盘活存量算力资源。<a href="https://tech.meituan.com/2026/07/12/LongCat-2.0-Open-source.html">来源</a></li>
-      <li><strong>LLM 跳跃式创新仍存想象空间</strong>：针对“LLM 无法飞跃”的观点，专业人士以 AlphaGo 为例进行反驳，并指出当前未让 AI 代理进行长期不间断计算，且会话记忆碎片化是瓶颈，暗示未来通过架构调整可能释放新的创新能力。<a href="https://x.com/elonmusk/status/2076336928933187982">来源：RT Yun-Ta Tsai...</a></li>
-      <li><strong>AI 安全与隐私冲突升级</strong>：Grok CLI 上传整个主目录的事件，将工具便利性与用户隐私的平衡问题推到风口浪尖；同时 Linux 15 年漏洞 GhostLock 被曝，也提醒基础设施安全性需要持续审视。<a href="https://twitter.com/a_green_being/status/2076598897779020159">来源</a> 及 <a href="https://nebusec.ai/research/ionstack-part-2/">GhostLock</a></li>
+      <li><strong>AI 竞争从性能转向成本与中立性</strong>：Grok 4.5 在逼近顶尖模型的同时强调中立路线，GPT-5.6 迁移带来显著降本，表明商业化竞争中成本效率与“价值观阵营”正在成为新维度。（信息来源：<a href="https://x.com/elonmusk/status/2076411563116835245">Grok 4.5 is Opus class for browser use</a>、<a href="https://x.com/elonmusk/status/2076102352751259651">RT Samuel Cardillo</a>、Altman 推文）</li>
+      <li><strong>基础设施提供商或成最大赢家</strong>：若 AI 市场份额从高利润率的前沿实验室转向更便宜的模型，终端用户的 AI 投资回报率升高，将驱动算力总需求，从而使 AI 基础设施提供商受益。（<a href="https://x.com/elonmusk/status/2076433522911244615">RT Gavin Baker</a>）</li>
+      <li><strong>国产算力生态意图盘活存量</strong>：美团 LongCat-2.0 在五万卡国产集群上推理并开源推理代码，旨在降低国产芯片使用门槛，推动国产算力生态建设。（<a href="https://tech.meituan.com/2026/07/12/LongCat-2.0-Open-source.html">美团技术博文</a>）</li>
+      <li><strong>平台新能力激发细分效率工具</strong>：Inkive、MeetAlarm、GitZip Pro 均源于个人痛点，利用本地模型、AlarmKit 等最新系统能力快速实现，预示未来会有更多“解决自身问题”式的精品小工具涌现。</li>
+      <li><strong>AI 安全与隐私压力加剧</strong>：Grok CLI 上传主目录事件与已存在 15 年的 GhostLock 漏洞，叠加 <code>destructive_command_guard</code> 等防护工具的兴起，说明行业对 AI 自主性带来的系统风险正快速反应。</li>
       </ul>
       <h2>值得继续关注</h2>
       <ul>
-      <li>星舰第 13 次试飞的实际结果及 V3 星链卫星在轨连接测试。</li>
-      <li>Grok 4.5 在更多独立基准和生产场景中的横向比较，以及 xAI 对其安全冷门的后续回应。</li>
-      <li>OpenAI GPT-5.6 Sol 挑战赛中的创意作品，以及 GPT-Live 的全球使用反馈。</li>
-      <li>Grok CLI 隐私事件是否会有官方修正或监管介入。</li>
-      <li>美团 LongCat-2.0 在开源社区的实际落地与生态反馈。</li>
-      <li>Vint Cerf 退休后对互联网治理的可能影响。</li>
+      <li>Starship 第 13 次试飞实况及 Starlink V3 部署结果，防热罩扫描图像是否公开。</li>
+      <li>Grok CLI 隐私事件的官方回应与修复措施。</li>
+      <li>Sam Altman 的 5.6 sol 创意征集活动后续佳作。</li>
+      <li>美团 LongCat-2.0 社区实际反馈及国产芯片适配进展。</li>
+      <li>Linux GhostLock 漏洞的补丁进展。</li>
+      <li>Grok 4.5 是否在后续版本中坚守中立路线。</li>
       </ul>
       <h2>来源索引</h2>
-      <p>（覆盖本次日报材料中全部来源，按原始标签分组列出）</p>
-      <p><strong>anyfeeder-matrix</strong></p>
+      <h3>少数派（sspai.com）</h3>
       <ul>
       <li><a href="https://sspai.com/post/111936">App+1｜读完，拍完，带走：为了把纸书划线连接数字笔记，我打磨出了 Inkive</a></li>
       <li><a href="https://sspai.com/post/112196">因为总在静音下错过飞书会议，我用 iOS 26 的 AlarmKit 做了个「会议闹钟」</a></li>
       <li><a href="https://sspai.com/post/112210">用了 GitZip 这么多年，我动手做了一个「Pro」版</a></li>
       <li>[[昨日补遗] 精准刀法还是精准定位——微软Surface Go 3代使用体验与测评（3个月）](https://sspai.com/post/112180)</li>
       </ul>
-      <p><strong>elon-musk</strong></p>
+      <h3>Elon Musk X 动态</h3>
       <ul>
       <li><a href="https://x.com/elonmusk/status/2076432602999722000">Cool</a></li>
       <li><a href="https://x.com/elonmusk/status/2076433121893814735">Follow the Starship series @SpaceX</a></li>
       <li><a href="https://x.com/elonmusk/status/2076411563116835245">Grok 4.5 is Opus class for browser use</a></li>
       <li><a href="https://x.com/elonmusk/status/2076434715951689733">Grok Build improvements</a></li>
-      <li><a href="https://x.com/elonmusk/status/2076524673139954010">RT Andrew McCarthy: I get to see this monster fly again later this week... new photos to come!</a></li>
-      <li><a href="https://x.com/elonmusk/status/2076340642121167241">RT Elon Musk: Re @beffjezos I say both energy and mass...</a></li>
-      <li><a href="https://x.com/elonmusk/status/2076340996044898343">RT Gail Alfar: Grok 4.5 is the truth seeking leader...</a></li>
-      <li><a href="https://x.com/elonmusk/status/2076433522911244615">RT Gavin Baker: The mega bull case for AI infrastructure...</a></li>
-      <li><a href="https://x.com/elonmusk/status/2076564143558074616">RT Miki Ovshievich: Well shit - grok 4.5 is KILLING it...</a></li>
-      <li><a href="https://x.com/elonmusk/status/2076435324910100916">RT X Freeze: Elon Musk explains why the Sun is humanity&#x27;s ultimate energy source...</a></li>
-      <li><a href="https://x.com/elonmusk/status/2076410318687776907">RT X Freeze: For the first time, Starship will carry 20 next-generation Starlink V3 satellites...</a></li>
-      <li><a href="https://x.com/elonmusk/status/2076336928933187982">RT Yun-Ta Tsai: I would like to offer a counterargument that LLMs (or maybe AIs) cannot jump...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2076524673139954010">RT Andrew McCarthy: …new photos to come!</a></li>
+      <li><a href="https://x.com/elonmusk/status/2076340642121167241">RT Elon Musk: …energy and mass…</a></li>
+      <li><a href="https://x.com/elonmusk/status/2076340996044898343">RT Gail Alfar: Grok 4.5 is the truth seeking leader…</a></li>
+      <li><a href="https://x.com/elonmusk/status/2076433522911244615">RT Gavin Baker: The mega bull case for AI infrastructure…</a></li>
+      <li><a href="https://x.com/elonmusk/status/2076564143558074616">RT Miki Ovshievich: …grok 4.5 is KILLING it…</a></li>
+      <li><a href="https://x.com/elonmusk/status/2076435324910100916">RT X Freeze: Elon Musk explains why the Sun is humanity’s ultimate energy source…</a></li>
+      <li><a href="https://x.com/elonmusk/status/2076410318687776907">RT X Freeze: For the first time, Starship will carry 20 next-generation Starlink V3 satellites…</a></li>
+      <li><a href="https://x.com/elonmusk/status/2076336928933187982">RT Yun-Ta Tsai: …LLMs cannot jump…</a></li>
       <li><a href="https://x.com/elonmusk/status/2076102645823971373">Starship is evolving rapidly</a></li>
       <li><a href="https://x.com/elonmusk/status/2076252465674977609">Try Grok 4.5 and see for yourself</a></li>
-      <li>[[昨日补遗] RT Samuel Cardillo: and yes, i would say that @elonmusk mission with @SpaceXAI is going well...](https://x.com/elonmusk/status/2076102352751259651)</li>
-      <li>[[昨日补遗] RT The Rabbit Hole: How many people have left America...](https://x.com/elonmusk/status/2076253536388550947)</li>
+      <li>[[昨日补遗] RT Samuel Cardillo: …Grok 4.5 training pushed even further…](https://x.com/elonmusk/status/2076102352751259651)</li>
+      <li>[[昨日补遗] RT The Rabbit Hole: How many people have left America…](https://x.com/elonmusk/status/2076253536388550947)</li>
       </ul>
-      <p><strong>github-trending-daily-any</strong></p>
+      <h3>GitHub Trending</h3>
       <ul>
-      <li><a href="https://github.com/Dicklesworthstone/destructive_command_guard">Dicklesworthstone/destructive_command_guard</a></li>
-      <li><a href="https://github.com/Graphify-Labs/graphify">Graphify-Labs/graphify</a></li>
-      <li><a href="https://github.com/Nutlope/hallmark">Nutlope/hallmark</a></li>
-      <li><a href="https://github.com/OpenCut-app/OpenCut">OpenCut-app/OpenCut</a></li>
-      <li><a href="https://github.com/Shubhamsaboo/awesome-llm-apps">Shubhamsaboo/awesome-llm-apps</a></li>
+      <li><a href="https://github.com/Dicklesworthstone/destructive_command_guard">destructive_command_guard</a></li>
+      <li><a href="https://github.com/Graphify-Labs/graphify">graphify</a></li>
+      <li><a href="https://github.com/Nutlope/hallmark">hallmark</a></li>
+      <li><a href="https://github.com/OpenCut-app/OpenCut">OpenCut</a></li>
+      <li><a href="https://github.com/Shubhamsaboo/awesome-llm-apps">awesome-llm-apps</a></li>
       </ul>
-      <p><strong>hacker-news</strong> （含来自 hacker-news 和 Show HN 的全部链接）</p>
+      <h3>Hacker News</h3>
       <ul>
-      <li><a href="https://deepbluedynamics.com/blog/right-too-expensive-to-exercise">A Right Too Expensive to Exercise Isn&#x27;t a Right</a></li>
-      <li><a href="https://jivx.com/densha">A voxel Tokyo in real Japan time – ride the Yamanote line and study Japanese</a></li>
+      <li><a href="https://deepbluedynamics.com/blog/right-too-expensive-to-exercise">A Right Too Expensive to Exercise Isn’t a Right</a></li>
+      <li><a href="https://jivx.com/densha">A voxel Tokyo in real Japan time…</a></li>
       <li><a href="https://shub.club/writings/2026/july/check-your-scrollheight/">Are you telling me a readonly property is wrecking my performance?</a></li>
       <li><a href="https://news.ycombinator.com/item?id=48886741">Ask HN: Add flag for AI-generated articles</a></li>
       <li><a href="https://news.ycombinator.com/item?id=48884984">Ask HN: What Are You Working On? (July 2026)</a></li>
@@ -200,7 +195,7 @@
       <li><a href="https://frieve-a.github.io/sound_toolbox/vinyl_explained/vinyl_explained.html">Frieve Vinyl Explained – Microscopic stylus/groove physics simulation</a></li>
       <li><a href="https://nebusec.ai/research/ionstack-part-2/">GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years</a></li>
       <li><a href="https://twitter.com/i/status/2076598897779020159">Grok CLI uploaded the whole home directory to GCS</a></li>
-      <li><a href="https://twitter.com/a_green_being/status/2076598897779020159">Grok uploaded my user directory to xAI&#x27;s servers</a></li>
+      <li><a href="https://twitter.com/a_green_being/status/2076598897779020159">Grok uploaded my user directory to xAI’s servers</a></li>
       <li><a href="https://scotto.me/blog/2026-07-12-how-to-read-more-books/">How to read more books</a></li>
       <li><a href="https://shkspr.mobi/blog/2026/07/another-ridiculous-interrail-holiday-6379km-and-13-countries-over-7-weeks/">Interrail: 6,379Km and 13 Countries over 7 weeks</a></li>
       <li><a href="https://kode.diy/">Kode Dot Programmable pocket device for makers, pentesters and geeks</a></li>
@@ -210,31 +205,31 @@
       <li><a href="https://github.com/clawkwork/clawk">Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop</a></li>
       <li><a href="https://github.com/floodtide/dom-docx">Show HN: DOM-docx – HTML to native, editable Word docs (MIT)</a></li>
       <li><a href="https://www.susanrigetti.com/physics">So you want to learn physics (second edition, 2021)</a></li>
-      <li><a href="https://www.bbc.com/news/articles/cwye0dlzgejo">The &#x27;absolute magic&#x27; of Morse code that still connects people globally</a></li>
+      <li><a href="https://www.bbc.com/news/articles/cwye0dlzgejo">The ‘absolute magic’ of Morse code that still connects people globally</a></li>
       <li><a href="https://www.lyrebirddreaming.com/post/the-graph-that-should-be-front-page-news">The Graph That Should Be Front-Page News</a></li>
-      <li><a href="https://andiroberts.com/citizenship/the-social-physics-of-conversation-citizenship-leadership">The social physics of conversation: Communication patterns matter</a></li>
+      <li><a href="https://andiroberts.com/citizenship/the-social-physics-of-conversation-citizenship-leadership">The social physics of conversation…</a></li>
       <li><a href="https://floooh.github.io/tiny8bit-preview/index.html">Tiny Emulators</a></li>
       <li><a href="https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/">Vint Cerf, “father of the Internet”, is retiring</a></li>
       <li><a href="https://raymyers.org/post/zed-creator-calls-spade-a-spade/">Zig Creator Calls Spade a Spade, Anthropic Blows Smoke</a></li>
       </ul>
-      <p><strong>sam-altman</strong></p>
+      <h3>Sam Altman X 动态</h3>
       <ul>
-      <li><a href="https://x.com/sama/status/2076398253332140410">i&#x27;d love to see interesting things people have built with 5.6 sol...</a></li>
-      <li>[[昨日补遗] 30% of the cost was on fable at these levels of usage?](https://x.com/sama/status/2075982820322025788)</li>
-      <li>[[昨日补遗] homeboy you&#x27;re the one selling public market investors on short-term space datacenters](https://x.com/sama/status/2075982617976230043)</li>
-      <li>[[昨日补遗] &quot;physicians found fewer flaws in GPT-5.6 responses than physician-written responses.&quot;](https://x.com/sama/status/2075985056846451123)</li>
-      <li>[[昨日补遗] so far at least, i&#x27;m pretty sure AI has been net job-creating...](https://x.com/sama/status/2076036901824532530)</li>
-      <li>[[昨日补遗] there are a lot of benchmarks that suggest 5.6 sol is the best model in the world right now...](https://x.com/sama/status/2075983427019612242)</li>
+      <li><a href="https://x.com/sama/status/2076398253332140410">i’d love to see interesting things people have built with 5.6 sol…</a></li>
+      <li>[[昨日补遗] 30% of the cost was on fable…](https://x.com/sama/status/2075982820322025788)</li>
+      <li>[[昨日补遗] homeboy you’re the one sellling public market investors…](https://x.com/sama/status/2075982617976230043)</li>
+      <li>[[昨日补遗] “physicians found fewer flaws in GPT-5.6 responses…](https://x.com/sama/status/2075985056846451123)</li>
+      <li>[[昨日补遗] so far at least, i’m pretty sure AI has been net job-creating…](https://x.com/sama/status/2076036901824532530)</li>
+      <li>[[昨日补遗] there are a lot of benchmarks that suggest 5.6 sol is the best model…](https://x.com/sama/status/2075983427019612242)</li>
       <li>[[昨日补遗] whoa](https://x.com/sama/status/2076034163418014199)</li>
       </ul>
-      <p><strong>美团技术</strong></p>
+      <h3>美团技术博客</h3>
       <ul>
       <li><a href="https://tech.meituan.com/2026/07/12/LongCat-2.0-Open-source.html">正式开源！美团 LongCat-2.0 同步开放国产卡推理代码</a></li>
       <li><a href="https://tech.meituan.com/2026/07/11/2026-meituan-32-papers.html">直播回放·含 ACL&#x27;26 杰出论文 | 美团 AI 顶会论文 32 篇精讲</a></li>
       </ul>
-      <p><strong>openai-x</strong></p>
+      <h3>OpenAI X 动态</h3>
       <ul>
-      <li>[[昨日补遗] RT Atty Eleti: GPT-Live is now fully rolled out to all ChatGPT users globally...](https://x.com/OpenAI/status/2075768868350677206)</li>
+      <li>[[昨日补遗] RT Atty Eleti: GPT-Live is now fully rolled out to all ChatGPT users globally…](https://x.com/OpenAI/status/2075768868350677206)</li>
       </ul>
     </article>
   </main>
