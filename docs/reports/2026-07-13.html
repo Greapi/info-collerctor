@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-13 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-07-13 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日核心关注集中在 Grok 4.5 与 GPT-5.6 的模型竞赛升级、SpaceXAI 数据隐私争议与处理、以及多个新工具与框架的发布。此外，加州“无限滚动”监管、Linux 15 年老漏洞曝光、演员 Sam Neill 去世等事件值得注意。</p>
+      <h2>重点事件</h2>
+      <ul>
+      <li><strong>Grok 4.5 性能获认可，成本优势显著</strong>：Grok 4.5 在 SWE-Atlas-QnA 基准上得分最高，超越 Claude Fable 5 与 GPT-5.6 Sol<a href="https://x.com/elonmusk/status/2076538528041677013">（RT Polymarket）</a>；在浏览器使用测试中被指达到“Opus 级别”<a href="https://x.com/elonmusk/status/2076411563116835245">（Grok 4.5 is Opus class for browser use）</a>；在视频工作室评估中得分从 6/33 提升至 23/33，成本效率突出<a href="https://x.com/elonmusk/status/2076564143558074616">（RT Miki Ovshievich）</a>。Grok Build 月访问量从 5 月的约 46 万次跃升至 6 月的 116 万次，增长超过 150%<a href="https://x.com/elonmusk/status/2076739857863385206">（Progress）</a>。</li>
+      </ul>
+      <ul>
+      <li><strong>Grok 与 SpaceXAI 数据隐私争议及应对</strong>：Grok CLI 被指将用户整个主目录上传至服务器<a href="https://twitter.com/i/status/2076598897779020159">（Grok CLI uploaded the whole home directory to GCS）</a>。官方多次强调零数据保留政策，声明 CLI 在任何模式下均不保留数据，使用 /privacy 命令可删除已同步数据<a href="https://x.com/elonmusk/status/2076740048335028734">（RT Andrew Milich）</a><a href="https://x.com/elonmusk/status/2076740203742466098">（RT SpaceXAI）</a>。Elon Musk 宣布作为预防措施，此前所有上传至 SpaceXAI 的用户数据将被彻底删除<a href="https://x.com/elonmusk/status/2076739687658496209">（True. As a precautionary measure...）</a>。</li>
+      </ul>
+      <ul>
+      <li><strong>GPT-5.6 性能与成本反馈分化</strong>：将生产 AI 代理迁移至 GPT-5.6 后速度提升 2.2 倍，成本降低 27%<a href="https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6">（Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper）</a>。但同时社区普遍反映 GPT-5.6 及其“Sol”模式速度变慢，思维链展示减少[（\[OpenAI\] gpt-5.6 速度慢的问题）](https://www.v2ex.com/t/1227014#reply6)；Codex 在下午高峰时段卡顿明显[（\[Codex\] codex 下午四点后巨卡巨慢）](https://www.v2ex.com/t/1227001#reply5)。OpenAI 因 Codex 和 ChatGPT Work 活跃用户达 700 万，再次赠送“重置卡”[（\[OpenAI\] openai 又送重制卡了么）](https://www.v2ex.com/t/1227064#reply3)。Sam Altman 确认 GPT 5.6 Sol 将保留在 ChatGPT 订阅中<a href="https://x.com/sama/status/2076780425280954658">（come for the best model...）</a>。</li>
+      </ul>
+      <ul>
+      <li><strong>美团开源万亿参数大模型 LongCat-2.0</strong>：总参数 1.6T、平均激活约 48B，业界首个在五万卡国产算力集群上完成推理的万亿参数模型，开源版本提供 BF16、FP8、INT8 等多精度选择<a href="https://tech.meituan.com/2026/07/12/LongCat-2.0-Open-source.html">（美团技术）</a>。同时公布了含 ACL 2026 杰出论文在内的 32 篇 AI 顶会论文精讲回放<a href="https://tech.meituan.com/2026/07/11/2026-meituan-32-papers.html">（美团技术）</a>。</li>
+      </ul>
+      <ul>
+      <li><strong>X 平台算法与 Grok 代理更新</strong>：X 平台提升互关好友帖子可见性，降低评论区“战场”感<a href="https://x.com/elonmusk/status/2076803358027895272">（RT Nikita Bier）</a>。Grok 代理支持后台运行模式（.grok/agents 或 config.toml 配置）<a href="https://x.com/elonmusk/status/2076563677319209094">（Using Grok agents in background mode）</a>。</li>
+      </ul>
+      <ul>
+      <li><strong>SpaceX Starship 第 13 次试飞将首次部署卫星</strong>：将携带 20 颗下一代 Starlink V3 卫星，测试激光星间链路等，部分卫星改装摄像头扫描 Starship 热防护罩<a href="https://x.com/elonmusk/status/2076410318687776907">（RT X Freeze: Starship will carry 20 next-generation Starlink V3）</a>。</li>
+      </ul>
+      <ul>
+      <li><strong>重要安全与漏洞披露</strong>：Linux 所有发行版存在 15 年的堆栈 UAF 漏洞 GhostLock 被披露<a href="https://nebusec.ai/research/ionstack-part-2/">（GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years）</a>。开源项目 destructive_command_guard（3682 星）和 Clawk 分别用于阻止 AI 代理执行危险命令和提供隔离执行环境<a href="https://github.com/Dicklesworthstone/destructive_command_guard">（Dicklesworthstone/destructive_command_guard）</a><a href="https://github.com/clawkwork/clawk">（Show HN: Clawk）</a>。</li>
+      </ul>
+      <ul>
+      <li><strong>产品与监管</strong>：Cloudflare 推出新产品 Precursor<a href="https://blog.cloudflare.com/introducing-precursor/">（Precursor）</a>。加州一项争议法案可能威胁“无限滚动”功能<a href="https://www.sfgate.com/politics/article/meta-social-media-teenagers-22337724.php">（The infinite scroll may become endangered...）</a>。维基百科暂时免于被英国《在线安全法》列为“第一类”服务<a href="https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2026-07-13/Special_report">（Wikipedia escapes Category 1 designation...）</a>。</li>
+      </ul>
+      <ul>
+      <li><strong>人物</strong>：演员 Sam Neill 去世，享年 78 岁<a href="https://www.theguardian.com/film/2026/jul/13/sam-neill-death-actor-dies-aged-78">（Sam Neill has died）</a>。“互联网之父”Vint Cerf 退休<a href="https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/">（Vint Cerf is retiring）</a>。</li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>模型竞争转向成本与垂直场景</strong>：Grok 4.5 凭借在特定评估中的高性价比获得关注<a href="https://x.com/elonmusk/status/2076564143558074616">（RT Miki Ovshievich）</a>，GPT-5.6 则被报告在生产环境中实现 27% 的成本优化<a href="https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6">（Migrating a production AI agent to GPT-5.6...）</a>。分析观点认为，AI 基础设施的看涨预期在于市场份额从高利润率的特定前沿实验室转向更便宜的模型<a href="https://x.com/elonmusk/status/2076433522911244615">（RT Gavin Baker）</a>，社区自发用 MiniRouter 等工具在多个模型间路由以降低费用[（\[程序员\] 智能路由 MiniRouter）](https://www.v2ex.com/t/1227031#reply0)。</li>
+      </ul>
+      <ul>
+      <li><strong>AI 编程交互模式转向批处理</strong>：有分析指出，Coding Agent 采用 Heredoc 式一次性执行完整代码，相比逐步交互的 REPL 模式，可将任务执行轮数、工具调用次数及成本降低约 40%[（\[程序员\] 为什么 Agent 更适合 Heredoc 式执行）](https://www.v2ex.com/t/1227024#reply0)。</li>
+      </ul>
+      <ul>
+      <li><strong>端侧 AI 与隐私工具的本地化实践增多</strong>：本期涌现多个强调本地处理、保护隐私的工具，如本机分析的相册清理工具 Minimal Cleaner[（\[推广\] 本机分析的 iPhone 清理工具）](https://www.v2ex.com/t/1227046#reply2)、私有简历系统 PResume[（\[分享创造\] 私有简历 PResume）](https://www.v2ex.com/t/1226992#reply2)、利用本地模型识别书页划线的 Inkive<a href="https://sspai.com/post/111936">（App+1｜Inkive）</a>。这与三星健康因拒绝 AI 训练而威胁删除用户数据<a href="https://neow.in/cWsyMTV3">（Samsung Health app threatens data deletion...）</a>及 SpaceXAI 数据上传争议<a href="https://twitter.com/i/status/2076598897779020159">（Grok CLI uploaded the whole home directory to GCS）</a>的背景形成对照。</li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Grok 与 GPT-5.6 的性能优化进展</strong>：两者虽表现强劲，但均存性能稳定性问题。Grok 的隐私争议是否会进一步发酵，GPT-5.6 的速度问题能否通过基础设施扩容解决，均值得跟踪。</li>
+      <li><strong>Starship 第 13 次试飞</strong>：首次尝试部署 Starlink V3 卫星，若成功将是星链组网和 Starship 多功能性的重要验证<a href="https://x.com/elonmusk/status/2076410318687776907">（RT X Freeze: Starship will carry 20 next-generation Starlink V3）</a>。</li>
+      <li><strong>加州「无限滚动」监管法案进展</strong>：若通过，可能对社交媒体产品形态产生深远影响<a href="https://www.sfgate.com/politics/article/meta-social-media-teenagers-22337724.php">（The infinite scroll may become endangered...）</a>。</li>
+      <li><strong>国产大模型生态建设</strong>：美团开源 LongCat-2.0 并适配国产算力，后续生态工具和社区采用情况值得关注<a href="https://tech.meituan.com/2026/07/12/LongCat-2.0-Open-source.html">（美团技术）</a>。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <p>本日报信息综合自以下信息源：</p>
+      <ul>
+      <li><strong>Elon Musk / X 平台</strong>：数条相关推文及转发，涉及 Grok、SpaceXAI、Starship 等动态。</li>
+      <li><strong>Sam Altman / OpenAI 官方 X</strong>：关于 GPT-5.6、ChatGPT 订阅及产品恢复的声明确认。</li>
+      <li><strong>Hacker News</strong>：涵盖 LAPD 合同终止、三星健康隐私、Cloudflare Precursor、加州法案、GhostLock 漏洞、人物讣告等多篇报道与项目展示。</li>
+      <li><strong>美团技术</strong>：LongCat-2.0 开源与 AI 顶会论文精讲。</li>
+      <li><strong>V2EX</strong>：社区关于 GPT-5.6 速度、开源工具、隐私应用、AI 中转站生态、交互模式讨论、个股爆仓等大量用户分享与讨论。</li>
+      <li><strong>GitHub Trending</strong>：destructive_command_guard 等热门开源项目。</li>
+      <li><strong>少数派 (sspai) / AnyFeeder Matrix</strong>：Inkive、MeetAlarm、GitZip Pro 等新应用报道。</li>
+      <li><strong>BBC / The Guardian / TechCrunch 等媒体</strong>：Sam Neill 去世、Vint Cerf 退休等新闻。</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
