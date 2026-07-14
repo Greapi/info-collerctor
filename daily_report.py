@@ -237,9 +237,7 @@ def chat_completion(config: OpenAIConfig, messages: list[dict[str, str]], timeou
         except urllib.error.HTTPError as exc:
             body = exc.read().decode("utf-8", errors="replace")
             raise RuntimeError(f"Model request failed with HTTP {exc.code}: {body}") from exc
-        except urllib.error.URLError:
-            raise
-        except (http.client.IncompleteRead, http.client.HTTPException, TimeoutError, ConnectionError) as exc:
+        except (urllib.error.URLError, http.client.IncompleteRead, http.client.HTTPException, TimeoutError, ConnectionError) as exc:
             last_exc = exc
             if attempt < retries:
                 wait = 2 ** attempt
