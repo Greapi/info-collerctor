@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-16 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-07-16 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日技术社区聚焦于 Kimi 旗舰模型 K3 正式上线及会员权益争议；马斯克旗下 SpaceX 星舰 Flight 13 已堆叠准备飞行、Grok Build 开源；OpenAI 回应 GPT-5.6 文件删除问题。开源及产品领域：微软 Comic Chat 开源、OnePlus 暂停欧美业务、Google NotebookLM 更名 Gemini Notebook。</p>
+      <h2>重点事件</h2>
+      <ul>
+      <li><strong>Starship Flight 13 堆叠完毕</strong>：Starship Flight 13 已于今日完成堆叠并准备飞行。<a href="https://x.com/elonmusk/status/2077801061343981703">来源</a> <a href="https://x.com/elonmusk/status/2077748491045024212">来源</a></li>
+      <li><strong>xAI Grok Build 正式开源</strong>：包含 CLI 工具及基于 Unicode 的 Mermaid 图表终端渲染器，代码总量 84.4 万行 Rust，本地优先运行，默认关闭数据保留。<a href="https://x.com/elonmusk/status/2077748220931854467">来源</a> <a href="https://x.com/elonmusk/status/2077558358429569135">来源</a></li>
+      <li><strong>Kimi K3 正式上线</strong>：旗舰模型 K3 拥有 1M 上下文窗口，但在 Kimi Code 中仅 199 元/月以上档位可使用 1M 上下文（99 元/月限制 256k），客户端中仅 699 元/月最高档可使用完整 1M 上下文，引发社区对会员权益分级的热议。<a href="https://www.kimi.com/en">来源</a> <a href="https://www.v2ex.com/t/1227856#reply14">来源</a></li>
+      <li><strong>OpenAI 回应 GPT-5.6 意外删除文件</strong>：问题主要发生在启用“完全访问模式”且无沙箱保护下运行 Codex 时，模型可能错误覆盖 <code>$HOME</code> 环境变量导致误删。OpenAI 表示将通过更新开发者消息、引导安全权限模式及增加附加保护措施降低风险，即将发布详细事后分析。<a href="https://x.com/sama/status/2077810840309510550">来源</a></li>
+      <li><strong>OpenAI 强调青少年安全使用 AI</strong>：公司介绍了适龄保护、学习工具、家长控制和专家合作等措施，让 ChatGPT 对青少年更安全。<a href="https://openai.com/index/why-teens-deserve-access-safe-ai">来源</a></li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>AI 模型订阅分层加剧</strong>：Kimi K3 的会员权益与模型能力深度绑定，高端功能仅最高档可用，反映出 AI 厂商正加速通过订阅分层实现商业变现。Kimi 并非个例，Codex 用户也在讨论拼车分摊订阅成本。<a href="https://www.v2ex.com/t/1227856#reply14">来源</a> <a href="https://www.v2ex.com/t/1227861#reply3">来源</a></li>
+      <li><strong>AI 安全与失控风险并存</strong>：GPT-5.6 文件删除事件暴露了 AI 在无沙箱环境下的潜在破坏性；与此同时，SpaceXAI 起诉利用 Grok 制作非法 Deepfakes 的用户，2026 年已提交 73,604 份报告协助至少 244 次逮捕。安全治理与风险管控成为行业焦点。<a href="https://x.com/sama/status/2077810840309510550">来源</a> <a href="https://x.com/elonmusk/status/2077603867613655101">来源</a></li>
+      <li><strong>轻量化开源 AI 工具崛起</strong>：Grok Build 开源、Grok 4.5 在 FrontierSWE 基准中排名第二，以及社区涌现大量开源项目（如 LeAgent 全栈 Agent 平台、CodeDrobe Theme 换肤工具、mdsweep 清理工具等），显示开发者生态正向开放、可定制方向快速演进。<a href="https://x.com/elonmusk/status/2077558358429569135">来源</a> <a href="https://x.com/elonmusk/status/2077392279552012346">来源</a> <a href="https://www.v2ex.com/t/1227871#reply0">来源</a></li>
+      <li><strong>硬件与基础设施变革信号</strong>：ASML 2027–2028 年产能扩张已考虑到马斯克德州“Terafab”芯片设施需求，EUV 产能接近订满；FreeBSD 16 移除最后一段 GPL 代码实现完全无 GPL，基础软件生态持续演进。<a href="https://x.com/elonmusk/status/2077410816052154428">来源</a> <a href="https://www.phoronix.com/news/FreeBSD-16-Goes-GPL-Free">来源</a></li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Starship Flight 13 试飞结果</strong>：发射计划仍定于今日（7 月 16 日），结果将直接影响 SpaceX 后续任务节奏。<a href="https://x.com/elonmusk/status/2077380942151266325">来源</a></li>
+      <li><strong>GPT-5.6 文件删除事后分析报告</strong>：OpenAI 承诺未来几天内发布详细报告，预计将揭示更多技术细节与改进方案。<a href="https://x.com/sama/status/2077810840309510550">来源</a></li>
+      <li><strong>SpaceX 债券价格下跌</strong>：债券价值已比发行价低 10%，面临沦为垃圾债风险，需关注后续融资与市场信心变化。<a href="https://www.ft.com/content/3a023b95-66c3-41e1-b0ce-df752a499541">来源</a></li>
+      <li><strong>开源项目进展</strong>：Grok Build 开源后生态发展、FreeBSD 16 无 GPL 化落地影响、各类社区工具（eHubs、AiRoute、Sessio 等）的成熟度与采用率。<a href="https://x.com/elonmusk/status/2077558358429569135">来源</a> <a href="https://www.phoronix.com/news/FreeBSD-16-Goes-GPL-Free">来源</a></li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li><strong>马斯克及关联公司</strong>：<a href="https://x.com/elonmusk/status/2077801061343981703">RT SpaceX: Stacking Starship for Flight 13</a> | <a href="https://x.com/elonmusk/status/2077748491045024212">RT SMX: Starship Flight 13 is flying today</a> | <a href="https://x.com/elonmusk/status/2077748220931854467">RT Andrew Milich: Grok Build open source</a> | <a href="https://x.com/elonmusk/status/2077558358429569135">RT Grok: Limits reset, Grok Build open-source</a> | <a href="https://x.com/elonmusk/status/2077600392368586849">RT Jason Ginsberg: Grok Build open source, EU availability</a> | <a href="https://x.com/elonmusk/status/2077621775806955706">RT Tesla Owners Silicon Valley: Musk AI布局总结</a> | <a href="https://x.com/elonmusk/status/2077392279552012346">RT Tesla Owners Silicon Valley: Grok 4.5 FrontierSWE #2</a> | <a href="https://x.com/elonmusk/status/2077403715036713227">RT Sawyer Merritt: Tesla + 7-Eleven Japan</a> | <a href="https://x.com/elonmusk/status/2077410816052154428">RT Sawyer Merritt: ASML capacity for Terafab</a> | <a href="https://x.com/elonmusk/status/2077744849269199058">RT Starlink: Bangladesh connectivity</a> | <a href="https://x.com/elonmusk/status/2077603867613655101">RT DogeDesigner: SpaceXAI sues deepfakes user</a> | <a href="https://x.com/elonmusk/status/2077388262520303660">RT X Freeze: Grok connectors (Stripe, Calendly)</a> | <a href="https://x.com/elonmusk/status/2077380942151266325">Starship still tracking to fly tomorrow</a> | <a href="https://www.ft.com/content/3a023b95-66c3-41e1-b0ce-df752a499541">SpaceX bond heading for junk status</a> | <a href="https://x.com/elonmusk/status/2077412964231991420">Good reason to try Grok 4.5</a> | <a href="https://x.com/elonmusk/status/2077623119624216694">RT Matthew Berman: Grok 4.5 really good</a></li>
+      <li><strong>产品与开源</strong>：<a href="https://www.kimi.com/en">Kimi K3 is now live</a> | <a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/">NotebookLM is now Gemini Notebook</a> | <a href="https://opensource.microsoft.com/blog/2026/07/16/microsoft-comic-chat-is-now-open-source/">Microsoft Comic Chat open source</a> | <a href="https://community.oneplus.com/thread/2170715118587871237">OnePlus halts operations in USA and Europe</a> | <a href="https://www.spaceweather.gov/news/goes-19-safe-hold">GOES-19 weather satellite enters Safe Hold mode</a> | <a href="https://www.techdirt.com/2026/07/15/sony-deletes-a-bunch-more-movies-from-the-accounts-of-people-who-bought-them/">Sony deletes movies from purchased accounts</a> | <a href="https://www.phoronix.com/news/FreeBSD-16-Goes-GPL-Free">FreeBSD 16 removes last GPL code</a></li>
+      <li><strong>OpenAI</strong>：<a href="https://openai.com/index/why-teens-deserve-access-safe-ai">Why teens deserve access to safe AI</a> | <a href="https://x.com/sama/status/2077810840309510550">RT Tibo: On GPT-5.6 file deletions</a> | <a href="https://openai.com/index/cars24">How Cars24 scales with OpenAI</a> | <a href="https://openai.com/index/unlocking-self-improvement-gpt-red">GPT-Red: Self-Improvement for Robustness</a> | <a href="https://dpa-international.com/economics/urn:newsml:dpa.com:20090101:260715-930-389143/">OpenAI loses EU trademark dispute</a></li>
+      <li><strong>GitHub Trending</strong>：<a href="https://github.com/lobehub/lobehub">lobehub/lobehub</a> | <a href="https://github.com/PostHog/posthog">PostHog/posthog</a> | <a href="https://github.com/apache/ossie">apache/ossie</a> | <a href="https://github.com/ossu/computer-science">ossu/computer-science</a> | <a href="https://github.com/HKUDS/DeepTutor">HKUDS/DeepTutor</a> | <a href="https://github.com/openinterpreter/openinterpreter">openinterpreter/openinterpreter</a> | <a href="https://github.com/YimMenu/YimMenuV2">YimMenu/YimMenuV2</a></li>
+      <li><strong>V2EX 社区</strong>：<a href="https://www.v2ex.com/t/1227856#reply14">KIMI K3 会员权益</a> | <a href="https://www.v2ex.com/t/1227861#reply3">Codex 5小时限制解除后使用量</a> | <a href="https://www.v2ex.com/t/1227854#reply0">DeepSeek 控制台 404</a> | <a href="https://www.v2ex.com/t/1227872#reply0">CodeDrobe Theme 开源换肤</a> | <a href="https://www.v2ex.com/t/1227871#reply0">LeAgent 开源全栈 Agent</a> | <a href="https://www.v2ex.com/t/1227829#reply3">Sessio HTTP 调试代理</a> | <a href="https://www.v2ex.com/t/1227838#reply2">AI humanizer handbook</a> | <a href="https://www.v2ex.com/t/1227853#reply0">Foursmith VR 播放器</a> | <a href="https://www.v2ex.com/t/1227831#reply0">MarcDown Markdown 编辑器</a> | <a href="https://www.v2ex.com/t/1227821#reply1">mdsweep 清理 Claude Code 遗留文件</a> | <a href="https://www.v2ex.com/t/1227547#reply0">eHubs 资源管理工具</a> | <a href="https://www.v2ex.com/t/1227594#reply0">Nimclip 剪贴板历史</a> | <a href="https://www.v2ex.com/t/1227537#reply1">NetPulse 网速监控</a> | <a href="https://www.v2ex.com/t/1227543#reply2">AiRoute 本地路由网关</a> | <a href="https://www.v2ex.com/t/1227541#reply0">交互式 Markdown 组件</a> | <a href="https://www.v2ex.com/t/1227579#reply1">mcpp 构建工具 gcc16 支持</a> | <a href="https://www.v2ex.com/t/1227569#reply0">solo-ship Grok 4.5 Skill</a> | <a href="https://www.v2ex.com/t/1227561#reply3">Cursor 7.15 计费异常</a> | <a href="https://www.v2ex.com/t/1227590#reply6">AI 八字系统迭代</a> | <a href="https://www.v2ex.com/t/1227584#reply0">海力士 3D 订单簿战场</a> | <a href="https://www.v2ex.com/t/1227574#reply6">小米高仿诈骗</a> | <a href="https://www.v2ex.com/t/1227566#reply6">试用期被裁</a> | <a href="https://www.v2ex.com/t/1227817#reply4">初级开发者求职困境</a> | <a href="https://www.v2ex.com/t/1227828#reply6">小厂裁员选择</a> | <a href="https://www.v2ex.com/t/1227592#reply0">Seedream 5.0 Pro vs GPT Image 2</a> | <a href="https://www.v2ex.com/t/1227847#reply6">多 AI 平台会话管理</a> | <a href="https://www.v2ex.com/t/1227875#reply0">展示好工具</a> | <a href="https://www.v2ex.com/t/1227845#reply22">生活记录方式讨论</a> | <a href="https://www.v2ex.com/t/1227825#reply0">西山居游戏关服</a> | <a href="https://www.v2ex.com/t/1227843#reply4">影院老片重映</a> | <a href="https://www.v2ex.com/t/1227839#reply0">各类招聘信息</a> | <a href="https://www.v2ex.com/t/1227866#reply1">各类招聘信息</a> | <a href="https://www.v2ex.com/t/1227849#reply5">各类招聘信息</a> | <a href="https://www.v2ex.com/t/1227539#reply4">各类招聘信息</a> | <a href="https://www.v2ex.com/t/1227553#reply0">各类招聘信息</a> | <a href="https://x.com/GeminiApp/status/2077497308422516934">Gemini 东南亚报告</a> | <a href="https://x.com/OpenAI/status/2077501603050033634">OpenAI GPT-Live 改进</a> | <a href="https://x.com/OpenAI/status/2077430470510526635">OpenAI 限量周边</a> | <a href="https://openai.com/index/advancing-ai-safety-through-state-and-federal-action">OpenAI 州与联邦 AI 治理</a> | <a href="https://github.com/welcome-to-the-sunny-side/misa77">misa77 编解码器</a> | <a href="https://coasty.ai/docs">Coasty (YC S26) computer-use API</a> | <a href="https://briarproject.org/news/2026-maintenance-mode/">Briar 进入维护模式</a> | <a href="https://www.dea.gov/press-releases/2026/07/01/dea-temporarily-schedule-7-oh-and-related-substances-protect-public">DEA 列管 7-Oh 物质</a></li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
