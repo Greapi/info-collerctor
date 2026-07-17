@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-17 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-07-17 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日科技领域热点集中于AI模型竞争与商业航天两大主线。Kimi K3旗舰模型正式上线并引发社区对会员权益的争议，OpenAI则因Codex误删文件事件紧急响应。商业航天方面，SpaceX迎来历史性时刻，Falcon与Starship同日近乎同时起飞，同时其股价波动与空头获利受到关注。此外，Starlink V3带宽提升、苹果向OpenAI员工发律师函、以及AWS计费事件等技术商业动态也值得留意。</p>
+      <h2>重点事件</h2>
+      <ul>
+      <li><strong>SpaceX 历史性同日双箭齐发</strong>：Falcon与Starship在约2小时内近乎同时起飞，SpaceX一天内完成了其他航天计划需数年才能实现的发射周期。(<a href="https://x.com/elonmusk/status/2077876568790028645">来源</a>)</li>
+      <li><strong>Starship Flight 13 今日执行</strong>：SpaceX已完成Starship Flight 13的堆叠，目标再次创造历史。(<a href="https://x.com/elonmusk/status/2077748491045024212">来源1</a>，<a href="https://x.com/elonmusk/status/2077801061343981703">来源2</a>)</li>
+      <li><strong>Kimi K3 旗舰模型上线，引发会员权益争议</strong>：Moonshot发布2.8万亿参数原生多模态模型，支持1M上下文，但社区反馈会员权益被分级限制。199元/月及以上套餐才能在Kimi Code中使用1M上下文，客户端则需699元/月。(<a href="https://www.kimi.com/en">来源1</a>，<a href="https://www.v2ex.com/t/1227856">来源2</a>)</li>
+      <li><strong>OpenAI 承认 GPT-5.6 误删文件漏洞</strong>：员工Tibo确认在开启全权限且无沙箱保护时，该模型会因试图覆盖环境变量而意外删除 <code>$HOME</code> 目录下文件。团队正更新开发者信息并增加保护措施，将发布详细事后分析。(<a href="https://x.com/sama/status/2077810840309510550">来源</a>)</li>
+      <li><strong>苹果向数十名 OpenAI 员工发出法律信函</strong>：引发外界对两家公司间潜在法律摩擦的关注。(<a href="https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166">来源</a>)</li>
+      <li><strong>Starlink V3 带宽将提升约两个数量级</strong>：Elon Musk表示新卫星将显著提高空基通信的容量、数据密度和发电量。(<a href="https://x.com/elonmusk/status/2077917951957643693">来源</a>)</li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>商业航天进入高频发射与基础设施化新阶段</strong>：SpaceX单日双箭齐发标志着发射能力迈上新台阶。ARK Invest分析指出，Starship是解锁价值28.5万亿美元的轨道数据中心市场的关键，SpaceX超90%的未来市场在于AI而非太空本身。(<a href="https://x.com/elonmusk/status/2077878804895134050">来源1</a>，<a href="https://x.com/elonmusk/status/2077876568790028645">来源2</a>)</li>
+      <li><strong>AI Agent 安全与可控性成为落地关键瓶颈</strong>：OpenAI GPT-5.6误删 <code>$HOME</code> 文件事件再次凸显高权限AI代理的失控风险。同时，社区开发出 <code>mdsweep</code> 等工具清理AI遗留文件，反映出AI编码助手在流程规范上的不足。(<a href="https://x.com/sama/status/2077810840309510550">来源1</a>，<a href="https://www.v2ex.com/t/1227821">来源2</a>)</li>
+      <li><strong>AI 模型竞争转向生态与定价权博弈</strong>：Kimi K3采用分级会员权益限制模型能力，引发用户不满。与此同时，Muse Spark 1.1上架OpenRouter，市场出现低价GPT Plus日抛账号，显示模型分发与定价策略正在快速分化。(<a href="https://www.v2ex.com/t/1227856">来源1</a>，<a href="https://x.com/elonmusk/status/2077878690726195376">来源2</a>，<a href="https://www.v2ex.com/t/1228091">来源3</a>)</li>
+      <li><strong>个人AI工具市场持续活跃，专注细分场景</strong>：从模糊图片修复、涂色页生成、livehouse提醒，到跨平台API工具、文档转换工具等，大量独立开发者针对特定痛点推出新产品，形成长尾创新的繁荣生态。(<a href="https://www.v2ex.com/t/1228096">来源1</a>，<a href="https://www.v2ex.com/t/1227826">来源2</a>，<a href="https://www.v2ex.com/t/1228097">来源3</a>)</li>
+      <li><strong>数字内容所有权问题再次引发关注</strong>：索尼从用户账户中删除已“购买”电影的事件，再次尖锐地揭示了数字时代消费者权益与平台权力之间的失衡。(<a href="https://www.techdirt.com/2026/07/15/sony-deletes-a-bunch-more-movies-from-the-accounts-of-people-who-bought-them/">来源</a>)</li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Starship Flight 13 发射结果</strong>：本次飞行是否能为轨道数据中心等远景目标铺平道路值得跟踪。</li>
+      <li><strong>GPT-5.6 误删文件事件的事后分析</strong>：OpenAI承诺的详细报告将揭示该高危漏洞的具体成因与未来防范措施。</li>
+      <li><strong>Kimi K3 社区反馈与市场反应</strong>：其分级定价模式是否会被其他厂商效仿，以及对模型使用生态的影响。</li>
+      <li><strong>苹果与 OpenAI 的法律摩擦进展</strong>：该事件可能反映巨头间在AI领域竞争加剧下的新型法律对抗。</li>
+      <li><strong>AWS计费错误后续</strong>：官方估算计费数据出现17亿美元错误（有用户反馈见400亿账单），暴露超大规模云服务在计费系统稳定性上的潜在风险。(<a href="https://news.ycombinator.com/item?id=48945241">来源1</a>，<a href="https://www.v2ex.com/t/1228115">来源2</a>)</li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li><strong>人物与官方账号</strong>：Elon Musk (<a href="https://x.com/elonmusk">elom-musk</a>)，Sam Altman (<a href="https://x.com/sama">sam-altman</a>)</li>
+      <li><strong>公司与机构</strong>：OpenAI (<a href="https://openai.com">openai-news</a>，<a href="https://x.com/OpenAI">openai-x</a>)，SpaceX，Tesla，AWS，Apple</li>
+      <li><strong>科技社区与媒体</strong>：Hacker News (<a href="https://news.ycombinator.com">hacker-news</a>)，V2EX (<a href="https://www.v2ex.com">v2ex</a>)，Simon Willison (<a href="https://simonwillison.net/2026/Jul/16/kimi-k3/">Kimi K3分析</a>)，ARK Invest，Reuters，FT，BBC，CNBC，New York Times，Smithsonian</li>
+      <li><strong>开源与产品动态</strong>：Capital One (<a href="https://www.capitalone.com/tech/open-source/announcing-vulnhunter/">VulnHunter</a>)，Mozilla (<a href="https://stateofopensource.ai/">开源AI报告</a>)，Pebble (<a href="https://repebble.com/blog/pebble-mega-update-july-2026">七月更新</a>)，GitHub众多热门仓库 (如 <code>lobehub</code>, <code>ossu/computer-science</code>, <code>PostHog</code> 等)，以及各类社区分享的新工具与项目。</li>
+      <li><strong>其他</strong>：阮一峰的网络日志 (<a href="http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html">科技爱好者周刊第404期</a>)</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
