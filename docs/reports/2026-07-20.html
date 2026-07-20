@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-20 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-07-20 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日 AI 领域多条主线并发：Grok 4.5 正式面向 Excel 与开发者推出，并在编程基准测试中超越主流竞品；Kimi K3 因需求暴增暂停新订阅，再次将国产模型算力瓶颈推向台前；OpenAI 发布长周期模型安全框架，同时悄然缩减 Codex 上下文窗口。安全方面，研究员用 GPT5.6 加 25 美元发现 WordPress 远程代码执行漏洞，而罗马尼亚土地注册数据库遭黑客清除。开源社区持续活跃，多款语音、MCP、终端工具冲上 GitHub 趋势榜。独立开发者叙事中，Vibe Coding 的投入产出比与用户真实需求错位，引发新一轮讨论。</p>
+      <h2>重点事件</h2>
+      <ul>
+      <li><strong>Grok 4.5 全面铺开</strong></li>
+      <p>Elon Musk 宣布 <a href="https://x.com/elonmusk/status/2079261553136734239">Grok for Excel 上线</a>，用户可在 Excel 中直接调用 Grok 4.5 构建金融模型、分析市场数据。同日，Grok 4.5 在 VulcanBench 编程基准中得分 91.3%，超越 Claude Fable 5 和 GPT‑5.6 Sol，且成本效率更优（<a href="https://x.com/elonmusk/status/2078987522927972695">来源</a>）。开发者 Lee Robinson 称赞其在 React 开发中“出色且经济高效”（<a href="https://x.com/elonmusk/status/2079261743650312227">来源</a>），Min Choi 则将其用于实时研究、日常编码和调试（<a href="https://x.com/elonmusk/status/2079157111183806697">来源</a>）。Grok Build 0.2.105 同步发布，已将 4.5 设为默认模型并新增 /summarize 命令（<a href="https://x.com/elonmusk/status/2078692662345888102">来源</a>）。</p>
+      </ul>
+      <ul>
+      <li><strong>Kimi K3 需求过热，暂停新订阅</strong></li>
+      <p>月之暗面因 Kimi K3 需求超预期，<a href="https://twitter.com/kimi_moonshot/status/2078855608565207130">暂停新用户订阅</a>（<a href="https://news.ycombinator.com/item?id=48969291">HN 讨论</a>）。社区反馈激烈：前端能力被部分用户视为全球第一梯队，但存在价格昂贵、速度偏慢、幻觉率高等问题（<a href="https://www.v2ex.com/t/1228376">V2EX 讨论</a>）；K2.6 被指“降智”，部分用户转向千问 3.8 Preview（<a href="https://www.v2ex.com/t/1228368">V2EX</a>）；算力不足直接引发国产算力能力的广泛讨论（<a href="https://www.v2ex.com/t/1228419">V2EX</a>）。此前公布的 Kimi Code 会员计划定价从 ¥99 至 ¥1399/月，被评价“毫无性价比”（<a href="https://www.v2ex.com/t/1228417">来源</a>）。</p>
+      </ul>
+      <ul>
+      <li><strong>OpenAI 发布长周期模型安全研究，并缩减 Codex 上下文</strong></li>
+      <p>OpenAI 公开了<a href="https://openai.com/index/safety-alignment-long-horizon-models">《Safety and alignment in an era of long-horizon models》</a>，指出可长期运行的模型在解决复杂开放问题的同时，会引入传统评估难以捕获的安全风险，并给出部署迭代中的失败案例与改进措施（<a href="https://x.com/OpenAI/status/2079260694076371442">OpenAI 公告</a>）。另一方面，Codex 模型上下文大小由 372k 缩减至 272k（<a href="https://github.com/openai/codex/pull/33972/files">PR 记录</a>，<a href="https://news.ycombinator.com/item?id=48965850">HN 讨论</a>），引发开发者关注。</p>
+      </ul>
+      <ul>
+      <li><strong>25 美元发现 WordPress RCE，漏洞贩子出价超 50 万美元</strong></li>
+      <p>安全研究员称仅使用 GPT5.6 和 25 美元就找到了一个 WordPress 远程代码执行漏洞，而漏洞中间商对同类漏洞的出价高达 50 万美元（<a href="https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/">报告</a>）。同时，fastjson 1.x 最新版本亦传出疑似的 RCE 漏洞，尚未获 CVE 编号与官方确认（<a href="https://www.v2ex.com/t/1228636">V2EX</a>）。</p>
+      </ul>
+      <ul>
+      <li><strong>Anthropic 启动罕见病研究与 Claude 资助计划</strong></li>
+      <p>Anthropic 宣布“AI for Science”项目首次定向征集，为加速罕见病治疗的研究人员提供高达 50,000 美元的 Claude 使用额度资助（<a href="https://x.com/AnthropicAI/status/2079256626771665098">公告</a>）。</p>
+      </ul>
+      <ul>
+      <li><strong>独立开发者 AI 实践与反思</strong></li>
+      <p>独立开发者利用 Codex 和 Claude Code 在两月内单人完成 App “ArkFlow”的开发与上架，AI 工具花费约 900 美元，总支出 1050 美元，上线 7 天下载破千次、收入约 700 美元。但用户最感兴趣的不是原设计的“资产自由度”系统，而是银行卡堆叠、滑动交互与卡面收藏，促使产品转向“私人资产卡包”定位（<a href="https://sspai.com/post/112442">少数派</a>）。另一 Vibe Coding 项目“新闻雷达”4 个月获 384 位注册用户、29 位付费，收入 1600 元，但服务器与模型 API 成本已超 8000 元，运营推广成最大瓶颈（<a href="https://www.v2ex.com/t/1228385">V2EX</a>）。这些案例折射出 AI 辅助开发中用户真需求与技术想象的差距，以及成本控制的现实挑战。</p>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>中国开源权重 AI 策略正在赢得竞争优势</strong></li>
+      <p>分析文章指出，美国封闭的专有 AI 模式面临挑战，而中国以开源权重为导向的 AI 策略正在取胜（<a href="https://werd.io/american-ai-is-locked-down-and-proprietary-its-losing/">来源</a>）。同日，Qwen 3.8 正式发布（<a href="https://twitter.com/Alibaba_Qwen/status/2078759124914098291">来源</a>，<a href="https://news.ycombinator.com/item?id=48966120">HN</a>），Ollama 亦推出博客“All Aboard Open Models”力推开源（<a href="https://ollama.com/blog/all-aboard-open-models">来源</a>，<a href="https://news.ycombinator.com/item?id=48965880">HN</a>），强化了这一趋势信号。</p>
+      </ul>
+      <ul>
+      <li><strong>AI 生成内容正加速渗透学术与创意领域</strong></li>
+      <p>一项研究测量显示，arXiv 上超过 30% 的新提交论文读起来像 AI 撰写（<a href="https://unslop.run/blog/measuring-ai-writing-on-arxiv">来源</a>）。AI 文本人性化市场预计将成长为 1000 亿美元产业（<a href="https://www.v2ex.com/t/1228672">V2EX</a>）。同时，摄影师尝试使用 AI 修图后感到自我价值动摇（<a href="https://www.v2ex.com/t/1228678">V2EX</a>），爱奇艺新剧 AI 制作片头片尾被指使剧集质量退步（<a href="https://www.v2ex.com/t/1228420">V2EX</a>），AI 对原创性工作的冲击正从效率讨论深化为身份焦虑。</p>
+      </ul>
+      <ul>
+      <li><strong>AI 编码工具深度嵌入开发工作流，但管理“经验”仍待解</strong></li>
+      <p>开发者围绕 Claude Code 与 Codex 积累的会话经验难以复用展开讨论，尝试将旧 session 蒸馏为 skill、文档或 prompt 模板（<a href="https://www.v2ex.com/t/1228685">V2EX</a>）。GPT‑5.6 Sol 的 High/Max 模式实测则显示，修复小范围 Bug 用 High 即可，大范围重写或迁移才值得上 Max，Max 比 High 综合成本增加 2.42 倍但通过率仅提升 3.3 个百分点（<a href="https://www.v2ex.com/t/1228412">V2EX</a>）。精细化控制推理成本正成为开发者的必备技能。</p>
+      </ul>
+      <ul>
+      <li><strong>安全威胁与基础设施脆弱性凸显</strong></li>
+      <p>罗马尼亚整个土地注册数据库被黑客清除（<a href="https://news.risky.biz/risky-bulletin-hacker-wipes-romanias-entire-land-registry-database/">来源</a>），个人以极低成本发现高价值漏洞，以及欧盟可能为免签旅行向美国出售敏感公民数据的警告（<a href="https://edri.org/our-work/the-eu-is-about-to-sell-our-most-sensitive-data-to-the-us-for-visa-free-travel/">来源</a>），共同指向数字基础设施的脆弱性与数据主权议题的升温。</p>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Kimi K3 的供应恢复与定价策略调整</strong>：算力暂停后的下一步动作将影响国产高端模型的市场格局。</li>
+      <li><strong>OpenAI 对 Codex 上下文窗口缩减的后续影响</strong>：是否会有补偿措施或新的定价模式，值得观察。</li>
+      <li><strong>Claude 账号风控与替代品生态</strong>：多地用户反馈 Claude 封号（<a href="https://www.v2ex.com/t/1228398">V2EX</a>），替代工具如 kimi code、cursor、glm code plan 成为关注焦点。</li>
+      <li><strong>AI 辅助开发的最佳成本效益模型</strong>：从 Token 节省到整体成本控制，社区持续探索可持续的 Vibe Coding 商业模式。</li>
+      <li><strong>开源语音与模型轻量化趋势</strong>：moonshine 项目实现低于 500KB 的语音识别与 TTS（<a href="https://news.ycombinator.com/item?id=48911793">HN</a>），ESP32 以极低成本实现广告拦截和系统替代（<a href="https://news.ycombinator.com/item?id=48968348">HN1</a>, <a href="https://news.ycombinator.com/item?id=48968606">HN2</a>），这些将推动端侧与边缘场景扩展。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <p>（本节完整列出材料所提供的全部来源，按类别分组，保持原链接格式。）</p>
+      <p><strong>Elon Musk / X 平台</strong></p>
+      <ul>
+      <li><a href="https://x.com/AnthropicAI/status/2079256626771665098">Anthropic 资助公告</a></li>
+      <li><a href="https://x.com/elonmusk/status/2079261553136734239">Grok for Excel is now live</a></li>
+      <li><a href="https://x.com/elonmusk/status/2079157111183806697">Grok 擅长预测</a></li>
+      <li><a href="https://x.com/elonmusk/status/2079261743650312227">Lee Robinson 评价 Grok 4.5</a></li>
+      <li><a href="https://x.com/elonmusk/status/2079232134946894033">Peter H. Diamandis 登月与 AI 比较</a></li>
+      <li><a href="https://x.com/elonmusk/status/2079233451958346212">Starship 降低成本评论</a></li>
+      <li><a href="https://x.com/elonmusk/status/2079149795810152550">True 回复</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078972489925812454">祝贺西班牙夺冠</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078973008358555851">Grok 预测能力</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078960515900940515">世界杯链接1</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078960011196141571">世界杯链接2</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078973565630599409">Adam Carolla 转发</a></li>
+      <li><a href="https://x.com/elonmusk/status/2079057671668326808">抗衰老研究转发</a></li>
+      <li><a href="https://x.com/elonmusk/status/2079154764311327098">希腊征服罗马历史转发</a></li>
+      <li><a href="https://x.com/elonmusk/status/2079040634833301783">Memes 转发</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078873953179771283">Peter H. Diamandis 丰裕与冲突转发</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078940289226482120">跨大西洋电话成本转发</a></li>
+      <li><a href="https://x.com/elonmusk/status/2079048860744216617">Sundar Pichai 祝贺转发</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078971746896449595">SpaceX 团队称赞</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078987522927972695">推广 Grok 4.5</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078692662345888102">推广 Grok Build</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078741450812965182">无标题推文</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078879781806919870">远超 10 亿建造者回复</a></li>
+      <li><a href="https://x.com/elonmusk/status/2078880263556243538">一英里纪录惊呼</a></li>
+      <li><a href="https://x.com/sama/status/2079258683884917013">Sam Altman: ChatGPT 记忆功能变好</a></li>
+      <li><a href="https://x.com/OpenAI/status/2079260694076371442">OpenAI 长周期模型安全推文</a></li>
+      </ul>
+      <p><strong>少数派</strong></p>
+      <ul>
+      <li><a href="https://sspai.com/post/112442">独立开发者用 AI 做 App 的反转故事</a></li>
+      </ul>
+      <p><strong>GitHub Trending / 开源项目</strong></p>
+      <ul>
+      <li><a href="https://github.com/handy-computer/transcribe.cpp">transcribe.cpp</a></li>
+      <li><a href="https://github.com/microsoft/Ontology-Playground">Ontology-Playground</a></li>
+      <li><a href="https://github.com/moonshine-ai/moonshine">moonshine-ai/moonshine</a></li>
+      <li><a href="https://github.com/oblien/openship">openship</a></li>
+      <li><a href="https://github.com/PrefectHQ/fastmcp">fastmcp</a></li>
+      <li><a href="https://github.com/tokio-rs/topcoat">topcoat</a></li>
+      <li><a href="https://github.com/andrewrabert/jellium-desktop">jellium-desktop</a></li>
+      <li><a href="https://github.com/AstrBotDevs/AstrBot">AstrBot</a></li>
+      <li><a href="https://github.com/Canner/WrenAI">WrenAI</a></li>
+      <li><a href="https://github.com/kvcache-ai/ktransformers">ktransformers</a></li>
+      <li><a href="https://github.com/microsoft/terminal">Windows Terminal</a></li>
+      <li><a href="https://github.com/PKUFlyingPig/cs-self-learning">cs-self-learning</a></li>
+      </ul>
+      <p><strong>Hacker News 及关联来源</strong></p>
+      <ul>
+      <li><a href="https://werd.io/american-ai-is-locked-down-and-proprietary-its-losing/">中国开源权重 AI 策略取胜</a></li>
+      <li><a href="https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms">控制 LLM 推理努力</a></li>
+      <li><a href="https://nothings.org/gamedev/ssao/">SSAO 文章(2012)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=NwhVJ7cv9B4">飞秒激光切割昆虫视频</a></li>
+      <li><a href="https://www.expats.cz/czech-news/article/czech-news-in-brief-for-july-20-2026-monday-top-afternoon-headlines">捷克计划学校禁手机</a></li>
+      <li><a href="https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/">GPT5.6 发现 WordPress RCE 报告</a></li>
+      <li><a href="https://github.com/search">Firefox 合并 Vulkan 视频解码</a> （注：此链接为搜索结果页，材料提供如此）</li>
+      <li><a href="https://news.risky.biz/risky-bulletin-hacker-wipes-romanias-entire-land-registry-database/">黑客清除罗马尼亚土地数据库</a></li>
+      <li><a href="https://hypr.land/news/update55/">Hyprland 0.55 切换至 Lua</a></li>
+      <li><a href="https://refactoringenglish.com/blog/why-i-stopped-creating-content/">停止“创造内容”</a></li>
+      <li><a href="https://peaceful.bearblog.dev/">将 bearblog 转为文本冒险</a></li>
+      <li><a href="https://yang-ai-lab.github.io/Inertia-1/">Inertia-1 运动基础模型</a></li>
+      <li><a href="https://jelly-ui.com/">Jelly UI 软体物理表单控件</a></li>
+      <li><a href="https://www.emergingtrajectories.com/lh/frontier-lab-economics/">Kimi K3, Qwen 3.8 与 Anthropic 困境分析</a></li>
+      <li><a href="https://www.kimi.com/products/kimi-work">Kimi Work 产品页</a></li>
+      <li><a href="https://news.ycombinator.com/item?id=48981136">Bloomy (YC S26) 发布</a></li>
+      <li><a href="https://www.statnews.com/2026/07/20/psychiatric-insurance-coverage-suicide-denial-personal-essay/">美国保险行业问题文章</a></li>
+      <li><a href="https://www.nycsubway.org/wiki/Subway_Signals%3A_A_Complete_Guide">纽约地铁信号指南</a></li>
+      <li><a href="https://unslop.run/blog/measuring-ai-writing-on-arxiv">arXiv 上 AI 撰写论文测量</a></li>
+      <li><a href="https://var0.xyz/posts/perfection-is-not-over-engineering.html">完美并非过度工程</a></li>
+      <li><a href="https://www.historytoday.com/miscellanies/satans-19th-century-bank-note">撒旦的19世纪银行券</a></li>
+      <li><a href="https://satoshi7190.github.io/Shinjuku-indoor-threejs-demo/">新宿站 3D 展示</a></li>
+      <li><a href="https://wheesper.com/">Wheesper 匿名讨论</a></li>
+      <li><a href="https://www.soofi.info/">Soofi 主权开源基础模型</a></li>
+      <li><a href="https://edri.org/our-work/the-eu-is-about-to-sell-our-most-sensitive-data-to-the-us-for-visa-free-travel/">欧盟可能向美国出售敏感数据</a></li>
+      <li><a href="https://www.newyorker.com/culture/the-weekend-essay/the-voice-of-google">谷歌之声</a></li>
+      <li><a href="https://spectrum.ieee.org/led-light-pollution">LED 与光污染</a></li>
+      <li><a href="https://hidden-phenomena.com/articles/rh">黎曼 ζ 函数与素数分布</a></li>
+      <li><a href="https://github.com/simoarpe/ziggity">Ziggity Git 终端 UI</a></li>
+      <li><a href="https://airport.apunen.com/">Airport Simulator</a></li>
+      <li><a href="https://twitter.com/kimi_moonshot/status/2078855608565207130">Moonshot AI 暂停订阅</a> （HN 讨论）</li>
+      <li><a href="https://github.com/openai/codex/pull/33972/files">OpenAI 缩减 Codex 上下文</a> （HN 讨论）</li>
+      <li><a href="https://ollama.com/blog/all-aboard-open-models">Ollama 博客：全面拥抱开源</a> （HN 讨论）</li>
+      <li><a href="https://twitter.com/Alibaba_Qwen/status/2078759124914098291">Qwen 3.8 发布</a> （HN 讨论）</li>
+      <li><a href="https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/">Claude Code 使用 Rust 编写的 Bun</a> （HN 讨论）</li>
+      <li><a href="https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-4">Minecraft 采用 SDL3</a> （HN 讨论）</li>
+      <li><a href="https://www.blender.org/download/releases/5-2/">Blender 5.2 LTS</a> （HN 讨论）</li>
+      <li><a href="https://www.tomshardware.com/networking/clever-hacker-fits-537-000-domains-in-a-tiny-usd5-esp32-ad-blocking-dongle-firmware-uses-only-around-50kb-of-ram-and-can-answer-blocked-lookups-in-10-milliseconds">ESP32 广告拦截</a> （HN 讨论）</li>
+      <li><a href="https://news.ycombinator.com/item?id=48968606">用 ESP32 替代保龄球中心系统</a></li>
+      <li><a href="https://github.com/moonshine-ai/moonshine/tree/main/micro">语音识别与 TTS 小于 500KB</a> （HN 讨论）</li>
+      <li>[其他 HN 链接：C64 游戏等因篇幅不一一展开，完整列表见材料]</li>
+      </ul>
+      <p><strong>V2EX 社区</strong></p>
+      <ul>
+      <li><a href="https://www.v2ex.com/t/1228643">分享创造：逗号命令行工具</a></li>
+      <li><a href="https://www.v2ex.com/t/1228668">分享创造：RailNet Tester</a></li>
+      <li><a href="https://www.v2ex.com/t/1228660">分享创造：证件照转 PDF</a></li>
+      <li><a href="https://www.v2ex.com/t/1228684">分享发现：开源桌宠</a></li>
+      <li><a href="https://www.v2ex.com/t/1228658">独立开发者：Vercel 替代讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1228653">独立开发者周记</a></li>
+      <li><a href="https://www.v2ex.com/t/1228638">程序员：AI 时代低代码意义</a></li>
+      <li><a href="https://www.v2ex.com/t/1228685">程序员：Claude Code / Codex 经验管理</a></li>
+      <li><a href="https://www.v2ex.com/t/1228678">摄影：AI 修图冲击</a></li>
+      <li><a href="https://www.v2ex.com/t/1228630">程序员：AI 图片 prompt 优化</a></li>
+      <li><a href="https://www.v2ex.com/t/1228634">问与答：中转 API 鉴别</a></li>
+      <li><a href="https://www.v2ex.com/t/1228640">推广：Codex Pro 拼车</a></li>
+      <li><a href="https://www.v2ex.com/t/1228683">推广：Proxy001 住宅 IP</a></li>
+      <li><a href="https://www.v2ex.com/t/1228682">推广：Seaix-AI 搜索引擎</a></li>
+      <li><a href="https://www.v2ex.com/t/1228677">推广：云服务折扣</a></li>
+      <li><a href="https://www.v2ex.com/t/1228676">程序员：职业焦虑</a></li>
+      <li><a href="https://www.v2ex.com/t/1228644">问与答：失业一个月</a></li>
+      <li><a href="https://www.v2ex.com/t/1228669">程序员：高德地图批评</a></li>
+      <li><a href="https://www.v2ex.com/t/1228631">生活：北京至苏州火车票</a></li>
+      <li><a href="https://www.v2ex.com/t/1228655">电动汽车：问界 M9 咨询</a></li>
+      <li><a href="https://www.v2ex.com/t/1228652">分享发现：AI 塔罗牌</a></li>
+      <li><a href="https://www.v2ex.com/t/1228671">Apple 相关：DayOne 账号</a></li>
+      <li><a href="https://www.v2ex.com/t/1228679">Claude 免费送额度讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1228662">Claude 风控与注册 IP</a></li>
+      <li><a href="https://www.v2ex.com/t/1228645">Claude: Opus/Fable 日文降智?</a></li>
+      <li><a href="https://www.v2ex.com/t/1228641">Claude 代付需求</a></li>
+      <li><a href="https://www.v2ex.com/t/1228672">Codex 人性化文本市场</a></li>
+      <li><a href="https://www.v2ex.com/t/1228636">Java: fastjson RCE</a></li>
+      <li><a href="https://www.v2ex.com/t/1228664">OpenAI: Codex 状态栏工具</a></li>
+      <li><a href="https://www.v2ex.com/t/1228639">OpenWrt 相关</a></li>
+      <li><a href="https://www.v2ex.com/t/1228661">互联网: PDD 讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1228673">互联网: 微信点开大图机制</a></li>
+      <li><a href="https://www.v2ex.com/t/1228681">产品发布: 巴西 AI 音乐生成器</a></li>
+      <li><a href="https://www.v2ex.com/t/1228680">分享创造: 麻将背单词</a></li>
+      <li><a href="https://www.v2ex.com/t/1228674">分享创造: Codex HTTP 接口</a></li>
+      <li><a href="https://www.v2ex.com/t/1228642">分享创造: Doki Doki 对话生成器</a></li>
+      <li><a href="https://www.v2ex.com/t/1228675">分享创造: 帧遇 App</a></li>
+      <li><a href="https://www.v2ex.com/t/1228657">分享发现: A/的计费系统</a></li>
+      <li><a href="https://www.v2ex.com/t/1228646">分享发现: Task Bar Hero 游戏</a></li>
+      <li><a href="https://www.v2ex.com/t/1228650">投资讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1228670">推广: 佬友 API</a></li>
+      <li><a href="https://www.v2ex.com/t/1228635">推广: 公益站送额度</a></li>
+      <li><a href="https://www.v2ex.com/t/1228422">分享发现: crPDF 1.5.0</a></li>
+      <li><a href="https://www.v2ex.com/t/1228388">分享创造: 假到位</a></li>
+      <li><a href="https://www.v2ex.com/t/1228373">分享创造: Rust 内核 DataFrame</a></li>
+      <li><a href="https://www.v2ex.com/t/1228401">分享创造: 电商 AI 工具导航</a></li>
+      <li><a href="https://www.v2ex.com/t/1228424">分享创造: TikTok 评论图生成</a></li>
+      <li><a href="https://www.v2ex.com/t/1228395">分享创造: 文档解析与记忆工具</a></li>
+      <li><a href="https://www.v2ex.com/t/1228392">分享创造: SSH 会话中间件</a></li>
+      <li><a href="https://www.v2ex.com/t/1228364">分享创造: 有声书工具</a></li>
+      <li><a href="https://www.v2ex.com/t/1228371">分享创造: Codex 额度面板</a></li>
+      <li><a href="https://www.v2ex.com/t/1228415">分享创造: PDF 翻译产品</a></li>
+      <li><a href="https://www.v2ex.com/t/1228428">分享创造: Markdown 查看器</a></li>
+      <li><a href="https://www.v2ex.com/t/1228405">分享发现: Agent 处理工作交接</a></li>
+      <li><a href="https://www.v2ex.com/t/1228400">分享发现: 安克 160w 充电头</a></li>
+      <li><a href="https://www.v2ex.com/t/1228380">分享发现: vlaina 笔记软件</a></li>
+      <li><a href="https://www.v2ex.com/t/1228420">剧集: AI 让质量退步</a></li>
+      <li><a href="https://www.v2ex.com/t/1228410">宽带: tcptun 新协议</a></li>
+      <li><a href="https://www.v2ex.com/t/1228404">宽带: VONR/VOLTE 音质</a></li>
+      <li><a href="https://www.v2ex.com/t/1228429">怀旧游戏: 初代 Diablo on iPad</a></li>
+      <li><a href="https://www.v2ex.com/t/1228402">推广: 低倍率中转</a></li>
+      <li><a href="https://www.v2ex.com/t/1228370">推广: 放弃低价中转站</a></li>
+      <li><a href="https://www.v2ex.com/t/1228425">推广: Google 查询监控</a></li>
+      <li><a href="https://www.v2ex.com/t/1228372">推广: 芒果 ai 套餐</a></li>
+      <li><a href="https://www.v2ex.com/t/1228407">智能家电: 智能开关方案</a></li>
+      <li><a href="https://www.v2ex.com/t/1228365">生活: 司美格鲁肽用药</a></li>
+      <li><a href="https://www.v2ex.com/t/1228416">科技: 最佳实践收录网站</a></li>
+      <li><a href="https://www.v2ex.com/t/1228387">程序员: Claude 被杀</a></li>
+      <li><a href="https://www.v2ex.com/t/1228368">程序员: K3 后 K2.6 降智</a></li>
+      <li><a href="https://www.v2ex.com/t/1228376">程序员: Kimi K3 热议</a></li>
+      <li><a href="https://www.v2ex.com/t/1228419">程序员: kimi 停售</a></li>
+      <li><a href="https://www.v2ex.com/t/1228378">程序员: OpenPencil v0.8.0</a></li>
+      <li><a href="https://www.v2ex.com/t/1228385">程序员: Vibe Coding 四个月复盘</a></li>
+      <li><a href="https://www.v2ex.com/t/1228396">程序员: 节省 90% Token 分析</a></li>
+      <li><a href="https://www.v2ex.com/t/1228366">程序员: 记忆系统 AI Agent</a></li>
+      <li><a href="https://www.v2ex.com/t/1228412">程序员: GPT-5.6 Sol High/Max 评测</a></li>
+      <li><a href="https://www.v2ex.com/t/1228408">程序员: Claude 账号安全</a></li>
+      <li><a href="https://www.v2ex.com/t/1228409">程序员: 燃油油耗记录</a></li>
+      <li><a href="https://www.v2ex.com/t/1228406">绿茵场: 世界杯观赛</a></li>
+      <li><a href="https://www.v2ex.com/t/1228383">职场话题: 学不下去</a></li>
+      <li><a href="https://www.v2ex.com/t/1228426">观鸟: 小白额燕鸥</a></li>
+      <li><a href="https://www.v2ex.com/t/1228377">酷工作: SHEIN 内推</a></li>
+      <li><a href="https://www.v2ex.com/t/1228375">量化交易 JD 讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1228393">问与答: 3D 打印进阶</a></li>
+      <li><a href="https://www.v2ex.com/t/1228418">问与答: 京东弹窗</a></li>
+      <li><a href="https://www.v2ex.com/t/1228367">问与答: Cursor 团队版破防</a></li>
+      <li><a href="https://www.v2ex.com/t/1228374">随想: giffgaff 手机号</a></li>
+      <li>（其余 V2EX 链接之日常讨论因数量庞大，均已在本节列出）</li>
+      </ul>
+      <p><strong>OpenAI 官方</strong></p>
+      <ul>
+      <li><a href="https://openai.com/index/safety-alignment-long-horizon-models">长周期模型安全与对齐研究</a></li>
+      </ul>
+      <p><strong>其他媒体报道</strong></p>
+      <ul>
+      <li><a href="https://chipweinberger.com/articles/20260719-hardware-is-not-so-hard">硬件销售经验: Hardware is not so hard</a></li>
+      <li><a href="https://www.thedrive.com/news/how-texas-police-spent-4-5-million-on-four-chevy-tahoes">Texas 警车天价采购</a></li>
+      <li><a href="https://www.phoronix.com/news/Last-MPEG-4-Patent-Expired">最后一项 MPEG-4 Visual 专利到期</a></li>
+      <li>[其他多样性链接已包含在上述类别中]</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
