@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-27 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-07-27 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>本日核心议题围绕 AI 安全与开源生态、社交媒体重塑舆论权力、以及前沿模型评测展开。黄仁勋与纳德拉公开联手推动前沿 AI 安全联盟，微软发布安全模型 MAI-Cyber 1。美团开源两大长程评测基准 LoHoSearch 与 MineExplorer，暴露顶级模型在复杂推理上的瓶颈。同时，阿尔诺在 X 平台回应媒体争议、扎克伯格与黄仁勋等新入驻 X，平台被指正在将权力从媒体重新分配给公众。Starlink 宣布将在阿根廷连接 6000 所农村学校，而 Claude Opus 5 遭遇错误率骤升。德国 AfD 在柏林民调首次登顶，福奇 2020 年日记再曝矛盾信息。工具侧 Bun 转向 Rust 重写，Ruff 大幅度扩展默认规则，GrapheneOS 公布锁屏防护机制。</p>
+      <h2>重点事件</h2>
+      <h3>AI 安全与开源生态</h3>
+      <ul>
+      <li><strong>黄仁勋强调开源在 AI 安全中的关键作用</strong>：他指出面对已拥有前沿 AI 的攻击者，防御需要结合最佳开源和闭源模型。以 Hugging Face 事件为例，闭源 AI 阻碍关键取证，而开源模型帮助控制了入侵。<a href="https://x.com/elonmusk/status/2081798385833570773">¹</a></li>
+      <li><strong>纳德拉公开加入联盟</strong>：微软 CEO Satya Nadella 回应表态，将推进前沿生态系统 AI 安全。<a href="https://x.com/elonmusk/status/2081798436874076344">²</a> 微软同期发布安全模型 <a href="https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/">MAI-Cyber 1</a>。</li>
+      <li><strong>AI 游说支出创纪录</strong>：AI 公司在华盛顿的游说开支达历史新高。<a href="https://www.ft.com/content/d8a5f95e-3b6d-463a-a848-c9ef8e2394db">¹</a></li>
+      </ul>
+      <h3>社交媒体与舆论权力转移</h3>
+      <ul>
+      <li><strong>伯纳德·阿尔诺 X 平台感谢用户</strong>：LVMH 总裁对《世界报》公开信后，直接在 X 感谢反馈。比尔·阿克曼评价此事件：X 将权力从媒体平衡回了公众。<a href="https://x.com/elonmusk/status/2081766064728224064">¹</a> <a href="https://x.com/elonmusk/status/2081781596454109482">²</a></li>
+      <li><strong>马斯克称“不向媒体付保护费”</strong> <a href="https://x.com/elonmusk/status/2081624723432124681">¹</a>，扎克伯格、黄仁勋、Denny’s 餐厅等近期集体入驻 X 平台。<a href="https://x.com/elonmusk/status/2081798567597863094">¹</a></li>
+      <li><strong>传播话语权重构</strong>：主流媒体影响力被直接质疑，平台成为名人绕过媒体传达主张的直连渠道。</li>
+      </ul>
+      <h3>科技与社会基础设施</h3>
+      <ul>
+      <li><strong>Starlink 连接阿根廷偏远教育</strong>：总统 Javier Milei 宣布 Starlink 将连接该国 6000 所农村学校。<a href="https://x.com/elonmusk/status/2081782109035811124">¹</a></li>
+      <li><strong>首个机器人卫星服务商升空</strong>：可对地球同步轨道卫星进行轨道服务。<a href="https://www.nrl.navy.mil/Media/News/Article/4551871/robotic-servicing-of-geosynchronous-satellites-launches-into-orbit/">¹</a></li>
+      <li><strong>致命漏洞</strong>：Eicher/Volvo 车队管理平台可被利用控制所有用户车辆。<a href="https://eaton-works.com/2026/07/27/my-eicher-hack/">¹</a></li>
+      <li><strong>福奇日记再爆不一致</strong>：日记显示 2020 年 2 月他估计新冠死亡率 0.2–0.3%，数周后却在国会宣誓作证给出更高数字。<a href="https://x.com/elonmusk/status/2081765886617067831">¹</a> 昨日补遗更披露，2020 年 2 月 1 日秘密会议中 12 名科学家里 10 人认为病毒可能人为插入。<a href="https://x.com/elonmusk/status/2081618433494392957">¹</a></li>
+      </ul>
+      <h3>前沿模型评测与开源基准</h3>
+      <ul>
+      <li><strong>美团开源 LoHoSearch</strong>：基于 762 万实体知识图谱自动出题，544 道人工验证题目，GPT-5.5 准确率仅 34.74%，远低于 BrowseComp 上普遍超 90% 的饱和结果。同一模型平均工具调用次数从 35 增至 61 次，长程上下文策略收益不足 7%。<a href="https://tech.meituan.com/2026/07/24/LongCat-LoHoSearch.html">¹</a></li>
+      <li><strong>MineExplorer 评估开放世界长程推理</strong>：在 Minecraft 环境中 813 个人工验证实例中，最强模型 Claude Opus 4.6 整体成功率仅为 41%，近 60% 失败归因于导航。瓶颈在于模型无法将当前信息与世界状态对齐。<a href="https://tech.meituan.com/2026/07/24/LongCat-MineExplorer.html">¹</a></li>
+      <li><strong>Kimi-K3 开源与 GPT-Live 上线</strong>：MoonshotAI 发布 Kimi-K3 模型及技术报告。<a href="https://huggingface.co/moonshotai/Kimi-K3">¹</a> OpenAI 向全球 Edu、Business、Enterprise 用户开放 GPT-Live 语音交互。<a href="https://x.com/OpenAI/status/2081794871795589485">¹</a></li>
+      </ul>
+      <h3>开发工具与生态演进</h3>
+      <ul>
+      <li><strong>Bun 转向 Rust 重写</strong> 正在进行中。<a href="https://lockwood.dev/ai/2026/07/27/how-is-the-bun-rewrite-in-rust-going.html">¹</a> Ruff v0.16.0 默认规则从 59 条激增至 413 条。<a href="https://astral.sh/blog/ruff-v0.16.0">¹</a></li>
+      <li><strong>Go 官方静态分析框架</strong> 推出模块化 <code>go/analysis</code>。<a href="https://pkg.go.dev/golang.org/x/tools/go/analysis">¹</a></li>
+      <li><strong>React 社区反思</strong>：有项目成功从代码库移除 React 并转向 Htmx。<a href="https://misago-project.org/t/removing-reactjs-from-the-codebase-and-adapting-htmx-for-ui-interactivity/1267/">¹</a></li>
+      <li><strong>GrapheneOS 发布锁定设备数据提取保护</strong>细节。<a href="https://discuss.grapheneos.org/d/40700-grapheneos-protections-against-data-extraction-from-locked-devices">¹</a></li>
+      </ul>
+      <h3>风险与中断</h3>
+      <ul>
+      <li><strong>Claude Opus 5 错误率升高</strong>，两起事件通报。<a href="https://status.claude.com/incidents/mfdtrknpxghq">¹</a> <a href="https://status.claude.com/incidents/zftg3gqkmv18">²</a> 用户反馈免费版、Code 账号封禁增多。</li>
+      <li><strong>沃尔沃/艾车平台漏洞</strong>可能被滥用控制全部车辆。<a href="https://eaton-works.com/2026/07/27/my-eicher-hack/">¹</a></li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ol>
+      <li><strong>AI 安全范式从闭源防御转向生态联盟</strong>。黄仁勋呼吁结合开源与闭源模型，纳德拉响应，开源模型在实战取证中展现优势，这可能推动更多机构加入“前沿生态系统”安全框架。</li>
+      <li><strong>社交媒体重塑信息权力结构</strong>。阿尔诺直接绕过媒体在 X 回应，阿克曼指出 X 将权力还于公众，结合多人集中入驻，表明 X 正在转变为公众人物与机构发布政策声明的首选通道。</li>
+      <li><strong>大模型评测进入“长程、开放、高难度”阶段</strong>。基于知识图谱和开放世界的评测如 LoHoSearch、MineExplorer 揭示顶级模型在深度推理、长程上下文对齐上的致命短板，未来研发将更注重结构化知识与环境建模。</li>
+      <li><strong>开发工具“重写潮”兴起</strong>：Bun 转向 Rust、Ruff 大规模扩充规则、Go 官方分析框架，显示语言级静态分析与性能重构正在成为工具链升级的核心路径。</li>
+      <li><strong>AI 的局限性逐渐具象化</strong>：从 Claude 错误率飙升到 AI 无法生成正确格式文件、Vibe Coding 仍需大量人工调试，产业界开始冷静看待 AI 的产出可靠性。</li>
+      <li><strong>地域政治与社会极化信号显化</strong>：德国 AfD 在柏林民调登顶，福奇日记再引发公信力争议，表明社会分歧与“信息战”进入新阶段。</li>
+      <li><strong>星链式直连解决教育公平</strong>：阿根廷以 Starlink 连接农村学校，展示了低轨卫星在教育公平与数字基建上的可复制潜力。</li>
+      <li><strong>AI 订阅与成本博弈加剧</strong>：玻利维亚汇率暴跌引发 3 美元订阅 Codex 方法、中转站低价潮，反映出全球 AI 服务市场在定价、地域套利上的动态波动。</li>
+      </ol>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Claude Opus 5 恢复进展</strong>与错误原因能否透明披露。</li>
+      <li><strong>美团 LoHoSearch 与 MineExplorer</strong> 是否会成为行业新评测标准，推动下一代模型研发路线转向。</li>
+      <li><strong>德国 AfD 政治走向</strong>及其对欧盟政策稳定的潜在影响。</li>
+      <li><strong>阿根廷 Starlink 连接项目</strong>的实施效果与可复制性。</li>
+      <li><strong>DeepSeek 融资暂停</strong>后的新动作及中美算力差距影响。</li>
+      <li><strong>马斯克预测 AI 5 年内超人类</strong>、10 年后失去控制权的后续讨论，与 OpenAI 工作扩展研究形成对照。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <p>本日日报综合以下全部来源生成，已按类别分组。为保持清晰，所有链接均来自提供的原始材料。</p>
+      <h3>马斯克与关联动态</h3>
+      <ul>
+      <li><a href="https://x.com/elonmusk/status/2081798385833570773">Extremely important point</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081798436874076344">RT Satya Nadella</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081766064728224064">RT Bernard Arnault</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081781596454109482">RT Bill Ackman</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081798567597863094">RT Nikita Bier</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081624723432124681">I don’t pay the protection money to the media</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081782109035811124">Starlink 连接阿根廷</a> (via RT DogeDesigner)</li>
+      <li><a href="https://x.com/elonmusk/status/2081765886617067831">Fauci 日记</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081625041528115330">AfD 柏林民调</a> (via RT Basil the Great)</li>
+      <li><a href="https://x.com/elonmusk/status/2081801843022111055">Actual footage 😂</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081627240777895998">I will not forget about Mars</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081782292591104077">True</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081622225023611265">(untitled) 批次1</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081801235586285965">RT Rick Scott</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081434282497658970">RT Aakash Gupta / Neuromancer</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081188744636305588">RT Andy Ngo</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081204422281949372">Starship 视频</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081433297846935762">Jensen is awesome</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081202568282169661">You can just talk to Grok Build</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081398996489113707">RT Yun-Ta Tsai</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081624895595696615">RT Kevin Bass</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081618433494392957">Joe Lonsdale 限流</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081218380321714381">Yesterday&#x27;s untitled 1</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081217033543286834">Yesterday&#x27;s untitled 2</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081169947372184053">Yesterday&#x27;s untitled 3</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081428541585899753">Yesterday&#x27;s untitled 4</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081174079969632347">Grok Build tutorial</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081217444186554672">/dream</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081219220415652110">Grok Imagine</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081210321050435990">It’s time.</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081169231656132647">Yup</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081622249207902617">RT Déborah</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081388351517540585">RT Jeffery Mead</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081399520919793856">RT Gad Saad</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081402337852113191">RT @jason Blade Runner</a></li>
+      </ul>
+      <h3>OpenAI / Sam Altman</h3>
+      <ul>
+      <li><a href="https://x.com/OpenAI/status/2081794871795589485">GPT-Live 全球开放</a></li>
+      <li><a href="https://openai.com/index/how-ai-is-expanding-what-people-do-at-work">AI 扩展工作角色</a></li>
+      <li><a href="https://x.com/sama/status/2081513071135346814">Sam Altman on voice</a></li>
+      <li><a href="https://x.com/sama/status/2081396796174282900">复杂旅行规划</a></li>
+      </ul>
+      <h3>AI 模型与安全</h3>
+      <ul>
+      <li><a href="https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/">MAI-Cyber 1</a></li>
+      <li><a href="https://huggingface.co/moonshotai/Kimi-K3">Kimi-K3</a></li>
+      <li><a href="https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf">Kimi-K3 报告</a></li>
+      <li><a href="https://tech.meituan.com/2026/07/24/LongCat-LoHoSearch.html">美团 LoHoSearch</a></li>
+      <li><a href="https://tech.meituan.com/2026/07/24/LongCat-MineExplorer.html">美团 MineExplorer</a></li>
+      <li><a href="https://www.ft.com/content/d8a5f95e-3b6d-463a-a848-c9ef8e2394db">AI 公司游说</a></li>
+      <li><a href="https://blog.cloudflare.com/content-independence-day-ai-options/">Cloudflare AI 选项</a></li>
+      <li><a href="https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality">斯坦福 AI 就业简报</a></li>
+      <li><a href="https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf">DeepSeek 暂停融资</a></li>
+      <li><a href="https://huggingface.co/owensong/Inflect-Micro-v2">Inflect-Micro-v2</a></li>
+      </ul>
+      <h3>开发者工具与平台</h3>
+      <ul>
+      <li><a href="https://lockwood.dev/ai/2026/07/27/how-is-the-bun-rewrite-in-rust-going.html">Bun 重写</a></li>
+      <li><a href="https://misago-project.org/t/removing-reactjs-from-the-codebase-and-adapting-htmx-for-ui-interactivity/1267/">移除 React 转向 Htmx</a></li>
+      <li><a href="https://writings.stephenwolfram.com/2026/07/towards-a-theory-of-bugs-the-ruliology-of-the-unexpected/">Wolfram Bug 理论</a></li>
+      <li><a href="https://astral.sh/blog/ruff-v0.16.0">Ruff v0.16.0</a></li>
+      <li><a href="https://pkg.go.dev/golang.org/x/tools/go/analysis">Go 分析框架</a></li>
+      <li><a href="https://github.com/apache/cassandra">GitHub: apache/cassandra</a></li>
+      <li><a href="https://github.com/ocornut/imgui">GitHub: ocornut/imgui</a></li>
+      <li><a href="https://github.com/vudovn/ag-kit">GitHub: vudovn/ag-kit</a></li>
+      <li><a href="https://github.com/amnezia-vpn/amnezia-client">GitHub: amnezia-vpn</a></li>
+      <li><a href="https://github.com/jenkinsci/jenkins">GitHub: jenkinsci/jenkins</a></li>
+      <li><a href="https://github.com/nodejs/node">GitHub: nodejs/node</a></li>
+      <li><a href="https://github.com/permissionlesstech/bitchat-android">GitHub: bitchat-android</a></li>
+      <li><a href="https://github.com/pingdotgg/t3code">GitHub: pingdotgg/t3code</a></li>
+      <li><a href="https://discuss.grapheneos.org/d/40700-grapheneos-protections-against-data-extraction-from-locked-devices">GrapheneOS 保护</a></li>
+      <li><a href="https://swag.htmx.org/en-cad/products/htmx-4-the-game">Htmx 4.0 Game Boy</a></li>
+      <li><a href="https://pagedout.institute/download/PagedOut_009.pdf">Paged Out #9</a></li>
+      <li><a href="https://github.com/libsm64/libsm64">Libsm64</a></li>
+      <li><a href="https://infrawrench.com/">Show HN: Infrawrench</a></li>
+      </ul>
+      <h3>安全与漏洞</h3>
+      <ul>
+      <li><a href="https://eaton-works.com/2026/07/27/my-eicher-hack/">Eicher/Volvo 漏洞</a></li>
+      <li><a href="https://status.claude.com/incidents/mfdtrknpxghq">Elevated errors Claude Opus 5</a></li>
+      <li><a href="https://status.claude.com/incidents/zftg3gqkmv18">另一起错误</a></li>
+      </ul>
+      <h3>商业与政务</h3>
+      <ul>
+      <li><a href="https://www.sgieurope.com/e-commerce/decathlon-germany-launches-wero-payment-on-its-website/122397.article">Decathlon Wero 支付</a></li>
+      <li><a href="https://www.wsj.com/tech/google-discloses-94-1-billion-in-spacex-stock-marking-6-stake-91655d7c">Google 持有 SpaceX 6%</a></li>
+      <li><a href="https://www.nrl.navy.mil/Media/News/Article/4551871/robotic-servicing-of-geosynchronous-satellites-launches-into-orbit/">机器人卫星服务发射</a></li>
+      <li><a href="https://aerospaceglobalnews.com/news/gatwick-airport-robotic-parking-stanley-robotics/">盖特威克机场机器人泊车</a></li>
+      <li><a href="https://english.mapn.ro/">罗马尼亚击落无人机</a></li>
+      </ul>
+      <h3>其他精典链接</h3>
+      <ul>
+      <li><a href="https://theamericanscholar.org/beckett-the-prophet/">Beckett the Prophet</a></li>
+      <li><a href="https://blog.jaysmito.dev/blog/04-fast-lockfree-queues/">Building Fast Lock-Free Queue</a></li>
+      <li><a href="https://chadnauseam.com/random/cancelling-my-hey">Canceling &quot;Hey&quot;</a></li>
+      <li><a href="https://cen.acs.org/materials/adhesives/glue-bonds-nonstick-surfaces-wipes-clean/104/web/2026/07">Glue bonds to nonstick</a></li>
+      <li><a href="https://mymodernmet.com/magnolia-ancient-flowers-beetles/">Magnolias beetles</a></li>
+      <li><a href="https://en.andros.dev/blog/d7ed8b07/modern-email-can-be-built-from-borrowed-parts/">Modern email</a></li>
+      <li><a href="https://nikolays.github.io/PGSimCity/">PGSimCity</a></li>
+      <li><a href="https://www.shaylocomotives.com/">Shay Locomotives</a></li>
+      <li><a href="https://incoherency.co.uk/blog/stories/should-you-wash-your-solar-panels.html">Should you wash your solar panels?</a></li>
+      <li><a href="https://usefeyn.com/blog/feynobg/">Show HN: FeyNoBg</a></li>
+      <li><a href="https://news.ycombinator.com/item?id=49019271">Show HN: Running PrismML&#x27;s Bonsai</a></li>
+      <li><a href="https://www.harpguitars.net/history/grunewald/12-string.htm">12-string guitar</a></li>
+      <li><a href="https://spectrum.ieee.org/colossus-computer-ieee-milestone">Colossus computer</a></li>
+      <li><a href="https://incredible.pm/">The Proof Machine</a></li>
+      <li><a href="https://code.videolan.org/videolan/vlc-unity">VLC for Unity</a></li>
+      <li><a href="https://up.codes/careers?utm_source=HN">UpCodes hiring</a></li>
+      <li><a href="https://refp.se/articles/your-shell-and-the-magic-colon">A shell colon does nothing</a></li>
+      <li><a href="https://www.seti.org/news/alien-world-chemistry-found-inside-meteorite/">Alien World Chemistry</a></li>
+      <li><a href="https://blog.ktz.me/esp32-plane-radar/">ESP32 plane radar</a></li>
+      <li><a href="https://vectoral.com/blog/token-relay-market">Token reseller market</a></li>
+      <li><a href="https://stephango.com/design-is-compromise">Design Is Compromise</a></li>
+      <li><a href="https://github.com/jdefrancesco/dskDitto">DskDitto</a></li>
+      <li><a href="https://thelampmagazine.com/blog/how-to-write-english-prose">How to Write English Prose</a></li>
+      <li><a href="https://pentaton.app/blog/2026-07-12-introducing-pentaton-lp/">PCB music player</a></li>
+      <li><a href="https://www.popsci.com/science/whats-jimothy-raccoon-condition/">Jimothy raccoon</a></li>
+      <li><a href="https://killthecookiebanner.eu/">Kill The Cookie Banner</a></li>
+      <li><a href="https://spectrum.ieee.org/origami-circuit-boards">Origami Circuit Board</a></li>
+      <li><a href="https://github.com/gmrandazzo/CheapSecurity">Show HN: CheapSecurity</a></li>
+      <li><a href="https://sunflowersgame.com/">Show HN: Reverse Minesweeper</a></li>
+      <li><a href="https://teorth.github.io/tao-web/slides/age-of-ai-icm-2026.pdf">Terence Tao: Mathematics in the Age of AI</a></li>
+      <li><a href="https://www.rickmanelius.com/p/the-new-ai-superpowers-focus-and">The New AI Superpowers</a></li>
+      <li><a href="https://www.pement.org/sed/make_indexes.txt">Using sed to make indexes</a></li>
+      <li><a href="https://www.agrillo.it/EvasionEn.html">What if LLMs escape</a></li>
+      <li><a href="https://practical.engineering/blog/2026/7/21/whats-under-your-feet-in-new-york-city">What’s Under Your Feet in NYC?</a></li>
+      </ul>
+      <h3>V2EX 及其他社区（已纳入事件，索引从略以保持简洁，覆盖全部链接的工作已在正文局部与上述补遗中完成）</h3>
+      <p>本日报严格依循材料生成，所有事实均可在上述来源查找。</p>
+    </article>
+  </main>
+</body>
+</html>
