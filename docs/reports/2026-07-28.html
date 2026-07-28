@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-28 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-07-28 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日科技与社区围绕三大主线展开：<strong>Giffgaff 遭遇史无前例的大规模封号</strong>波及国内大量长期保号用户，退款与转网教程涌现；<strong>AI 生态进入“共享与自主”新阶段</strong>，从浏览器到 Agent 团队协作，工具链正重塑人机交互边界；<strong>Elon Musk 生态持续扩张</strong>，Grok 4.6/4.7 发布路线图明确，Starlink 获阿根廷国家级教育部署。</p>
+      <h2>重点事件</h2>
+      <ul>
+      <li><strong>Giffgaff 大规模封号风波</strong></li>
+      <p>社区集中反映英国运营商 Giffgaff 发生批量化停用封号，<strong>开启 Wi-Fi Calling 极大概率触发封禁</strong>，导致用户无法接收验证码及获取转网必需的 PAC 码。社区已自发产出手把手退款教程（实测 5 天到账）与携号转网指南（VOXI/CTExcel UK 双方案），引发对 Saily 等替代方案的广泛讨论。</p>
+      <li>来源：[程序员] giffgaff 别开 WiFi Calling… <a href="https://www.v2ex.com/t/1230509">链接</a> | [问与答] GiffGaff 嘎了… <a href="https://www.v2ex.com/t/1230513">链接</a> | [生活] giffgaff 废了那么有替代吗？<a href="https://www.v2ex.com/t/1230548">链接</a> | [推广] 📺 Giffgaff 退款教程！… <a href="https://www.v2ex.com/t/1230559">链接</a> | [推广] 📺 GiffGaff 携号转网… <a href="https://www.v2ex.com/t/1230524">链接</a></li>
+      </ul>
+      <ul>
+      <li><strong>AI 浏览器与 Agent 团队化</strong></li>
+      <p>团队 citrolabs 推出基于 Chromium 的免费浏览器 “ego lite”，<strong>允许人类与 AI Agent 共享同一套登录态与工作环境</strong>，Agent 可在独立“Space”并行执行任务。其采用语义快照读取页面，仅消耗两三百 Token，复杂任务处理速度宣称比 Playwright MCP 快两倍，最高达 2.6 倍。仓库曾登顶 GitHub Trending #1，获超 5200 星。同时，开源项目 ccteam 发布，<strong>可将 Claude Code、Codex 等编程 Agent 编成协作团队</strong>，支持跨厂商任务派发与无人值守并行开发。</p>
+      <li>来源：<a href="https://sspai.com/post/112795">我们做了个浏览器 ，让人类和 AI 无缝共享一套上网环境</a> | [程序员] 分享下自己生产力工具 ccteam… <a href="https://www.v2ex.com/t/1230260#reply1">链接</a></li>
+      </ul>
+      <ul>
+      <li><strong>Elon Musk 与 Agent 基础设施扩张</strong></li>
+      <p>Musk 确认 Grok 路线图：<strong>1.5T 参数的 Grok 4.6 将于 8 月 7 日左右发布</strong>，数周后发布 2.1T 参数的 Grok 4.7。阿根廷总统 Milei 宣布 Starlink 将为该国 6000 所农村学校提供连接。此外，NASA 局长评论称鉴于 Musk 押注轨道数据中心，不应做空“资本极其充足的 Elon”。</p>
+      <li>来源：<a href="https://x.com/elonmusk/status/2082123925283041545">Interesting. Grok 4.6 releases around August 7...</a> | <a href="https://x.com/elonmusk/status/2082127138178699766">RT Maye Musk: 👏👏👏 @Starlink</a> | <a href="https://x.com/elonmusk/status/2081920546355241321">❤️🇺🇸</a></li>
+      </ul>
+      <ul>
+      <li><strong>美团 CatPaw 发布与开源基准</strong></li>
+      <p>美团正式发布搭载 LongCat 2.0（1.6T 参数 MoE）的全场景 AI Agent 平台 CatPaw，内部已覆盖 9 万员工并搭建 3 万 Agent。同日，其开源了搜索智能体评测基准 <strong>LoHoSearch</strong>（最强模型准确率仅 34.74%）与长程任务评测基准 <strong>MineExplorer</strong>（最强模型整体成功率仅 41%），揭示了当前顶级模型与真实世界任务间的巨大鸿沟。</p>
+      <li>来源：<a href="https://tech.meituan.com/2026/07/28/CatPaw-LongCat.html">美团正式发布 CatPaw…</a> | <a href="https://tech.meituan.com/2026/07/24/LongCat-LoHoSearch.html">下一代搜索智能体评测基准！…</a> | <a href="https://tech.meituan.com/2026/07/24/LongCat-MineExplorer.html">让AI离开温室…</a></li>
+      </ul>
+      <ul>
+      <li><strong>特朗普表彰少年救生员</strong></li>
+      <p>美国前总统特朗普表示，将邀请一名 16 岁救生员及其家人和他所救的男孩到白宫，授予其“高级平民荣誉”。</p>
+      <li>来源：<a href="https://x.com/realDonaldTrump/status/2082159711852298494">We’re going to bring this heroic young man...</a></li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>海外保号生态遭遇“黑天鹅”</strong>：Giffgaff 依托 Wi-Fi Calling 的封号策略，标志着低成本海外号码维持方案的系统性风险急剧升高。用户的应对正从被动封禁转向主动携号转网与余额申诉，相关工具链和教程的快速涌现显示出开发者社区的敏捷自救能力。</li>
+      </ul>
+      <ul>
+      <li><strong>AI Agent 交互范式走向“环境共享”与“自主协作”</strong>：从 “ego lite” 浏览器让 Agent 与人类共享登录态，到 ccteam 编排多个代码 Agent 协同工作，<strong>AI 正从执行单一指令的工具转变为需要独立工作空间并可自主协作的数字实体</strong>。美团开源的高难度评测基准则进一步表明，为这些 Agent 构建可衡量、接近真实世界的测试环境已成为行业前沿方向。</li>
+      </ul>
+      <ul>
+      <li><strong>Musk 生态的“算力-网络”双基建扩张</strong>：Grok 密集的模型迭代计划与 Starlink 在阿根廷的国家级教育部署，分别对应着 Musk 生态在 AI 算力与全球网络覆盖上的双重加速。投资界对“轨道数据中心”的讨论，暗示了 SpaceX 的星舰与 Starlink 资产正被整合进一个更大的、资本高度充足的叙事体系中。</li>
+      </ul>
+      <ul>
+      <li><strong>开发者工具“逆 React 化”与系统编程语言回潮</strong>：Misago 项目移除 React.js 改用 Htmx，Bun 正用 Rust 重写，多个新工具如 Zedis（Rust 编写的 Redis GUI）、Terry（基于 Zed 的终端）均采用 Rust 等系统语言。这反映出社区对 Web 框架复杂度疲劳，并<strong>重新追求轻量级交互与底层性能的平衡</strong>。</li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Grok 4.6 及 4.7 发布</strong>：8 月 7 日左右发布的 Grok 4.6 是否能兑现“显著改进的 SFT &amp; RL”，并影响网络安全模型性价比格局，值得持续验证。</li>
+      <li><strong>Giffgaff 替代方案的成熟度</strong>：受封号风波影响，VOXI、CTExcel UK 乃至 Saily 等方案的社区实测反馈，以及新“保号神卡”共识的形成将是本周社区焦点。</li>
+      <li><strong>AI 编程协作瓶颈</strong>：在 Vibe Coding 和 Agent 协作工具（如 ccteam）热度攀升的背景下，GPT Plus 额度快速耗尽、企业落地难等反馈，指向当前商业模型与工具成熟度仍存脱节，需观察后续解决方案。</li>
+      <li><strong>AI 安全与治理博弈</strong>：NVIDIA 牵头成立“开放安全 AI 联盟”并获得微软、戴尔支持，同时 Anthropic 就开放权重模型发表完整立场。围绕 AI 安全是走向封闭还是开放生态的路线之争正在升温。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li><strong>AI/科技产品与发布</strong>：<a href="https://sspai.com/post/112795">anyfeeder-matrix</a>， <a href="https://tech.meituan.com/2026/07/28/CatPaw-LongCat.html">美团技术 (CatPaw)</a>， <a href="https://tech.meituan.com/2026/07/24/LongCat-LoHoSearch.html">美团技术 (LoHoSearch)</a>， <a href="https://tech.meituan.com/2026/07/24/LongCat-MineExplorer.html">美团技术 (MineExplorer)</a></li>
+      <li><strong>Elon Musk/Twitter 动态</strong>：<a href="https://x.com/realDonaldTrump/status/2082159711852298494">@realDonaldTrump</a>， <a href="https://x.com/elonmusk/">@elonmusk (多条)</a>， <a href="https://x.com/AnthropicAI/status/2081864750296658008">@AnthropicAI (昨日补遗)</a>， <a href="https://x.com/OpenAI/status/2081882249839157545">OpenAI (多条)</a></li>
+      <li><strong>GitHub 热门与开源趋势</strong>：<a href="https://github.com/">github-trending-daily-any (多条)</a></li>
+      <li><strong>AI/行业研究与安全</strong>：<a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">hacker-news (Anthropic加密研究等)</a>， <a href="https://openai.com/index/scientific-computing-agentic-ai/">hacker-news (AI代理时代科学计算)</a>， <a href="https://www.data.jma.go.jp/multi/quake/quake_detail.html?eventID=20260728163528&amp;amp;lang=en">hacker-news (日产地震等)</a>， <a href="https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html">hacker-news (Kimi K3架构)</a>， <a href="https://ciphercue.com/blog/dmarc-enforcement-gap-rua-fragmentation-2026">hacker-news (DMARC报告)</a>， <a href="https://www.ft.com/content/d8a5f95e-3b6d-463a-a848-c9ef8e2394db">hacker-news (AI游说支出创纪录)</a></li>
+      <li><strong>社区综合讨论 (V2EX)</strong>： <a href="https://www.v2ex.com/">关于 Giffgaff 封号、退款、替代方案的多篇讨论</a>， <a href="https://www.v2ex.com/">关于 AI Agent、编程工具的讨论</a>， <a href="https://www.v2ex.com/">关于硬件、职场、交易提醒的多篇讨论</a></li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
