@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-29 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-07-29 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>2026年7月29日，AI 模型竞赛再掀波澜：Grok 4.5 在 LaurenBench 与 HighWalk Benchmark 两项独立基准中同时登顶，马斯克称其为“可靠的 workhorse”，并预告万亿参数级新模型即将发布。AI 安全事件集中爆发，文档型蠕虫、前沿实验室入侵解剖以及长策略文档治理失效等研究同日公开，OpenAI 与微软分别从学术支持与企业代理治理两端推进安全实践。基础设施层面，Render 发布代理应用模式总结，SQLite 生产环境优化与自托管大模型的成本实践获得关注。与此同时，Giffgaff 大规模封号波及大量开发者，Google 医生推荐答案引发种族争议，福奇援引第五修正案拒绝回答新冠起源问题，SpaceX 星舰完成首次完整软溅落，Waymo 新平台接入 Gemini。国内方面，美团正式发布全场景 AI Agent 平台 CatPaw，V2EX 社区涌现多个 AI 创造工具。</p>
+      <h2>重点事件</h2>
+      <h3>Grok 4.5 双榜夺冠，Grok 4.6/4.7 路线图曝光</h3>
+      <p>Grok 4.5 在 <a href="https://x.com/elonmusk/status/2082474808537923616">LaurenBench</a> 以 56.9% 得分领先 Claude Sonnet 5、GLM 5.2、Claude Opus 5、Kimi K3 及 GPT‑5.6，同时在 <a href="https://x.com/elonmusk/status/2082369174828118361">HighWalk Benchmark</a> 拿下头名。马斯克透露，参数为 1.5T 的 Grok 4.6 预计 8 月 7 日左右发布，更强的 2.1T 模型 Grok 4.7 随后数周推出。Grok Build 更新至 v0.2.114，新增 <code>/delete</code> 命令并提高受限主机启动可靠性。（<a href="https://x.com/elonmusk/status/2082472190575034548">来源</a>）</p>
+      <h3>多起 AI 安全研究集中公开</h3>
+      <ul>
+      <li>研究人员发现可经 <strong>Copilot for Word</strong> 自我传播的文档型 AI 蠕虫。（<a href="https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/">来源</a>）</li>
+      <li><strong>Hugging Face</strong> 发布对前沿实验室 AI 代理入侵的完整解剖报告。（<a href="https://huggingface-anatomy-of-frontier-lab-model-intrusion.static.hf.space/index.html">来源</a>）</li>
+      <li><a href="https://arxiv.org/abs/2607.25398">arxiv 研究</a> 表明，长策略文档无法可靠约束 AI 代理行为。</li>
+      <li>Anthropic 利用 Claude 发现密码学弱点的成果获得关注。（<a href="https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/">Matthew Green 评论</a>）</li>
+      <li>微软发布 <a href="https://github.com/microsoft/agent-governance-toolkit">agent-governance-toolkit</a>，覆盖 OWASP Agentic Top 10，提供策略执行与零信任沙箱。</li>
+      </ul>
+      <h3>OpenAI 向 10 万名学术研究人员免费开放 ChatGPT</h3>
+      <p>OpenAI 宣布通过 <a href="https://openai.com/index/chatgpt-for-academic-researchers">ChatGPT for Academic Researchers</a> 计划，向学术社区免费提供最先进模型，旨在加速科学发现。同日，OpenAI 发布的“代理 AI 时代的科学计算”报告展示了 AI 编码代理在基因组学等领域的应用。（<a href="https://openai.com/index/scientific-computing-agentic-ai">昨日补遗</a>）</p>
+      <h3>SpaceX 星舰首次完整软溅落</h3>
+      <p><a href="https://x.com/elonmusk/status/2082468093704786065">Starship 完成海上软溅落</a>，这一 35 层楼高的飞行器成功受控着陆，无人机捕捉到了历史性画面。</p>
+      <h3>Waymo 新平台 Ojai 搭载 Gemini</h3>
+      <p>Waymo 发布 <a href="https://x.com/GeminiApp/status/2082513350060351616">Ojai 车辆平台</a>，配备全新车内 UI，并首次接入 Google Gemini，早期访问已开放。</p>
+      <h3>Giffgaff 大规模封号风波</h3>
+      <p>多地用户反映 Giffgaff 手机号码遭批量封禁，余额难以退款，社区账号同时被封。大量开发者因 Codex、Claude 等 AI 服务绑定 Giffgaff 号码而受影响，社区开始寻找替代保号方案，并倡议将余额捐赠公益机构。（<a href="https://www.v2ex.com/t/1230830#reply2">来源</a>、<a href="https://www.v2ex.com/t/1230828#reply32">来源</a>）</p>
+      <h3>国内发布：美团 CatPaw 与多个创造工具</h3>
+      <p>美团正式发布搭载万亿参数模型 LongCat 2.0 的 <a href="https://tech.meituan.com/2026/07/28/CatPaw-LongCat.html">CatPaw</a>，提供全场景 AI Agent 工作台，已在内部覆盖 9 万员工、搭建 3 万个 Agent。V2EX 社区同日涌现多项创造：中文手写识别模型 Handwritten（准确率 95.47%）、代码检索工具 Code Search、AI 视频反推工具 VideoFlow、AI RSS 阅读器 FeedWeave、扩展开源 claudeFS、2FA 认证器 Spot Authenticator 等。</p>
+      <h2>趋势与判断</h2>
+      <h3>1. 大模型性能竞争向“准生产级”迁移</h3>
+      <p>Grok 4.5 同时拿下两项基准第一，且预告的 1.5T~2.1T 模型排期密集，标志着头部实验室不再满足于单一榜单，转而追求综合排名与一致性。独立评测榜单（LaurenBench、HighWalk）的多元化也有助于削弱刷榜风险。</p>
+      <h3>2. AI 安全从模型层向系统与供应链延伸</h3>
+      <p>文档蠕虫、代理入侵解剖、策略文档失效等研究集中公开，结合微软代理治理工具包、GitHub 打击 NPM/Actions 供应链攻击（<a href="https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/">来源</a>），AI 安全重心正从模型对齐扩展到企业基础设施、开发供应链和代理行为治理。</p>
+      <h3>3. 基础设施“agent-native”化加速</h3>
+      <p>Render 总结代理应用基础设施模式（<a href="https://render.com/blog/infrastructure-patterns-for-agentic-applications">来源</a>），Tokenless 通过模型自动切换降成本（<a href="https://usetokenless.com/">来源</a>），自托管 Kimi K3 以 20% 硬件成本换取 20% 任务质量提升（<a href="https://aistack.imec-int.com/blog/gpu-self-hosting">来源</a>），加上 SQLite 在生产环境深度优化，表明为代理工作负载设计的轻量、高效、可分支的基础设施栈正在成型。</p>
+      <h3>4. 全球运营商治理影响开发者生态</h3>
+      <p>Giffgaff 大规模封号和扣费争议暴露了全球化 AI 服务对单一境外号码的脆弱依赖，推动开发者探索 eSIM、公益捐赠等替代方案，也可能加速 AI 服务商支持多因子认证和号码解绑。</p>
+      <h3>5. 就业市场两极分化加剧</h3>
+      <p>AI 公司大规模招募电工、木匠等实体基建岗位（<a href="https://www.nytimes.com/2026/07/29/business/economy/data-center-electricians-training.html">来源</a>），同时远程 AI 开发岗位要求 8 年以上经验并熟练使用 AI 编码工具（<a href="https://www.v2ex.com/t/1230813#reply2">招聘</a>），黄仁勋称“任何人都能成为软件程序员”的愿景与国企劳务派遣陈旧技术栈的现实形成强烈对比。</p>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>福奇听证会后续</strong>：Anthony Fauci 在参议院新冠起源听证会上对每一项问题援引第五修正案，Paul D. Thacker 披露的日记内容可能引发更多政治博弈。（<a href="https://x.com/elonmusk/status/2082464656724312445">来源</a>）</li>
+      <li><strong>Google 医生推荐种族争议</strong>：Google 被指根据种族产生截然不同的医生推荐，后续是否调整算法值得关注。（<a href="https://x.com/elonmusk/status/2082465101492428861">来源</a>）</li>
+      <li><strong>日本 7.1 级地震</strong>（<a href="https://www.data.jma.go.jp/multi/quake/quake_detail.html?eventID=20260728163528&amp;amp;lang=en">来源</a>）后续影响及恢复进展。</li>
+      <li><strong>Neuralink 意念控制轮椅</strong>（<a href="https://x.com/elonmusk/status/2082469624940208485">来源</a>）及 X Money 向 Premium 用户推出（<a href="https://x.com/elonmusk/status/2081916459647660205">来源</a>）的商业化进展。</li>
+      <li><strong>DMARC 强制执行率低迷</strong>：尽管标准公开 12 年，仍有 68.4% 域名未强制执行（<a href="https://ciphercue.com/blog/dmarc-enforcement-gap-rua-fragmentation-2026">来源</a>），邮件安全改进空间巨大。</li>
+      <li><strong>欧盟数字身份倡议</strong>“停止杀死互联网：不要数字身份和年龄验证”（<a href="https://citizens-initiative.europa.eu/initiatives/details/2026/000011_en">来源</a>）的签名进展。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <p>&gt; 索引覆盖全部指定来源，按属性分类列举。</p>
+      <h3>社交媒体与政务推文</h3>
+      <ul>
+      <li><a href="https://x.com/elonmusk/status/2082474808537923616">Elon Musk: Grok 4.5 ranked #1 on LaurenBench</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082369174828118361">Elon Musk: Grok 4.5 HighWalk Benchmark</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082465700401361192">Elon Musk: Fauci would incriminate himself</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082472190575034548">Elon Musk: Grok Build updates</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082473483066597623">Elon Musk: Jensen Huang quote</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082465101492428861">Elon Musk: Google racial answers</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082464656724312445">Elon Musk: Fauci diary disclosure</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082468093704786065">Elon Musk: Starship soft landing</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082469465061777825">Elon Musk: Illegal migrant armed at school</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082468943810470160">Elon Musk: Ted Cruz hearing statement</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082458212662661293">Elon Musk: Untitled1</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082458184913195344">Elon Musk: Untitled2</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082458959248834596">Elon Musk: Untitled3</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082469014618665216">Elon Musk: Déborah fashion</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081973255296934043">Elon Musk: Common sense (SAVE Act)</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082123925283041545">Elon Musk: Grok 4.6/4.7 details</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082469624940208485">Elon Musk: Neuralink wheelchair control</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082127138178699766">Elon Musk: Starlink Argentina schools</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081916459647660205">Elon Musk: X Money rollout</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082126582873821412">Elon Musk: Gad is right</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082126998323769578">Elon Musk: Arthur MacWaters tweet</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082472600673075547">Elon Musk: FSD singularity video</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082469119736365558">Elon Musk: Graham Linehan tweet</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082472358233911727">Elon Musk: Grok app build</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082474458590425461">Elon Musk: SMX quote</a></li>
+      <li><a href="https://x.com/elonmusk/status/2082126910071398513">Elon Musk: Wes tweet on X integration</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081942019283255449">Elon Musk: WR4NYGov timeline</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081936891184566514">Elon Musk: True</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081921143397572945">Elon Musk: Unfiltered reality</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081936825313038348">Elon Musk: Where we are going no training data</a></li>
+      <li><a href="https://x.com/elonmusk/status/2081920546355241321">Elon Musk: Heart emoji</a></li>
+      <li><a href="https://x.com/GeminiApp/status/2082513350060351616">Waymo Ojai with Gemini</a></li>
+      <li><a href="https://x.com/AnthropicAI/status/2082228994653696371">Anthropic support petition</a></li>
+      <li><a href="https://x.com/realDonaldTrump/status/2082159711852298494">Donald Trump: heroic young lifeguard</a></li>
+      <li><a href="https://x.com/OpenAI/status/2082208694142730340">OpenAI: pacing the frontier</a></li>
+      </ul>
+      <h3>安全与治理</h3>
+      <ul>
+      <li><a href="https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/">AI worm through Copilot for Word</a></li>
+      <li><a href="https://huggingface-anatomy-of-frontier-lab-model-intrusion.static.hf.space/index.html">Hugging Face anatomy of frontier lab intrusion</a></li>
+      <li><a href="https://arxiv.org/abs/2607.25398">Handbook.md – long policy documents fail to govern agents</a></li>
+      <li><a href="https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/">Anthropic’s new cryptanalysis results – M. Green notes</a></li>
+      <li><a href="https://github.com/microsoft/agent-governance-toolkit">microsoft/agent-governance-toolkit</a></li>
+      <li><a href="https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/">GitHub supply chain attacks on NPM &amp; Actions</a></li>
+      <li><a href="https://ciphercue.com/blog/dmarc-enforcement-gap-rua-fragmentation-2026">DMARC enforcement gap</a></li>
+      <li><a href="https://citizens-initiative.europa.eu/initiatives/details/2026/000011_en">Stop Killing the Internet EU initiative</a></li>
+      <li><a href="https://flashpaper.app/">Flashpaper secret sharing</a></li>
+      </ul>
+      <h3>AI 模型与学术进展</h3>
+      <ul>
+      <li><a href="https://openai.com/index/chatgpt-for-academic-researchers">Accelerating scientific discovery with ChatGPT</a></li>
+      <li><a href="https://openai.com/index/scientific-computing-agentic-ai">Scientific computing in the age of agentic AI</a> (补遗)</li>
+      <li><a href="https://juliahub.com/blog/frontier-models-physical-ai-evaluation">GPT-5.6 vs Claude Fable 5 for Physical AI</a></li>
+      <li><a href="https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html">Kimi K3 architecture notes</a></li>
+      <li><a href="https://arxiv.org/abs/2510.26692">Kimi Linear attention architecture</a></li>
+      <li><a href="https://blog.doubleword.ai/you-could-have-come-up-with-kimi-delta-attention">You could have come up with Kimi Delta Attention</a></li>
+      <li><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">Discovering Cryptographic Weaknesses with Claude</a></li>
+      </ul>
+      <h3>基础设施与开发者工具</h3>
+      <ul>
+      <li><a href="https://render.com/blog/infrastructure-patterns-for-agentic-applications">Render infrastructure patterns for agentic applications</a></li>
+      <li><a href="https://usetokenless.com/">Tokenless (YC S26) – Auto model switching</a></li>
+      <li><a href="https://kedge.dev/">Kedge – full-stack cloud with forkable VM snapshots</a></li>
+      <li><a href="https://docs.imiron.io/v/0.5.10/en/tour.html">SpecForge – formal specification platform</a></li>
+      <li><a href="https://aistack.imec-int.com/blog/gpu-self-hosting">Self-hosting Kimi K3 cost analysis</a></li>
+      <li><a href="https://micrologics.org/blog/sqlite-in-production-optimizing-wal-mode-concurrency-and-vfs-layers-for-low-latency-app-servers">SQLite in Production: WAL, concurrency, VFS</a></li>
+      <li><a href="https://www.ycombinator.com/companies/pgdog/jobs/uWymUYy-founding-software-engineer">PgDog (YC P25) hiring</a></li>
+      <li><a href="https://www.digitalfoundry.net/news/2026/07/keychron-announces-first-open-source-firmware-for-gaming-mice">Keychron open-source firmware for gaming mice</a></li>
+      <li><a href="https://mlugg.co.uk/posts/incremental-compilation-internals/">Zig’s incremental compilation internals</a></li>
+      <li><a href="https://sbcl.org/all-news.html?2.6.7">Steel Bank Common Lisp 2.6.7</a></li>
+      <li><a href="https://naveensrinivasan.com/posts/2026-07-22-how-do-i-profile-ebpf-code/">How to profile eBPF code</a></li>
+      <li><a href="https://github.com/utmapp/UTM/issues/7658">VMs can’t boot with bridged network on Apple M5 Pro</a></li>
+      <li><a href="https://www.w3.org/blog/2026/woff-1-0-a-milestone-on-w3cs-journey-of-fonts-on-the-web/">WOFF 1.0 milestone on W3C fonts journey</a></li>
+      <li><a href="https://www.darktable.org/">Darktable</a></li>
+      <li><a href="https://koreader.rocks/">KOReader</a></li>
+      <li><a href="https://amiga.lychesis.net/index.html">Amiga Graphics Archive</a></li>
+      <li><a href="https://www.superlogical.com/">Superlogical</a></li>
+      </ul>
+      <h3>GitHub Trending</h3>
+      <ul>
+      <li><a href="https://github.com/deepfakes/faceswap">deepfakes/faceswap</a></li>
+      <li><a href="https://github.com/different-ai/openwork">different-ai/openwork</a></li>
+      <li><a href="https://github.com/grokability/snipe-it">grokability/snipe-it</a></li>
+      <li><a href="https://github.com/maderix/ANE">maderix/ANE</a></li>
+      <li><a href="https://github.com/MoonshotAI/FlashKDA">MoonshotAI/FlashKDA</a></li>
+      <li><a href="https://github.com/paperswithbacktest/awesome-systematic-trading">paperswithbacktest/awesome-systematic-trading</a></li>
+      <li><a href="https://github.com/virgiliojr94/book-to-skill">virgiliojr94/book-to-skill</a></li>
+      <li><a href="https://github.com/opengeos/GeoLibre">opengeos/GeoLibre</a></li>
+      <li><a href="https://github.com/huggingface/speech-to-speech">huggingface/speech-to-speech</a></li>
+      <li><a href="https://github.com/pascalorg/editor">pascalorg/editor</a></li>
+      </ul>
+      <h3>展示与项目 (Show HN/社区创造)</h3>
+      <ul>
+      <li><a href="https://github.com/drumih/turbo-fieldfare">Open-source engine for Gemma 4 26B on M-series Mac</a></li>
+      <li><a href="https://github.com/VladUZH/qwen-scribe">Qwen Scribe – local transcription for Apple Silicon</a></li>
+      <li><a href="https://cheapfoodmap.com/">CheapFoodMap</a></li>
+      <li><a href="https://github.com/reflex-dev/xy">XY – GPU-accelerated plotting library</a></li>
+      <li><a href="https://github.com/schildep/verified-3d-mesh-intersection">Formally verified 3D CSG</a></li>
+      <li><a href="https://xenharmlib.readthedocs.io/en/latest/whats_new_0_4_0.html">xenharmlib just intonation support</a></li>
+      <li><a href="https://docs.espressif.com/projects/rust/book/">Rust on ESP Book</a></li>
+      <li><a href="https://www.claire-blackshaw.com/blog/2026/07/shipping-godot-vr-and-porting-to-psvr2-a-partial-post-mortem/">Godot VR and PSVR2 porting</a></li>
+      </ul>
+      <h3>生态与行业</h3>
+      <ul>
+      <li><a href="https://cesium.com/events/cesium-developer-conference/2026/">Cesium DevCon 2026 talks</a></li>
+      <li><a href="https://www.nytimes.com/2026/07/29/business/economy/data-center-electricians-training.html">A.I. companies recruiting electricians and carpenters</a></li>
+      <li><a href="https://tailscale.com/blog/jailbroken-kindle-proxy-tun-modes">More Tailscale tricks for jailbroken Kindle</a></li>
+      <li><a href="https://www.slow-journalism.com/">Delayed Gratification magazine</a></li>
+      <li><a href="https://unawatch.com/">Una Watch – repairable, open ecosystem</a></li>
+      <li><a href="https://stephenkrings.com/posts/rtx-5070-linux-gpu-server/">Using RTX 5070 from a separate Linux workstation</a></li>
+      <li><a href="https://alsterrunde.com/hamburgs-stadtpark-a-park-built-to-be-used/">Hamburg’s Stadtpark</a></li>
+      <li><a href="https://www.newscientist.com/article/2580119-hunter-gatherers-introduced-fish-to-a-mountain-lake-7000-years-ago/">Hunter-gatherers introduced fish 7000 years ago</a></li>
+      <li><a href="https://taxa.substack.com/p/how-to-survive-boiling-water">如何从沸水中幸存</a></li>
+      <li><a href="https://www.apple.com/shop/iphone/iphone-upgrade-program">iPhone Upgrade Program</a></li>
+      <li><a href="https://www.lji.org/news-events/news/post/new-hiv-vaccine-shows-unprecedented-success-in-preclinical-study/">New HIV vaccine unprecedented success</a></li>
+      <li><a href="https://elizabethtai.com/2026/06/10/substack-writers-you-need-a-website/">Substack writers need a website</a></li>
+      <li><a href="https://www.pbs.org/wgbh/nova/proof/wiles.html">Solving Fermat: Andrew Wiles</a></li>
+      <li><a href="https://letoverlambda.com/textmode.cl/guest/chap8.html">Lisp moving Forth moving Lisp</a></li>
+      <li><a href="https://arxiv.org/abs/1202.4212">Harmony Explained: Scientific Theory of Music</a></li>
+      <li><a href="https://spawn-queue.acm.org/doi/10.1145/3819083">Google&#x27;s Beyond Zero security</a></li>
+      <li><a href="https://cacm.acm.org/opinion/now-is-the-time-to-give-llms-access-to-the-acm-digital-library/">Now Is the Time to Give LLMs Access to ACM DL</a></li>
+      <li><a href="https://www.data.jma.go.jp/multi/quake/quake_detail.html?eventID=20260728163528&amp;amp;lang=en">日本 7.1 级地震</a></li>
+      <li><a href="https://anthropeum.com/">Anthropeum</a></li>
+      </ul>
+      <h3>媒体报道与评测</h3>
+      <ul>
+      <li><a href="https://sspai.com/post/112744">VIVO X Fold 5 五个月使用评测</a></li>
+      <li><a href="https://sspai.com/post/112833">翻译完一本书，我治好了自己的驼背</a></li>
+      <li><a href="https://sspai.com/post/112691">我们为什么会陷入纠结</a></li>
+      <li><a href="https://sspai.com/post/112795">人类与 AI 共享上网浏览器 ego lite</a></li>
+      </ul>
+      <h3>V2EX 综合讨论与推广</h3>
+      <ul>
+      <li><a href="https://www.v2ex.com/t/1230853#reply0">Giffgaff 封号及替代方案</a></li>
+      <li><a href="https://www.v2ex.com/t/1230828#reply32">Giffgaff 捐款倡议</a></li>
+      <li><a href="https://www.v2ex.com/t/1230830#reply2">Giffgaff 拒绝退款</a></li>
+      <li><a href="https://www.v2ex.com/t/1230843#reply0">Giffgaff 社区账号被封</a></li>
+      <li><a href="https://www.v2ex.com/t/1230524#reply2">Giffgaff 携号转网教程</a></li>
+      <li><a href="https://www.v2ex.com/t/1230559#reply0">Giffgaff 退款教程</a></li>
+      <li><a href="https://www.v2ex.com/t/1230509#reply61">Giffgaff WiFi Calling 封号</a></li>
+      <li><a href="https://www.v2ex.com/t/1230550#reply2">Giffgaff 是诈骗企业?</a></li>
+      <li><a href="https://www.v2ex.com/t/1230515#reply7">Giffgaff 余额退款</a></li>
+      <li><a href="https://www.v2ex.com/t/1230513#reply0">低价保号卡替代</a></li>
+      <li><a href="https://www.v2ex.com/t/1230541#reply1">giffgaff 怎么了</a></li>
+      <li><a href="https://www.v2ex.com/t/1230558#reply1">Codex 绑定 giffgaff 问题</a></li>
+      <li><a href="https://www.v2ex.com/t/1230827#reply0">AI Agent 心路历程</a></li>
+      <li><a href="https://www.v2ex.com/t/1230852#reply3">App Store 中国区充值返 10%</a></li>
+      <li><a href="https://www.v2ex.com/t/1230815#reply1">M1 Max 能否安装 macOS 27 Public Beta</a></li>
+      <li><a href="https://www.v2ex.com/t/1230836#reply2">web 版 app store 强制跳转大陆区</a></li>
+      <li><a href="https://www.v2ex.com/t/1230811#reply4">微信 Mac 频繁闪退</a></li>
+      <li><a href="https://www.v2ex.com/t/1230848#reply0">懒猫微服非官方资源列表</a></li>
+      <li><a href="https://www.v2ex.com/t/1230834#reply0">GPT Image 2 在线生成器</a></li>
+      <li><a href="https://www.v2ex.com/t/1230849#reply0">Manim 最新教程</a></li>
+      <li><a href="https://www.v2ex.com/t/1230817#reply14">Spot Authenticator 2FA</a></li>
+      <li><a href="https://www.v2ex.com/t/1230807#reply0">达梦数据库客户端 dmcli</a></li>
+      <li><a href="https://www.v2ex.com/t/1230842#reply1">VideoFlow 视频反推提示词</a></li>
+      <li><a href="https://www.v2ex.com/t/1230806#reply0">Code Search 任务感知代码检索</a></li>
+      <li><a href="https://www.v2ex.com/t/1230833#reply0">Handwritten 中文手写识别</a></li>
+      <li><a href="https://www.v2ex.com/t/1230854#reply0">claudeFS 浏览器扩展</a></li>
+      <li><a href="https://www.v2ex.com/t/1230847#reply0">FeedWeave AI RSS 阅读器</a></li>
+      <li><a href="https://www.v2ex.com/t/1230818#reply0">象棋(卧底版)小游戏</a></li>
+      <li><a href="https://www.v2ex.com/t/1230819#reply0">RaisDB 数据库客户端</a></li>
+      <li><a href="https://www.v2ex.com/t/1230838#reply0">Gitea Runner Manager</a></li>
+      <li><a href="https://www.v2ex.com/t/1230809#reply0">memU 2.0 跨 Agent 记忆</a></li>
+      <li><a href="https://www.v2ex.com/t/1230821#reply3">Clipture 截图工具</a></li>
+      <li><a href="https://www.v2ex.com/t/1230810#reply2">xAgent 0.0.5.beta</a></li>
+      <li><a href="https://www.v2ex.com/t/1230857#reply1">AI 动画制作成本</a></li>
+      <li><a href="https://www.v2ex.com/t/1230837#reply0">Cursor 架构分析</a></li>
+      <li><a href="https://www.v2ex.com/t/1230835#reply1">Claude 账号删除无法重新注册</a></li>
+      <li><a href="https://www.v2ex.com/t/1230823#reply1">vibe coding 省 Token 技巧</a></li>
+      <li><a href="https://www.v2ex.com/t/1230805#reply0">职场感悟：没人能为你兜底</a></li>
+      <li><a href="https://www.v2ex.com/t/1230816#reply2">AK Router 中转平台</a></li>
+      <li><a href="https://www.v2ex.com/t/1230814#reply3">a6api 全网比价 Token</a></li>
+      <li><a href="https://www.v2ex.com/t/1230844#reply2">axionai.cc 推广</a></li>
+      <li><a href="https://www.v2ex.com/t/1230826#reply0">自建 Cursor/Claude Code 中转</a></li>
+      <li><a href="https://www.v2ex.com/t/1230839#reply3">Hostinger 云主机转让</a></li>
+      <li><a href="https://www.v2ex.com/t/1230846#reply0">nodeduck 节点交流社区</a></li>
+      <li><a href="https://www.v2ex.com/t/1230855#reply1">AI 资本叙事讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1230840#reply2">入职后心态转变</a></li>
+      <li><a href="https://www.v2ex.com/t/1230813#reply2">远程 Golang/PHP 工程师招聘</a></li>
+      <li><a href="https://www.v2ex.com/t/1230858#reply0">Senplayer 授权疑问</a></li>
+      <li><a href="https://www.v2ex.com/t/1230808#reply4">中转站客户是谁</a></li>
+      <li><a href="https://www.v2ex.com/t/1230802#reply3">安卓按 WiFi 切换代理</a></li>
+      <li><a href="https://www.v2ex.com/t/1230859#reply0">sing-box 规则配置</a></li>
+      <li><a href="https://www.v2ex.com/t/1230531#reply4">iOS 26.6 续航改善</a></li>
+      <li><a href="https://www.v2ex.com/t/1230534#reply16">iCloud 照片实体备份</a></li>
+      <li><a href="https://www.v2ex.com/t/1230511#reply0">Claude Fable/opus 5 破甲逆向</a></li>
+      <li><a href="https://www.v2ex.com/t/1230519#reply0">macOS Shadowrocket 故障</a></li>
+      <li><a href="https://www.v2ex.com/t/1230555#reply0">Notion 回归</a></li>
+      <li><a href="https://www.v2ex.com/t/1230508#reply1">GPT 网页端 deep research 卡片</a></li>
+      <li><a href="https://www.v2ex.com/t/1230556#reply6">Codex 修改手机号</a></li>
+      <li><a href="https://www.v2ex.com/t/1230525#reply10">CC 九周年 VPS 促销</a></li>
+      <li><a href="https://www.v2ex.com/t/1230545#reply2">AI 中转站账号来源讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1230533#reply1">3D 侦探线索墙</a></li>
+      <li><a href="https://www.v2ex.com/t/1230537#reply0">图片 XMP 元数据测试</a></li>
+      <li><a href="https://www.v2ex.com/t/1230544#reply0">反应速度测试工具</a></li>
+      <li><a href="https://www.v2ex.com/t/1230522#reply0">DeepClean macOS 清理工具</a></li>
+      <li><a href="https://www.v2ex.com/t/1230535#reply4">《这顿不发愁》小程序</a></li>
+      <li><a href="https://www.v2ex.com/t/1230528#reply3">qoder 极致模型体验</a></li>
+      <li><a href="https://www.v2ex.com/t/1230510#reply1">Sol 5.6 Max 后台智能体</a></li>
+      <li><a href="https://www.v2ex.com/t/1230538#reply0">OpenAI Agent SDK Go 移植</a></li>
+      <li><a href="https://www.v2ex.com/t/1230562#reply0">Tura 测试框架</a></li>
+      <li><a href="https://www.v2ex.com/t/1230520#reply0">115 下载达量限速</a></li>
+      <li><a href="https://www.v2ex.com/t/1230557#reply1">Tailscale 组网方案分享</a></li>
+      <li><a href="https://www.v2ex.com/t/1230549#reply1">宽带频繁重新拨号</a></li>
+      <li><a href="https://www.v2ex.com/t/1230552#reply1">又拍云对象存储故障</a></li>
+      <li><a href="https://www.v2ex.com/t/1230521#reply2">国企劳务派遣体验</a></li>
+      <li><a href="https://www.v2ex.com/t/1230553#reply1">程序员出路讨论</a></li>
+      <li><a href="https://www.v2ex.com/t/1230560#reply1">上海创业合伙人招募</a></li>
+      <li><a href="https://www.v2ex.com/t/1230554#reply0">AI 模型折扣推广</a></li>
+      <li><a href="https://www.v2ex.com/t/1230516#reply1">AIsa 招聘远程岗位</a></li>
+      <li><a href="https://www.v2ex.com/t/1230518#reply0">Pyxis Tech Lead 招聘</a></li>
+      <li><a href="https://www.v2ex.com/t/1230527#reply3">Pyxis 全栈工程师招聘</a></li>
+      <li><a href="https://tech.meituan.com/2026/07/28/CatPaw-LongCat.html">美团 CatPaw 发布</a></li>
+      <li><a href="https://www.v2ex.com/t/1230532#reply1">v2ex dark mode 问题</a></li>
+      <li><a href="https://www.v2ex.com/t/1230547#reply8">为 8 岁女儿选自行车</a></li>
+      <li><a href="https://www.v2ex.com/t/1230536#reply8">男人自由值 2w 一个月</a></li>
+      <li><a href="https://www.v2ex.com/t/1230841#reply0">开源软件莫须有罪名</a></li>
+      <li><a href="https://www.v2ex.com/t/1230820#reply6">工作鸭自信端点</a></li>
+      <li><a href="https://www.v2ex.com/t/1230530#reply0">vibe coding 给人主宰感</a></li>
+      <li><a href="https://www.v2ex.com/t/1230543#reply4">探讨节省 token 的 coding agent</a></li>
+      <li><a href="https://www.v2ex.com/t/1230546#reply2">Java 实现 Claude code 功能</a></li>
+      <li><a href="https://www.v2ex.com/t/1230539#reply0">xx 人工智能研究院是否靠谱</a></li>
+      <li><a href="https://www.v2ex.com/t/1230561#reply0">终于找回账号</a></li>
+      <li><a href="https://www.v2ex.com/t/1230512#reply2">结婚与新生儿增长预测</a></li>
+      <li><a href="https://www.v2ex.com/t/1230514#reply3">护眼屏幕一体机</a></li>
+      <li><a href="https://www.v2ex.com/t/1230540#reply0">小米膨程发动机适配汽油</a></li>
+      <li><a href="https://www.v2ex.com/t/1230548#reply0">giffgaff 废了替代</a></li>
+      <li><a href="https://www.v2ex.com/t/1230856#reply0">gpt-transcribe llms.txt</a></li>
+      <li><a href="https://www.v2ex.com/t/1230845#reply0">跨 Agent 知识库共享</a></li>
+      <li><a href="https://www.v2ex.com/t/1230851#reply1">搞错</a></li>
+      <li><a href="https://www.v2ex.com/t/1230803#reply0">源头直供各大模型 key</a></li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
