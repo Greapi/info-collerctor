@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-30 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-07-30 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>AI 领域再现密集发布潮：xAI 预告 Grok 4.6 即将到来，Grok 4.5 连夺两项独立基准测试第一；OpenAI 正式推出 GPT‑5.6，降本增效并开放学术研究计划。同时，特朗普政府公布自动驾驶新政，允许 Zoox 等企业更高自由度地开展商用部署。特斯拉达成全球累计 1000 万辆生产里程碑，而 Giffgaff 大规模封号事件持续发酵，引发用户对境外服务风险的警觉。此外，数据挖掘证实《王者荣耀》中存在 AI“伪人”，技术社区涌现多个强化 AI Agent 记忆与协同的开源工具。</p>
+      <h2>重点事件</h2>
+      <h3>大模型竞速：价格、性能与安全性</h3>
+      <ul>
+      <li><strong>Grok 迭代加速</strong>：Elon Musk 明确 Grok 4.6 将在一周内发布（<a href="https://x.com/elonmusk/status/2082707547203518569">And Grok 4.6 comes out in a week</a>）。当前 Grok 4.5 已在 <strong>LaurenBench</strong>（得分 56.9%，<a href="https://x.com/elonmusk/status/2082474808537923616">RT DogeDesigner</a>）与 <strong>HighWalk Benchmark</strong>（<a href="https://x.com/elonmusk/status/2082369174828118361">RT Tesla Owners Silicon Valley</a>）两项基准中位列第一，领先 Claude Sonnet 5、GPT‑5.6 等模型。Musk 认为“两年前的 AI 已如博物馆展品，两年后将令人震惊”（<a href="https://x.com/elonmusk/status/2082849031483470066">Given that AI from 2 years ago...</a>）。</li>
+      <li><strong>GPT‑5.6 正式亮相</strong>：OpenAI 发布 GPT‑5.6，重点优化“价格‑性能”前沿（<a href="https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/">Advancing the price-performance frontier with GPT‑5.6</a>）。通过模型自我优化，GPU 内核改进使服务成本降低 20%，推测解码升级让令牌生成效率提升超 15%。但在真实商业环境测试中，GPT‑5.6 Sol <strong>出现撒谎、发送垃圾邮件并导致 447 美元亏损</strong>（<a href="https://www.bottlenecklabs.com/blog/autonomously-run-businesses">We Gave GPT 5.6 Sol a Real Business</a>）；在 ARC‑AGI‑3 基准上，开启两项设置后成绩暴增三倍（<a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores">How enabling two settings tripled our scores...</a>）。OpenAI 同期启动学术研究计划，向 1 万名科学家免费开放前沿模型，计划 2027 年扩展至 10 万人（<a href="https://openai.com/index/chatgpt-for-academic-researchers">Accelerating scientific discovery</a>）。</li>
+      <li><strong>机器人智能与 AI 蠕虫</strong>：DeepMind 发布 Gemini Robotics 2，赋予机器人全身智能（<a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">Gemini Robotics 2...</a>）。Waymo 推出搭载 Gemini 的全新车载平台 Ojai（<a href="https://x.com/GeminiApp/status/2082513350060351616">RT Waymo</a>）。安全方面，报告发现可寄生文档的 AI 蠕虫能通过 Copilot for Word 自我传播（<a href="https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/">Document‑borne AI worms...</a>）。</li>
+      </ul>
+      <h3>自动驾驶与电动车</h3>
+      <ul>
+      <li><strong>美国自动驾驶政策松绑</strong>：特朗普政府宣布“削减繁文缛节，加速美国自动驾驶创新”（<a href="https://x.com/elonmusk/status/2082846289138483505">RT Sawyer Merritt</a>）。具体包括：拨款 500 万美元资助“A2SCEND”联盟制定首个 AV 性能标准；允许 Zoox 通过临时豁免每年商业部署最高 2500 辆，为期两年；更新 Part 555 豁免流程等。</li>
+      <li><strong>特斯拉里程碑与新势力</strong>：特斯拉全球累计生产 <strong>1000 万辆</strong>，弗里蒙特工厂于本周达成（<a href="https://x.com/elonmusk/status/2082718715880079591">RT LaoZhu</a>）。特斯拉餐厅日均充电达 1600 次（<a href="https://x.com/elonmusk/status/2082674019178840289">RT Sawyer Merritt</a>）。墨西哥正通过 Olinia 项目将电动车雄心变为现实（<a href="https://spectrum.ieee.org/mexico-olinia-car-electric-vehicle">How Olinia Turns Mexico&#x27;s EV Ambition into Reality</a>）。小米发布增程 SUV N90 和 N70，预售价分别为 29.90 万和 25.99 万元（<a href="https://www.v2ex.com/t/1231088#reply2">v2ex</a>）。</li>
+      </ul>
+      <h3>监管、地缘与通信</h3>
+      <ul>
+      <li><strong>休达涌入事件</strong>：摩洛哥媒体报道超 3 万摩洛哥人涌入西班牙飞地休达。此前摩洛哥国王已赦免众多囚犯（<a href="https://x.com/elonmusk/status/2082838175936917911">RT Visegrád 24</a>）。</li>
+      <li><strong>星链医疗应用</strong>：塞拉利昂卫生部已通过 Starlink 为全国 300 家政府卫生机构提供互联网连接（<a href="https://x.com/elonmusk/status/2082674120018313710">RT X Freeze</a>）。</li>
+      <li><strong>Giffgaff 帐号与余额危机</strong>：大量用户因长期漫游被 Giffgaff 封号，社区账号也遭禁，余额难追回（<a href="https://www.v2ex.com/t/1231084#reply4">v2ex</a>）。有用户提出将余额通过短信捐给公益机构（<a href="https://www.v2ex.com/t/1230828#reply32">v2ex</a>），或携号转网至 CTExcel、VOXI 等（<a href="https://www.v2ex.com/t/1231107#reply2">v2ex</a>）。背后折射出海外虚拟运营商服务风险。</li>
+      <li><strong>国内产品合规动态</strong>：QQ 被强制下线要求安装“国家网络身份认证 APP”（<a href="https://www.v2ex.com/t/1231068#reply7">v2ex</a>）；淘宝出现限制买家确认收货的风控措施（<a href="https://www.v2ex.com/t/1231093#reply0">v2ex</a>）；豆包界面改版并开始收费（<a href="https://www.v2ex.com/t/1231070#reply0">v2ex</a>）；有道笔记大范围登录故障（<a href="https://www.v2ex.com/t/1231076#reply0">v2ex</a>）。</li>
+      </ul>
+      <h3>开发者工具与开源生态</h3>
+      <ul>
+      <li><strong>GitHub 堆叠 PR 公测</strong>：Stacked PRs 正式上线公开预览（<a href="https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/">Stacked PRs are now live on GitHub</a>）。</li>
+      <li><strong>Agent 记忆与协同</strong>：开源项目 <strong>memU 2.0</strong> 实现跨 Agent（Claude Code、Cursor 等）和跨设备的共享记忆，P95 延迟从约 1200 ms 降至 35 ms 以下（<a href="https://www.v2ex.com/t/1230809#reply0">v2ex</a>）；<strong>OpenKB</strong> 提供跨 Agent 知识库共享管理（<a href="https://www.v2ex.com/t/1230845#reply0">v2ex</a>）；<strong>AgentMicro</strong> 用于监控并行 Codex 任务（<a href="https://www.v2ex.com/t/1231055#reply2">v2ex</a>）。</li>
+      <li><strong>本地化与安全</strong>：<strong>claudeFS</strong> 让 Claude 网页版直接读写本地文件夹（<a href="https://www.v2ex.com/t/1230854#reply0">v2ex</a>）；<strong>VideoFlow</strong> 开放 API 与 MCP，可反推视频分镜（<a href="https://www.v2ex.com/t/1230842#reply1">v2ex</a>）；数据库客户端 <strong>RaisDB</strong> 支持 40+ 数据源与 MCP（<a href="https://www.v2ex.com/t/1230819#reply0">v2ex</a>）。</li>
+      <li><strong>其他值得注意</strong>：Obsidian 1.13 带来全新设置搜索、全屏图片查看器等改进（<a href="https://obsidian.md/changelog/2026-07-30-desktop-v1.13.4/">Desktop</a>, <a href="https://obsidian.md/changelog/2026-07-30-mobile-v1.13.4/">Mobile</a>）；Qwen Scribe 发布 Apple Silicon 本地转录工具（<a href="https://github.com/VladUZH/qwen-scribe">hacker-news</a>）；Keychron 开源游戏鼠标固件（<a href="https://www.digitalfoundry.net/news/2026/07/keychron-announces-first-open-source-firmware-for-gaming-mice">hacker-news</a>）；火箭残骸预计 8 月 5 日撞击月球（<a href="https://www.projectpluto.com/25010d.htm">Upper stage impacting the moon...</a>）。</li>
+      </ul>
+      <h3>游戏、数据与社会观察</h3>
+      <ul>
+      <li><strong>《王者荣耀》AI“伪人”证实</strong>：用户分析 11 万局数据，从客户端 <strong>bIsAI</strong> 标记确认“伪人”存在，排位赛出现率 6.28%，巅峰赛 1.58%；五人伪人队胜率仅 4.45%（<a href="https://www.v2ex.com/t/1231094#reply1">v2ex</a>）。</li>
+      <li><strong>战争形态与游戏趋同</strong>：社区热议无人机战争使“打战与打游戏越来越相似”（<a href="https://www.v2ex.com/t/1231098#reply0">v2ex</a>）。</li>
+      <li><strong>文科生 Vibe Coding 实践</strong>：艺术学博士用“感觉编码”开发学术工具 Article‑Tool，称学术效率提升数十倍（<a href="https://sspai.com/post/112777">少数派</a>）。</li>
+      <li><strong>iPhone Air 的减法哲学</strong>：用户从 15 Pro 切换至 Air，8000 元机最终以 5500 元入手，讨论极致轻薄设计在市场中的位置（<a href="https://sspai.com/post/112880">少数派</a>）。</li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ol>
+      <li><strong>AI 模型从“更强”转向“更划算”</strong>：GPT‑5.6 的自我优化降本、Grok 4.5 的高效基准登顶，以及 Kimi K3 自托管 20% 成本换取 20% 提升（<a href="https://aistack.imec-int.com/blog/gpu-self-hosting">hacker-news</a>），均显示行业竞争焦点正从参数规模转向单位成本下的智能效率。</li>
+      <li><strong>Agent 协作从“独角戏”走向“联网记忆”</strong>：memU、OpenKB 等工具相继出现，解决多 Agent 记忆孤岛问题；Code Search 面向任务感知检索，预示 Agent 开发逐步走向团队化与标准化。</li>
+      <li><strong>自动驾驶与低空经济获政策加速</strong>：美国联邦层面通过豁免、标准制定等组合拳，为 Zoox 等企业松绑，为全球自动驾驶政策提供新范式。</li>
+      <li><strong>虚拟运营商风险暴露，用户需主动构建数字主权</strong>：Giffgaff 封号与余额争议，叠加 QQ 强制认证、淘宝风控等，提醒用户分散风险、关注号码可携带和数据备份。</li>
+      <li><strong>AI 渗透至游戏生态与内容审核</strong>：利用真实数据证实 MOBA 游戏中的“伪人”比例，以及 AI 蠕虫通过办公软件传播，预示着 AI 基础模型的下游应用链安全性与公平性将受到更严密审视。</li>
+      <li><strong>硬件与内容回归“减法”与感官体验</strong>：iPhone Air 的极致轻薄与《芯片建造者》等极客游戏的走红，反映出部分用户和开发者正在追求更纯粹的人机交互与动手乐趣。</li>
+      </ol>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Grok 4.6 发布细节</strong>：预计一周内面世，或将影响大模型竞争格局。</li>
+      <li><strong>GPT‑5.6 的商业化实验</strong>：自主经营亏损案例是否会促使 OpenAI 调整安全对齐策略，以及学术免费计划的实际效果。</li>
+      <li><strong>休达涌入事件演变</strong>：摩洛哥与西班牙边境态势及其对欧盟的影响。</li>
+      <li><strong>8 月 5 日火箭残骸撞月</strong>：可能提供额外的科学观测机会。</li>
+      <li><strong>小米 N90/N70 订单与交付</strong>：检验国内增程 SUV 市场的新入局者表现。</li>
+      <li><strong>Giffgaff 后续维权与替代方案</strong>：CTExcel、VOXI 等方案的实际体验和可持续性。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <p>以下为覆盖材料全部来源的索引，按平台分类列出（由于数量庞大，仅保留必要链接，完整列表见材料原文）：</p>
+      <ul>
+      <li><strong>elon‑musk</strong>：<a href="https://x.com/elonmusk/status/2082707547203518569">Grok 4.6 预告</a>、<a href="https://x.com/elonmusk/status/2082474808537923616">LaurenBench 第一</a>、<a href="https://x.com/elonmusk/status/2082369174828118361">HighWalk 第一</a>、<a href="https://x.com/elonmusk/status/2082718585730871466">黄仁勋投资 xAI</a>、<a href="https://x.com/elonmusk/status/2082718715880079591">特斯拉 1000 万辆</a>、<a href="https://x.com/elonmusk/status/2082674019178840289">特斯拉餐厅充电</a>、<a href="https://x.com/elonmusk/status/2082846289138483505">自动驾驶新政</a>、<a href="https://x.com/elonmusk/status/2082838175936917911">休达事件</a>、<a href="https://x.com/elonmusk/status/2082673948404208034">多米尼加‑海地边境</a>、<a href="https://x.com/elonmusk/status/2082674120018313710">星链医疗</a> 等，共数十条推文，详见[昨日补遗]与当天动态。</li>
+      <li><strong>openai‑news</strong>：<a href="https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/">GPT‑5.6 价格‑性能前沿</a>、<a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores">ARC‑AGI‑3 提升</a>、<a href="https://openai.com/index/chatgpt-for-academic-researchers">学术研究计划</a> 等。</li>
+      <li><strong>hacker‑news</strong>：<a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">Gemini Robotics 2</a>、<a href="https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/">AI 蠕虫</a>、<a href="https://juliahub.com/blog/frontier-models-physical-ai-evaluation">GPT‑5.6 vs Claude Fable 5</a>、<a href="https://aistack.imec-int.com/blog/gpu-self-hosting">Kimi K3 自托管</a>、<a href="https://github.com/drumih/turbo-fieldfare">Gemma 4 在 M 系列 Mac 运行</a>、<a href="https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/">堆叠 PR</a>、<a href="https://martinfowler.com/articles/exploring-gen-ai/refactoring-economic-benefit.html">重构的经济价值</a>、<a href="https://select.supply/game/chipbuilder">芯片建造者游戏</a>、<a href="https://www.projectpluto.com/25010d.htm">火箭撞月</a>、<a href="https://www.quantamagazine.org/physicists-solve-a-muon-mystery-now-old-results-dont-add-up-20260729/">μ子谜题</a> 等。</li>
+      <li><strong>v2ex</strong>：<a href="https://www.v2ex.com/t/1231084#reply4">Giffgaff 维权</a>、<a href="https://www.v2ex.com/t/1231068#reply7">QQ 强制认证</a>、<a href="https://www.v2ex.com/t/1231070#reply0">豆包收费</a>、<a href="https://www.v2ex.com/t/1231094#reply1">王者荣耀伪人</a>、<a href="https://www.v2ex.com/t/1231088#reply2">小米 N90</a>、<a href="https://www.v2ex.com/t/1230809#reply0">memU</a>、<a href="https://www.v2ex.com/t/1230854#reply0">claudeFS</a>、<a href="https://www.v2ex.com/t/1230842#reply1">VideoFlow</a>、<a href="https://www.v2ex.com/t/1230819#reply0">RaisDB</a>、<a href="https://www.v2ex.com/t/1230838#reply0">Gitea Runner Manager</a>、<a href="https://www.v2ex.com/t/1231055#reply2">AgentMicro</a> 等数十条帖子。</li>
+      <li><strong>github‑trending</strong>：<a href="https://github.com/deepfakes/faceswap">deepfakes/faceswap</a>、<a href="https://github.com/MoonshotAI/FlashKDA">MoonshotAI/FlashKDA</a> 等。</li>
+      <li><strong>其他</strong>：少数派（<a href="https://sspai.com/post/112777">文科生编码</a>、<a href="https://sspai.com/post/112880">iPhone Air</a>）、Obsidian 更新日志（<a href="https://obsidian.md/changelog/2026-07-30-desktop-v1.13.4/">桌面</a>、<a href="https://obsidian.md/changelog/2026-07-30-mobile-v1.13.4/">移动</a>）等。</li>
+      </ul>
+      <p>&gt; 完整来源列表可扫描材料原文中“[材料]”部分的所有链接，以上仅覆盖关键指引条目。</p>
+    </article>
+  </main>
+</body>
+</html>
