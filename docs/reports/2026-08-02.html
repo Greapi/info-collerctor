@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-02 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-08-02 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日科技领域聚焦多个重大进展：AI 领域，OpenAI 下一代模型 Astra 内部版本攻克 10 道数学与理论计算机科学重大难题，引发行业震动；在应用端，围绕大模型编程、AI 鉴图、本地部署等出现大量新工具与新讨论。基础设施方面，硬件钱包 Coldcard 黑客事件持续恶化，损失或达 8860 万美元。同时，Linux 桌面在北美市场份额历史性突破 10%。特斯拉 CEO 埃隆·马斯克在 X 上动态频繁，涉及 Grok 模型能力、SpaceX 年度第 90 次发射及多项社会话题评论。</p>
+      <h2>重点事件</h2>
+      <h3>1. OpenAI 下一代模型 Astra 取得数学领域重大突破</h3>
+      <p>OpenAI 于官网公开了下代模型 Astra 的内部版本细节，其解决了数学与理论计算机科学领域的 <strong>10 个重大开放难题</strong>，涵盖几何学、密码学、复杂性理论等多个分支。具体成果包括：证明了“非索菲克群”的存在、反驳了 Connes 刚性猜想、在高维球体填充和电路复杂性方面获得了更优界限等，所有证明均附带精简证书与思维链演示。萨姆·奥尔特曼随后发文“团队人类”。（来源：<a href="https://openai.com/index/ten-advances-in-mathematics">Ten advances in mathematics and theoretical computer science</a>，<a href="https://x.com/sama/status/2083552732225417342">RT Sebastien Bubeck</a>）</p>
+      <h3>2. Karpathy 展示 LLM 长程任务生成能力</h3>
+      <p>Andrej Karpathy 分享其使用 Anthropic 的 Opus 5 模型，在约 <strong>10 美元开销、100 万 token 的预算下，耗时约 2 小时</strong>，自主编写 5500 行代码，生成了用于程序化三维动画渲染《指环王》首段文字的脚本。Karpathy 认为这标志着 LLM 评测正从过去“画一辆自行车上的鹈鹕”等简单测试，向大规模自定义世界生成进阶。同时他指出，LLM 目前尚无法原生感知视频或实际游玩游戏，这使其在审计自身输出成果时存在显著短板。（来源：<a href="https://twitter.com/karpathy/status/2083749667410727319">Karpathy’s Pelican</a>）</p>
+      <h3>3. Coldcard 钱包被盗事件持续恶化</h3>
+      <p>加密货币硬件钱包 Coldcard 近期遭遇的黑客攻击事件持续发酵，分析显示此次攻击造成的损失可能已达 <strong>8860 万美元</strong>，引发社区对硬件钱包安全性的广泛担忧。（来源：<a href="https://medium.com/mountain-movers/the-coldcard-disaster-gets-worse-the-hack-may-have-reached-88-6-af507b028594">The Coldcard Disaster Gets Worse: The Hack May Have Reached $88.6M</a>）</p>
+      <h3>4. Grok 模型获马斯克大力推介</h3>
+      <p>埃隆·马斯克宣布 Grok 现可分析任意视频，用户上传后即可提问，并同时展示了 Grok Imagine 的图像生成能力。此外，他引用第三方评价称，<strong>Grok 4.5 在综合考虑速度与成本时，表现为帕累托最优</strong>，并转发了开发者关于 Grok 4.5 生成了函数简短、嵌套浅的“最漂亮 C 语言代码”的评价。（来源：<a href="https://x.com/elonmusk/status/2083800942927839307">Grok can analyze any video</a>，<a href="https://x.com/elonmusk/status/2083706250370449572">Grok Imagine</a>，<a href="https://x.com/elonmusk/status/2083568773294911788">Grok 4.5 is Pareto #1</a>，<a href="https://x.com/elonmusk/status/2083430685411299374">Cool</a>）</p>
+      <h3>5. SpaceX 完成 2026 年第 90 次猎鹰发射</h3>
+      <p>SpaceX 在 8 月 2 日于范登堡成功发射一枚猎鹰 9 号火箭，搭载 24 颗星链卫星，其助推器 B1081 完成第 26 次飞行并成功回收。这是 SpaceX 本年度第 90 次猎鹰系列火箭发射任务。（来源：<a href="https://x.com/elonmusk/status/2083705353942761906">RT X Freeze</a>）</p>
+      <h2>趋势与判断</h2>
+      <h3>1. AI 能力迈向超越人类智力极限的新前沿</h3>
+      <p>今日多条动态均指向 AI 能力的关键性跨越。OpenAI 的 Astra 模型在纯数学领域证明了此前悬而未决的难题，这是从语言生成、代码编写向<strong>深度科学推理</strong>的重大延伸。与此同时，Karpathy 的演示则展示了 AI 从零生成复杂、大规模创意作品的成熟能力。马斯克转发的一则评论概括了这一趋势：“AI 会越来越多地完成更困难的任务……我们一开始会惊叹，然后会习以为常。”（来源：<a href="https://x.com/elonmusk/status/2083593903828058213">RT Yun-Ta Tsai</a>）</p>
+      <h3>2. AI 驱动开发的生态正在爆发与重塑</h3>
+      <p>开发者工具与社区围绕 AI 编程形成了两个鲜明趋势：一是从模型到基础设施的深度整合，如 Claude Code 中转服务在 29 天内即吸引 145 个用户并消耗 306 亿 token，且社区为此开发了防止 Mac 休眠的心跳脚本（来源：<a href="https://www.v2ex.com/t/1231587#reply0">历时 29 天，145 个用户，306 亿 token 调用量！</a>，<a href="https://www.v2ex.com/t/1231529#reply6">写了两个脚本，Claude Code 干活时 Mac 不睡觉</a>）；二是 <strong>“氛围编程”</strong>成为常态，如完全不会 Go 语言的开发者借助 Codex 仅通过撰写 README 和测试就开发出微信机器人（来源：<a href="https://www.v2ex.com/t/1231567#reply3">根本不会 go 语言，做了个给微信 clawbot 发消息的机器人</a>）。同时，关于开源项目是否应利用 AI 加速开发引发了社区讨论（来源：<a href="https://www.v2ex.com/t/1231528#reply42">似乎开源项目作者不知道/不想利用 AI 来加速自己的开发？</a>）。</p>
+      <h3>3. 多模型协作与垂直场景应用的探索增多</h3>
+      <p>将多个大模型组合完成特定任务成为新的实践方向。例如多模型 AI 鉴图工具“明眼社”通过集成 GPT-5.6、Qwen3 VL 等交叉判断图片是否为 AI 合成（来源：<a href="https://www.v2ex.com/t/1231585#reply0">做了个多模型 AI 鉴图小站</a>）；BEAM 项目则让三个 Agent 竞猜财报后股价涨跌，用于对比模型金融预测能力（来源：<a href="https://www.v2ex.com/t/1231532#reply2">写了一个 agent 赌财报网站</a>）。这反映出社区正从单一模型应用转向<strong>构建有特定目标的 Agent 系统</strong>。</p>
+      <h3>4. 云端大模型价格战冲击本地部署性价比</h3>
+      <p>随着云端大模型服务价格持续走低，有观点明确指出，利用 Mac 统一内存本地部署 32b 参数模型已丧失成本优势（来源：<a href="https://www.v2ex.com/t/1231540#reply16">云 llm 越卷越便宜</a>）。这与此前本地运行模型的热潮形成对比，预示着<strong>个人和中小开发者可能会进一步倒向云端推理服务</strong>。</p>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>OpenAI Astra 模型正式发布</strong>：此次仅是内部版本展示，其何时正式推出、在通用任务上是否也将有类似跃升将是后续关键。</li>
+      <li><strong>Coldcard 黑客事件后续</strong>：8860 万美元的损失是否会引发更广泛的硬件钱包安全审查，以及事件根因的最终披露值得关注。</li>
+      <li><strong>Claude Code 的爆发式增长</strong>：其社区与生态扩展速度极快，看门狗等周边脚本的出现表明用户在将其用于高时长、高价值任务。</li>
+      <li><strong>本地大模型部署的价值重估</strong>：在云端 API 价格持续下降和上下文压缩技术（如 5 亿 token 插件）并行的背景下，开发者的计算归属选择将成为持续的讨论点。</li>
+      <li><strong>AI 生成内容的可信度与识别</strong>：随着“明眼社”等工具的兴起，以及知乎充斥 AI 生成文章的讨论（来源：<a href="https://www.v2ex.com/t/1231526#reply26">知乎里一眼望去都是 gpt 生成的文章</a>），如何界定和鉴别 AI 生成内容正从技术问题演变为社会价值判断问题。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li><a href="https://x.com/karpathy/status/2083749667410727319">We&#x27;re starting to leave the territory...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2083800942927839307">Grok can analyze any video</a></li>
+      <li><a href="https://x.com/elonmusk/status/2083706250370449572">Grok Imagine</a></li>
+      <li><a href="https://x.com/elonmusk/status/2083709924236751300">Made with Grok Imagine</a></li>
+      <li><a href="https://x.com/elonmusk/status/2083800687561908662">True</a></li>
+      <li><a href="https://stackoverflow.blog/2026/07/29/developers-are-attached-to-tools-because-tools-encode-trust/">Developers are attached to tools...</a></li>
+      <li><a href="https://pudding.cool/2026/07/essential-words/">How the words we teach English...</a></li>
+      <li><a href="https://linuxiac.com/linux-desktop-market-share-surpasses-10-in-north-america/">Linux Desktop Market Share Surpasses 10%</a></li>
+      <li><a href="https://www.abc.net.au/news/2026-07-28/how-norway-s-salmon-industry-became-a-global-behemoth/106949872">Norway Salmon</a></li>
+      <li><a href="https://lists.archlinux.org/archives/list/aur-general@lists.archlinux.org/message/YPJ3FQYJTJXXY3RUXCYLMHUKHLIUNVFF/">Pushes to arch AUR are suspendended</a></li>
+      <li><a href="https://blog.juni-mp4.com/posts/42/rooting-the-tplink-tl841n-pt1/">Rooting, firmware analysis... TP-Link TL-841N</a></li>
+      <li><a href="https://github.com/wie-project/kakehashi">Show HN: Kakehashi</a></li>
+      <li><a href="https://github.com/graham33/nixos-dgx-spark">Show HN: NixOS-DGX-Spark</a></li>
+      <li><a href="https://medium.com/mountain-movers/the-coldcard-disaster-gets-worse-the-hack-may-have-reached-88-6-af507b028594">The Coldcard Disaster Gets Worse</a></li>
+      <li><a href="https://letterformarchive.org/news/milwaukee-transit-passes/">When transit passes were designed by hand</a></li>
+      <li>[[Bitcoin] 行情到了本轮熊市低位了吗](https://www.v2ex.com/t/1231544#reply4)</li>
+      <li>[[Claude Code] 历时 29 天...](https://www.v2ex.com/t/1231587#reply0)</li>
+      <li>[[Claude] 写了两个脚本...](https://www.v2ex.com/t/1231529#reply6)</li>
+      <li>[[macOS] [咔咔找 AI]...](https://www.v2ex.com/t/1231533#reply8)</li>
+      <li>[[OpenAI] win 系统下 codexcli...](https://www.v2ex.com/t/1231537#reply0)</li>
+      <li>[[OpenAI] 发现我的 gpt 账号...](https://www.v2ex.com/t/1231550#reply5)</li>
+      <li>[[ThinkPad] 复活了经典 T42 键盘...](https://www.v2ex.com/t/1231583#reply0)</li>
+      <li>[[V2EX] 貌似交易区停止更新了？](https://www.v2ex.com/t/1231566#reply3)</li>
+      <li>[[Wunder] DeepSeek-V4-Flash 0731...](https://www.v2ex.com/t/1231582#reply0)</li>
+      <li>[[YouTube] YouTube 难以下载...](https://www.v2ex.com/t/1231539#reply18)</li>
+      <li>[[分享创造] AI 图像工具](https://www.v2ex.com/t/1231588#reply0)</li>
+      <li>[[分享创造] ATBCmder...](https://www.v2ex.com/t/1231563#reply2)</li>
+      <li>[[分享创造] [macOS] CoolRun...](https://www.v2ex.com/t/1231520#reply1)</li>
+      <li>[[分享创造] [Mailbike]...](https://www.v2ex.com/t/1231527#reply0)</li>
+      <li>[[分享创造] 做了一个把普通视频...](https://www.v2ex.com/t/1231525#reply1)</li>
+      <li>[[分享创造] 做了个多模型 AI 鉴图小站](https://www.v2ex.com/t/1231585#reply0)</li>
+      <li>[[分享创造] 写了一个 agent 赌财报网站](https://www.v2ex.com/t/1231532#reply2)</li>
+      <li>[[分享创造] [分享] 暑假带娃...](https://www.v2ex.com/t/1231570#reply1)</li>
+      <li>[[分享创造] 🎉[分享后台数据]...](https://www.v2ex.com/t/1231579#reply0)</li>
+      <li>[[分享创造] 复刻老黄历...](https://www.v2ex.com/t/1231523#reply4)</li>
+      <li>[[分享创造] 我开源了一个...](https://www.v2ex.com/t/1231542#reply0)</li>
+      <li>[[分享创造] ...TradeMirror](https://www.v2ex.com/t/1231573#reply0)</li>
+      <li>[[分享创造] 最近发现个治愈...](https://www.v2ex.com/t/1231538#reply2)</li>
+      <li>[[分享创造] ...手柄在线检测工具](https://www.v2ex.com/t/1231555#reply1)</li>
+      <li>[[分享创造] 用 pixel 白嫖...](https://www.v2ex.com/t/1231541#reply2)</li>
+      <li>[[分享发现] gaffgiff 卡...](https://www.v2ex.com/t/1231530#reply7)</li>
+      <li>[[分享发现] ...叮叮提醒...](https://www.v2ex.com/t/1231562#reply3)</li>
+      <li>[[分享发现] 总结了一下 Claude...](https://www.v2ex.com/t/1231586#reply0)</li>
+      <li>[[分享发现] 现在真的是”娱乐至死”？...](https://www.v2ex.com/t/1231517#reply11)</li>
+      <li>[[奇思妙想] 云 llm 越卷越便宜](https://www.v2ex.com/t/1231540#reply16)</li>
+      <li>[[推广] Ai 模型全网最低价](https://www.v2ex.com/t/1231581#reply0)</li>
+      <li>[[推广] [AIX API]...](https://www.v2ex.com/t/1231553#reply0)</li>
+      <li>[[推广] gpt-image-2 生图站福利](https://www.v2ex.com/t/1231524#reply1)</li>
+      <li>[[推广] ...AI 面部分析工具...](https://www.v2ex.com/t/1231549#reply0)</li>
+      <li>[[推广] opencode-acp...](https://www.v2ex.com/t/1231578#reply1)</li>
+      <li>[[推广] ...在线视频播放器](https://www.v2ex.com/t/1231548#reply0)</li>
+      <li>[[推广] 芒果 AI - 8 月活动...](https://www.v2ex.com/t/1231531#reply0)</li>
+      <li>[[求职] [远程工作/项目外包]...](https://www.v2ex.com/t/1231556#reply4)</li>
+      <li>[[生活] 初中同班一个很漂亮的女生...](https://www.v2ex.com/t/1231580#reply1)</li>
+      <li>[[程序员] Clash 的规则集...](https://www.v2ex.com/t/1231545#reply18)</li>
+      <li>[[程序员] Google Play 订阅...](https://www.v2ex.com/t/1231518#reply10)</li>
+      <li>[[程序员] macOS 原生终端 Termite...](https://www.v2ex.com/t/1231572#reply0)</li>
+      <li>[[程序员] 似乎开源项目作者...](https://www.v2ex.com/t/1231528#reply42)</li>
+      <li>[[程序员] ...魔尺折叠过程...](https://www.v2ex.com/t/1231574#reply1)</li>
+      <li>[[程序员] 冒险岛 083 网页版](https://www.v2ex.com/t/1231558#reply12)</li>
+      <li>[[程序员] 根本不会 go 语言...](https://www.v2ex.com/t/1231567#reply3)</li>
+      <li>[[程序员] 除了刷 leetcode...](https://www.v2ex.com/t/1231536#reply10)</li>
+      <li>[[站长] 域名服务器在海外...](https://www.v2ex.com/t/1231534#reply0)</li>
+      <li>[[酷工作] 招聘 Agent 架构...](https://www.v2ex.com/t/1231571#reply0)</li>
+      <li>[[酷工作] 联想 天津 直招...](https://www.v2ex.com/t/1231559#reply2)</li>
+      <li>[[问与答] ibkr 开户...](https://www.v2ex.com/t/1231551#reply6)</li>
+      <li>[[问与答] 大家周末都干什么？...](https://www.v2ex.com/t/1231564#reply3)</li>
+      <li>[[问与答] 大家所在的公司...](https://www.v2ex.com/t/1231568#reply5)</li>
+      <li>[[问与答] 知乎里一眼望去...](https://www.v2ex.com/t/1231526#reply26)</li>
+      <li>[[问与答] 订阅了 OpenCode Go...](https://www.v2ex.com/t/1231535#reply9)</li>
+      <li>[[昨日补遗] A special effect...](https://x.com/elonmusk/status/2083595725552734528)</li>
+      <li>[[昨日补遗] 💯](https://x.com/elonmusk/status/2083433190941691982)</li>
+      <li>[[昨日补遗] Cool](https://x.com/elonmusk/status/2083430685411299374)</li>
+      <li>[[昨日补遗] Exactly](https://x.com/elonmusk/status/2083595079357239628)</li>
+      <li>[[昨日补遗] Grok 4.5 is Pareto #1...](https://x.com/elonmusk/status/2083568773294911788)</li>
+      <li>[[昨日补遗] RT Déborah...](https://x.com/elonmusk/status/2083716381741051935)</li>
+      <li>[[昨日补遗] RT FFmpeg...](https://x.com/elonmusk/status/2083743602627297283)</li>
+      <li>[[昨日补遗] RT Maye Musk...](https://x.com/elonmusk/status/2083594136662278167)</li>
+      <li>[[昨日补遗] RT Rothmus 🏴...](https://x.com/elonmusk/status/2083799455736709601)</li>
+      <li>[[昨日补遗] RT Starlink...](https://x.com/elonmusk/status/2083713298818543784)</li>
+      <li>[[昨日补遗] RT X Freeze...](https://x.com/elonmusk/status/2083705353942761906)</li>
+      <li>[[昨日补遗] RT Yun-Ta Tsai...](https://x.com/elonmusk/status/2083593903828058213)</li>
+      <li>[[昨日补遗] The Moon base will be even more epic](https://x.com/elonmusk/status/2083658315582632272)</li>
+      <li>[[昨日补遗] They are far along the road to extinction](https://x.com/elonmusk/status/2083435949187367406)</li>
+      <li>[[昨日补遗] (untitled)](https://x.com/elonmusk/status/2083433406998663647)</li>
+      <li>[[昨日补遗] Ten advances in mathematics...](https://openai.com/index/ten-advances-in-mathematics)</li>
+      <li>[[昨日补遗] RT Noam Brown...](https://x.com/sama/status/2083553085993951362)</li>
+      <li>[[昨日补遗] RT Sebastien Bubeck...](https://x.com/sama/status/2083552732225417342)</li>
+      <li>[[昨日补遗] team humanity](https://x.com/sama/status/2083560847889023219)</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
