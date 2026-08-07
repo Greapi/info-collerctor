@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-07 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-08-07 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>AI 工具与应用继续成为核心焦点：埃隆·马斯克宣布 Grok Build V1.0 正式发布，OpenAI 改进了 GPT‑5.6 Sol 模型并扩大了免费用户的访问权限。在基础设施方面，Terafab 超级工厂的规模细节被披露，AMD 通过收购加码 AI 芯片。社会议题上，Meta 因儿童心理健康问题被判支付 5.67 亿美元罚款。此外，丹麦推出自托管分布式对象服务，引发了开发者对去中心化架构的关注。</p>
+      <h2>重点事件</h2>
+      <h3>AI 模型与应用动态</h3>
+      <ul>
+      <li><strong>Grok Build V1.0 发布</strong>：埃隆·马斯克宣布其 AI 编程工具 [Grok Build V1.0]（https：//x.com/elonmusk/status/2085594813840216212） 正式上线。SpaceXAI 已为其推送超百次更新，新版改进了仪表盘和 UI，被评价为“最强大的编程工具之一”。</li>
+      <li><strong>OpenAI 模型更新</strong>：OpenAI 正在改进其 [GPT‑5.6 Sol]（https：//openai.com/index/improving-gpt-5-6-sol-in-chatgpt/） 模型，提升了准确性与一致性。同时，[GPT‑5.6 Luna]（https：//x.com/sama/status/2085454964814753990） 对免费用户的文本聊天权限已无限制开放。不过，有用户反馈免费版实际返回的仍是 GPT-5.5 Mini 模型 (<a href="https：//www.v2ex.com/t/1232812">链接</a>)。</li>
+      <li><strong>AI 编码与自主代理</strong>：开源项目 [PrimeIntellect-ai/prime-agent]（https：//github.com/PrimeIntellect-ai/prime-agent） 受到关注，这是一个自我改进型 RLM 智能体，专为编码和长时间自主任务设计。同时，甲骨文却反其道而行之，[禁止在 OpenJDK]（https：//app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code） 中使用 AI 生成的代码。</li>
+      <li><strong>网络安全新前沿</strong>：OpenAI 公布了对 Astra 模型的初步网络安全评估结果，并就“[关键网络能力]（https：//openai.com/index/responding-next-frontier-critical-cyber-capabilities/）”的未来影响与应对措施发布新回应。</li>
+      </ul>
+      <h3>硬件与基础架构</h3>
+      <ul>
+      <li><strong>Terafab 超级工厂规模披露</strong>：马斯克表示，[Terafab]（https：//x.com/elonmusk/status/2085530890759749760） 超级工厂建成后将是五角大楼的 50 倍大，有望成为全球最有价值的建筑。该项目计划在得克萨斯州年产超过 1 太瓦的计算能力。</li>
+      <li><strong>AMD 加码 AI 芯片</strong>：AMD 收购 AI 芯片初创公司 [Taalas]（https：//www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344），旨在通过将模型直接蚀刻到硅中来提升推理性能。</li>
+      <li><strong>Deno 推出分布式对象服务</strong>：Deno 推出了自托管的分布式持久对象服务 [denoland/celld]（https：//github.com/denoland/celld），使用 Rust 语言开发，旨在简化去中心化应用的构建。</li>
+      <li><strong>针对 AI 代理的浏览器</strong>：Cloudflare 推出 [Kitesurf]（https：//blog.cloudflare.com/kitesurf/），这是一个在 V8 isolates 中运行的、面向 AI 智能体的浏览器。</li>
+      </ul>
+      <h3>社会、法律与数据</h3>
+      <ul>
+      <li><strong>Meta 被开出巨额罚单</strong>：新墨西哥州法院命令 [Meta 支付 5.67 亿美元]（https：//www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta），因其产品对儿童心理健康造成的危害。</li>
+      <li><strong>报业巨头与大数据公司合作</strong>：美国最大报业集团 USA Today Co. 与 [Palantir 达成合作]（https：//www.niemanlab.org/2026/08/americas-largest-newspaper-chain-usa-today-co-partners-with-palantir-to-analyze-audience-data/），将利用后者分析其受众数据，此举可能引发对新闻中立性与数据隐私的新讨论。</li>
+      <li><strong>网站流量真实性受质疑</strong>：一篇文章指出其网站 [99% 的流量都来自机器人]（https：//patronview.com/news/99-percent-of-my-website-traffic-is-bots/），揭示了当前互联网流量分析面临的挑战。</li>
+      </ul>
+      <h3>科学研究</h3>
+      <ul>
+      <li><strong>太阳物理新发现</strong>：科学家利用 NSF 井上建太阳望远镜，首次在太阳表面发现 [开尔文-亥姆霍兹不稳定性]（https：//nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/） 现象。</li>
+      <li><strong>黑洞全天图发布</strong>：SDSS 发布了包含 [50 万个超大质量黑洞]（https：//www.sdss.org/black-hole-mapper-release-20/） 的新全天图。</li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <h3>AI 工具的安全与管理博弈加剧</h3>
+      <p>今日多个事件共同指向一个趋势：AI 的安全、合规与伦理问题正从讨论走向具体行动。OpenAI 在提升模型能力的同时，主动公布网络能力评估以寻求社会信任；甲骨文在开源社区实施严格的代码来源管制；Meta 则因产品危害而面临巨额罚款。这标志着 AI 发展正进入一个能力扩张与风险规制并行的新阶段。</p>
+      <h3>从 Model 到 Agent：AI 应用范式的转变</h3>
+      <p>Grok Build、prime-agent 以及 Kitesurf 的出现，表明 AI 应用的焦点正从单一的对话模型转向能够自主执行复杂任务的 AI 代理。这些工具不再只是“问答机”，而是开始成为开发者的“同事”和“执行者”，一个围绕 AI Agent 的生态正在快速构建。</p>
+      <h3>分布式与去中心化基础设施的回归</h3>
+      <p>无论是 Deno 推出的分布式对象服务 <code>celld</code>，还是 SpaceX 利用现有终端构建地面蜂窝网络的计划，都显示出行业对去中心化、自托管基础设施的重新关注。这可能与对中心化云服务成本和控制权日益增长的担忧有关。</p>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>Tooboo 户外运动应用</strong>：因其自研离线地图引擎与 Apple Watch Ultra 2 上 11 小时的优异续航表现，在特定用户群中获得积极反馈，其后续迭代值得关注（<a href="https：//sspai.com/post/113112">来源</a>）。</li>
+      <li><strong>加拿大就业市场回暖</strong>：<a href="https：//www.cbc.ca/news/business/canada-jobs-july-2026-9.7299225">加拿大 7 月新增 75，000 个工作岗位</a>，失业率降至两年新低，作为北美经济的重要参考指标，这一趋势能否持续值得观察。</li>
+      <li><strong>PostgreSQL 性能优化实践</strong>：一项通过批处理、算子融合和 SIMD 技术使 Postgres 分析性能 <a href="https：//malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/">提升 300 倍</a> 的技术实践受到关注，其方案成熟度和普适性有待验证。</li>
+      <li><strong>StarLink 地面网络计划</strong>：SpaceX 公布利用现有 Starlink 终端建设 <a href="https：//x.com/elonmusk/status/2085530983588036841">蜂窝网络</a> 的计划，这将在未来直接挑战传统电信运营商。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li>少数派 (SSPAI) - anyfeeder-matrix</li>
+      <li>Elon Musk&#x27;s X (Twitter) - elon-musk</li>
+      <li>GitHub Trending Daily - github-trending-daily-any</li>
+      <li>Hacker News - hacker-news</li>
+      <li>Obsidian Changelog - obsidian-changelog</li>
+      <li>OpenAI Blog - openai-news</li>
+      <li>Sam Altman&#x27;s X (Twitter) - sam-altman</li>
+      <li>V2EX - v2ex</li>
+      <li>阮一峰的网络日志</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
