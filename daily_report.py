@@ -14,6 +14,8 @@ import textwrap
 import time
 import urllib.error
 import urllib.request
+
+import requests
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -212,32 +214,32 @@ def build_batches(articles: list[Article]) -> list[list[Article]]:
 def chat_completion(config: OpenAIConfig, messages: list[dict[str, str]], timeout: int, retries: int | None = None) -> str:
     if retries is None:
         retries = 3
-    payload = json.dumps(
-        {
-            "model": config.model,
-            "messages": messages,
-            "temperature": 0.2,
-        }
-    ).encode("utf-8")
-    request = urllib.request.Request(
-        f"{config.base_url}/chat/completions",
-        data=payload,
-        headers={
-            "Authorization": f"Bearer {config.api_key}",
-            "Content-Type": "application/json",
-            "User-Agent": rss_collector.USER_AGENT,
-        },
-        method="POST",
-    )
+    payload = {
+        "model": config.model,
+        "messages": messages,
+        "temperature": 0.2,
+    }
+    headers = {
+        "Authorization": f"Bearer {config.api_key}",
+        "Content-Type": "application/json",
+        "User-Agent": rss_collector.USER_AGENT,
+    }
     last_exc: Exception | None = None
     for attempt in range(1, retries + 1):
         try:
-            with urllib.request.urlopen(request, timeout=timeout) as response:
-                data = json.loads(response.read().decode("utf-8"))
-        except urllib.error.HTTPError as exc:
-            body = exc.read().decode("utf-8", errors="replace")
-            raise RuntimeError(f"Model request failed with HTTP {exc.code}: {body}") from exc
-        except (urllib.error.URLError, http.client.IncompleteRead, http.client.HTTPException, TimeoutError, ConnectionError) as exc:
+            resp = requests.post(
+                f"{config.base_url}/chat/completions",
+                json=payload,
+                headers=headers,
+                timeout=timeout,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+        except requests.exceptions.HTTPError as exc:
+            code = exc.response.status_code if exc.response is not None else "?"
+            body = exc.response.text[:500] if exc.response is not None else ""
+            raise RuntimeError(f"Model request failed with HTTP {code}: {body}") from exc
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout, requests.exceptions.ChunkedEncodingError) as exc:
             last_exc = exc
             if attempt < retries:
                 wait = 2 ** attempt

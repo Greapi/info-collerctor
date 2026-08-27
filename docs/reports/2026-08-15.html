@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-15 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-08-15 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>本日报覆盖截至 2026-08-15 前后几日的公开材料，主要包含 GitHub 趋势、美团技术、Anthropic、少数派、X、Hacker News 与 V2EX 等多个来源。</p>
+      <p>当日值得关注的主线有：AI Agent Skills 生态成为开源热点，大量仓库围绕技能、插件与本地优先工具涌现；美团技术团队披露 KDD 2026 论文与 KDD Cup 2026 DataAgents 冠军方案，并发布搜索 3.0 中 LLM 语义表征的一、二期实践；Anthropic 发布第二份风险报告并解释文本水印 FAQ；Cursor 宣布正式加入 SpaceX，并入 SpaceXAI；Grok 4.6 在 CursorBench、ARC-AGI 等基准上表现突出，并强调成本效率；DeepSeek Harness 开源后社区插件生态快速扩张，相关列表已收录 270 个插件。</p>
+      <p>社区与产品层面，RustDesk 宣布支持 Wayland 无人值守、GLM-5.3 与 Qwen 3.8 27B 模型出现、谷歌推进同态加密私有 AI、法国最高法阻止针对 15 岁以下人群的社交媒体禁令等，也构成当日值得留意的信号。</p>
+      <h2>重点事件</h2>
+      <h3>1. GitHub 趋势：Agent Skills 与本地优先知识管理集中升温</h3>
+      <p>GitHub 趋势中多个高星项目围绕 AI Agent 技能、自动化与本地知识库展开。</p>
+      <ul>
+      <li><a href="https://github.com/browser-use/browser-use">browser-use/browser-use</a> 以 111,143 Stars 位居前列，目标是让网站对 AI 智能体可访问，用于在线任务自动化。</li>
+      <li><a href="https://github.com/DietrichGebert/ponytail">DietrichGebert/ponytail</a> 获得 112,891 Stars，其理念是让 AI 智能体像“房间里最懒的高级开发”一样思考——“最好的代码是没有写出来的代码”。</li>
+      <li>Agent Skills 聚合生态明显升温：<a href="https://github.com/VoltAgent/awesome-agent-skills">VoltAgent/awesome-agent-skills</a> 收录 1000+ 官方团队与社区 agent skills，兼容 Claude Code、Codex、Gemini CLI、Cursor 等；<a href="https://github.com/K-Dense-AI/scientific-agent-skills">K-Dense-AI/scientific-agent-skills</a> 则定位为将任意 AI 智能体变为“AI 科学家”，并称已有 175,000+ 科学家使用，提供 163 个经验证技能与 100+ 科学数据库。</li>
+      <li>图像生成与设计类技能也被集中整理：<a href="https://github.com/freestylefly/awesome-gpt-image-2">freestylefly/awesome-gpt-image-2</a> 提供 530+ 案例逆向工程与 20+ 套工业级模板；<a href="https://github.com/ConardLi/garden-skills">ConardLi/garden-skills</a> 覆盖网页设计、知识检索、图像生成等。</li>
+      <li>个人知识管理与本地优先方向受到关注：<a href="https://github.com/AgriciDaniel/claude-obsidian">AgriciDaniel/claude-obsidian</a> 定位为自组织 AI 第二大脑，可将任意来源归入纯 Markdown 知识图谱；<a href="https://github.com/tinyhumansai/openhuman">tinyhumansai/openhuman</a> 强调本地优先生活记忆，并作为智能体群组与深度研究员的编排器。</li>
+      <li>此外，<a href="https://github.com/anthropics/claude-plugins-community">anthropics/claude-plugins-community</a> 作为 Claude Cowork 与 Claude Code 的社区插件市场以只读镜像形式出现，插件提交入口为 clau.de/plugin-directory-submission；<a href="https://github.com/basecamp/omarchy">basecamp/omarchy</a> 则自称“美观、现代且有明确取向的 Linux”。</li>
+      </ul>
+      <h3>2. 美团：KDD 2026 论文、KDD Cup 冠军与搜索 3.0 实践</h3>
+      <p>美团技术团队发布 <a href="https://tech.meituan.com/2026/08/13/KDD-2026-meituan-papers.html">KDD&#x27;26 美团学术论文精选及 KDD Cup&#x27;26 DataAgents 赛道冠军思路解读</a>，共有 8 篇论文被 KDD 2026 收录。要点包括：</p>
+      <ul>
+      <li><strong>MTFM</strong>：可扩展、免对齐的工业推荐基础模型，基于 Transformer，将跨域数据转为异质 Token，并引入多场景用户级样本聚合、Grouped-Query Attention、Hybrid Target Attention 等，已作为统一基座推荐大模型全量替换独立精排。论文见 <a href="https://arxiv.org/abs/2602.11235">arXiv</a>。</li>
+      <li><strong>CDRRM</strong>：对比驱动的评分准则生成与奖励建模框架，仅用 3 千样本使未微调模型超越全量微调基线。论文见 <a href="https://arxiv.org/pdf/2603.08035">arXiv</a>。</li>
+      <li><strong>LocalSearchBench</strong>：本地生活服务智能体搜索评测基准，覆盖 9 城、6 大服务品类、900 道多跳问答，发现当前主流 LLM 推理模型普遍存在信息完整性、可信度不足等问题。论文见 <a href="https://arxiv.org/abs/2512.07436">arXiv</a>。</li>
+      <li><strong>JTransNet</strong>：联合广告拍卖中的匿名性与确定性分配方案，已在美团零售核心业务场景全量上线。论文见 <a href="https://dl.acm.org/doi/epdf/10.1145/3770855.3818370">ACM DL</a>。</li>
+      <li><strong>UME</strong>：统一元泛化框架，用于跨域 ETA，采用双分支网络与超网络元学习，并通过知识蒸馏弥合特征缺失。论文见 <a href="https://arxiv.org/abs/2606.00979">arXiv</a>。</li>
+      <li><strong>GRAD</strong>：可扩展的自动竞价基础模型，以动作混合专家模块探索多样化竞价行为并结合因果 Transformer。论文见 <a href="https://arxiv.org/abs/2508.02002">arXiv</a>。</li>
+      <li><strong>HMAF</strong>：分层多坑位 GD-RTB 分配框架，按“规划–校准–执行”统一优化曝光分配，平衡短期收入与长期合约交付。论文见 <a href="https://arxiv.org/abs/2606.09896">arXiv</a>。</li>
+      <li><strong>MTGenRec</strong>：生成式推荐模型分布式训练框架，相比 TorchRec baseline 训练加速 1.6–2.4 倍，8 卡扩展到 128 卡近似线性。论文见 <a href="https://arxiv.org/pdf/2505.12663">arXiv</a>。</li>
+      </ul>
+      <p>KDD Cup 2026 DataAgents 赛道中，大众点评技术部获得冠军与季军。团队迁移“问点仔”Agent Harness 能力构建 Agent 运行时，支持 SQL、Python 等工具选择与执行，并构建多模态视频理解子智能体和文档 ETL 子智能体。冠军方案代码已开源：<a href="https://github.com/zhezh/kddcup2026_champion">zhezh/kddcup2026_champion</a>。</p>
+      <p>与此同时，美团搜索团队发布 <a href="https://tech.meituan.com/2026/08/20/01-meituan-Query-3.0.html">美团搜索3.0：LLM 语义表征在排序模型的探索与应用</a>。该文介绍 2025 Q4 到 2026 Q2 的三期实践，一期、二期均完成全量上线：</p>
+      <ul>
+      <li><strong>一期（验证可行性）</strong>：轻量 LLM 全参微调，新增 <code>&lt;|query|&gt;</code>、<code>&lt;|item|&gt;</code>、<code>&lt;|qi|&gt;</code> 三个特殊 Token；训练样本 3,000 余万条，下单:点击未下单:未点击=1:3:6；提取 64 维语义表征并注入精排。线上 2025/9/18–10/1 期间，大盘搜索支付订单 +0.20%、服务零售订单 +0.27%，长尾 NDCG@5 +2.21pp。局限包括缺商品侧、全参微调成本高、目标偏点击、推理效率低。</li>
+      <li><strong>二期（商家精排表征系统性升级）</strong>：训练数据扩展为五元组，共 2,766 万条，以同请求曝光未点击作为难负样本；采用“精简信息陈述+总结引导”Prompt，中等参数 Embedding 模型 + LoRA；表征提取改为独立序列 + 可学习向量，一次 Forward 处理五路输入；降维采用 MRL-E；损失函数从 BCE 转为 InfoNCE 对比学习，并引入 Triplet Loss。消融显示引入 Triplet Loss 后 Q2I-Click-AUC +4.85pp、Q2I-Order-AUC +11.02pp。</li>
+      </ul>
+      <h3>3. Anthropic：第二份风险报告与文本水印 FAQ</h3>
+      <p>Anthropic 作为 Responsible Scaling Policy 的一部分，发布了第二份 Risk Report，分享系统风险及应对准备情况。官方入口见 <a href="https://www.anthropic.com/aug-2026-risk-report">Anthropic 2026 年 8 月风险报告</a>，推文见 <a href="https://x.com/AnthropicAI/status/2088324824863236248">@AnthropicAI</a>。</p>
+      <p>Anthropic 同时就文本水印发布 FAQ，核心信息包括：实施水印是为符合欧盟 AI Act，其他主要模型开发者已签署同一 Code of Practice 并将实施；水印不会影响 Claude 输出质量或内容，读者无法区分，不添加内容或隐藏字符，不需要额外 token、不增加费用，也无法追踪到特定个人、组织或聊天。详情见 <a href="https://www.anthropic.com/news/claude-text-watermark">Claude text watermark FAQ</a>，相关推文见 <a href="https://x.com/AnthropicAI/status/2088343978873966687">@AnthropicAI</a>。</p>
+      <h3>4. Cursor 正式加入 SpaceX，并归入 SpaceXAI</h3>
+      <p>Cursor 宣布 <a href="https://cursor.com/blog/joining-spacex">Cursor is now a part of SpaceX</a>，收购已完成。Cursor 团队将加入 SpaceXAI，参与改进 Grok、Grok Build、Grok Bot、Grok API、Cursor 等产品。</p>
+      <p>马斯克在 X 上转发并评论相关公告：<a href="https://x.com/elonmusk/status/2088273489820061920">It is an honor to have such a great team join @SpaceX</a>、<a href="https://x.com/elonmusk/status/2088284368905134459">RT Michael Truell</a>。a16z 则认为 Cursor 与 SpaceXAI 文化高度契合，双方都以极高节奏和强度运作；Cursor 四年内完成两次自我重塑，从邮件客户端到 tab-complete IDE/token reseller，再到 AI lab/token creator，相关推文见 <a href="https://x.com/elonmusk/status/2088302714576896342">RT a16z</a>。</p>
+      <h3>5. Grok 4.6：基准表现、多模态与成本效率</h3>
+      <p>Elon Musk 及相关账号密集转发 Grok 4.6 的基准与能力信息：</p>
+      <ul>
+      <li>Grok 4.6 在 <a href="https://x.com/elonmusk/status/2088138697002668110">CursorBench 3.2 真实世界编程测试中排名第一</a>，超过 Claude Fable 5、Opus 5、GPT-5.6 Sol，同时展示出平均每次任务成本上的效率优势。</li>
+      <li>Grok 4.6 在 ARC-AGI 基准的验证成绩：ARC-AGI-1 87.5%（$0.30/task）、ARC-AGI-2 67.1%（$0.76/task）、ARC-AGI-3 2.11%（$5.6K）；在 ARC-AGI-3 上与 GPT-5.6 Sol high reasoning 得分相当，但成本为 $5.6K 对 $15.2K。来源见 <a href="https://x.com/elonmusk/status/2088137563362013451">RT ARC Prize</a>。</li>
+      <li>Grok 4.6 的图像与视频理解被称为相对 Grok 4.5 的阶跃式改进，尤其视频理解负载显著提升生产力，见 <a href="https://x.com/elonmusk/status/2088127459971522726">Try Grok 4.6 image &amp; video understanding</a> 与 <a href="https://x.com/elonmusk/status/2088138867022995697">RT Frank Hu</a>。</li>
+      <li><a href="https://x.com/elonmusk/status/2088137315109449870">Grok Imagine</a> 展示自动动画生成能力，用户称结果惊艳。</li>
+      <li><a href="https://x.com/elonmusk/status/2088149393731981516">How to use @bot</a> 介绍 @bot 可扮演“chief of staff”，用户可让其分析自身、管理 bot 团队等。</li>
+      <li>特斯拉自动驾驶 14.3.7 也被评价为表现出色，能在洛杉矶密集交通中自如穿行，见 <a href="https://x.com/elonmusk/status/2088143429968564386">RT Whole Mars Catalog</a>。</li>
+      </ul>
+      <h3>6. 少数派：Obsidian 知识库插件、F1 观赛与硬件考古</h3>
+      <p>少数派当日有多篇可读性较强的内容：</p>
+      <ul>
+      <li><a href="https://sspai.com/post/113390">记了 2 万条笔记后，我把知识库交给了 AI | Obsidian插件推荐</a> 介绍作者拥有近 2 万条 Obsidian 笔记，并推出 <strong>Analogy for Obsidian</strong> 插件。其特点为完全本地化、无隐私风险、自适应语义分块、语义漫游，并支持通过 MCP Server 让 Agent 调用知识库。商业模式为 2500 篇笔记以内免费，超出可单次 $9.9 买断许可证。产品地址：<a href="https://community.obsidian.md/plugins/analogy-rag-in-your-vault">Analogy for Obsidian</a>。</li>
+      <li><a href="https://sspai.com/post/108010">与世界建立联结——上海F1之行</a> 记录了作者受电影影响赴 2026 年上海站观赛的体验：上海站为 2026 赛季第二场，3 月 13–15 日举行；作者选择周六 B 看台，票价 740 元；2026 规则大改，电机与内燃机功率达到 1:1；排位赛中梅赛德斯新秀安东内利以 19 岁 201 天成为 F1 历史最年轻杆位得主；交通方面 11 号线嘉定新城站分线，退场地铁排队约 1 小时。</li>
+      <li><a href="https://sspai.com/post/113315">从0.01到MelGeek｜磁轴之前，那些被时间掩埋的客制化往事</a> 回顾 MelGeek 前身 0.01 及 2014 年创立过程，并梳理 Z70、MDA 键帽、MG 高度、MOJO 等产品节点，呈现磁轴时代之前客制化键盘的黄金年代。</li>
+      <li><a href="https://sspai.com/post/113429">我家也跨上了信息高速路！在25年前的笔记本上体验有线网络冲浪</a> 使用 2001 年索尼 PCG-C1 PictureBook、智邦 EN2216-1 PCMCIA 网卡复刻以太网上网，发现 Windows XP 可自动识别网卡，IE6 因 TLS 1.0/SSL、HTML5/CSS3 限制无法访问多数现代网站，但可访问 DOSPY 等站点；网卡实测约 10Mbps，作者判断 RJ45 有线方案延续至 2026 年仍是家庭、台式机等稳定上网的主流选择之一。</li>
+      </ul>
+      <h3>7. DeepSeek Harness 插件生态快速扩张</h3>
+      <p>DeepSeek Harness 开源后，社区迅速形成插件生态。相关动态包括：</p>
+      <ul>
+      <li>社区维护的 <a href="https://www.v2ex.com/t/1234499">awesome-dsh-plugin</a> 精选列表已收录 270 个插件，分 11 类，其中 UI 增强 55 个、工具与能力 69 个、开发与运行时 52 个、娱乐 20 个等，在线浏览地址为 <a href="https://beancookie.github.io/awesome-dsh-plugin/">beancookie.github.io/awesome-dsh-plugin</a>。</li>
+      <li><a href="https://www.v2ex.com/t/1234467">dshplugin.store</a> 上线，用于集中发现和浏览 DeepSeek Harness 插件。</li>
+      <li>新发布插件包括 <a href="https://www.v2ex.com/t/1234516">dsh-github-connector</a>（复刻 Claude Code PR 功能）、<a href="https://www.v2ex.com/t/1234484">dsh-workspace-search</a>（VS Code 同款文件搜索）、<a href="https://www.v2ex.com/t/1234470">deepseek-mcp-image</a>（视觉识别 MCP，提到商汤 token-plan 支持 deepseek-v4-flash 与 GLM5.2，免费）。</li>
+      <li>有用户筹划编写《DeepSeek Harness：即插即用的实战指南》，讨论插件安装、权限与兼容性，见 <a href="https://www.v2ex.com/t/1234514">V2EX 讨论</a>；另有用户分享基于 Tauri 的客户端 DeepHarness，见 <a href="https://www.v2ex.com/t/1234471">DeepSeek 客户端</a>。</li>
+      </ul>
+      <h3>8. 其他值得留意的产品、模型与基础研究</h3>
+      <ul>
+      <li><a href="https://cursor.com/blog/joining-spacex">Cursor is now a part of SpaceX</a> 之外，AI 编程工具竞争仍在继续。OpenAI 预告 Ultrafast 模式，GPT-5.6 Sol 速度最高提升 14 倍，首先通过 OpenAI API 向部分客户开放，来源见 <a href="https://x.com/sama/status/2088101491802243121">Sam Altman 推文 /ultrafast</a>。</li>
+      <li>模型方面，<a href="https://z.ai/blog/glm-5.3">GLM-5.3</a> 发布，主打前沿编码与新兴网络能力；<a href="https://huggingface.co/Qwen/Qwen3.8-27B-FP8">Qwen 3.8 27B</a> 的 FP8 版本出现在 Hugging Face。</li>
+      <li><a href="https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/">谷歌利用同态加密推动私有 AI 实用化</a>，为隐私计算方向提供新信号。</li>
+      <li><a href="https://rustdesk.com/blog/unattended-remote-access-wayland/">RustDesk 宣布支持 Wayland 上的真正无人值守远程访问</a>，并继续作为开源自托管远程桌面的替代方案出现于 GitHub 趋势。</li>
+      <li><a href="https://www.reuters.com/world/frances-top-court-rules-social-media-ban-curtails-freedom-expression-2026-08-14/">法国最高法阻止针对 15 岁以下人群的社交媒体禁令</a>，裁定其限制表达自由。</li>
+      <li><a href="https://www.mixedbread.com/blog/toast-1">Mixedbread 推出 Toast 1</a>，RayforceDB 也以纯 C 分析数据库、类 Lisp 语法出现，见 <a href="https://rayforcedb.com/">RayforceDB</a>。</li>
+      <li><a href="https://hashagent.pages.dev/">HashAgent</a> 支持将 AI agent 分享为 URL，并通过 WebGPU 在本地运行；<a href="https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0">AI Model Atlas</a> 将 ML 模型群可视化为互连 3D 图谱。</li>
+      <li>论文 <a href="https://arxiv.org/abs/2608.12700">A Contract-Grade Verifier for LLM-Generated GPU Kernels</a> 与文章 <a href="https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications">Don&#x27;t classify, hallucinate</a> 也在 HN 社区引发讨论。</li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ol>
+      <li><strong>Agent Skills 正在形成跨模型、跨工具的通用能力层。</strong> 从 GitHub 上多个 awesome 聚合仓库、Anthropic 社区插件市场到 DeepSeek Harness 插件列表，均以技能、插件形式封装可复用能力。兼容 Claude Code、Codex、Gemini CLI、Cursor 等成为普遍诉求，意味着上游模型差异正在被统一的 Agent Skills 标准部分抹平。</li>
+      </ol>
+      <ol>
+      <li><strong>本地优先与隐私友好成为 AI 知识管理的新卖点。</strong> claude-obsidian、openhuman、Analogy for Obsidian 等均强调本地、Markdown、无隐私风险。这一趋势与“个人第二大脑”需求结合，可能推动本地 RAG 和 MCP 工具的进一步普及。</li>
+      </ol>
+      <ol>
+      <li><strong>AI 编程工具进入整合期。</strong> Cursor 被 SpaceX 收购并加入 SpaceXAI，a16z 明确将其描述为“AI lab/token creator”。这意味着头部 AI 编程工具不再只是 IDE 或代理，而是与模型研发、算力布局深度绑定。同时，社区对 OpenAI Codex 重置力度、Opus 5 体验变差等讨论显示，产品策略与用户感知之间存在张力。</li>
+      </ol>
+      <ol>
+      <li><strong>基准与成本并重，效率竞争成为模型公司的新叙事。</strong> Grok 4.6 在 CursorBench、ARC-AGI 上不仅展示分数，还反复强调单位任务成本优势；DeepSeek 也更新峰谷定价。这表明单纯能力领先已不足以建立优势，单位智能成本正在成为关键决策变量。</li>
+      </ol>
+      <ol>
+      <li><strong>中国技术团队在推荐、搜索与智能体竞赛中的工程深度显现。</strong> 美团 KDD 论文覆盖推荐基础模型、自动竞价、生成式推荐训练框架等完整链路，且 JTransNet、MTGenRec 等已全量上线；KDD Cup 冠军方案则验证了将 Agent Harness 能力迁移至数据代理竞赛的可行性。</li>
+      </ol>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li>美团搜索 3.0 的第三期内容在本次材料中未展开，后续应继续关注其 LLM 语义表征在更多业务场景的收益与限制。</li>
+      <li>Anthropic 文本水印的落地细节，尤其是不同语言、不同 API 端点下的透明度与用户体验影响，值得观察。</li>
+      <li>Cursor 加入 SpaceXAI 后，Cursor 产品本身的定价、模型接入和开源策略是否会发生变化。</li>
+      <li>Grok 4.6 在 ARC-AGI-3 上 2.11% 的成绩与高成本，可能引发关于“高难度推理基准的性价比”进一步讨论。</li>
+      <li>DeepSeek Harness 插件生态的权限、兼容性与安全规范，可能需要社区进一步形成共识。</li>
+      <li>Opus 5 使用体验变差的讨论是否会形成系统性反馈，以及 Anthropic 是否作出回应。</li>
+      <li>法国社交媒体禁令被阻止后，立法如何调整、欧洲其他国家是否跟进，值得关注。</li>
+      <li>RustDesk Wayland 无人值守的稳定性和安全性，以及自托管远程桌面在商业场景中的替代作用。</li>
+      <li>澳大利亚家用电池热潮对批发电价的影响是否有更长期的统计数据支撑。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <h3>GitHub 趋势仓库</h3>
+      <ul>
+      <li><a href="https://github.com/AgriciDaniel/claude-obsidian">AgriciDaniel/claude-obsidian</a></li>
+      <li><a href="https://github.com/anthropics/claude-plugins-community">anthropics/claude-plugins-community</a></li>
+      <li><a href="https://github.com/basecamp/omarchy">basecamp/omarchy</a></li>
+      <li><a href="https://github.com/browser-use/browser-use">browser-use/browser-use</a></li>
+      <li><a href="https://github.com/ConardLi/garden-skills">ConardLi/garden-skills</a></li>
+      <li><a href="https://github.com/DietrichGebert/ponytail">DietrichGebert/ponytail</a></li>
+      <li><a href="https://github.com/freestylefly/awesome-gpt-image-2">freestylefly/awesome-gpt-image-2</a></li>
+      <li><a href="https://github.com/K-Dense-AI/scientific-agent-skills">K-Dense-AI/scientific-agent-skills</a></li>
+      <li><a href="https://github.com/MadsLorentzen/ai-job-search">MadsLorentzen/ai-job-search</a></li>
+      <li><a href="https://github.com/marin-community/marin">marin-community/marin</a></li>
+      <li><a href="https://github.com/tinyhumansai/openhuman">tinyhumansai/openhuman</a></li>
+      <li><a href="https://github.com/tt-a1i/archify">tt-a1i/archify</a></li>
+      <li><a href="https://github.com/VoltAgent/awesome-agent-skills">VoltAgent/awesome-agent-skills</a></li>
+      <li><a href="https://github.com/deepseek-ai/awesome-deepseek-agent">deepseek-ai/awesome-deepseek-agent</a></li>
+      <li><a href="https://github.com/rustdesk/rustdesk">rustdesk/rustdesk</a></li>
+      <li><a href="https://github.com/ToolJet/ToolJet">ToolJet/ToolJet</a></li>
+      </ul>
+      <h3>美团技术</h3>
+      <ul>
+      <li><a href="https://tech.meituan.com/2026/08/13/KDD-2026-meituan-papers.html">KDD&#x27;26 美团学术论文精选及 KDD Cup&#x27;26 DataAgents 赛道冠军思路解读</a></li>
+      <li><a href="https://tech.meituan.com/2026/08/20/01-meituan-Query-3.0.html">美团搜索3.0：LLM 语义表征在排序模型的探索与应用</a></li>
+      </ul>
+      <h3>Anthropic 相关</h3>
+      <ul>
+      <li><a href="https://x.com/AnthropicAI/status/2088324824863236248">As part of our Responsible Scaling Policy, we publish regular Risk Reports...</a></li>
+      <li><a href="https://x.com/AnthropicAI/status/2088343978873966687">We’ve written an FAQ to answer some of the questions we&#x27;ve received about watermarking...</a></li>
+      </ul>
+      <h3>少数派 / AnyFeeder-Matrix</h3>
+      <ul>
+      <li><a href="https://sspai.com/post/108010">与世界建立联结——上海F1之行</a></li>
+      <li><a href="https://sspai.com/post/113315">从0.01到MelGeek｜磁轴之前，那些被时间掩埋的客制化往事</a></li>
+      <li><a href="https://sspai.com/post/113429">我家也跨上了信息高速路！在25年前的笔记本上体验有线网络冲浪</a></li>
+      <li><a href="https://sspai.com/post/113390">记了 2 万条笔记后，我把知识库交给了 AI | Obsidian插件推荐</a></li>
+      </ul>
+      <h3>Elon Musk / X 相关</h3>
+      <ul>
+      <li><a href="https://x.com/elonmusk/status/2088138697002668110">Grok 4.6 ranks #1 on CursorBench for real-world coding</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088137315109449870">Grok Imagine</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088149393731981516">How to use @bot</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088273489820061920">It is an honor to have such a great team join @SpaceX</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088124576685281766">Kekius Maximus</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088306926442430578">Orbital compute will be the only way to scale AI probably sometime in 2029...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088302714576896342">RT a16z: &quot;Cursor and SpaceXAI are a deep cultural fit...&quot;</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088137563362013451">RT ARC Prize: Grok 4.6 from @SpaceXAI on ARC-AGI (Verified)...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088138867022995697">RT Frank Hu: Thrilled to receive this feedback from Tesla...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088284368905134459">RT Michael Truell: Cursor has officially joined SpaceX...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088125882284073265">RT Robert Scoble: He built the computer vision system in my oven...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088143429968564386">RT Whole Mars Catalog: Tesla Self-Driving 14.3.7 is quite a beautiful build...</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088127459971522726">Try Grok 4.6 image &amp; video understanding, it’s a major upgrade!</a></li>
+      <li><a href="https://x.com/elonmusk/status/2088286607077990820">Yes</a></li>
+      </ul>
+      <h3>Hacker News 相关</h3>
+      <ul>
+      <li><a href="https://arxiv.org/abs/2608.12700">A Contract-Grade Verifier for LLM-Generated GPU Kernels</a></li>
+      <li><a href="https://www.byhand.ai/">AI by Hand</a></li>
+      <li><a href="https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0">AI Model Atlas – visualizing populations of ML models as interconnected 3D graph</a></li>
+      <li><a href="https://www.bbc.com/news/articles/ce97mm3vvemo">Count Binface receives over a quarter of votes in Clacton by-election</a></li>
+      <li><a href="https://cursor.com/blog/joining-spacex">Cursor is now a part of SpaceX</a></li>
+      <li><a href="https://api-docs.deepseek.com/news/news260813/">DeepSeek peak/off-peak pricing update</a></li>
+      <li><a href="https://www.byhand.ai/p/28-discrete-fourier-transform">Discrete Fourier Transform by Hand</a></li>
+      <li><a href="https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications">Don&#x27;t classify, hallucinate</a></li>
+      <li><a href="https://earth.nullschool.net/">Earth.nullschool.net</a></li>
+      <li><a href="https://lxe.github.io/everywebsite/">Every Fucking Website (2020)</a></li>
+      <li><a href="https://www.cnn.com/2025/11/10/style/jadeite-cabbage-taiwan-forbidden-city-curio-hnk-intl">Forbidden City Cabbage</a></li>
+      <li><a href="https://www.reuters.com/world/frances-top-court-rules-social-media-ban-curtails-freedom-expression-2026-08-14/">France&#x27;s top court blocks social media ban for under-15s</a></li>
+      <li><a href="https://z.ai/blog/glm-5.3">GLM-5.3: Frontier coding with emergent cyber capabilities</a></li>
+      <li><a href="https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/">Google is making private AI practical with homomorphic encryption</a></li>
+      <li><a href="https://www.chiply.dev/post-elisp-macros-are-beautiful">Gödel, Escher, Elisp: The Beauty of Macros</a></li>
+      <li><a href="https://hashagent.pages.dev/">HashAgent – Share an AI agent as a URL, runs locally via WebGPU</a></li>
+      <li><a href="https://heyjonny.dev/posts/rss-to-eink-newspaper/">I turned my RSS feeds into an e-ink newspaper to stop reading on my phone</a></li>
+      <li><a href="https://e360.yale.edu/digest/australia-home-batteries">In Australia, a home battery boom has helped cut wholesale power prices</a></li>
+      <li><a href="https://www.mixedbread.com/blog/toast-1">Introducing Toast 1</a></li>
+      <li><a href="https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions">Maximizing the value of your Claude Code sessions</a></li>
+      <li><a href="https://huggingface.co/Qwen/Qwen3.8-27B-FP8">Qwen 3.8 27B</a></li>
+      <li><a href="https://rayforcedb.com/">RayforceDB – a pure C analytics database with a Lisp-like syntax</a></li>
+      <li><a href="https://rustdesk.com/blog/unattended-remote-access-wayland/">RustDesk now supports true unattended remote access on Wayland</a></li>
+      <li><a href="https://kukuroo.cc/">Self-hosted web push Cloudflare Worker, works on iOS</a></li>
+      <li><a href="https://blog.plover.com/2026/08/02/">Seven books I keep close because I love them</a></li>
+      <li><a href="https://luacad.ad-si.com/">Show HN: LuaCAD – Parametric CAD Scripted in Lua</a></li>
+      <li><a href="https://goonhost.rocks/blog/implementing-ipv8-internet-draft">Show HN: We Implemented the IPv8 Internet-Draft in Linux, Libc, and BGP</a></li>
+      <li><a href="https://xn--gckvb8fzb.com/the-temu-fication-of-software-digital-goods-services/">The TEMU-Fication of Software, Digital Goods and Services</a></li>
+      <li><a href="https://uvbirds.com/">Ultraviolet Bird Photography</a></li>
+      <li><a href="https://mun-logadan.github.io/why-does-opus-5-feel-worse/">Why does Opus 5 feel worse to work with?</a></li>
+      </ul>
+      <h3>其他社交媒体 / 官方账号</h3>
+      <ul>
+      <li><a href="https://x.com/kepano/status/2088299683722711173">Obsidian + e-ink 🦓</a></li>
+      <li><a href="https://x.com/sama/status/2088101491802243121">/ultrafast</a></li>
+      </ul>
+      <h3>V2EX 相关帖子</h3>
+      <ul>
+      <li>[[DeepSeek] 浏览器里用 DeepSeek Harness 不太方便，包了一个客户端出来](https://www.v2ex.com/t/1234471#reply1)</li>
+      <li>[[Google Gemini] Gemini 抽风了，又好了](https://www.v2ex.com/t/1234517#reply0)</li>
+      <li>[[Google Gemini] 大冤种！刚全额续费 Gemini Pro，给我账号封了！](https://www.v2ex.com/t/1234459#reply26)</li>
+      <li>[[Google] 泪目，谷歌余额终于用出去了😭](https://www.v2ex.com/t/1234458#reply2)</li>
+      <li>[[Harness] DeepSeek Harness 刚开源，有人一起折腾插件体系吗？](https://www.v2ex.com/t/1234514#reply0)</li>
+      <li>[[Local LLM] local.ai 有么有好心人接力](https://www.v2ex.com/t/1234476#reply0)</li>
+      <li>[[Local LLM] local.ai 求接力](https://www.v2ex.com/t/1234492#reply0)</li>
+      <li>[[Local LLM] 我也来一个接力的](https://www.v2ex.com/t/1234489#reply0)</li>
+      <li>[[Local LLM] 本地部署小模型(100G 上下显存可用) 用于 Verilog 生成 or 自动化验证的可行性](https://www.v2ex.com/t/1234502#reply0)</li>
+      <li>[[Local LLM] 胸弟、local.ai 接力，前 10 位有打赏‼️](https://www.v2ex.com/t/1234469#reply0)</li>
+      <li>[[OpenAI] Codex 重置是什么力度的活动？可能没有想象的那么多](https://www.v2ex.com/t/1234515#reply0)</li>
+      <li>[[公司运营] 关于深圳个体工商户注册的问题](https://www.v2ex.com/t/1234512#reply2)</li>
+      <li>[[分享创造] 10 分钟打造自己的专属豆包和 deepseek，基于 Go+React 开发了一款 Agent 编排器 Ollmo](https://www.v2ex.com/t/1234483#reply1)</li>
+      <li>[[分享创造] devfun.org - 开发者（网络）工具集合](https://www.v2ex.com/t/1234504#reply0)</li>
+      <li>[[分享创造] edge 扩展商店审核好快啊！](https://www.v2ex.com/t/1234479#reply1)</li>
+      <li>[[分享创造] Linkit -跨平台桌面端 AI 书签管理器](https://www.v2ex.com/t/1234472#reply0)</li>
+      <li>[[分享创造] PIRT - 融合本地 Linux PRoot 环境的手机 Agent](https://www.v2ex.com/t/1234461#reply0)</li>
+      <li>[[分享创造] 做了个能查询 YouTube 频道是否获利的小程序“YPP 了吗”](https://www.v2ex.com/t/1234508#reply0)</li>
+      <li>[[分享创造] 分享个 dsh 插件 自动将为提交信息增加 co-author 对应模型](https://www.v2ex.com/t/1234485#reply1)</li>
+      <li>[[分享创造] 多人 2d 射击大乱斗游戏](https://www.v2ex.com/t/1234513#reply1)</li>
+      <li>[[分享创造] [开源] 多邻听：英语逐句精听与内容制作平台，招募共建伙伴](https://www.v2ex.com/t/1234519#reply1)</li>
+      <li>[[分享创造] 花了 2 个 5 小时额度， vibe 了一个 DeepSeek Harness GitHub 连接器插件](https://www.v2ex.com/t/1234516#reply0)</li>
+      <li>[[分享创造] 苦于 DeepSeek Harness 没有可视化文本搜索， Vibe 了一个插件](https://www.v2ex.com/t/1234484#reply0)</li>
+      <li>[[分享发现] DeepSeek Harness 插件越来越多，已经快挑花眼了，试试 👉 https://www.dshplugin.store/](https://www.v2ex.com/t/1234467#reply1)</li>
+      <li>[[分享发现] [开源]让 Codex 直接用 Kimi K3 的 Responses API 适配层](https://www.v2ex.com/t/1234505#reply3)</li>
+      <li>[[分享发现] 我给 deepseek-dsh 配置了一个视觉识别 mcp](https://www.v2ex.com/t/1234470#reply1)</li>
+      <li>[[分享发现] 抖音上刷到的一个关于男女对立的有意思的视频](https://www.v2ex.com/t/1234464#reply1)</li>
+      <li>[[分享发现] 整理了一份 DeepSeek Harness (dsh) 插件精选列表，目前收录 270 个插件](https://www.v2ex.com/t/1234499#reply0)</li>
+      <li>[[分享发现] 移动 iPhone 用户免费领公交卡+送 10 元余额](https://www.v2ex.com/t/1234507#reply0)</li>
+      <li>[[微信] 微信啥时候能支持多设备登录啊。](https://www.v2ex.com/t/1234460#reply5)</li>
+      <li>[[推广] Ai 模型最低至 4 折 阿里腾讯华为火山国内站 7 折 国际站 AWS/GCP 行业最低 可至 65 折](https://www.v2ex.com/t/1234503#reply0)</li>
+      <li>[[推广] lao1.me 论坛正式运营不限制任何内容年轻人的社区](https://www.v2ex.com/t/1234487#reply0)</li>
+      <li>[[推广] [memeapi 中转站宣传！]中转现已严肃支持 deepseek-v4、kimi-k3，超低倍率等你来蹬~](https://www.v2ex.com/t/1234482#reply4)</li>
+      <li>[[推广] 哦 ho 真中了懒猫微服的 ds 额度抽奖开心](https://www.v2ex.com/t/1234496#reply0)</li>
+      <li>[[推广] 开奖了！恭喜这些老板中奖！](https://www.v2ex.com/t/1234501#reply0)</li>
+      <li>[[推广] 🔥 性价比最高 Cursor 插件中转 价格便宜 服务稳定｜新人送 $1 + 24 小时不限量](https://www.v2ex.com/t/1234510#reply0)</li>
+      <li>[[推广] 想试用 GPT、Grok、国产、图像和视频模型？ RouterBase 只接官方渠道](https://www.v2ex.com/t/1234463#reply0)</li>
+      <li>[[推广] 新开发的小程序 “日程协调助手” 给大家用用 ，前 100 送免广告](https://www.v2ex.com/t/1234466#reply0)</li>
+      <li>[[推广] 有逛 X 的吗, 被 &quot;福不黑&quot; 恶心过吗?](https://www.v2ex.com/t/1234490#reply0)</li>
+      <li>[[推广] [满血中转] 美区满血 claude，前 10 位注册每人送 $15](https://www.v2ex.com/t/1234468#reply16)</li>
+      <li>[[推广] 电商/自媒体人专用 AI 生图 NEWAP 中转站](https://www.v2ex.com/t/1234480#reply0)</li>
+      <li>[[杭州] 最近开始听一些脑电波音乐，发现对专注很有用](https://www.v2ex.com/t/1234493#reply0)</li>
+      <li>[[生活] 一年中总有几天状态不对](https://www.v2ex.com/t/1234481#reply0)</li>
+      <li>[[生活] 闲鱼上第一次申请小法庭维权](https://www.v2ex.com/t/1234478#reply3)</li>
+      <li>[[程序员] 记录一下人生第一个订阅站](https://www.v2ex.com/t/1234509#reply1)</li>
+      <li>[[程序员] 请问在云端部署 AI Agent，是选择国内服务器还是国外服务器？](https://www.v2ex.com/t/1234486#reply2)</li>
+      <li>[[酷工作] base 上海 还有纯前端岗位❓有的有的](https://www.v2ex.com/t/1234465#reply0)</li>
+      <li>[[问与答] 几时钱也跟风买了一个 gemini pro，只能在网页用？](https://www.v2ex.com/t/1234494#reply3)</li>
+      <li>[[问与答] 刚买了个贝尔金充电器，准备做 Mac 充电器的平替，然后测了下纹波，结果震惊了](https://www.v2ex.com/t/1234506#reply8)</li>
+      <li>[[问与答] 甲骨文春川是不是无法降配了](https://www.v2ex.com/t/1234473#reply5)</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>

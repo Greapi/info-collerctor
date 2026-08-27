@@ -17,6 +17,8 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+
+import requests
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from html.parser import HTMLParser
@@ -163,18 +165,17 @@ def fetch_url(url: str, timeout: int, retries: int = 3) -> bytes:
     last_exc: Exception | None = None
     for attempt in range(1, retries + 1):
         try:
-            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(request, timeout=timeout) as response:
-                return response.read()
-        except (urllib.error.URLError, TimeoutError, http.client.IncompleteRead,
-                http.client.HTTPException, ConnectionError) as exc:
+            resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=timeout)
+            resp.raise_for_status()
+            return resp.content
+        except requests.exceptions.RequestException as exc:
             last_exc = exc
             if attempt < retries:
                 wait = 2 ** attempt
                 print(f"  fetch retry {attempt}/{retries} in {wait}s: {exc}", file=sys.stderr)
                 time.sleep(wait)
+                continue
     raise last_exc  # type: ignore[misc]
-
 
 def parse_feed(feed: Feed, payload: bytes) -> list[Entry]:
     root = ET.fromstring(payload)

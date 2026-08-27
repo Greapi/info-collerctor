@@ -3,16 +3,16 @@ services:
     image: ${RSSHUB_IMAGE:-diygod/rsshub:latest}
     container_name: ${RSSHUB_CONTAINER_NAME:-info-collector-rsshub}
     restart: unless-stopped
-    ports:
-      - "${RSSHUB_HOST:-127.0.0.1}:${RSSHUB_PORT:-1200}:1200"
+    network_mode: host
     env_file:
       - .env.rsshub
     environment:
       NODE_ENV: production
       CACHE_TYPE: redis
-      REDIS_URL: redis://redis:6379/
-      PUPPETEER_WS_ENDPOINT: ws://browserless:3000
-      PROXY_URI: http://192.168.1.3:7890
+      REDIS_URL: redis://127.0.0.1:6379/
+      PUPPETEER_WS_ENDPOINT: ws://127.0.0.1:3000
+      PROXY_URI: http://127.0.0.1:7897
+      LISTEN_INADDR_ANY: "false"
     depends_on:
       redis:
         condition: service_healthy
@@ -28,6 +28,8 @@ services:
     image: ${BROWSERLESS_IMAGE:-browserless/chrome:latest}
     container_name: ${BROWSERLESS_CONTAINER_NAME:-info-collector-browserless}
     restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
     ulimits:
       core:
         hard: 0
@@ -42,6 +44,8 @@ services:
     image: ${REDIS_IMAGE:-redis:7-alpine}
     container_name: ${REDIS_CONTAINER_NAME:-info-collector-redis}
     restart: unless-stopped
+    ports:
+      - "127.0.0.1:6379:6379"
     volumes:
       - rsshub-redis-data:/data
     healthcheck:

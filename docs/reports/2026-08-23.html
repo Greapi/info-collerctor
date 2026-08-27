@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-23 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-08-23 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日补遗两条昨日信息：开源阅读器 KOReader 迎来原生仓颉输入法，改善墨水屏输入延迟问题；谷歌 Gemini 3.7 Flash 模型首周增长创纪录，ARC-AGI 评测表现突出且成本较低。</p>
+      <h2>重点事件</h2>
+      <h3>KOReader 引入原生仓颉输入法，降低墨水屏输入延迟</h3>
+      <p>开发者针对 Kindle 等墨水屏设备输入延迟痛点，为 KOReader 开发了原生仓颉输入法。仓颉作为形码输入法，重码率极低，用户几乎无需选字，可与墨水屏低刷新率特性更好匹配，实现“可预期的盲打特性”。目前代码已提交 <a href="https://github.com/koreader/koreader/pull/15196">Pull Request #15196</a>，并提供手动安装指南，需下载 5 个核心文件并覆盖原生文件，作者呼吁社区前往 PR 点赞或反馈以加速官方合并。详情见：<a href="https://sspai.com/post/113712">告别墨水屏的输入延迟：我为 KOReader 开发了原生仓颉输入法</a>。</p>
+      <h3>Gemini 3.7 Flash 成为谷歌增长最快模型</h3>
+      <p>Sundar Pichai 转发表示，Gemini 3.7 Flash 在发布首周打破此前 Gemini 模型增长纪录，成为谷歌增长最快的模型，目前已运行于 Search 和 Gemini App。ARC Prize 的验证数据显示其 ARC-AGI-2 得分为 84.6%（每任务成本 0.25 美元），ARC-AGI-1 得分为 95.5%（每任务成本 0.12 美元），相对于其他前沿模型具有低成本、高分数的特点。详见：<a href="https://x.com/GeminiApp/status/2091176452561735682">RT Sundar Pichai 推文</a>。</p>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li>针对墨水屏等特殊硬件场景的开源优化持续出现，开发者通过深度整合原生模块（而非外置插件）来解决输入体验问题，并依赖社区反馈推动官方合并，例如 <a href="https://github.com/koreader/koreader/pull/15196">KOReader 仓颉输入法 PR #15196</a>。</li>
+      <li>AI 模型评测中，成本与性能的平衡成为重要竞争维度，Gemini 3.7 Flash 以较低成本取得高 ARC-AGI 分数，可能吸引对推理成本和基准表现敏感的开发者与团队，参考 <a href="https://x.com/GeminiApp/status/2091176452561735682">ARC Prize 数据</a>。</li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li>KOReader 仓颉输入法 <a href="https://github.com/koreader/koreader/pull/15196">Pull Request #15196</a> 的代码审查与合并进展，以及手动安装后的用户反馈。</li>
+      <li>Gemini 3.7 Flash 在 Search 和 Gemini App 中的实际使用表现，以及后续是否出现更多第三方基准测试结果。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li><a href="https://sspai.com/post/113712">告别墨水屏的输入延迟：我为 KOReader 开发了原生仓颉输入法</a> - anyfeeder-matrix</li>
+      <li><a href="https://x.com/GeminiApp/status/2091176452561735682">RT Sundar Pichai: Gemini 3.7 Flash smashed previous Gemini growth records in its first week, making it our fastest growing model yet. Great to see the...</a> - google-gemini</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>

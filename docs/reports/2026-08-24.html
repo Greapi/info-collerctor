@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-24 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-08-24 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日共有 3 条更新，分别来自少数派、Google Gemini 官方账号与 OpenAI 新闻频道：</p>
+      <ul>
+      <li>少数派发布长文解析 X「为你推荐」算法机制，从候选召回、行为预测、加权计分到可见性检查，说明约 3000 条候选推文如何被筛选为屏幕上的几十条。</li>
+      <li>Google Gemini 宣布正式加入阿森纳足球俱乐部与 Google Pixel 的合作，合作进入第三年。</li>
+      <li>OpenAI 宣布 GPT-5.6 已在 Kiro 中可用，主打面向开发者的规划、构建、审查与测试软件场景，强调更好的价格性能比。</li>
+      </ul>
+      <h2>重点事件</h2>
+      <h3>1. X「为你推荐」算法机制解析</h3>
+      <p>来源：<a href="https://sspai.com/post/113626">算法不只是在猜你喜欢：窥探 X「为你推荐」背后的秘密</a>（anyfeeder-matrix）</p>
+      <p>该文基于 X 在 2026 年 8 月更新的开源<a href="https://github.com/xai-org/x-algorithm">算法仓库</a>，将推荐流程拆为五个主要环节：候选召回、行为预测、加权计分、排名调整和可见性检查。核心观点包括：</p>
+      <ul>
+      <li>每次打开或刷新页面，系统都会重新运行整套推荐流程，而不是使用预先排好的无限列表。</li>
+      <li>候选推文来自三条并行来源：已关注账号的 Thunder 近期推文（单次返回上限 1200 条）、机器学习检索未关注账号内容的 Phoenix（1000 条）、基于互动社区的 SimClusters（800 条）。总和约为 3000 条，但筛选前还会移除重复、过期、已看过或违反屏蔽规则的内容。</li>
+      <li>排序模型 Phoenix 读取用户近期行为序列，预测用户接下来会点赞、回复、转帖、打开推文、观看视频、关注作者、复制链接，以及选择「不感兴趣」、隐藏、屏蔽或举报等行为的概率。</li>
+      <li>计分逻辑可简化为：推文分数等于各项行为预测值乘以对应权重。文中给出代表性默认权重，如打开推文 +0.4、点赞 +0.5、转帖 +1、分享 +2、关注作者 +4、回复 +5、引用转帖 +5、通过私信分享 +5、复制链接 +20、回复互相关注用户 +20、屏蔽账号 -31.2、不感兴趣 -43.2、隐藏账号 -58.8、举报 -234。</li>
+      <li>原始分数之后还有排名调整：同一作者后续推文按 0.5 起逐步衰减，最低到 0.25；未关注账号推文乘以 0.75；低曝光作者可获冷启动提升。</li>
+      <li>排序完成后还要接受独立的可见性过滤：决定内容正常显示、置于警告之后或直接移除；部分安全规则未公开，以降低被绕过和操纵的风险。</li>
+      </ul>
+      <p>文章还附有一个<a href="https://x-for-you.shenn.xyz/">交互式网页</a>，供读者手动调整权重、选择互动信号，观察推文分数和排序变化。</p>
+      <h3>2. Google Gemini 正式加入阿森纳 × Google Pixel 合作</h3>
+      <p>来源：<a href="https://x.com/GeminiApp/status/2091905728932123054">RT Arsenal: Good looks at how far we’ve come. Great pushes it further. Three years of partnership. One exciting new addition. ✨ Google Gemini is off...</a>（google-gemini）</p>
+      <p>Google Gemini 官方账号转发了阿森纳相关内容，宣布 Google Gemini 正式加入阿森纳足球俱乐部与 Google Pixel 的合作关系。帖子提到双方已合作三年，并称此次为“令人兴奋的新增成员”，同时提及 @GoogleUK 与 @GeminiApp。原文未披露合作的具体形式、权益或后续内容。</p>
+      <h3>3. OpenAI 在 Kiro 中推出 GPT-5.6，强调开发者性价比</h3>
+      <p>来源：<a href="https://openai.com/index/gpt-5-6-in-kiro">Advancing price-performance for developers with GPT‑5.6 in Kiro</a>（openai-news）</p>
+      <p>OpenAI 宣布 GPT-5.6 现已在 Kiro 中可用，能够帮助开发者规划、构建、审查和测试软件，并称其具备更优的价格性能比。原文未给出具体定价、基准测试数据或功能对比细节。</p>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>推荐算法透明度有所提升，但解释边界仍然清晰。</strong> 少数派文章基于公开代码指出，X 的「为你推荐」并非热度榜，也不是单纯的兴趣分类；排序依据的是对用户下一步行为的预测概率，再由行为权重、作者多样性、未关注折扣和可见性过滤共同决定。文章同时强调，开源仓库只是代码快照，默认值可能变化，部分安全规则未公开。因此可判断：平台在算法解释层面提供了更多可验证细节，但完整运行逻辑仍不具备完全可复现性。</li>
+      </ul>
+      <ul>
+      <li><strong>用户操作在推荐系统中的作用更加具体化。</strong> 根据公开参数，点赞、复制链接、回复互相关注用户等行为权重明显不同；停留、负反馈、关注关系等也会改变后续排序。尤其是关注列表会直接影响候选来源，并影响未关注账号折扣。材料表明，用户“整理关注列表”比“在偶然出现的推文下被动点赞”对长期推荐流改变更稳定。</li>
+      </ul>
+      <ul>
+      <li><strong>AI 产品继续多线推进：体育营销与开发者工具效率成为本周同期动作。</strong> Google Gemini 选择加入阿森纳与 Google Pixel 的体育合作，OpenAI 则在开发者工具 Kiro 中投放 GPT-5.6 并强调性价比。两条消息均无具体数据，但可以观察到 AI 厂商在品牌露出和开发者生产力场景同时保持更新节奏。</li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li>X 开源算法仓库是否继续更新默认权重、候选上限或可见性规则；交互式网页是否会随代码变更同步调整。</li>
+      <li>Google Gemini 与阿森纳合作的具体形式、覆盖地区、球迷或用户可感知的权益，目前材料尚未说明。</li>
+      <li>GPT-5.6 在 Kiro 中的实际价格、性能提升幅度、支持范围和与上一代模型的具体差异，公开材料未披露。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <ul>
+      <li><a href="https://sspai.com/post/113626">算法不只是在猜你喜欢：窥探 X「为你推荐」背后的秘密</a> - anyfeeder-matrix</li>
+      <li><a href="https://x.com/GeminiApp/status/2091905728932123054">RT Arsenal: Good looks at how far we’ve come. Great pushes it further. Three years of partnership. One exciting new addition. ✨ Google Gemini is off...</a> - google-gemini</li>
+      <li><a href="https://openai.com/index/gpt-5-6-in-kiro">Advancing price-performance for developers with GPT‑5.6 in Kiro</a> - openai-news</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
