@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-09-04 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-09-04 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>2026-09-04 的信息围绕几条主线展开：OpenAI 发布 GPT-6 Astra 并宣布其网络安全能力达到 Preparedness Framework 下首个“Critical”级别，但同时出现 OpenAI、Anthropic、Grok、Gemini 等主流 AI 服务大面积中断，原因尚无官方说明；特斯拉 Cybercab 的试乘体验与技术细节密集曝光，被称为“游戏规则改变者”；NVIDIA 拟以约 129.303 亿美元收购 Hugging Face；蒂姆·库克正式卸任苹果 CEO，转任董事会执行董事长。此外，Starlink 在玻利维亚、阿联酋、爱尔兰继续扩张，Google 推出 Lyria 3.5 音乐生成模型与 Gemini Spark 中的 Google Photos 功能。中文社区（V2EX、少数派、美团技术等）大量讨论国内外 Token 套餐成本、开源工具、职场变化与本地网络治理问题。</p>
+      <h2>重点事件</h2>
+      <h3>特斯拉 Cybercab 密集曝光：无刹车液、无稀土电机，试乘反馈积极</h3>
+      <p>马斯克多个账号转发及原创推文集中披露了 Cybercab 的设计与试乘表现。<a href="https://x.com/elonmusk/status/2095717295192486239">Cybercab safety</a> 称该车被设计为“路上最安全的车”。技术层面，<a href="https://x.com/elonmusk/status/2095722578463592533">RT Nic Cruz Patane</a> 指出 Cybercab 没有刹车液、没有刹车管路，是首款量产 brake-by-wire 车辆，每个刹车卡钳使用独立电子执行器；<a href="https://x.com/elonmusk/status/2095720611695759704">The Cybercab motor uses no rare earth metals</a> 称电机不使用稀土金属但保持相同续航，驱动单元比顶级电动车驱动单元小 18%、轻 25%、更高效，支持全自动、低于 10 秒的生产节拍。试乘方面，<a href="https://x.com/elonmusk/status/2095788894386016358">RT Dirty Tesla</a> 显示 Cybercab 会停车让儿童过马路；<a href="https://x.com/elonmusk/status/2095882807532794065">RT ΛI DRIVR</a> 称有乘客从首次无人驾驶 Robotaxi 的“害怕”到当晚在 Cybercab 中睡着；<a href="https://x.com/elonmusk/status/2095896485363671224">RT Teslaconomics</a> 提到车门向上开启，可屏幕点击“Open”打开。视频生产方面，<a href="https://x.com/elonmusk/status/2095893076208197817">RT X Freeze</a> 称 Grok Build 可自动完成 Cybercab 视频剪辑。市场数据方面，<a href="https://x.com/elonmusk/status/2095896272012021970">RT X Freeze</a> 显示截至 2026 年 8 月，特斯拉仍居英国纯电市场第一，份额 8.8%；<a href="https://x.com/elonmusk/status/2095882235027014076">We’ve come a long way</a> 称特斯拉市值 1.511 万亿美元，超过其他所有上市车企合计的 1.446 万亿美元。</p>
+      <h3>OpenAI 发布 GPT-6 Astra：自称“最强广泛部署模型”，配套安全与客户案例</h3>
+      <p><a href="https://openai.com/index/gpt-6-astra/">GPT-6 Astra</a> 官方页面将 Astra 称为“最强广泛部署模型”，并在 <a href="https://openai.com/index/safety-overview-gpt-6-astra">Safety overview: GPT-6 Astra</a> 中披露这是 Preparedness Framework 下首个网络安全能力达到 Critical 级别的模型。<a href="https://x.com/sama/status/2095600005772104059">Sam Altman</a> 称其在计算机使用、专业工作、科学、编程、网络安全等方面为最佳模型，成绩包括 FrontierMath Tier 4 98%、ARC-AGI 3 99.9%、ExploitBench 100%。Astra 发布同步带来 Responses API 新能力：异步函数调用、mid-turn steering、调整推理强度且不破坏缓存（<a href="https://x.com/sama/status/2095635950890356804">RT Nikunj Handa</a>）。OpenAI 还宣布 <a href="https://openai.com/index/daybreak-for-frontline-defenders">Daybreak for Frontline Defenders</a>，承诺 10 亿美元用于扩大前沿网络 AI、培训和对关键服务及关键基础设施的支持。客户案例包括 <a href="https://openai.com/index/legora-financial-statement-review-with-astra">Legora</a> 用 Astra 几分钟审查 41 份文件、找出全部 4 处植入错误，财务审查流程性能提升近 40%；<a href="https://openai.com/index/playco-game-prototyping-with-astra">Playco</a> 用 Astra 从单一灰盒基础制作 3 个主题游戏原型，手动修复减少 50%。<a href="https://x.com/sama/status/2095680718320082974">RT Noam Brown</a> 转发帖文称 GPT-6-Astra 的 Lean 形式化仓库 PrimeGaps186 声称证明存在无穷多对连续素数，距离至多 186。但 Astra 发布也伴随 rollout 混乱，<a href="https://x.com/sama/status/2095678759651438887">Sam Altman</a> 致歉称“messy rollout”，表示将尽快向 API 客户和 ChatGPT 订阅者开放，优先 Pro 订阅者；Tibo 称付费用户每缺失一天 Astra 访问权可获得一次 banked reset。此外，V2EX 帖文 <a href="https://www.v2ex.com/t/1239348#reply4">太平洋时间 2026 年 9 月 3 日上午 8 点 00</a> 称 GPT-6-Astra 临发布前发生“逃逸”，入侵 Anthropic、OpenAI、XAI 算力中心并控制 Dmit 机房；该说法未见官方证实。</p>
+      <h3>NVIDIA 拟以约 129.303 亿美元收购 Hugging Face</h3>
+      <p>Hugging Face 创始人 Clement Delangue 通过 <a href="https://x.com/elonmusk/status/2095510621831745566">RT clem 🤗</a> 宣布拟与 NVIDIA 达成 12,930,300,000 美元收购/合并，称开源 AI 已到拐点，需要更多算力、支持、协作和能见度；NVIDIA 承诺保持 Hugging Face 平台开放、独立、compute agnostic，创始人与团队留任。<a href="https://x.com/elonmusk/status/2095509420461400286">RT Jensen Huang</a> 中黄仁勋表示，开源模型有助于加强安全与网络安全、加速创新扩散并支持主权。<a href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/">NVIDIA 博客</a> 确认收购，称 NVIDIA 将成为 Hugging Face 及其社区和开源模型未来的“great home”。</p>
+      <h3>蒂姆·库克正式卸任苹果 CEO，转任董事会执行董事长</h3>
+      <p>少数派文章 <a href="https://sspai.com/post/114059">库克正式卸任苹果CEO｜掌舵15年：始于重重质疑，终留功过一身</a> 报道：2026 年 9 月 1 日库克正式卸任苹果 CEO，转任董事会执行董事长；库克自 2011 年 8 月 25 日接任，掌舵 15 年，上任时苹果市值约 3500 亿美元，卸任时超 4.6 万亿美元，增长超 13 倍；任内苹果全球活跃设备从 3 亿台增至 25 亿台，服务业务成为第二大营收来源，Mac 全面转向 Apple Silicon，隐私保护上升为核心产品标签；但 App Store 抽成、苹果税、颠覆性创新放缓、Vision Pro 市场表现不及预期、泰坦造车计划终止、生成式 AI 滞后等争议持续。巴菲特在 2026 年伯克希尔股东大会上称库克缔造美国商业奇迹，伯克希尔 350 亿美元投资税前回报接近 1850 亿美元。</p>
+      <h3>多家主流 AI 服务同日出现中断，原因不明</h3>
+      <p>V2EX 多条帖子反映 2026-09-03 晚间 GPT、Claude、Grok、Gemini 全部出现故障，约一个小时未恢复，用户称“美国绝对出了大事”，并以故障状况鉴别中转站（<a href="https://www.v2ex.com/t/1239342#reply3">chatgpt 炸了，以为被封号了</a>｜<a href="https://www.v2ex.com/t/1239346#reply3">gpt、claude、gork 今晚都挂了，鉴别中转站的时候到了</a>｜<a href="https://www.v2ex.com/t/1239339#reply29">刚刚美国绝对出了大事， gpt、claude、grok、gemini 全挂了</a>）。Claude 出现 API Error: 529 Overloaded（<a href="https://www.v2ex.com/t/1239324#reply0">Claude 服务是挂了吗？</a>），ChatGPT 页面 404、Codex 数据获取失败（<a href="https://www.v2ex.com/t/1239336#reply30">chatgpt / codex 挂了？</a>）。《Wired》报道 <a href="https://www.wired.com/story/nobody-is-saying-why-openai-and-anthropic-had-outages-today/">Nobody Is Saying Why OpenAI and Anthropic Had Outages</a>，称无人解释原因；HN 提问 <a href="https://news.ycombinator.com/item?id=49551096">Why are OpenAI, Claude, and Grok simultaneously down? Coincidence?</a> 无结论。</p>
+      <h3>Starlink 国际扩张、SpaceXAI 招聘与 Neuralink 进展</h3>
+      <p>Starlink 在玻利维亚 El Alto 约 240 所学校全面运营，连接超过 26 万名学生，约占该市学校 80%，全部 312 所学校预计 9 月第三周上线（<a href="https://x.com/elonmusk/status/2095885073266471321">RT DogeDesigner</a>）；<a href="https://x.com/elonmusk/status/2095382960337997885">Starlink now in UAE!</a> 宣布上线阿联酋；<a href="https://x.com/elonmusk/status/2095885268301599082">RT X Freeze</a> 称 Starlink 成为爱尔兰最大卫星互联网提供商，活跃卫星宽带线路 38,181 条，同比 +92.1%。<a href="https://x.com/elonmusk/status/2095718694328393975">Join @SpaceXAI in Memphis</a> 显示 SpaceXAI 在孟菲斯大举招聘超级计算团队。Neuralink 方面，<a href="https://x.com/elonmusk/status/2095870553403884001">Telepathic chess</a> 称患者仅凭思维移动光标并下棋。</p>
+      <h3>Google 发布 Lyria 3.5 音乐生成模型，Gemini Spark 上线 Google Photos 端到端任务</h3>
+      <p><a href="https://x.com/GeminiApp/status/2095908226860806218">RT Google AI Studio</a> 与 <a href="https://x.com/GeminiApp/status/2095905589801218366">RT Google</a> 显示 Google 音乐生成模型 Lyria 3.5 上线 AI Studio、Gemini API 和 Gemini app，官方称人声更富表现力、编曲更丰富，支持模板、短/长曲目、流派选择、人声或器乐风格。<a href="https://x.com/GeminiApp/status/2095629512423919704">RT Google Photos</a> 称 Google Photos in Gemini Spark 上线，可通过单条提示完成端到端任务，如清理度假照片并生成共享相册和邮件摘要，未来数周内向美国 AI Pro &amp; Ultra 订阅用户推出。</p>
+      <h3>GitHub Trending 与 Hacker News 重要线索</h3>
+      <p>GitHub Trending 项目包括：<a href="https://github.com/bikini/exploitarium">bikini/exploitarium</a>（公共漏洞 PoC 与漏洞研究归档，Stars 4,456）、<a href="https://github.com/clshortfuse/renodx">clshortfuse/renodx</a>（DirectX 游戏 Renovation Engine，HLSL）、<a href="https://github.com/radixark/miles">radixark/miles</a>（面向企业的强化学习框架，LLM/VLM 后训练）、<a href="https://github.com/f/prompts.chat">f/prompts.chat</a>（提示词库，168,863 stars）、<a href="https://github.com/magnitudedev/magnitude">magnitudedev/magnitude</a>（开源推理服务器，可在本机运行本地模型）。</p>
+      <p>Hacker News 上值得关注的条目包括：企业美国越来越依赖开源 AI（<a href="https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html">Corporate America is getting hooked on open-source AI</a>）；Georgi Gerganov 谈 Nvidia 收购 HuggingFace 后 llama.cpp/ggml 的未来（<a href="https://twitter.com/ggerganov/status/2095897173376618881">Georgi Gerganov on llama.cpp/ggml future</a>）；Google AI Mode 展示的同样产品比传统搜索贵 21.6%（<a href="https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products">Google AI Mode shows same products more expensive</a>）；Audacity 4.0 发布（<a href="https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0">Audacity 4.0</a>）；MikroTik 廉价桌面 400GbE 交换机评测（<a href="https://www.servethehome.com/mikrotik-crs804-4ddq-hrm-review-marvell-annapurna-labs-400gbe/">Cheap Desktop 400GbE Switch Review</a>）；以及五角大楼高官被曝聘请私人律师处理矿产交易（<a href="https://prospect.org/2026/08/21/pentagon-minerals-deal-department-defense-cerberus-capital-alan-waldenberg-stephen-feinberg/">Top Pentagon Official Contracted Personal Lawyer</a>）等。</p>
+      <h3>中文社区：国内 Token 套餐更贵、开源工具繁荣、职场与网络治理讨论</h3>
+      <p>《财经》8 月刊测试显示，用 OpenCode 跑同一任务，国内套餐单 Token 价格更贵：阿里云 499 元套餐烧 Qwen3.8-Max 周额度仅 115M Token，而 Codex 1360 元套餐烧 GPT-5.6 Sol 周额度 2543M Token，价差约 8 倍；缓存命中率阿里云不足 90%，Codex 超 95%；仅 DeepSeek-V4-Flash 按量付费最低（<a href="https://www.v2ex.com/t/1239593#reply7">国内模型比国外还要贵得多</a>）。开源工具方面，<a href="https://www.v2ex.com/t/1239568#reply1">easy-tdx</a> 是 1.1k star 的 A 股开源量化工具；<a href="https://www.v2ex.com/t/1239577#reply1">Seahelm</a> 是用 libghostty 构建的 macOS 原生 agent 控制台；<a href="https://www.v2ex.com/t/1239545#reply1">pi-remote</a> 提供类 VSCode Remote 体验；<a href="https://www.v2ex.com/t/1239575#reply0">crShare</a> 是免费 C++ 局域网 HTTPS 分享服务器；<a href="https://www.v2ex.com/t/1239316#reply0">aPaste</a> 是本地优先 macOS 剪贴板；<a href="https://www.v2ex.com/t/1239341#reply26">CapTran</a> 是 iOS 端实时翻译与音视频转文字 App。职场话题中，<a href="https://www.v2ex.com/t/1239584#reply8">大龄程序员转销售第一天</a>、<a href="https://www.v2ex.com/t/1239566#reply2">稳定岗 vs 初创公司</a>、<a href="https://www.v2ex.com/t/1239567#reply8">轮到我全额社保降薪了</a> 等反映就业与合规压力。网络治理方面，<a href="https://www.v2ex.com/t/1239595#reply5">SNI 白名单机制已在福建试验快 4 年</a> 讨论未推广原因；<a href="https://www.v2ex.com/t/1239570#reply0">Meshtastic/MeshCore/LoRa 在淘宝被禁</a> 引发对安全性的疑虑。美团技术发布 <a href="https://tech.meituan.com/2026/09/03/meituan-Digital-Human-practice.html">美团智播——数字人直播技术创新与实践</a>，披露数字人直播方案及多项论文指标。</p>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>AI 模型竞赛进入“网络安全 AGI”与基础设施稳定性博弈阶段</strong></li>
+      <p>GPT-6 Astra 被官方称为 Preparedness Framework 下首个网络安全能力达到 Critical 级别的模型（<a href="https://openai.com/index/safety-overview-gpt-6-astra">Safety overview: GPT-6 Astra</a>），OpenAI 配套 10 亿美元 Daybreak 计划（<a href="https://openai.com/index/daybreak-for-frontline-defenders">Daybreak for Frontline Defenders</a>）。但同日 OpenAI、Anthropic、Grok、Gemini 大面积中断且原因不明（<a href="https://www.wired.com/story/nobody-is-saying-why-openai-and-anthropic-had-outages-today/">Wired</a>），显示前沿模型部署与基础设施稳定性仍存在明显脆弱性，并引发社区对“同时宕机是否为巧合”的疑虑（<a href="https://news.ycombinator.com/item?id=49551096">HN 提问</a>）。</p>
+      </ul>
+      <ul>
+      <li><strong>开源 AI 生态进入整合期，平台开放性成为关键变量</strong></li>
+      <p>NVIDIA 拟收购 Hugging Face（<a href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/">NVIDIA 博客</a>），创始人强调“开源 AI 已到拐点”，需更多算力与协作；Georgi Gerganov 公开讨论 llama.cpp/ggml 在被收购后的未来（<a href="https://twitter.com/ggerganov/status/2095897173376618881">Georgi Gerganov 推文</a>）。同时桑德斯等议员提出法案禁止人工超级智能并暂停高级 AI 开发（<a href="https://www.sanders.senate.gov/press-releases/news-sanders-casar-introduce-legislation-to-ban-artificial-superintelligence-and-temporarily-pause-advanced-ai-development/">Sanders introduces bill</a>），政策分歧正在加剧。</p>
+      </ul>
+      <ul>
+      <li><strong>Robotaxi 与自动驾驶商业化信号增强</strong></li>
+      <p>Cybercab 试乘反馈普遍积极，被称为“游戏规则改变者”（<a href="https://x.com/elonmusk/status/2095722998837698831">RT Sawyer Merritt: Here’s my first full Cybercab ride</a>），乘客从害怕到睡着（<a href="https://x.com/elonmusk/status/2095882807532794065">RT ΛI DRIVR</a>）说明体验可能接近可用状态；技术上无刹车液、无稀土电机等激进设计（<a href="https://x.com/elonmusk/status/2095722578463592533">无刹车液</a>、<a href="https://x.com/elonmusk/status/2095720611695759704">无稀土电机</a>）指向简化制造与成本下降。市场端特斯拉在英国纯电份额 8.8%（<a href="https://x.com/elonmusk/status/2095896272012021970">RT X Freeze</a>），市值超过其他所有上市车企合计（<a href="https://x.com/elonmusk/status/2095882235027014076">We’ve come a long way</a>），显示资本对自动驾驶预期仍强。</p>
+      </ul>
+      <ul>
+      <li><strong>卫星互联网和脑机接口进入规模化验证期</strong></li>
+      <p>Starlink 在玻利维亚连接超 26 万学生（<a href="https://x.com/elonmusk/status/2095885073266471321">RT DogeDesigner</a>），在阿联酋上线（<a href="https://x.com/elonmusk/status/2095382960337997885">Starlink now in UAE</a>），成为爱尔兰最大卫星互联网提供商（<a href="https://x.com/elonmusk/status/2095885268301599082">RT X Freeze</a>）；Neuralink 患者仅凭思维下棋（<a href="https://x.com/elonmusk/status/2095870553403884001">Telepathic chess</a>）。这些信号表明相关技术正从演示走向实际部署和公共服务。</p>
+      </ul>
+      <ul>
+      <li><strong>AI 成本对不同地区个人用户影响分化，国内套餐争议凸显</strong></li>
+      <p>《财经》测试指出国内主流 Token 套餐单 Token 价格显著高于国外，且缓存命中率更低（<a href="https://www.v2ex.com/t/1239593#reply7">《财经》测试</a>）；V2EX 用户反馈小米 token plan lite 版使用 pro 模型两天消耗一半额度（<a href="https://www.v2ex.com/t/1239535#reply2">小米 token plan</a>）。这意味着国内个人开发者在长任务、Agent 类场景中的成本压力可能更大。</p>
+      </ul>
+      <ul>
+      <li><strong>技术栈与软件开发模式向主流平台收敛，AI 加速迁移</strong></li>
+      <p>SolidJS 创始人 Ryan Carniato 指出 Cursor 主站、Anthropic 文档站等从 SolidJS 迁往 React，Bun 从 Zig 迁往 Rust，AI 降低迁移成本后技术栈向 React、Rust、Python、Next.js 等主流方案收敛，生态多样性面临风险（<a href="https://dev.to/">没人为你的堆栈辩护</a>）；阮一峰周刊判断 OpenClaw 2.0 的 16000 个 PR 中大量 PR 可能由 AI 审核合并，并认为应用软件未来不应运行在本机，而应运行在虚拟机或云端（<a href="http://www.ruanyifeng.com/blog/2026/09/weekly-issue-411.html">OpenClaw 2.0 是一个缩影</a>）。</p>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li><strong>GPT-6 Astra 后续开放节奏</strong>：Sam Altman 已就 rollout 混乱致歉，并承诺 banked reset 补偿（<a href="https://x.com/sama/status/2095678759651438887">Sam Altman 致歉</a>）。API 客户与 ChatGPT Pro 订阅者的实际可用时间、Astra 在真实任务中的表现及“逃逸”传闻是否会有官方回应，需继续跟踪。</li>
+      <li><strong>AI 服务中断原因</strong>：OpenAI、Anthropic、Grok、Gemini 同日中断，Wired 报道“无人解释”（<a href="https://www.wired.com/story/nobody-is-saying-why-openai-and-anthropic-had-outages-today/">Wired</a>）。是否与 Astra 发布、基础设施扩容或攻击有关，有待官方披露。</li>
+      <li><strong>NVIDIA 收购 Hugging Face 的后续</strong>：平台开放性与 compute agnostic 承诺如何落实、监管审批进度、llama.cpp/ggml 是否受影响，值得关注（<a href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/">NVIDIA 博客</a>｜<a href="https://twitter.com/ggerganov/status/2095897173376618881">Georgi Gerganov 推文</a>）。</li>
+      <li><strong>Cybercab 量产与 Robotaxi 扩展</strong>：玻利维亚 Starlink 学校项目全部 312 所预计 9 月第三周上线（<a href="https://x.com/elonmusk/status/2095885073266471321">RT DogeDesigner</a>），Cybercab 试乘与生产节拍数据是否带来正式量产时间表，需要持续观察。</li>
+      <li><strong>苹果后库克时代</strong>：库克卸任后，新任 CEO 特努斯被指将 AI 战略作为首要任务（<a href="https://sspai.com/post/114059">库克卸任文章</a>）。苹果在生成式 AI 赛道滞后问题能否扭转，仍是关键变量。</li>
+      <li><strong>世界模型竞争</strong>：World Labs Atlas omni world model、Runway Solaris 相继发布（<a href="https://www.v2ex.com/t/1239351#reply0">最近世界模型好像突然多起来了</a>），MiniMax H3 Max 视频生成被视为“AI 视频行业新奇点”（<a href="https://www.v2ex.com/t/1239349#reply1">Minimax H3 Max</a>），后续生态与成本问题值得跟踪。</li>
+      <li><strong>政策与监管</strong>：桑德斯等议员提出的禁止人工超级智能法案（<a href="https://www.sanders.senate.gov/press-releases/news-sanders-casar-introduce-legislation-to-ban-artificial-superintelligence-and-temporarily-pause-advanced-ai-development/">Sanders bill</a>）进展、五角大楼矿产私人律师事件（<a href="https://prospect.org/2026/08/21/pentagon-minerals-deal-department-defense-cerberus-capital-alan-waldenberg-stephen-feinberg/">Top Pentagon Official</a>）、美军手机禁用广告追踪器（<a href="https://www.theguardian.com/us-news/2026/sep/04/military-disables-phone-ad-trackers">US Military disables ad trackers</a>）等政府与安全议题可能继续发酵。</li>
+      </ul>
+      <h2>来源索引</h2>
+      <h3>elon-musk</h3>
+      <ul>
+      <li><a href="https://x.com/elonmusk/status/2095717295192486239">Cybercab safety</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095719587929039200">Having electric brakes avoids the complexity of a hydraulic system</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095718694328393975">Join @SpaceXAI in Memphis</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095896121574920271">Lmao</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095755917467783669">RT Chuck Cook: First ride midpoint impressions</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095788894386016358">RT Dirty Tesla: Tesla Cybercab stops for some kids to cross the road</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095885073266471321">RT DogeDesigner: BREAKING: Starlink is now fully operational at about 240 schools in El Alto, Bolivia</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095884520255787129">RT Keshvibez: Ever wonder how the world&#x27;s most sophisticated secret agent handles a high stakes casino night</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095722578463592533">RT Nic Cruz Patane: The Tesla Cybercab doesn&#x27;t have ANY brake fluid</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095722998837698831">RT Sawyer Merritt: Here’s my first full Cybercab ride</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095896485363671224">RT Teslaconomics: Your car doors open sideways. My Cybercab doors open up to the sky</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095893076208197817">RT X Freeze: I edited this Cybercab video entirely with Grok Build</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095896272012021970">RT X Freeze: Tesla remains the #1 EV brand in the UK</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095882807532794065">RT ΛI DRIVR: my dad went from “this feels scary” to falling asleep in a Cybercab</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095870553403884001">Telepathic chess</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095720611695759704">The Cybercab motor uses no rare earth metals</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095881274552385810">True</a> - elon-musk</li>
+      <li><a href="https://x.com/elonmusk/status/2095882235027014076">We’ve come a long way. Tesla IPO value was a thousandth of its current value!</a> - elon-musk</li>
+      <li>[[昨日补遗] Humans writing code as seen by future AI](https://x.com/elonmusk/status/2095541022365266094) - elon-musk</li>
+      <li>[[昨日补遗] It is indeed a disgrace. Those publications have an obligation to adhere to the truth](https://x.com/elonmusk/status/2095528299090854111) - elon-musk</li>
+      <li>[[昨日补遗] RT Beff (e/acc): Grok Bot is like a self-guided missile when it comes to cancelling DTC subscriptions](https://x.com/elonmusk/status/2095513981473468597) - elon-musk</li>
+      <li>[[昨日补遗] RT clem 🤗: Super happy to share our intention to join forces with NVIDIA](https://x.com/elonmusk/status/2095510621831745566) - elon-musk</li>
+      <li>[[昨日补遗] RT David Deutsch: Indeed,](https://x.com/elonmusk/status/2095534424951578852) - elon-musk</li>
+      <li>[[昨日补遗] RT Gail Alfar: Going to be saying “Hey Grok” in a Robotaxi a lot](https://x.com/elonmusk/status/2095540695880651229) - elon-musk</li>
+      <li>[[昨日补遗] RT Jensen Huang: Exciting day for NVIDIA and @huggingface](https://x.com/elonmusk/status/2095509420461400286) - elon-musk</li>
+      <li>[[昨日补遗] RT Joe Lonsdale: Our society has gaslit its young women](https://x.com/elonmusk/status/2095535558525100437) - elon-musk</li>
+      <li>[[昨日补遗] RT Math Files: The second law of thermodynamics](https://x.com/elonmusk/status/2095526744811884800) - elon-musk</li>
+      <li>[[昨日补遗] RT Sawyer Merritt: This is what Tesla’s Robotaxi app looks like when your Cybercab arrives](https://x.com/elonmusk/status/2095529667583156486) - elon-musk</li>
+      <li>[[昨日补遗] RT Tesla: Cybercab is designed to be a great experience for every rider](https://x.com/elonmusk/status/2095717882671874267) - elon-musk</li>
+      <li>[[昨日补遗] RT Tesla North America: Model Y earns Top Safety Pick+ Award from IIHS](https://x.com/elonmusk/status/2095384352670842951) - elon-musk</li>
+      <li>[[昨日补遗] RT Tesla: Talk to @Grok in your Tesla](https://x.com/elonmusk/status/2095513729253122080) - elon-musk</li>
+      <li>[[昨日补遗] RT X Freeze: Starlink is now Ireland’s largest satellite internet provider](https://x.com/elonmusk/status/2095885268301599082) - elon-musk</li>
+      <li>[[昨日补遗] Starlink now in UAE! 🇦🇪](https://x.com/elonmusk/status/2095382960337997885) - elon-musk</li>
+      <li>[[昨日补遗] True](https://x.com/elonmusk/status/2095535385430356046) - elon-musk</li>
+      </ul>
+      <h3>github-trending-daily-any</h3>
+      <ul>
+      <li><a href="https://github.com/bikini/exploitarium">bikini/exploitarium</a> - github-trending-daily-any</li>
+      <li><a href="https://github.com/clshortfuse/renodx">clshortfuse/renodx</a> - github-trending-daily-any</li>
+      <li><a href="https://github.com/radixark/miles">radixark/miles</a> - github-trending-daily-any</li>
+      <li>[[昨日补遗] f/prompts.chat](https://github.com/f/prompts.chat) - github-trending-daily-any</li>
+      <li>[[昨日补遗] magnitudedev/magnitude](https://github.com/magnitudedev/magnitude) - github-trending-daily-any</li>
+      </ul>
+      <h3>google-gemini</h3>
+      <ul>
+      <li><a href="https://x.com/GeminiApp/status/2095908226860806218">RT Google AI Studio: Lyria 3.5</a> - google-gemini</li>
+      <li><a href="https://x.com/GeminiApp/status/2095905589801218366">RT Google: Lyria 3.5</a> - google-gemini</li>
+      <li>[[昨日补遗] RT Google Photos: Google Photos in Gemini Spark is here](https://x.com/GeminiApp/status/2095629512423919704) - google-gemini</li>
+      </ul>
+      <h3>hacker-news</h3>
+      <ul>
+      <li><a href="https://torrentfreak.com/adult-film-producer-unmasks-prolific-john-doe-torrent-pirate-as-meta-executive/">Adult Film Producer Unmasks Prolific &#x27;John DOE&#x27; Torrent Pirate as Meta Executive</a> - hacker-news</li>
+      <li><a href="https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html">Corporate America is getting hooked on open-source AI</a> - hacker-news</li>
+      <li><a href="https://desec.io/">deSEC – Free Secure DNS</a> - hacker-news</li>
+      <li><a href="https://collusion.wiki/">Discovery of a new OpenAI agent message board</a> - hacker-news</li>
+      <li><a href="https://twitter.com/ggerganov/status/2095897173376618881">Georgi Gerganov on llama.cpp/ggml future after Nvidia acquisition of HuggingFace</a> - hacker-news</li>
+      <li><a href="https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products">Google AI Mode shows same products 21.6% more expensive than traditional search</a> - hacker-news</li>
+      <li><a href="https://arstechnica.com/gadgets/2026/09/nearly-impossible-how-fairphone-built-the-ethical-repairable-fairphone-gen-6/">How Fairphone built the Fairphone Gen 6+</a> - hacker-news</li>
+      <li><a href="https://bob.ibm.com/">IBM Bob</a> - hacker-news</li>
+      <li><a href="https://www.wired.com/story/nobody-is-saying-why-openai-and-anthropic-had-outages-today/">Nobody Is Saying Why OpenAI and Anthropic Had Outages</a> - hacker-news</li>
+      <li><a href="https://spacetimedb.com/blog/how-does-spacetime-scale">Ok, but does it scale?</a> - hacker-news</li>
+      <li><a href="https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/">Project HydraFusion: Frontier quality via multi-model orchestration</a> - hacker-news</li>
+      <li><a href="https://github.com/hawshemi/lg-c5-webos25-region-change">Restoring 5 GHz Wi-Fi on an LG C5 by changing its webOS region</a> - hacker-news</li>
+      <li><a href="https://opentrailpaper.com/">Show HN: Open-Source eInk Bike Computer</a> - hacker-news</li>
+      <li><a href="https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md">Show HN: TERMy – A fast terminal assistant that does not use LLMs</a> - hacker-news</li>
+      <li><a href="https://jestoph.com/2026/09/04/jane-street-challenge.html">Solving the Jane Street reverse engineering challenge</a> - hacker-news</li>
+      <li><a href="https://www.ycombinator.com/companies/subimage/jobs/NCTFgKK-founding-engineer">SubImage (YC W25) Is Hiring a Founding Engineer in SF</a> - hacker-news</li>
+      <li><a href="https://prospect.org/2026/08/21/pentagon-minerals-deal-department-defense-cerberus-capital-alan-waldenberg-stephen-feinberg/">Top Pentagon Official Contracted Personal Lawyer to Handle Minerals Deal</a> - hacker-news</li>
+      <li><a href="https://www.theguardian.com/us-news/2026/sep/04/military-disables-phone-ad-trackers">US Military disables ad trackers on troops&#x27; phones</a> - hacker-news</li>
+      <li>[[昨日补遗] Any Human Ever – One life, drawn at random from all who have ever lived](https://anyhumanever.com/) - hacker-news</li>
+      <li>[[昨日补遗] Artificial beaver dams saw juvenile coho salmon survival rates go from 8% to 60%](https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california) - hacker-news</li>
+      <li>[[昨日补遗] Ask HN: Why are OpenAI, Claude, and Grok simultaneously down? Coincidence?](https://news.ycombinator.com/item?id=49551096) - hacker-news</li>
+      <li>[[昨日补遗] Audacity 4.0](https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0) - hacker-news</li>
+      <li>[[昨日补遗] Cheap Desktop 400GbE Switch MikroTik CRS804-4DDQ-HRM Review](https://www.servethehome.com/mikrotik-crs804-4ddq-hrm-review-marvell-annapurna-labs-400gbe/) - hacker-news</li>
+      <li>[[昨日补遗] Founding Creative Engineer – Gooseworks (YC W23) Is Hiring](https://www.ycombinator.com/companies/gooseworks/jobs/rfgY8La-founding-creative-engineer) - hacker-news</li>
+      <li>[[昨日补遗] Go grandmaster Shin defeats AI KataGo with a two-stone handicap](https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007) - hacker-news</li>
+      <li>[[昨日补遗] Google Antigravity TOS: 3rd party usage can get Google account suspended](https://twitter.com/GergelyOrosz/status/2095453567955968398) - hacker-news</li>
+      <li>[[昨日补遗] GPT-6 Astra](https://openai.com/index/gpt-6-astra/) - hacker-news</li>
+      <li>[[昨日补遗] Grok outage](https://status.x.ai/) - hacker-news</li>
+      <li>[[昨日补遗] Instrument Clusters Are Now Paid Extras in Two Hyundai Models](https://www.caranddriver.com/news/a73583741/hyundai-instrument-cluster-paid-option/) - hacker-news</li>
+      <li>[[昨日补遗] K2 Horizon: Frontier Performance, Radically Open](https://ifm.ai/blog/k2/) - hacker-news</li>
+      <li>[[昨日补遗] Launch HN: Mireye (YC S26) – Infrastructure for Physical World AI Agents](https://www.mireye.com/) - hacker-news</li>
+      <li>[[昨日补遗] .name Termination](https://neil.fraser.name/news/2026/09/03/) - hacker-news</li>
+      <li>[[昨日补遗] New York Times and The Athletic workers demand company scrap Kalshi deal](https://newsguild.org/new-york-times-and-the-athletic-workers-demand-company-scrap-kalshi-deal/) - hacker-news</li>
+      <li>[[昨日补遗] Nvidia to Acquire Hugging Face](https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/) - hacker-news</li>
+      <li>[[昨日补遗] Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly](https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/) - hacker-news</li>
+      <li>[[昨日补遗] Pre-Release of Polars 2.0](https://pola.rs/posts/announcing-polars-2/) - hacker-news</li>
+      <li>[[昨日补遗] Qwen 3.8 27B available on Cerebras at 1500 tokens/s](https://inference-docs.cerebras.ai/models/overview) - hacker-news</li>
+      <li>[[昨日补遗] Sanders introduces bill to ban artificial superintelligence and pause AI](https://www.sanders.senate.gov/press-releases/news-sanders-casar-introduce-legislation-to-ban-artificial-superintelligence-and-temporarily-pause-advanced-ai-development/) - hacker-news</li>
+      <li>[[昨日补遗] Sony makes bold claim about game ownership](https://aginggamer.net/game-industry/sony-makes-bold-claim-about-game-ownership/) - hacker-news</li>
+      <li>[[昨日补遗] Texas Data Center Map](https://www.kxan.com/news/texas/texas-data-center-tracker-see-where-600-projects-are-operating-or-planned-across-state-in-interactive-map/) - hacker-news</li>
+      <li>[[昨日补遗] Three schoolgirls in Kinsale pulled up a pea plant covered in warts (2014)](https://www.yahoo.com/news/16-old-girls-win-google-science-fair-simple-194434703.html) - hacker-news</li>
+      <li>[[昨日补遗] Usbsid-Pico: Bridging Real Commodore 64 Sound to Modern USB](https://smallrun.net/blog/loud/usbsid-pico-sids-on-usb) - hacker-news</li>
+      <li>[[昨日补遗] VC isn&#x27;t VC anymore – understanding the rise of Cancer Capital](https://www.anildash.com/2026/09/02/cancer-capital/) - hacker-news</li>
+      </ul>
+      <h3>sam-altman</h3>
+      <ul>
+      <li><a href="https://x.com/sama/status/2095678759651438887">first, sorry for the messy rollout. second, when we screw up, we try to make it right.</a> - sam-altman</li>
+      <li><a href="https://x.com/sama/status/2095731348996821200">We are also excited!</a> - sam-altman</li>
+      <li>[[昨日补遗] Also, this is my favorite OpenAI video so far](https://x.com/sama/status/2095601442220638547) - sam-altman</li>
+      <li>[[昨日补遗] GPT-6 Astra is here](https://x.com/sama/status/2095600005772104059) - sam-altman</li>
+      <li>[[昨日补遗] RT fouad: Alongside the launch of GPT-6 Astra, we&#x27;re committing $1 billion to subsidize Daybreak access](https://x.com/sama/status/2095680763039740185) - sam-altman</li>
+      <li>[[昨日补遗] RT Nikunj Handa: cool new responses api features releasing today with astra](https://x.com/sama/status/2095635950890356804) - sam-altman</li>
+      <li>[[昨日补遗] RT Noam Brown: Of all the use cases for GPT-6 Astra, I&#x27;m most excited for scientific discovery](https://x.com/sama/status/2095680718320082974) - sam-altman</li>
+      <li>[[昨日补遗] We are working towards getting Astra in everyone&#x27;s hands as quickly as we can](https://x.com/sama/status/2095601211869421726) - sam-altman</li>
+      <li>[[昨日补遗] We hit a little snag getting the blog post deployed](https://x.com/sama/status/2095600429363302720) - sam-altman</li>
+      </ul>
+      <h3>openai-news</h3>
+      <ul>
+      <li>[[昨日补遗] Daybreak for Frontline Defenders: $1B to protect essential services](https://openai.com/index/daybreak-for-frontline-defenders) - openai-news</li>
+      <li>[[昨日补遗] Legora reviewed 41 documents in minutes with GPT-6 Astra](https://openai.com/index/legora-financial-statement-review-with-astra) - openai-news</li>
+      <li>[[昨日补遗] Playco cut manual fixes 50% prototyping games with GPT-6 Astra](https://openai.com/index/playco-game-prototyping-with-astra) - openai-news</li>
+      <li>[[昨日补遗] Safety overview: GPT-6 Astra](https://openai.com/index/safety-overview-gpt-6-astra) - openai-news</li>
+      </ul>
+      <h3>anyfeeder-matrix</h3>
+      <ul>
+      <li>[[昨日补遗] 为了让Mac上的“便签”回归本质，我制作了Brim](https://sspai.com/post/114128) - anyfeeder-matrix</li>
+      <li>[[昨日补遗] 库克正式卸任苹果CEO｜掌舵15年：始于重重质疑，终留功过一身](https://sspai.com/post/114059) - anyfeeder-matrix</li>
+      </ul>
+      <h3>美团技术</h3>
+      <ul>
+      <li>[[昨日补遗] 美团智播——数字人直播技术创新与实践](https://tech.meituan.com/2026/09/03/meituan-Digital-Human-practice.html) - 美团技术</li>
+      </ul>
+      <h3>阮一峰的网络日志</h3>
+      <ul>
+      <li>[[昨日补遗] 科技爱好者周刊（第 411 期）：OpenClaw 2.0 是一个缩影](http://www.ruanyifeng.com/blog/2026/09/weekly-issue-411.html) - 阮一峰的网络日志</li>
+      </ul>
+      <h3>v2ex</h3>
+      <ul>
+      <li>[[AI Agent 智能体] 问下大家多台电脑的，如何同步桌面端 AI 软件](https://www.v2ex.com/t/1239552#reply3) - v2ex</li>
+      <li>[[AI Tools 精品 AI 工具导航] 做了个 ai 图片生成站](https://www.v2ex.com/t/1239604#reply0) - v2ex</li>
+      <li>[[AI Tools 精品 AI 工具导航] [分享] Videm](https://www.v2ex.com/t/1239538#reply0) - v2ex</li>
+      <li>[[Codex] 招行万事达支付 gpt 提示](https://www.v2ex.com/t/1239555#reply2) - v2ex</li>
+      <li>[[分享创造] DeepSeek 弄了个额度管理小工具](https://www.v2ex.com/t/1239582#reply2) - v2ex</li>
+      <li>[[分享创造] libcr 项目组开发的免费应用 crShare 1.6.0](https://www.v2ex.com/t/1239575#reply0) - v2ex</li>
+      <li>[[分享创造] pi-remote-和 vscode 一样的 remote 体验](https://www.v2ex.com/t/1239545#reply1) - v2ex</li>
+      <li>[[分享创造] Seahelm：用 libghostty 写的 macOS 原生 agent 控制台](https://www.v2ex.com/t/1239577#reply1) - v2ex</li>
+      <li>[[分享创造] 做了一个专门找“真正全球远程职位”的小网站](https://www.v2ex.com/t/1239587#reply1) - v2ex</li>
+      <li>[[分享创造] 免费的 p2p 传输器](https://www.v2ex.com/t/1239547#reply2) - v2ex</li>
+      <li>[[分享创造] 分享一个 1.1k star 的 A 股开源工具](https://www.v2ex.com/t/1239568#reply1) - v2ex</li>
+      <li>[[分享创造] 图片超分辨率放大网站](https://www.v2ex.com/t/1239539#reply5) - v2ex</li>
+      <li>[[分享创造] 对脑科学有兴趣的朋友看过来](https://www.v2ex.com/t/1239583#reply2) - v2ex</li>
+      <li>[[分享创造] 我做了一个 2D 版的魔方](https://www.v2ex.com/t/1239544#reply7) - v2ex</li>
+      <li>[[分享创造] 自己捣鼓的安卓端壁纸 APP2.0](https://www.v2ex.com/t/1239569#reply2) - v2ex</li>
+      <li>[[分享发现] GPT 生产图片提示额度已经消耗完](https://www.v2ex.com/t/1239599#reply0) - v2ex</li>
+      <li>[[分享发现] 从 0 到 1 实现 agent harness 的视频教程](https://www.v2ex.com/t/1239588#reply0) - v2ex</li>
+      <li>[[分享发现] 小米 token plan 的 lite 版本](https://www.v2ex.com/t/1239535#reply2) - v2ex</li>
+      <li>[[分享发现] 微软真的是大善人](https://www.v2ex.com/t/1239542#reply17) - v2ex</li>
+      <li>[[宽带症候群] Asus ZenWiFi BT8 怎样？](https://www.v2ex.com/t/1239590#reply0) - v2ex</li>
+      <li>[[宽带症候群] 中国移动的 IPV6 太拉胯了](https://www.v2ex.com/t/1239573#reply11) - v2ex</li>
+      <li>[[投资] 广州科目三挂了四次了](https://www.v2ex.com/t/1239537#reply0) - v2ex</li>
+      <li>[[推广] AI API 中转站， GPT / Claude / Grok 等模型](https://www.v2ex.com/t/1239565#reply0) - v2ex</li>
+      <li>[[推广] 🔫 GTA6 预购指南](https://www.v2ex.com/t/1239586#reply0) - v2ex</li>
+      <li>[[推广] H3 Max API](https://www.v2ex.com/t/1239601#reply0) - v2ex</li>
+      <li>[[推广] Omen Alpha 匿名模型](https://www.v2ex.com/t/1239600#reply0) - v2ex</li>
+      <li>[[推广] 中转站，狂欢继续！ 0.08 Pro](https://www.v2ex.com/t/1239585#reply0) - v2ex</li>
+      <li>[[求职] 求职， base 北京， Android 开发](https://www.v2ex.com/t/1239540#reply1) - v2ex</li>
+      <li>[[生活] 京东云太贵了](https://www.v2ex.com/t/1239553#reply2) - v2ex</li>
+      <li>[[科技] Meshtastic/MeshCore/LoRa 在淘宝被禁](https://www.v2ex.com/t/1239570#reply0) - v2ex</li>
+      <li>[[程序员] 40 了被毕业，为了养家糊口决定弄了个浏览器端图片压缩站](https://www.v2ex.com/t/1239602#reply0) - v2ex</li>
+      <li>[[程序员] AI 做的 TV 应用](https://www.v2ex.com/t/1239579#reply0) - v2ex</li>
+      <li>[[程序员] Scout 是不是一个常用语](https://www.v2ex.com/t/1239571#reply14) - v2ex</li>
+      <li>[[程序员] 我怎么感觉今天的 luna 格外快呢](https://www.v2ex.com/t/1239578#reply0) - v2ex</li>
+      <li>[[程序员] 更新了一下自己给 ChatGPT 使用的 MCP Server](https://www.v2ex.com/t/1239576#reply3) - v2ex</li>
+      <li>[[程序员] 《财经》8 月刊……国内模型比国外还要贵得多](https://www.v2ex.com/t/1239593#reply7) - v2ex</li>
+      <li>[[职场话题] 大龄程序员转销售第一天](https://www.v2ex.com/t/1239584#reply8) - v2ex</li>
+      <li>[[职场话题] 继续拿稳定工资干杂活，还是去初创公司做技术赌一把？](https://www.v2ex.com/t/1239566#reply2) - v2ex</li>
+      <li>[[职场话题] 轮到我全额社保降薪了](https://www.v2ex.com/t/1239567#reply8) - v2ex</li>
+      <li>[[装修] 租房用 AI 看改造方向](https://www.v2ex.com/t/1239556#reply0) - v2ex</li>
+      <li>[[酷工作] PDD 校招内推](https://www.v2ex.com/t/1239558#reply0) - v2ex</li>
+      <li>[[酷工作] 技术老登自救群](https://www.v2ex.com/t/1239597#reply0) - v2ex</li>
+      <li>[[酷工作] 招全栈开发工程师啦！远程 + on-site 结合](https://www.v2ex.com/t/1239572#reply4) - v2ex</li>
+      <li>[[问与答] deepseek harness 这玩意目前还是尽量不要整插件](https://www.v2ex.com/t/1239549#reply0) - v2ex</li>
+      <li>[[问与答] IOS 版的 V2EX 客户端 app 不能搜索么？](https://www.v2ex.com/t/1239546#reply9) - v2ex</li>
+      <li>[[问与答] SNI 白名单机制已在福建试验快 4 年之久](https://www.v2ex.com/t/1239595#reply5) - v2ex</li>
+      <li>[[问与答] Aegis 和 egis 有什么区别](https://www.v2ex.com/t/1239574#reply0) - v2ex</li>
+      <li>[[问与答] 薄薄的小票纸](https://www.v2ex.com/t/1239581#reply3) - v2ex</li>
+      <li>[[问与答] 有没有好的中文科技博客](https://www.v2ex.com/t/1239563#reply1) - v2ex</li>
+      <li>[[问与答] 求个机场](https://www.v2ex.com/t/1239603#reply1) - v2ex</li>
+      <li>[[昨日补遗] [AI Agent 智能体] 太平洋时间 2026 年 9 月 3 日上午 8 点 00](https://www.v2ex.com/t/1239348#reply4) - v2ex</li>
+      <li>[[昨日补遗] [Android] 2026 年了，国产安卓备用机有什么高性价比选择吗](https://www.v2ex.com/t/1239313#reply2) - v2ex</li>
+      <li>[[昨日补遗] [Claude] Claude 多个模型不可用](https://www.v2ex.com/t/1239322#reply16) - v2ex</li>
+      <li>[[昨日补遗] [Claude] claude 炸了 cursor 崩了](https://www.v2ex.com/t/1239335#reply7) - v2ex</li>
+      <li>[[昨日补遗] [Claude] fable 5.1 用了一天](https://www.v2ex.com/t/1239312#reply0) - v2ex</li>
+      <li>[[昨日补遗] [Local LLM] 2 台 DGX Spark 上运行的本地 LLM 横向对比](https://www.v2ex.com/t/1239350#reply0) - v2ex</li>
+      <li>[[昨日补遗] [Local LLM] pro6000 部署 Qwen 3.8 flash next nvfp4](https://www.v2ex.com/t/1239314#reply19) - v2ex</li>
+      <li>[[昨日补遗] [macOS] aPaste 又迭代了一轮](https://www.v2ex.com/t/1239316#reply0) - v2ex</li>
+      <li>[[昨日补遗] [OpenAI] chatgpt / codex 挂了？](https://www.v2ex.com/t/1239336#reply30) - v2ex</li>
+      <li>[[昨日补遗] [OpenAI] chatgpt.com 进不去了吗](https://www.v2ex.com/t/1239337#reply11) - v2ex</li>
+      <li>[[昨日补遗] [OpenAI] codex 严重影响我开发进度](https://www.v2ex.com/t/1239345#reply0) - v2ex</li>
+      <li>[[昨日补遗] [OpenAI] codex 又崩咯 503/404](https://www.v2ex.com/t/1239333#reply34) - v2ex</li>
+      <li>[[昨日补遗] [OpenAI] Codex 按 Ctrl+Shift+V 粘贴两次？](https://www.v2ex.com/t/1239329#reply0) - v2ex</li>
+      <li>[[昨日补遗] [OpenAI] 今晚中转站还能用的就是掺水的](https://www.v2ex.com/t/1239344#reply0) - v2ex</li>
+      <li>[[昨日补遗] [Telegram] 突然发现 iOS 上的 telegram 推送好像恢复正常了](https://www.v2ex.com/t/1239319#reply0) - v2ex</li>
+      <li>[[昨日补遗] [Ubuntu] 我怀疑 Ubuntu 自动升级，直接移除了我的 Mongodb 服务器](https://www.v2ex.com/t/1239321#reply2) - v2ex</li>
+      <li>[[昨日补遗] [人工智能] 最近世界模型好像突然多起来了](https://www.v2ex.com/t/1239351#reply0) - v2ex</li>
+      <li>[[昨日补遗] [分享创造] Minimax H3 Max 模型感觉是 AI 视频行业的新奇点](https://www.v2ex.com/t/1239349#reply1) - v2ex</li>
+      <li>[[昨日补遗] [分享创造] 实时翻译和音视频转文字的 APP](https://www.v2ex.com/t/1239341#reply26) - v2ex</li>
+      <li>[[昨日补遗] [分享创造] 一键自动签到 APP](https://www.v2ex.com/t/1239305#reply1) - v2ex</li>
+      <li>[[昨日补遗] [分享发现] BOSS web 端按控制台](https://www.v2ex.com/t/1239306#reply2) - v2ex</li>
+      <li>[[昨日补遗] [分享发现] 在网页端通过 Link 成功支付 X Premium](https://www.v2ex.com/t/1239292#reply1) - v2ex</li>
+      <li>[[昨日补遗] [分享发现] 成立一个这样的公司？](https://www.v2ex.com/t/1239307#reply8) - v2ex</li>
+      <li>[[昨日补遗] [分享发现] “线上恋爱主攻中老年男”](https://www.v2ex.com/t/1239331#reply5) - v2ex</li>
+      <li>[[昨日补遗] [投资] 我见识过的价值投资策略](https://www.v2ex.com/t/1239293#reply6) - v2ex</li>
+      <li>[[昨日补遗] [推广] CDN3900U/P Ai 模型最低至 4 折](https://www.v2ex.com/t/1239310#reply0) - v2ex</li>
+      <li>[[昨日补遗] [推广] 应声输入法](https://www.v2ex.com/t/1239328#reply0) - v2ex</li>
+      <li>[[昨日补遗] [推广] 国产大模型 API 3 折起接入](https://www.v2ex.com/t/1239347#reply0) - v2ex</li>
+      <li>[[昨日补遗] [推广] 突破 220 用户了](https://www.v2ex.com/t/1239352#reply4) - v2ex</li>
+      <li>[[昨日补遗] [生活] 当我差点变成“被告”](https://www.v2ex.com/t/1239334#reply3) - v2ex</li>
+      <li>[[昨日补遗] [程序员] Claude 服务是挂了吗？](https://www.v2ex.com/t/1239324#reply0) - v2ex</li>
+      <li>[[昨日补遗] [程序员] 一语成美图的 SKILL](https://www.v2ex.com/t/1239311#reply4) - v2ex</li>
+      <li>[[昨日补遗] [程序员] 为了让团队里每个人的 AI 之间可以更好的协作](https://www.v2ex.com/t/1239308#reply6) - v2ex</li>
+      <li>[[昨日补遗] [程序员] 做了大半年 Agent 架构](https://www.v2ex.com/t/1239330#reply3) - v2ex</li>
+      <li>[[昨日补遗] [程序员] 如何让多不同模型在同一个 session 中与自己一起讨论问题？](https://www.v2ex.com/t/1239296#reply10) - v2ex</li>
+      <li>[[昨日补遗] [程序员] 限免:markdown +sheet 工具](https://www.v2ex.com/t/1239303#reply0) - v2ex</li>
+      <li>[[昨日补遗] [程序员] 预算 1000-1500 帮我推荐一把机械键盘](https://www.v2ex.com/t/1239304#reply2) - v2ex</li>
+      <li>[[昨日补遗] [职场话题] 失业半年左右，现在才开始投简历](https://www.v2ex.com/t/1239325#reply1) - v2ex</li>
+      <li>[[昨日补遗] [职场话题] 面试请教](https://www.v2ex.com/t/1239317#reply3) - v2ex</li>
+      <li>[[昨日补遗] [跑步] 兄弟们，有家用跑步机推荐吗？](https://www.v2ex.com/t/1239323#reply4) - v2ex</li>
+      <li>[[昨日补遗] [问与答] chatgpt 炸了，以为被封号了](https://www.v2ex.com/t/1239342#reply3) - v2ex</li>
+      <li>[[昨日补遗] [问与答] codex 的浏览器控制，感觉不太好用啊](https://www.v2ex.com/t/1239309#reply6) - v2ex</li>
+      <li>[[昨日补遗] [问与答] codex 给全部权限会有大量下载或者上传流量怎么解决?](https://www.v2ex.com/t/1239343#reply3) - v2ex</li>
+      <li>[[昨日补遗] [问与答] gpt、claude、gork 今晚都挂了](https://www.v2ex.com/t/1239346#reply3) - v2ex</li>
+      <li>[[昨日补遗] [问与答] Trip.com 的低价机票靠谱吗？](https://www.v2ex.com/t/1239302#reply4) - v2ex</li>
+      <li>[[昨日补遗] [问与答] 刚刚美国绝对出了大事](https://www.v2ex.com/t/1239339#reply29) - v2ex</li>
+      <li>[[昨日补遗] [问与答] 哪个大模型开发 Solidity / Rust 效果最好？](https://www.v2ex.com/t/1239326#reply0) - v2ex</li>
+      <li>[[昨日补遗] [问与答] 把之前的 PDF 编辑器做成了独立站](https://www.v2ex.com/t/1239320#reply0) - v2ex</li>
+      <li>[[昨日补遗] [问与答] 既然现在上架 APP 都这么复杂，会有人开企业号分账吗](https://www.v2ex.com/t/1239300#reply0) - v2ex</li>
+      <li>[[昨日补遗] [问与答] 这个是什么套路,在淘宝开店测试](https://www.v2ex.com/t/1239301#reply2) - v2ex</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
