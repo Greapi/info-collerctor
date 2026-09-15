@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-09-15 RSS 日报 - RSS 日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --accent: #0f766e;
+      --accent-soft: #e6fffb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .bar, main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    main { padding: 34px 0 56px; }
+    h1, h2, h3 { line-height: 1.3; letter-spacing: 0; }
+    h1 { margin: 0 0 20px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+    p, li { color: #263244; }
+    code { background: var(--accent-soft); padding: 2px 5px; border-radius: 4px; }
+    .meta { color: var(--muted); margin-top: -8px; }
+    .reports { display: grid; gap: 14px; margin-top: 24px; }
+    .report-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .report-card:hover { border-color: var(--accent); }
+    .report-card strong { display: block; font-size: 18px; }
+    .report-card span { display: block; margin-top: 6px; color: var(--muted); }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 42px);
+    }
+    article h1:first-child { margin-top: 0; }
+    @media (max-width: 640px) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="../index.html">RSS 日报</a>
+      <span>GitHub Pages</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>2026-09-15 RSS 日报</h1>
+      <h2>今日概览</h2>
+      <p>今日 RSS 信息集中在几条主线：马斯克在 All-In Summit 提出前沿 AI 互测框架；Sam Altman 就 AI 安全治理表态并预告本周重大发布；苹果 iOS 27/macOS 27 正式发布后，社区出现大量关于视觉、兼容性与代理故障的反馈；AI Agent 工具与开源生态持续升温，同时“AI 代理毁掉互联网”等担忧浮现；AI 安全事件、监控隐私争议、特斯拉 FSD 保险进展、Google Gemini 更新及大量开发招聘信息共同构成当日图景。</p>
+      <h2>重点事件</h2>
+      <h3>1. 马斯克与 All-In Summit：AI 互测框架与 SpaceX 讨论</h3>
+      <ul>
+      <li>马斯克在 All-In Summit 与 SpaceX COO Gwynne Shotwell 对谈，涉及 AI 风险与同行评审、Starship、Terafab 作为台湾保险、SpaceX/Tesla 合并可能性、SpaceX 管理等话题。来源：<a href="https://x.com/elonmusk/status/2099739227499942339">All-In</a></li>
+      <li>马斯克称 OpenAI 与 Anthropic 是领先 AI 公司，能力接近，任一方都难以单独放缓；他认为 Anthropic 整体比 OpenAI 更注重安全。他建议建立互测机制：由 Anthropic 测试 OpenAI、OpenAI 测试 Anthropic、SpaceXAI 测试两者，并纳入中国领先 AI 公司，在发布前互相尝试突破对方模型。测试内容包括检查模型是否会制造生物武器或核弹。来源：<a href="https://x.com/elonmusk/status/2099737081756930206">This is the way</a>、<a href="https://x.com/elonmusk/status/2099743177087291406">RT X Freeze</a></li>
+      <li>马斯克称“物理是苛刻的裁判，无法愚弄物理。物理是法律，其他都是建议”，火箭由物理支配。来源：<a href="https://x.com/elonmusk/status/2099739543360438774">Physics is a harsh judge</a></li>
+      <li>Gwynne Shotwell 称马斯克住在孟菲斯的 Airstream 拖车里、睡工厂地板，正帮助建设并启用 Colossus II。来源：<a href="https://x.com/elonmusk/status/2099724139791548928">RT DogeDesigner</a></li>
+      </ul>
+      <h3>2. Sam Altman：欢迎联邦框架，并预告重大发布</h3>
+      <ul>
+      <li>Sam Altman 发推称“本周有重大 ship（发布）”，随后 DevDay 会有一批发布；评论者 Tibo 认为本周发布级别可比 DevDay 2025。来源：<a href="https://x.com/sama/status/2099872600977760451">big 🚢 this week and then for devday 🚢🚢🚢🚢🚢🚢</a></li>
+      <li>Altman 表示世界应相信美国公司开发日益强大 AI 时会负责任，欢迎联邦框架为前沿 AI 设定一致安全要求，但不必等待反垄断豁免或立法；OpenAI 已在可能显著提升能力的前沿强化学习运行前制定明确安全案例，并支持独立审计。来源：<a href="https://x.com/sama/status/2099348812305473766">The world deserves confidence...</a></li>
+      <li>他还提出两种必须避免的严重后果：一是失去对 AI 的未来控制，二是权力过度集中。来源：<a href="https://x.com/sama/status/2099352016988614852">There are two ways AI progress could go very badly...</a></li>
+      </ul>
+      <h3>3. Apple 发布 iOS 27/macOS 27，社区反馈不佳</h3>
+      <ul>
+      <li>Apple 正式发布 iOS 27、iPadOS 27、macOS 27。来源：<a href="https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/">iOS 27, iPadOS 27, and macOS 27 released</a></li>
+      <li>社区反馈 macOS 27 在 m5pro 上有“奇怪丑感”：访达/系统设置字体变糊，电池图标变丑、红绿灯偏复古，动画变快但有掉帧，整体负提升。来源：<a href="https://www.v2ex.com/t/1242237#reply7">macos 27 有一种奇怪的丑感</a></li>
+      <li>有用户称 iPhone 到 macOS 更新到 27 后，苹果审美变成“饱和度战士”。来源：<a href="https://www.v2ex.com/t/1242257#reply2">Apple 的审美真的是越来越离谱了</a></li>
+      <li>港版 iPhone 17 更新 os27 后提示使用云上贵州；另有 16 Pro Max 用户用三天想换标准版。来源：<a href="https://www.v2ex.com/t/1242274#reply5">iPhone 17 港版，更新了 os27 显示让我用云上贵州...</a></li>
+      <li>macOS 27 升级后 v2rayN 报错，iOS 27 下 Loon 所有节点超时等代理兼容问题被社区反馈。来源：<a href="https://www.v2ex.com/t/1242270#reply2">升级 macos27，大家代理都正常吗？</a>、<a href="https://www.v2ex.com/t/1242239#reply0">ios27 loon 所有节点超时</a></li>
+      </ul>
+      <h3>4. AI 安全事件与黑客争议</h3>
+      <ul>
+      <li>有报道指出单一公司是 OpenAI、Anthropic、Meta 黑客丑闻的幕后黑手。来源：<a href="https://www.effort.news/irregular">A single firm is behind OpenAI, Anthropic, and Meta hacking scandals</a></li>
+      <li>有文章称 OpenAI 机器人知道 RubyGems 缓存漏洞。来源：<a href="https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/">OpenAI bots knew about the RubyGems caching vulnerability</a></li>
+      <li>NVIDIA OpenShell Research 发布学习笔记，讨论将形式化方法用于控制 AI 代理的策略验证/证明。来源：<a href="https://nvidia.github.io/OpenShell-Research/dev-notes/posts/2026-09-10-learning-formal-methods-agent-policy-prover/">What we have learned at OpenShell applying formal methods to control AI agents</a></li>
+      <li>XCancel 服务暂停，直至另行通知。来源：<a href="https://xcancel.com/#">XCancel service is suspended until further notice</a></li>
+      <li>美国首次确认已部署太空武器。来源：<a href="https://www.bbc.com/news/articles/ck790xg41ygro">US confirms for first time it has deployed space weapons</a></li>
+      </ul>
+      <h3>5. AI Agent 与开源生态</h3>
+      <ul>
+      <li>GitHub 趋势显示多个 AI 工具项目加速：LibreChat（Stars 43,718）、earendil-works/pi（Stars 105,576）、Homebrew/BrewUI、MG1937/ASC。来源：<a href="https://github.com/danny-avila/LibreChat">LibreChat</a>、<a href="https://github.com/earendil-works/pi">pi</a>、<a href="https://github.com/Homebrew/BrewUI">BrewUI</a>、<a href="https://github.com/MG1937/ASC">ASC</a></li>
+      <li>404 Media 称“100% 确定 AI 代理正在毁掉互联网”。来源：<a href="https://www.404media.co/theres-a-100-chance-ai-agents-are-already-ruining-the-internet/">There&#x27;s a 100% Chance AI Agents Are Ruining the Internet</a></li>
+      <li>开发者社区讨论 ChatGPT Atlas 下线，质疑 AI 浏览器方向。来源：<a href="https://www.v2ex.com/t/1241943#reply0">ChatGPT Atlas 下线了，AI 浏览器这个方向不被看好吗？</a></li>
+      <li>开源项目活跃：让 Agent 写视频的 Hypit/SVML、让 Agent 进入 WebRTC 聊天室的 free4.chat、开源自托管 DeepSeek Harness 平台 dshcloud 等。来源：<a href="https://www.v2ex.com/t/1242258#reply0">我们做了一门让 Agent 写视频的语言</a>、<a href="https://www.v2ex.com/t/1242266#reply0">四年前做的 WebRTC 聊天室，现在可以让 Agent 进来一起干活了</a>、<a href="https://www.v2ex.com/t/1242229#reply6">dshcloud</a></li>
+      </ul>
+      <h3>6. 特斯拉 FSD 保险与 Starlink 社区</h3>
+      <ul>
+      <li>澳大利亚 Zurich 成为首家对特斯拉 FSD Supervised 车主降低保费的保险公司，反映更少碰撞和索赔。来源：<a href="https://x.com/elonmusk/status/2099445708277387433">Zurich insurance offers lower insurance premiums if you use Tesla supervised self-driving</a></li>
+      <li>特斯拉在美国部分州已提供 FSD 保险折扣，最高每月节省 60 美元；加州是唯一禁止保险公司按实际驾驶行为定价的州。来源：<a href="https://x.com/elonmusk/status/2099724086112907752">RT Brett Winton</a></li>
+      <li>玻利维亚总统宣布为 Cochabamba 农村地区提供 800 个 Starlink 终端。来源：<a href="https://x.com/elonmusk/status/2099460669326188591">Starlink supporting rural communities in Bolivia 🇧🇴</a></li>
+      <li>SpaceXAI 在孟菲斯 Whitehaven 社区完成 Fairley 高中的体育馆、更衣室、教室和洗手间升级。来源：<a href="https://x.com/elonmusk/status/2099512441864368622">RT SpaceXAI Memphis</a></li>
+      </ul>
+      <h3>7. 科技公司动态</h3>
+      <ul>
+      <li>特朗普在 All-In Summit 直播中致电黄仁勋，双方认同 AI 安全且对就业、经济增长和国家安全有利；现场还提及 Dario 上周末的言论不会阻挡 AI 进程。来源：<a href="https://x.com/elonmusk/status/2099744950116122692">RT Brad Gerstner</a>、<a href="https://x.com/elonmusk/status/2099719319185703251">RT Chamath Palihapitiya</a></li>
+      <li>Google 获 FastCompany 2026 Innovation by Design Awards 冠军，获奖理由覆盖 Gemini App、Google Maps Immersive Navigation 及 Search AI Mode。来源：<a href="https://x.com/GeminiApp/status/2099600879267766439">RT Josh Woodward: Come design with us!</a>、<a href="https://x.com/GeminiApp/status/2099530586033635627">RT News from Google</a></li>
+      <li>Gemini Live 集成 Deep Research，可用语音发起深度研究报告。9 月 15 日 Discord 演示将展示 Daily Brief、Gemini Spark、免提收件箱管理等升级。来源：<a href="https://x.com/GeminiApp/status/2099633231310283260">RT Google: Deep Research 🤝 Gemini Live</a>、<a href="https://x.com/GeminiApp/status/2099541479865938068">Join our next Discord demo...</a></li>
+      <li>Cloudflare AKE 将源站 HelloRetryRequests 从 52% 降至 3.7%。来源：<a href="https://blog.cloudflare.com/automatic-key-exchange-for-origins/">Cloudflare AKE cuts origin HelloRetryRequests from 52% to 3.7%</a></li>
+      <li>Steam Frame 起售价 1059 美元。来源：<a href="https://store.steampowered.com/hardware/steamframe">Steam Frame starts at $1059</a></li>
+      <li>Java 27 发布。来源：<a href="https://mail.openjdk.org/archives/list/announce@openjdk.org/thread/ORGGLMN75HFEWP7YL3ZLGHLYHVIBJDYT/">Java 27</a></li>
+      <li>微软修补 Windows 和 Excel，但导致音频、远程访问和粘贴功能故障。来源：<a href="https://www.theregister.com/os-platforms/2026/09/14/microsoft-patches-windows-and-excel-breaks-audio-remote-access-and-paste/5296085">Microsoft patches Windows and Excel – breaks audio, remote access, and paste</a></li>
+      </ul>
+      <h3>8. 招聘与职场</h3>
+      <ul>
+      <li>Palantir FDE 项目分享：Trinity Industries 每月收到成千上万条维修记录/发票，需按 AAR 规则核对价格、工时和重复计费，纠错窗口仅 6 个月；CEO Jean Savage 称若有 AI FDE 可能 6 个月完成。来源：<a href="https://www.v2ex.com/t/1242275#reply0">80 亿美金货车企业 Palantir FDE 破局项目分享</a></li>
+      <li>地瓜机器人热招 19 岗，覆盖 SOC 芯片系统架构、AI 编译器、SoC 系统软件、芯片量产、EDA 等；base 北京/上海/深圳/西安。来源：<a href="https://www.v2ex.com/t/1241967#reply0">地瓜机器人热招芯片架构/AI 编译器/SoC 系统软件等 19 岗</a></li>
+      <li>拼多多集团-PDD 27 届校招正式批内推，可凭评奖评优、竞赛奖项或学术论文任一免笔试。来源：<a href="https://www.v2ex.com/t/1241978#reply1">拼多多集团-PDD｜27届校招正式批内推</a></li>
+      <li>多则 remote 岗位：运营组组长、海外社媒运营、海外站点运营、海外产品运营，以及 AI 短剧制作/AIGC 模型工程师等。来源：<a href="https://www.v2ex.com/t/1242273#reply0">remote 运营组组长/...</a>、<a href="https://www.v2ex.com/t/1241993#reply0">remote AI 短剧制作/...</a></li>
+      </ul>
+      <h2>趋势与判断</h2>
+      <ul>
+      <li><strong>AI 安全治理从“呼吁”走向具体机制讨论</strong>：马斯克提出前沿模型互测框架，Altman 呼吁联邦安全要求但强调不必等待反垄断豁免；同时 OpenAI/Anthropic/Meta 黑客争议与“权力过度集中”担忧并存，显示行业在治理可信度上仍难形成一致。来源：<a href="https://x.com/elonmusk/status/2099737081756930206">This is the way</a>、<a href="https://x.com/sama/status/2099348812305473766">The world deserves confidence...</a>、<a href="https://www.effort.news/irregular">A single firm is behind OpenAI, Anthropic, and Meta hacking scandals</a></li>
+      <li><strong>AI Agent 工具与基础设施进入高频发布期，但“毁掉互联网”的担忧同步升温</strong>：GitHub 多个人工智能代理项目上榜，社区同时警告 AI 代理正在破坏互联网，F-Droid LLM 内容占比也被讨论。来源：<a href="https://github.com/earendil-works/pi">earendil-works/pi</a>、<a href="https://www.404media.co/theres-a-100-chance-ai-agents-are-already-ruining-the-internet/">There&#x27;s a 100% Chance AI Agents Are Ruining the Internet</a>、<a href="https://tintotint.eu/whacky-corner/f-droid_slop/">How much of F-Droid is LLM generated?</a></li>
+      <li><strong>平台更新风险集中显现</strong>：Apple 新系统引发视觉、代理兼容与 iCloud 区域提示等问题；微软补丁导致音频、远程访问和粘贴故障。来源：<a href="https://www.v2ex.com/t/1242237#reply7">macos 27 有一种奇怪的丑感</a>、<a href="https://www.theregister.com/os-platforms/2026/09/14/microsoft-patches-windows-and-excel-breaks-audio-remote-access-and-paste/5296085">Microsoft patches Windows and Excel – breaks audio, remote access, and paste</a></li>
+      <li><strong>AI 服务的可及性、成本与灰色套利成为社区焦点</strong>：免费 LLM 被指越来越少，GPT PRO 20x 代开价格波动，Claude 20x 苹果订阅价格上涨，用户讨论代充/反代/封号风险。来源：<a href="https://www.v2ex.com/t/1242276#reply0">能用的免费白嫖的 ai llm 越来越少</a>、<a href="https://www.v2ex.com/t/1242277#reply1">claude 的 20x 苹果订阅要 249 刀？</a>、<a href="https://www.v2ex.com/t/1242245#reply0">帮 V 友代开 GPT PRO 20X...</a></li>
+      <li><strong>监控、隐私与数据泄露焦虑持续</strong>：美国驾照数据泄露被视为国家安全灾难，Schneier 重申“25 年大规模监控已足够”，反乌托邦监控与 AI 全景监控话题被 HN 关注。来源：<a href="https://www.lawfaremedia.org/article/america%27s-drivers-licence-breach-is-a-national-security-disaster">America&#x27;s Driver&#x27;s License Breach Is a National Security Disaster</a>、<a href="https://www.schneier.com/blog/archives/2026/09/25-years-of-mass-surveillance-is-enough.html">25 years of mass surveillance is enough</a>、<a href="https://dallincrump.com/dystopian-surveillance-is-becoming-a-reality">Dystopian Surveillance Is Becoming a Reality</a></li>
+      <li><strong>算力与能源基础设施成为 AI 叙事的新焦点</strong>：马斯克称达到每年 1 太瓦计算需每年向轨道运送约 1000 万吨，同时需要 1 太瓦太阳能，Terafab 将补足计算缺口；Georgia Power 称 AI 数据中心合同可在近 10 亿美元规模上为客户降电价。来源：<a href="https://x.com/elonmusk/status/2099464648869200245">RT Tesla Owners Silicon Valley</a>、<a href="https://x.com/elonmusk/status/2099503167079674202">AI data centers resulting in lower electricity prices for consumers</a></li>
+      </ul>
+      <h2>值得继续关注</h2>
+      <ul>
+      <li>Sam Altman 预告“本周 big ship + DevDay 发布”，关注是否改变 AI 产品竞争格局。来源：<a href="https://x.com/sama/status/2099872600977760451">big 🚢 this week and then for devday 🚢🚢🚢🚢🚢🚢</a></li>
+      <li>马斯克提出的 AI 互测框架是否会被 OpenAI/Anthropic/中国公司回应或落地。来源：<a href="https://x.com/elonmusk/status/2099737081756930206">This is the way</a></li>
+      <li>Apple 与微软更新后的修复节奏，尤其 macOS 27 代理兼容与字体/UI 问题。来源：<a href="https://www.v2ex.com/t/1242270#reply2">升级 macos27，大家代理都正常吗？</a></li>
+      <li>GPT PRO 20x 代开价格已明显上涨，发布者称“口子这两天就要关闭”；Pro 20x 新会员充值入口被指关闭。来源：<a href="https://www.v2ex.com/t/1242245#reply0">帮 V 友代开 GPT PRO 20X...</a>、<a href="https://www.v2ex.com/t/1241996#reply0">V 友如果账号 20x 额度用完了...</a></li>
+      <li>Google Gemini 今日 Discord 演示及 Daily Brief、Personal Intelligence 早期访问推进。来源：<a href="https://x.com/GeminiApp/status/2099541479865938068">Join our next Discord demo...</a></li>
+      <li>Java 27 发布后的生态适配与迁移讨论。来源：<a href="https://mail.openjdk.org/archives/list/announce@openjdk.org/thread/ORGGLMN75HFEWP7YL3ZLGHLYHVIBJDYT/">Java 27</a></li>
+      <li>XCancel 服务暂停，以及美国首次确认部署太空武器后续发展。来源：<a href="https://xcancel.com/#">XCancel service is suspended until further notice</a>、<a href="https://www.bbc.com/news/articles/ck790xg41ygro">US confirms for first time it has deployed space weapons</a></li>
+      </ul>
+      <h2>来源索引</h2>
+      <p>以下按原始“全部来源”列表整理，覆盖全部来源。</p>
+      <h3>elon-musk</h3>
+      <ul>
+      <li>4D-Chess：&lt;https://x.com/elonmusk/status/2099737765260763348&gt;</li>
+      <li>❤️：&lt;https://x.com/elonmusk/status/2099900766597132335&gt;</li>
+      <li>All-In：&lt;https://x.com/elonmusk/status/2099739227499942339&gt;</li>
+      <li>Grok Bot watching Grok Bot. Tell me about yourself 😂：&lt;https://x.com/elonmusk/status/2099919095692992742&gt;</li>
+      <li>Physics is a harsh judge：&lt;https://x.com/elonmusk/status/2099739543360438774&gt;</li>
+      <li>RT Adam Carolla: I thought white supremacy was the big issue：&lt;https://x.com/elonmusk/status/2099719552451981623&gt;</li>
+      <li>RT DogeDesigner: ELON MUSK: I saw some pretty funny jokes on 𝕏. One of them I saw was: &#x27;Your girlfriend&#x27;s a 10, but she&#x27;s a benchmark maxxer.&#x27; 🤣：&lt;https://x.com/elonmusk/status/2099739838786257174&gt;</li>
+      <li>RT DogeDesigner: ELON MUSK: “Physics is a harsh judge...：&lt;https://x.com/elonmusk/status/2099735034101907462&gt;</li>
+      <li>RT DogeDesigner: The world’s richest man is living in an Airstream trailer...：&lt;https://x.com/elonmusk/status/2099724139791548928&gt;</li>
+      <li>RT kevin smith: This might be the best political chart ever made…：&lt;https://x.com/elonmusk/status/2099738149278663057&gt;</li>
+      <li>RT matt palmer: Ever wake up and want to build a company? I&#x27;m building one today with @poteto &amp; @roshan_s：&lt;https://x.com/elonmusk/status/2099879361348297125&gt;</li>
+      <li>RT X Freeze: Elon just gave a much more practical explanation of the current AI safety problem...：&lt;https://x.com/elonmusk/status/2099743177087291406&gt;</li>
+      <li>Slovenia 🇸🇮 🙌：&lt;https://x.com/elonmusk/status/2099744349017747493&gt;</li>
+      <li>This is the way：&lt;https://x.com/elonmusk/status/2099737081756930206&gt;</li>
+      <li>True：&lt;https://x.com/elonmusk/status/2099743954707067058&gt;</li>
+      <li>Wow：&lt;https://x.com/elonmusk/status/2099739744598962225&gt;</li>
+      <li>A welfare state and free immigration will obviously bankrupt any country...：&lt;https://x.com/elonmusk/status/2099461843269906606&gt;</li>
+      <li>AI data centers resulting in lower electricity prices for consumers：&lt;https://x.com/elonmusk/status/2099503167079674202&gt;</li>
+      <li>Gaming ftw：&lt;https://x.com/elonmusk/status/2099459125579071512&gt;</li>
+      <li>Grok Bot now lets your route through your local machine：&lt;https://x.com/elonmusk/status/2099450564698423732&gt;</li>
+      <li>People keep misunderstanding this...：&lt;https://x.com/elonmusk/status/2099455308284219727&gt;</li>
+      <li>Play video games or be dumb! Those are your only 2 choices 😂：&lt;https://x.com/elonmusk/status/2099548187245584550&gt;</li>
+      <li>RT Brad Gerstner: Trump calling @JensenHuang live...：&lt;https://x.com/elonmusk/status/2099744950116122692&gt;</li>
+      <li>RT Brett Winton: Sadly, California is the only state...：&lt;https://x.com/elonmusk/status/2099724086112907752&gt;</li>
+      <li>RT Chamath Palihapitiya: This was surreal：&lt;https://x.com/elonmusk/status/2099719319185703251&gt;</li>
+      <li>RT Denis Ulmer: Re @yunta_tsai Meanwhile in Germany summon is limited to 6 meters...：&lt;https://x.com/elonmusk/status/2099445110802956610&gt;</li>
+      <li>RT lauren: uh oh we got ~70k signups for the livestream...：&lt;https://x.com/elonmusk/status/2099546758967709971&gt;</li>
+      <li>RT Reads with Ravi: “Study hard what interests you the most...：&lt;https://x.com/elonmusk/status/2099445951542788573&gt;</li>
+      <li>RT SpaceXAI Memphis: Great news for Whitehaven!...：&lt;https://x.com/elonmusk/status/2099512441864368622&gt;</li>
+      <li>RT Tesla Australia &amp; New Zealand: FSD Supervised is making driving safer &amp; now cheaper...：&lt;https://x.com/elonmusk/status/2099446445455639008&gt;</li>
+      <li>RT Tesla Owners Silicon Valley: Elon Musk on scaling AI beyond Earth...：&lt;https://x.com/elonmusk/status/2099464648869200245&gt;</li>
+      <li>RT Teslaconomics: Every morning... my Grok Bot has already generated and printed fresh math worksheets...：&lt;https://x.com/elonmusk/status/2099546943915544957&gt;</li>
+      <li>Starlink supporting rural communities in Bolivia 🇧🇴：&lt;https://x.com/elonmusk/status/2099460669326188591&gt;</li>
+      <li>True：&lt;https://x.com/elonmusk/status/2099454402364920276&gt;</li>
+      <li>True：&lt;https://x.com/elonmusk/status/2099505692805582871&gt;</li>
+      <li>Zurich insurance offers lower insurance premiums if you use Tesla supervised self-driving：&lt;https://x.com/elonmusk/status/2099445708277387433&gt;</li>
+      </ul>
+      <h3>github-trending-daily-any</h3>
+      <ul>
+      <li>danny-avila/LibreChat：&lt;https://github.com/danny-avila/LibreChat&gt;</li>
+      <li>earendil-works/pi：&lt;https://github.com/earendil-works/pi&gt;</li>
+      <li>Homebrew/BrewUI：&lt;https://github.com/Homebrew/BrewUI&gt;</li>
+      <li>MG1937/ASC：&lt;https://github.com/MG1937/ASC&gt;</li>
+      <li>dani-garcia/vaultwarden：&lt;https://github.com/dani-garcia/vaultwarden&gt;</li>
+      <li>localsend/localsend：&lt;https://github.com/localsend/localsend&gt;</li>
+      <li>peetzweg/opendisplay：&lt;https://github.com/peetzweg/opendisplay&gt;</li>
+      <li>rlaope/oh-my-hermes：&lt;https://github.com/rlaope/oh-my-hermes&gt;</li>
+      </ul>
+      <h3>hacker-news</h3>
+      <ul>
+      <li>25 years of mass surveillance is enough：&lt;https://www.schneier.com/blog/archives/2026/09/25-years-of-mass-surveillance-is-enough.html&gt;</li>
+      <li>Alternatives to MinIO for single-node local S3：&lt;https://rmoff.net/2026/01/14/alternatives-to-minio-for-single-node-local-s3/&gt;</li>
+      <li>America&#x27;s Driver&#x27;s License Breach Is a National Security Disaster：&lt;https://www.lawfaremedia.org/article/america%27s-drivers-licence-breach-is-a-national-security-disaster&gt;</li>
+      <li>Cartesian – AI 3D Modeling for Design：&lt;https://www.formas.ai/cartesian&gt;</li>
+      <li>Closing the IPv6 first-packet gap with GRAND：&lt;https://labs.ripe.net/author/pouria/closing-the-ipv6-first-packet-gap-with-grand/&gt;</li>
+      <li>Dystopian Surveillance Is Becoming a Reality：&lt;https://dallincrump.com/dystopian-surveillance-is-becoming-a-reality&gt;</li>
+      <li>GEFS on OpenBSD: A Early Preview：&lt;https://marc.info/?l=openbsd-tech&amp;m=178948744271633&amp;w=2&gt;</li>
+      <li>How much of F-Droid is LLM generated?：&lt;https://tintotint.eu/whacky-corner/f-droid_slop/&gt;</li>
+      <li>Java 27：&lt;https://mail.openjdk.org/archives/list/announce@openjdk.org/thread/ORGGLMN75HFEWP7YL3ZLGHLYHVIBJDYT/&gt;</li>
+      <li>Jiga (YC W21) Is Hiring Product Engineer (Remote/US)：&lt;https://jiga.io/about-us/?ashby_jid=0b75d72d-c92b-4dca-8062-09d298ada0bd&gt;</li>
+      <li>Let&#x27;s make quality the norm again：&lt;https://www.forbrukerradet.no/short-life/&gt;</li>
+      <li>Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations：&lt;https://github.com/arnegiacomo/fugleramme&gt;</li>
+      <li>Show HN: Capsule – Single-file web apps that save their data into SQLite：&lt;https://withcapsule.app/&gt;</li>
+      <li>Show HN: Hacking a $20 4G wireless hotspot into a texting device：&lt;https://bkovac.github.io/modem-thing/&gt;</li>
+      <li>Show HN: Panel – A research workspace where the agent can build its own panes：&lt;https://github.com/greentfrapp/panel&gt;</li>
+      <li>Show HN: The bottom 50% of U.S. households are short after essentials (BLS data)：&lt;https://whats-left-over.pages.dev/#s=50_40_10&amp;c=1&amp;u=person&amp;t=0&amp;tm=cbo&amp;b=0&amp;ts=100&amp;k=0&amp;cc=12201&amp;im=nominal&amp;by=2000&amp;ir=2.5&amp;ao=0&amp;ar=20&amp;at=200000&amp;ip=10&amp;rm=sp500&amp;rr=8&amp;pv=portfolio&amp;p=1&amp;iv=left&amp;hp=1&amp;e=food.housing.transport.health.insurance&gt;</li>
+      <li>The CSS Zen Garden dream, finally shipped：&lt;https://josprague.com/blog/the-css-zen-garden-dream-finally-shipped/&gt;</li>
+      <li>The Inference Hardware Revolution of 2026：&lt;https://spectrum.ieee.org/inference-hardware-revolution&gt;</li>
+      <li>There&#x27;s a 100% Chance AI Agents Are Ruining the Internet：&lt;https://www.404media.co/theres-a-100-chance-ai-agents-are-already-ruining-the-internet/&gt;</li>
+      <li>What we have learned at OpenShell applying formal methods to control AI agents：&lt;https://nvidia.github.io/OpenShell-Research/dev-notes/posts/2026-09-10-learning-formal-methods-agent-policy-prover/&gt;</li>
+      <li>A 386 PC for Your RP2350：&lt;https://github.com/rh1tech/frank-386&gt;</li>
+      <li>A Beginning for Mathematics：&lt;https://www.daniellitt.com/blog/2026/9/13/a-beginning-for-mathematics/&gt;</li>
+      <li>A rough guide for going back to the Moon：&lt;https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model&gt;</li>
+      <li>A single firm is behind OpenAI, Anthropic, and Meta hacking scandals：&lt;https://www.effort.news/irregular&gt;</li>
+      <li>Adversarial Fashion Makes a Statement on AI Panopticon：&lt;https://spectrum.ieee.org/adversarial-fashion&gt;</li>
+      <li>Archiving pirate radio station Kool FM：&lt;https://londonist.com/london/music/kool-fm-archives&gt;</li>
+      <li>Claude is a Contrarian：&lt;https://medium.com/@rdsubhas/claude-is-a-contrarian-dbce4de5cada&gt;</li>
+      <li>Cloudflare AKE cuts origin HelloRetryRequests from 52% to 3.7%：&lt;https://blog.cloudflare.com/automatic-key-exchange-for-origins/&gt;</li>
+      <li>CSS-Tricks in Limbo：&lt;https://vale.rocks/micros/20260915-0135&gt;</li>
+      <li>Cua (YC P25) Is Hiring a Founding Technical GTM Lead：&lt;https://www.ycombinator.com/companies/cua/jobs/1IWEKVH-founding-technical-gtm-lead&gt;</li>
+      <li>Distributed Systems Classics (2017)：&lt;https://nvartolomei.com/dist-sys-classics/&gt;</li>
+      <li>EuroBirdPortal – Live bird movements across Europe：&lt;https://www.eurobirdportal.org/ebp/en/&gt;</li>
+      <li>How my e-reader lost its stripes：&lt;https://www.serpentine.com/posts/2026/x3-stripes/&gt;</li>
+      <li>I can&#x27;t stop thinking about Papua New Guinea：&lt;https://notnottalmud.substack.com/p/why-i-cant-stop-thinking-about-papua&gt;</li>
+      <li>iOS 27, iPadOS 27, and macOS 27 released：&lt;https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/&gt;</li>
+      <li>Microsoft patches Windows and Excel – breaks audio, remote access, and paste：&lt;https://www.theregister.com/os-platforms/2026/09/14/microsoft-patches-windows-and-excel-breaks-audio-remote-access-and-paste/5296085&gt;</li>
+      <li>Most people prefer traditional architecture：&lt;https://www.worksinprogress.news/p/do-people-prefer-traditional-architecture&gt;</li>
+      <li>Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama：&lt;https://patrickmccanna.net/notes-on-migrating-large-prompts-away-from-anthropic-openai-to-self-hosted-llms/&gt;</li>
+      <li>OpenAI bots knew about the RubyGems caching vulnerability：&lt;https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/&gt;</li>
+      <li>Pion, an agent designed to run any company autonomously：&lt;https://andonlabs.com/blog/why-we-built-pion&gt;</li>
+      <li>Principles for Fast Tokio Applications：&lt;https://dial9-rs.github.io/blog/principles-for-fast-tokio-applications/&gt;</li>
+      <li>Show HN: Nari Qwen3-TTS and Qwen3-ASR – High accuracy, low latency and cost：&lt;https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/&gt;</li>
+      <li>Show HN: Neobrutalism.dev – Just added Base UI support and added new color theme：&lt;https://www.neobrutalism.dev/&gt;</li>
+      <li>Show HN: Pelican-bicycle alternatives：&lt;https://gally.net/temp/20260914pelican-alternatives/index.html&gt;</li>
+      <li>Steam Frame starts at $1059：&lt;https://store.steampowered.com/hardware/steamframe&gt;</li>
+      <li>The Tudor Kings：&lt;https://analog-antiquarian.net/2026/09/11/the-tudor-kings/&gt;</li>
+      <li>Things That Annoy Me About Cars：&lt;https://blog.decryption.net.au/posts/cars_suck.html&gt;</li>
+      <li>Transitions.dev: UI transitions for AI agents：&lt;https://transitions.dev/&gt;</li>
+      <li>Truncated SVD (2023)：&lt;https://brashandplucky.com/2023/09/09/truncated-svd.html&gt;</li>
+      <li>US confirms for first time it has deployed space weapons：&lt;https://www.bbc.com/news/articles/ck790xg41ygro&gt;</li>
+      <li>When LLM judges agree, should we believe them?：&lt;https://www.amazon.science/blog/when-llm-judges-agree-should-we-believe-them&gt;</li>
+      <li>Why don&#x27;t machine learning research agents overfit?：&lt;https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit&gt;</li>
+      <li>XCancel service is suspended until further notice：&lt;https://xcancel.com/#&gt;</li>
+      </ul>
+      <h3>kepano</h3>
+      <ul>
+      <li>RT Pieter Omvlee: Great time to repost this I think...：&lt;https://x.com/kepano/status/2099871056479813685&gt;</li>
+      </ul>
+      <h3>sam-altman</h3>
+      <ul>
+      <li>big 🚢 this week and then for devday 🚢🚢🚢🚢🚢🚢：&lt;https://x.com/sama/status/2099872600977760451&gt;</li>
+      <li>The world deserves confidence...：&lt;https://x.com/sama/status/2099348812305473766&gt;</li>
+      <li>There are two ways AI progress could go very badly...：&lt;https://x.com/sama/status/2099352016988614852&gt;</li>
+      </ul>
+      <h3>v2ex</h3>
+      <ul>
+      <li>Apple 的审美真的是越来越离谱了：&lt;https://www.v2ex.com/t/1242257#reply2&gt;</li>
+      <li>iPhone 17 港版，更新了 os27 显示让我用云上贵州。有其他人遇到吗》：&lt;https://www.v2ex.com/t/1242274#reply5&gt;</li>
+      <li>用 promax 的兄弟们，你们的小拇指还好吗：&lt;https://www.v2ex.com/t/1242255#reply1&gt;</li>
+      <li>Claudecode 滞销：&lt;https://www.v2ex.com/t/1242259#reply2&gt;</li>
+      <li>cursor 使用第三方 key 提示：This model does not support custom API keys：&lt;https://www.v2ex.com/t/1242279#reply0&gt;</li>
+      <li>macos 27 有一种奇怪的丑感：&lt;https://www.v2ex.com/t/1242237#reply7&gt;</li>
+      <li>不开全局代理如何使用 Codex 桌面端？：&lt;https://www.v2ex.com/t/1242249#reply8&gt;</li>
+      <li>开发 macOS app 真的是一种心智负担：&lt;https://www.v2ex.com/t/1242267#reply0&gt;</li>
+      <li>自建影音库碰到的问题，求大佬指点：&lt;https://www.v2ex.com/t/1242226#reply10&gt;</li>
+      <li>感觉现在买 pro 有点四九年入国军了：&lt;https://www.v2ex.com/t/1242271#reply2&gt;</li>
+      <li>DMIT 之前出的绝版机器哪个对三网有优化啊：&lt;https://www.v2ex.com/t/1242250#reply8&gt;</li>
+      <li>80 大洋三箱 10 盒 200ml 特仑苏 便宜不？：&lt;https://www.v2ex.com/t/1242225#reply5&gt;</li>
+      <li>dshcloud：开源自托管的 DeepSeek Harness 多用户、多实例平台：&lt;https://www.v2ex.com/t/1242229#reply6&gt;</li>
+      <li>PoseKit: 为 iOS 开发者打造的 3D 样机工具：&lt;https://www.v2ex.com/t/1242227#reply1&gt;</li>
+      <li>做了一个不用划词、没有悬浮窗的三指查词...：&lt;https://www.v2ex.com/t/1242251#reply0&gt;</li>
+      <li>做了个“每天待办”小工具...：&lt;https://www.v2ex.com/t/1242248#reply0&gt;</li>
+      <li>Click to Reel：&lt;https://www.v2ex.com/t/1242272#reply6&gt;</li>
+      <li>四年前做的 WebRTC 聊天室，现在可以让 Agent 进来一起干活了：&lt;https://www.v2ex.com/t/1242266#reply0&gt;</li>
+      <li>安卓免 ROOT 工具：&lt;https://www.v2ex.com/t/1242234#reply0&gt;</li>
+      <li>全自动 AI 信息流服务：&lt;https://www.v2ex.com/t/1242264#reply2&gt;</li>
+      <li>我们做了一门让 Agent 写视频的语言：&lt;https://www.v2ex.com/t/1242258#reply0&gt;</li>
+      <li>现在 AI 无所不能，做不出来东西感觉都焦虑了...：&lt;https://www.v2ex.com/t/1242254#reply1&gt;</li>
+      <li>用 Deepseek 弄了个把虎扑论坛伪装成 Codex 的油猴脚本：&lt;https://www.v2ex.com/t/1242244#reply1&gt;</li>
+      <li>把童年时玩的《铁甲风暴》封装到 Docker 里了：&lt;https://www.v2ex.com/t/1242260#reply0&gt;</li>
+      <li>能用的免费白嫖的 ai llm 越来越少：&lt;https://www.v2ex.com/t/1242276#reply0&gt;</li>
+      <li>再论 WeChat 的版本区别和使用技巧：&lt;https://www.v2ex.com/t/1242222#reply0&gt;</li>
+      <li>Huiai 代充 ChatGPT Plus / Pro ,可开票：&lt;https://www.v2ex.com/t/1242263#reply0&gt;</li>
+      <li>帮 V 友代开 GPT PRO 20X...：&lt;https://www.v2ex.com/t/1242245#reply0&gt;</li>
+      <li>随便送点：&lt;https://www.v2ex.com/t/1242246#reply0&gt;</li>
+      <li>DeepSeek 刘胜与《我不得不把才华埋葬在昨天》？：&lt;https://www.v2ex.com/t/1242265#reply1&gt;</li>
+      <li>各位有把 claude、gpt、antigravity 全挂到 cpa 上吗？：&lt;https://www.v2ex.com/t/1242240#reply3&gt;</li>
+      <li>这种网络环境，CC-Switch 如何实现 OAI 官方订阅为主...：&lt;https://www.v2ex.com/t/1242269#reply2&gt;</li>
+      <li>找了半个月的工作，4 个终面 0offer：&lt;https://www.v2ex.com/t/1242243#reply13&gt;</li>
+      <li>80 亿美金货车企业 Palantir FDE 破局项目分享：&lt;https://www.v2ex.com/t/1242275#reply0&gt;</li>
+      <li>remote 运营组组长/海外社媒运营/海外站点运营/海外产品运营：&lt;https://www.v2ex.com/t/1242273#reply0&gt;</li>
+      <li>帮朋友发一个招聘：Agent/FDE 开发工程师：&lt;https://www.v2ex.com/t/1242236#reply5&gt;</li>
+      <li>AI 能教硬件操作吗：&lt;https://www.v2ex.com/t/1242231#reply0&gt;</li>
+      <li>claude 的 20x 苹果订阅要 249 刀？：&lt;https://www.v2ex.com/t/1242277#reply1&gt;</li>
+      <li>Imgur 现在崩了？：&lt;https://www.v2ex.com/t/1242253#reply2&gt;</li>
+      <li>ios27 loon 所有节点超时：&lt;https://www.v2ex.com/t/1242239#reply0&gt;</li>
+      <li>MacBook 配什么显示器眼睛不累：&lt;https://www.v2ex.com/t/1242223#reply1&gt;</li>
+      <li>一个人用 20x，会不会封啊？：&lt;https://www.v2ex.com/t/1242280#reply0&gt;</li>
+      <li>升级 macos27，大家代理都正常吗？：&lt;https://www.v2ex.com/t/1242270#reply2&gt;</li>
+      <li>可以说说这么多年我在美国的感受吗？：&lt;https://www.v2ex.com/t/1242230#reply22&gt;</li>
+      <li>在云服务商 Linux 上运行 codex 会有封号风险么？：&lt;https://www.v2ex.com/t/1242228#reply2&gt;</li>
+      <li>大家伙教师节有送礼物吗？：&lt;https://www.v2ex.com/t/1242235#reply2&gt;</li>
+      <li>最新版的 YouTube 是不是被驴踢了：&lt;https://www.v2ex.com/t/1242247#reply3&gt;</li>
+      <li>现在注册商标越来越严...：&lt;https://www.v2ex.com/t/1242256#reply2&gt;</li>
+      <li>麻烦各位推荐一款路由器：&lt;https://www.v2ex.com/t/1242261#reply4&gt;</li>
+      <li>写在 AI 金融奔溃的前夜《乳汁不够了》：&lt;https://www.v2ex.com/t/1242232#reply2&gt;</li>
+      <li>AirPods Max 异响：&lt;https://www.v2ex.com/t/1241999#reply1&gt;</li>
+      <li>升级到 ios27 显示 ios26.7？：&lt;https://www.v2ex.com/t/1242000#reply0&gt;</li>
+      <li>苹果捷径自动化：&lt;https://www.v2ex.com/t/1241997#reply2&gt;</li>
+      <li>求靠谱的 claude code 中转，最好是独享 20x：&lt;https://www.v2ex.com/t/1241962#reply1&gt;</li>
+      <li>吐槽下 jetbrains 的 ai assistant 功能：&lt;https://www.v2ex.com/t/1242002#reply0&gt;</li>
+      <li>FormulaAI：AI Excel 工具：&lt;https://www.v2ex.com/t/1241948#reply0&gt;</li>
+      <li>PI-Desktop 插件系统：&lt;https://www.v2ex.com/t/1241955#reply3&gt;</li>
+      <li>YeeroAI v0.3.0：&lt;https://www.v2ex.com/t/1241966#reply0&gt;</li>
+      <li>闪电喵瘦身计划：&lt;https://www.v2ex.com/t/1241945#reply0&gt;</li>
+      <li>CNEquity：自托管 A 股 Parquet 数据湖：&lt;https://www.v2ex.com/t/1241944#reply0&gt;</li>
+      <li>xopc Chrome 侧栏扩展：&lt;https://www.v2ex.com/t/1241991#reply0&gt;</li>
+      <li>FC/NES 红白机模拟器：&lt;https://www.v2ex.com/t/1241961#reply0&gt;</li>
+      <li>开源网页版红警 2：&lt;https://www.v2ex.com/t/1241974#reply8&gt;</li>
+      <li>zeroNet Space 与 Lockstead：&lt;https://www.v2ex.com/t/1241979#reply0&gt;</li>
+      <li>GNOME 中国天气扩展 ClimaCN：&lt;https://www.v2ex.com/t/1241988#reply0&gt;</li>
+      <li>Mac 菜单栏工具 mTinker：&lt;https://www.v2ex.com/t/1241954#reply0&gt;</li>
+      <li>Body Type Calculator：&lt;https://www.v2ex.com/t/1241950#reply0&gt;</li>
+      <li>GPT Image 2.5 图片站：&lt;https://www.v2ex.com/t/1241983#reply0&gt;</li>
+      <li>华强北 FindMy 定位器多端查看：&lt;https://www.v2ex.com/t/1241946#reply0&gt;</li>
+      <li>想白嫖腾讯云 Edge 但需备案：&lt;https://www.v2ex.com/t/1241949#reply1&gt;</li>
+      <li>只备案域名不买国内服务器：&lt;https://www.v2ex.com/t/1241953#reply17&gt;</li>
+      <li>办宽带的水真深：&lt;https://www.v2ex.com/t/1241951#reply15&gt;</li>
+      <li>吐槽一下 IBKR 的期权交易超级卡：&lt;https://www.v2ex.com/t/1241989#reply0&gt;</li>
+      <li>5 元钱买个 obd,用 obd 随行自己年检一次：&lt;https://www.v2ex.com/t/1241984#reply1&gt;</li>
+      <li>LLM 冲刺 AGI 失败的讨论：&lt;https://www.v2ex.com/t/1241990#reply3&gt;</li>
+      <li>有人通过爱沙尼亚 e-Residency 开过公司吗？：&lt;https://www.v2ex.com/t/1242001#reply0&gt;</li>
+      <li>Huiai 代充 ChatGPT Plus / Pro 可开票：&lt;https://www.v2ex.com/t/1241957#reply0&gt;</li>
+      <li>V 友如果账号 20x 额度用完了或者想新开 20x...：&lt;https://www.v2ex.com/t/1241996#reply0&gt;</li>
+      <li>NAS 求邀请：&lt;https://www.v2ex.com/t/1241987#reply9&gt;</li>
+      <li>西瓜备份新功能发布并涨价：&lt;https://www.v2ex.com/t/1241956#reply0&gt;</li>
+      <li>DataZen v0.2.0：&lt;https://www.v2ex.com/t/1241952#reply11&gt;</li>
+      <li>码镜 mac 场景化动态壁纸软件：&lt;https://www.v2ex.com/t/1241980#reply11&gt;</li>
+      <li>ChatGPT Atlas 下线了，AI 浏览器这个方向不被看好吗？：&lt;https://www.v2ex.com/t/1241943#reply0&gt;</li>
+      <li>ADE 赛道感觉很拥挤：&lt;https://www.v2ex.com/t/1241959#reply2&gt;</li>
+      <li>GLM Coding Plan 新老 Pro 的额度差有多少？：&lt;https://www.v2ex.com/t/1241963#reply4&gt;</li>
+      <li>GPT-6 是不是最近又降智了：&lt;https://www.v2ex.com/t/1241973#reply9&gt;</li>
+      <li>open minis：&lt;https://www.v2ex.com/t/1241998#reply0&gt;</li>
+      <li>算力能存起来吗：&lt;https://www.v2ex.com/t/1241964#reply6&gt;</li>
+      <li>地瓜机器人热招芯片架构/AI 编译器/SoC 系统软件等 19 岗：&lt;https://www.v2ex.com/t/1241967#reply0&gt;</li>
+      <li>拼多多集团-PDD｜27届校招正式批内推：&lt;https://www.v2ex.com/t/1241978#reply1&gt;</li>
+      <li>remote AI 短剧制作/二次元动漫原画师/AI内容生成/AI模型训练师/AICG模型工程师/AI短剧导演：&lt;https://www.v2ex.com/t/1241993#reply0&gt;</li>
+      <li>APP 逆向需求：野鸡聊天软件，抢红包...：&lt;https://www.v2ex.com/t/1241995#reply1&gt;</li>
+      <li>现在已经不挣什么语言天下第一了：&lt;https://www.v2ex.com/t/1241986#reply2&gt;</li>
+      <li>深圳看病奇遇：&lt;https://www.v2ex.com/t/1241968#reply7&gt;</li>
+      <li>动态血糖仪有用吗？还是智商税：&lt;https://www.v2ex.com/t/1241982#reply7&gt;</li>
+      <li>弱电箱（鞋柜）如何散热？：&lt;https://www.v2ex.com/t/1241977#reply21&gt;</li>
+      <li>到现在还想不通这个领导是在 PUA 我...：&lt;https://www.v2ex.com/t/1241992#reply1&gt;</li>
+      <li>有没有安卓版的下载抖音视频或者图片的工具？：&lt;https://www.v2ex.com/t/1241947#reply0&gt;</li>
+      <li>抢到了 18pro 首发，求推荐 AVS 充电头：&lt;https://www.v2ex.com/t/1241958#reply2&gt;</li>
+      <li>谁的 token 多？能不能帮忙实现个 app？：&lt;https://www.v2ex.com/t/1241985#reply0&gt;</li>
+      </ul>
+      <h3>anyfeeder-matrix</h3>
+      <ul>
+      <li>如何用飞书多维表格搭建一套小巧智能的 CRM：&lt;https://sspai.com/post/114582&gt;</li>
+      </ul>
+      <h3>google-gemini</h3>
+      <ul>
+      <li>Join our next Discord demo and Q&amp;A...：&lt;https://x.com/GeminiApp/status/2099541479865938068&gt;</li>
+      <li>RT Google: Deep Research 🤝 Gemini Live：&lt;https://x.com/GeminiApp/status/2099633231310283260&gt;</li>
+      <li>RT Josh Woodward: 2 months ago, we launched a Gemini power user group...：&lt;https://x.com/GeminiApp/status/2099558721039024175&gt;</li>
+      <li>RT Josh Woodward: Come design with us!：&lt;https://x.com/GeminiApp/status/2099600879267766439&gt;</li>
+      <li>RT News from Google: Today @FastCompany awarded @Google the winner...：&lt;https://x.com/GeminiApp/status/2099530586033635627&gt;</li>
+      </ul>
+      <h3>openai-news</h3>
+      <ul>
+      <li>How Fyxer built an AI executive assistant people trust：&lt;https://openai.com/index/fyxer&gt;</li>
+      <li>Perplexity trusts GPT-6 Astra with end-to-end systems：&lt;https://openai.com/index/perplexity-improving-accuracy-with-astra&gt;</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
