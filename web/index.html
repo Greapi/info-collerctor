@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSS 采集器 · 本地配置</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">R</span>
+        <div>
+          <strong>RSS 采集器</strong>
+          <small>本地配置界面</small>
+        </div>
+      </div>
+      <nav class="nav" id="nav" aria-label="主导航">
+        <button class="nav-item active" data-tab="overview"><span class="nav-icon">总</span>总览</button>
+        <button class="nav-item" data-tab="feeds"><span class="nav-icon">源</span>订阅源</button>
+        <button class="nav-item" data-tab="integrations"><span class="nav-icon">接</span>集成配置</button>
+        <button class="nav-item" data-tab="run"><span class="nav-icon">跑</span>运行</button>
+        <button class="nav-item" data-tab="system"><span class="nav-icon">系</span>系统</button>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="dot-row"><span class="dot" id="side-dot"></span><span id="side-state">正在连接…</span></div>
+        <small id="side-root">127.0.0.1</small>
+        <a href="/preview/" target="_blank" rel="noreferrer" class="foot-link">打开日报站点预览 ↗</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div id="banner-root"></div>
+      <header class="topbar">
+        <div>
+          <h1 id="page-title">总览</h1>
+          <p id="page-subtitle">配置、运行与状态一页掌握</p>
+        </div>
+        <div class="top-status" id="top-status"></div>
+      </header>
+      <section class="tab-panel" id="tab-overview"></section>
+      <section class="tab-panel" id="tab-feeds" hidden></section>
+      <section class="tab-panel" id="tab-integrations" hidden></section>
+      <section class="tab-panel" id="tab-run" hidden></section>
+      <section class="tab-panel" id="tab-system" hidden></section>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" aria-live="polite"></div>
+</body>
+</html>

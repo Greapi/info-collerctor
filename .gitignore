@@ -6,3 +6,6 @@ __pycache__/
 rss-downloads/
 logs/
 .DS_Store
+*.bak
+*.bak.*
+.config_ui_state.json

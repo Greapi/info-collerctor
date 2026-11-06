@@ -3,10 +3,16 @@
 
 from __future__ import annotations
 
+import argparse
+import datetime as dt
 import html
+import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
+
+import settings as settings_module
+from config_store import atomic_write
 
 
 ROOT = Path(__file__).resolve().parent
@@ -115,9 +121,9 @@ def extract_summary(markdown: str) -> str:
     return text[:180] + ("..." if len(text) > 180 else "")
 
 
-def load_reports() -> list[Report]:
+def load_reports(reports_dir: Path = REPORTS_DIR) -> list[Report]:
     reports: list[Report] = []
-    for path in sorted(REPORTS_DIR.glob("*.md"), reverse=True):
+    for path in sorted(reports_dir.glob("*.md"), reverse=True):
         markdown = path.read_text(encoding="utf-8")
         date = path.stem
         reports.append(
@@ -253,18 +259,60 @@ def indent(value: str, spaces: int) -> str:
     return "\n".join(prefix + line if line else line for line in value.splitlines())
 
 
-def main() -> int:
-    reports = load_reports()
-    if not reports:
-        raise SystemExit("No reports found in reports/*.md")
+def build_parser(settings_obj: settings_module.Settings | None = None) -> argparse.ArgumentParser:
+    settings_obj = settings_obj or settings_module.load_settings()
+    parser = argparse.ArgumentParser(description="Build the static RSS report site.")
+    parser.add_argument(
+        "--reports", type=Path, default=settings_obj.resolve_path("paths.report_dir"), help="Markdown report directory."
+    )
+    parser.add_argument(
+        "--site", type=Path, default=settings_obj.resolve_path("paths.site_dir"), help="Static site output directory."
+    )
+    parser.add_argument("--summary-json", type=Path, help="Write a structured run summary to this JSON file.")
+    return parser
 
-    SITE_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    (SITE_DIR / "index.html").write_text(build_index(reports), encoding="utf-8")
-    for report in reports:
-        (SITE_REPORTS_DIR / f"{report.date}.html").write_text(build_report(report), encoding="utf-8")
 
-    print(f"Built {len(reports)} report page(s) in {SITE_DIR}")
+def main(argv: list[str] | None = None) -> int:
+    settings_obj = settings_module.load_settings()
+    parser = build_parser(settings_obj)
+    args = parser.parse_args(argv)
+    summary: dict = {
+        "ok": True,
+        "mode": "site",
+        "started_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
+    }
+    try:
+        reports = load_reports(args.reports)
+        if not reports:
+            raise SystemExit(f"No reports found in {args.reports}/*.md")
+        site_reports_dir = args.site / "reports"
+        site_reports_dir.mkdir(parents=True, exist_ok=True)
+        (args.site / "index.html").write_text(build_index(reports), encoding="utf-8")
+        for report in reports:
+            (site_reports_dir / f"{report.date}.html").write_text(build_report(report), encoding="utf-8")
+        summary.update({"reports": len(reports), "site_dir": str(args.site)})
+        print(f"Built {len(reports)} report page(s) in {args.site}")
+    except SystemExit as exc:
+        summary.update({"ok": False, "error": str(exc)})
+        _write_summary(args.summary_json, summary)
+        raise
+    except (OSError, ValueError) as exc:
+        summary.update({"ok": False, "error": str(exc)})
+        _write_summary(args.summary_json, summary)
+        parser.exit(1, f"error: {exc}\n")
+    summary["finished_at"] = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
+    _write_summary(args.summary_json, summary)
     return 0
+
+
+def _write_summary(path: Path | None, summary: dict) -> None:
+    if not path:
+        return
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        atomic_write(path, json.dumps(summary, ensure_ascii=False, indent=2) + "\n")
+    except OSError:
+        pass
 
 
 if __name__ == "__main__":
