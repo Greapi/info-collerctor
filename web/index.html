@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RSS 采集器 · 本地配置</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script src="/theme-init.js"></script>
   <link rel="stylesheet" href="/styles.css">
   <script src="/app.js" defer></script>
 </head>
@@ -39,7 +40,13 @@
           <h1 id="page-title">总览</h1>
           <p id="page-subtitle">配置、运行与状态一页掌握</p>
         </div>
-        <div class="top-status" id="top-status"></div>
+        <div class="topbar-right">
+          <div class="top-status" id="top-status"></div>
+          <button class="btn theme-toggle" id="theme-toggle" type="button" aria-pressed="false" title="切换到深色模式">
+            <span class="theme-icon" id="theme-icon" aria-hidden="true">☾</span>
+            <span id="theme-label">深色</span>
+          </button>
+        </div>
       </header>
       <section class="tab-panel" id="tab-overview"></section>
       <section class="tab-panel" id="tab-feeds" hidden></section>

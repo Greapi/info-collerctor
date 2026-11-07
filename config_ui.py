@@ -2549,7 +2549,7 @@ class ConfigUiHandler(BaseHTTPRequestHandler):
         if path in {"/", "/index.html"}:
             self._serve_web("index.html")
             return
-        if path in {"/app.js", "/styles.css", "/favicon.svg"}:
+        if path in {"/app.js", "/styles.css", "/favicon.svg", "/theme-init.js"}:
             self._serve_web(path.lstrip("/"))
             return
         if path == "/preview":

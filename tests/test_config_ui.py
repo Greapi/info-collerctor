@@ -139,6 +139,11 @@ class ConfigUiHttpTests(unittest.TestCase):
         status, payload = self.client.call("POST", "/api/legacy/confirm", {})
         self.assertEqual(status, 200, payload)
 
+    def test_theme_init_script_is_served(self):
+        status, payload = self.client.call("GET", "/theme-init.js")
+        self.assertEqual(status, 200)
+        self.assertIn("configUiTheme", payload.get("raw", ""))
+
     def test_legacy_gate_token_and_initial_save(self):
         status, payload = self.client.call("GET", "/api/bootstrap")
         self.assertEqual(status, 200)

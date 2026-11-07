@@ -176,11 +176,48 @@ async function init() {
   } else {
     state.token = sessionStorage.getItem('configUiToken') || '';
   }
+  setupTheme();
   bindEvents();
   await refreshBootstrap();
   if (!state.token) showTokenBanner();
   const hash = window.location.hash.replace(/^#/, '');
   await switchTab(TABS[hash] ? hash : 'overview');
+}
+
+function setupTheme() {
+  const button = $('#theme-toggle');
+  if (!button) return;
+  syncThemeButton();
+  button.addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem('configUiTheme', next);
+    } catch (error) {
+      /* The toggle still works for this page even if persistence is blocked. */
+    }
+    syncThemeButton();
+    toast(next === 'dark' ? '已切换到深色模式' : '已切换到浅色模式', 'ok', 1800);
+  });
+  window.addEventListener('storage', (event) => {
+    if (event.key === 'configUiTheme' && (event.newValue === 'dark' || event.newValue === 'light')) {
+      document.documentElement.dataset.theme = event.newValue;
+      syncThemeButton();
+    }
+  });
+}
+
+function syncThemeButton() {
+  const dark = document.documentElement.dataset.theme === 'dark';
+  const button = $('#theme-toggle');
+  if (!button) return;
+  button.setAttribute('aria-pressed', dark ? 'true' : 'false');
+  button.title = dark ? '切换到浅色模式' : '切换到深色模式';
+  button.setAttribute('aria-label', dark ? '切换到浅色模式' : '切换到深色模式');
+  const icon = $('#theme-icon');
+  const label = $('#theme-label');
+  if (icon) icon.textContent = dark ? '☀' : '☾';
+  if (label) label.textContent = dark ? '浅色' : '深色';
 }
 
 function bindEvents() {
