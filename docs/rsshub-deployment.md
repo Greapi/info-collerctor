@@ -167,3 +167,15 @@ docker compose --env-file .env.rsshub -f docker-compose.rsshub.yml down -v
    ```
 
    然后把 `feeds.txt` 中的地址同步改成 `http://127.0.0.1:1201/...`。
+
+
+## 代理与界面管理
+
+代理不再硬编码在 Compose 文件中。把代理写进 `.env.rsshub`：
+
+```env
+RSSHUB_PROXY=http://127.0.0.1:7890
+```
+
+`docker-compose.rsshub.yml` 使用 `${RSSHUB_PROXY:-}` 读取该值。也可以使用 `python3 config_ui.py`
+的「集成配置」页编辑主机、端口、镜像、代理与 GitHub token，并查看 `/healthz` 与容器状态。

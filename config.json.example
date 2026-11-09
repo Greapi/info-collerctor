@@ -1,0 +1,25 @@
+{
+  "paths": {
+    "archive_dir": "rss-downloads",
+    "report_dir": "reports",
+    "db_path": ".rss_collector.sqlite3",
+    "site_dir": "docs"
+  },
+  "run": {
+    "timeout": 60,
+    "fetch_limit": 100,
+    "date_offset": 1
+  },
+  "model": {
+    "temperature": 0.2,
+    "max_chars_per_article": 8000,
+    "max_chars_per_batch": 24000
+  },
+  "schedule": {
+    "hour": 4,
+    "minute": 0
+  },
+  "ui": {
+    "port": 8765
+  }
+}

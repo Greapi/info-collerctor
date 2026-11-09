@@ -15,11 +15,15 @@ import time
 import urllib.error
 import urllib.request
 
-import requests
 from dataclasses import dataclass
 from pathlib import Path
 
 import rss_collector
+import settings as settings_module
+from config_store import atomic_write
+from env_file import EnvDocument
+from feed_config import disabled_archive_names
+from runlock import LockBusy, RunLock, lock_path
 
 
 DEFAULT_INPUT = Path("rss-downloads")
@@ -45,6 +49,9 @@ class OpenAIConfig:
     api_key: str
     model: str
     base_url: str
+    temperature: float = 0.2
+    max_chars_per_article: int = MAX_CHARS_PER_ARTICLE
+    max_chars_per_batch: int = MAX_CHARS_PER_BATCH
 
 
 def parse_front_matter(markdown: str) -> tuple[dict[str, str], str]:
@@ -71,17 +78,27 @@ def unquote_front_matter(value: str) -> str:
     return value.replace('\\"', '"').replace("\\\\", "\\")
 
 
-def load_articles(input_dir: Path, report_date: str, previous_date: str | None = None) -> list[Article]:
+def load_articles(
+    input_dir: Path,
+    report_date: str,
+    previous_date: str | None = None,
+    disabled_feeds: set[str] | None = None,
+) -> list[Article]:
     articles: list[Article] = []
     if not input_dir.exists():
         return articles
+    disabled_feeds = disabled_feeds or set()
 
     for path in sorted(input_dir.glob(f"*/{report_date}/*.md")):
-        articles.append(_parse_article(path, report_date))
+        article = _parse_article(path, report_date)
+        if article.feed not in disabled_feeds:
+            articles.append(article)
 
     if previous_date:
         for path in sorted(input_dir.glob(f"*/{previous_date}/*.md")):
             article = _parse_article(path, previous_date)
+            if article.feed in disabled_feeds:
+                continue
             article = Article(
                 title=f"[昨日补遗] {article.title}",
                 feed=article.feed,
@@ -128,30 +145,16 @@ def previous_date(date_str: str) -> str:
 
 
 def load_env_file(path: Path) -> dict[str, str]:
-    values: dict[str, str] = {}
-    if not path.exists():
-        return values
-    for line_no, raw_line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
-        line = raw_line.strip()
-        if not line or line.startswith("#"):
-            continue
-        if line.startswith("export "):
-            line = line[len("export ") :].strip()
-        if "=" not in line:
-            raise ValueError(f"Invalid env line at {path}:{line_no}")
-        key, value = line.split("=", 1)
-        key = key.strip()
-        value = value.strip()
-        if not key:
-            raise ValueError(f"Invalid env key at {path}:{line_no}")
-        values[key] = unquote_env_value(value)
-    return values
+    document = EnvDocument.read(path)
+    if document.errors:
+        raise ValueError("；".join(document.errors))
+    return document.values
 
 
 def unquote_env_value(value: str) -> str:
-    if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
-        value = value[1:-1]
-    return value
+    from env_file import unquote_value
+
+    return unquote_value(value)
 
 
 def config_value(name: str, file_values: dict[str, str]) -> str:
@@ -161,25 +164,28 @@ def config_value(name: str, file_values: dict[str, str]) -> str:
     return file_values.get(name, "").strip()
 
 
-def load_openai_config(env_file: Path = DEFAULT_ENV_FILE) -> OpenAIConfig:
-    file_values = load_env_file(env_file)
-    api_key = config_value("OPENAI_API_KEY", file_values)
-    model = config_value("OPENAI_MODEL", file_values)
-    base_url = (config_value("OPENAI_BASE_URL", file_values) or DEFAULT_BASE_URL).rstrip("/")
-    missing = []
-    if not api_key:
-        missing.append("OPENAI_API_KEY")
-    if not model:
-        missing.append("OPENAI_MODEL")
-    if missing:
-        raise RuntimeError(f"Missing required environment variable(s): {', '.join(missing)}")
-    return OpenAIConfig(api_key=api_key, model=model, base_url=base_url)
+def load_openai_config(env_file: Path = DEFAULT_ENV_FILE, settings_obj: settings_module.Settings | None = None) -> OpenAIConfig:
+    if env_file == DEFAULT_ENV_FILE and settings_obj is not None:
+        env_file = settings_obj.env_path
+    config = settings_module.load_model_config(env_path=env_file, settings_obj=settings_obj)
+    if config.errors:
+        raise ValueError("；".join(config.errors))
+    if config.missing:
+        raise RuntimeError(f"Missing required environment variable(s): {', '.join(config.missing)}")
+    return OpenAIConfig(
+        api_key=config.api_key,
+        model=config.model,
+        base_url=config.base_url,
+        temperature=config.temperature,
+        max_chars_per_article=config.max_chars_per_article,
+        max_chars_per_batch=config.max_chars_per_batch,
+    )
 
 
-def article_to_prompt(article: Article) -> str:
+def article_to_prompt(article: Article, max_chars: int = MAX_CHARS_PER_ARTICLE) -> str:
     body = article.body.strip()
-    if len(body) > MAX_CHARS_PER_ARTICLE:
-        body = body[:MAX_CHARS_PER_ARTICLE].rstrip() + "\n\n[内容已截断]"
+    if len(body) > max_chars:
+        body = body[:max_chars].rstrip() + "\n\n[内容已截断]"
     return textwrap.dedent(
         f"""\
         标题: {article.title}
@@ -194,13 +200,17 @@ def article_to_prompt(article: Article) -> str:
     ).strip()
 
 
-def build_batches(articles: list[Article]) -> list[list[Article]]:
+def build_batches(
+    articles: list[Article],
+    max_chars_per_article: int = MAX_CHARS_PER_ARTICLE,
+    max_chars_per_batch: int = MAX_CHARS_PER_BATCH,
+) -> list[list[Article]]:
     batches: list[list[Article]] = []
     current: list[Article] = []
     current_size = 0
     for article in articles:
-        size = len(article_to_prompt(article))
-        if current and current_size + size > MAX_CHARS_PER_BATCH:
+        size = len(article_to_prompt(article, max_chars=max_chars_per_article))
+        if current and current_size + size > max_chars_per_batch:
             batches.append(current)
             current = []
             current_size = 0
@@ -211,35 +221,52 @@ def build_batches(articles: list[Article]) -> list[list[Article]]:
     return batches
 
 
-def chat_completion(config: OpenAIConfig, messages: list[dict[str, str]], timeout: int, retries: int | None = None) -> str:
+def chat_completion(
+    config: OpenAIConfig,
+    messages: list[dict[str, str]],
+    timeout: int,
+    retries: int | None = None,
+) -> str:
     if retries is None:
         retries = 3
-    payload = {
-        "model": config.model,
-        "messages": messages,
-        "temperature": 0.2,
-    }
-    headers = {
-        "Authorization": f"Bearer {config.api_key}",
-        "Content-Type": "application/json",
-        "User-Agent": rss_collector.USER_AGENT,
-    }
+    payload = json.dumps(
+        {
+            "model": config.model,
+            "messages": messages,
+            "temperature": config.temperature,
+        }
+    ).encode("utf-8")
+    request = urllib.request.Request(
+        f"{config.base_url}/chat/completions",
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {config.api_key}",
+            "Content-Type": "application/json",
+            "User-Agent": rss_collector.USER_AGENT,
+        },
+        method="POST",
+    )
     last_exc: Exception | None = None
     for attempt in range(1, retries + 1):
         try:
-            resp = requests.post(
-                f"{config.base_url}/chat/completions",
-                json=payload,
-                headers=headers,
-                timeout=timeout,
-            )
-            resp.raise_for_status()
-            data = resp.json()
-        except requests.exceptions.HTTPError as exc:
-            code = exc.response.status_code if exc.response is not None else "?"
-            body = exc.response.text[:500] if exc.response is not None else ""
-            raise RuntimeError(f"Model request failed with HTTP {code}: {body}") from exc
-        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout, requests.exceptions.ChunkedEncodingError) as exc:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                raw = response.read().decode("utf-8", errors="replace")
+            try:
+                data = json.loads(raw)
+            except json.JSONDecodeError as exc:
+                raise RuntimeError(f"Model returned non-JSON response: {raw[:500]}") from exc
+            try:
+                return data["choices"][0]["message"]["content"].strip()
+            except (KeyError, IndexError, TypeError) as exc:
+                raise RuntimeError(f"Unexpected model response: {data}") from exc
+        except urllib.error.HTTPError as exc:
+            body = ""
+            try:
+                body = exc.read().decode("utf-8", errors="replace")[:500]
+            except OSError:
+                pass
+            raise RuntimeError(f"Model request failed with HTTP {exc.code}: {body}") from exc
+        except (urllib.error.URLError, TimeoutError, http.client.HTTPException, ConnectionError, OSError) as exc:
             last_exc = exc
             if attempt < retries:
                 wait = 2 ** attempt
@@ -248,16 +275,13 @@ def chat_completion(config: OpenAIConfig, messages: list[dict[str, str]], timeou
                 continue
             raise RuntimeError(f"Model request failed after {retries} retries: {exc}") from exc
 
-        try:
-            return data["choices"][0]["message"]["content"].strip()
-        except (KeyError, IndexError, TypeError) as exc:
-            raise RuntimeError(f"Unexpected model response: {data}") from exc
-
     raise last_exc  # type: ignore[misc]
 
 
 def summarize_batch(config: OpenAIConfig, report_date: str, batch: list[Article], timeout: int) -> str:
-    article_block = "\n\n---\n\n".join(article_to_prompt(article) for article in batch)
+    article_block = "\n\n---\n\n".join(
+        article_to_prompt(article, max_chars=config.max_chars_per_article) for article in batch
+    )
     return chat_completion(
         config,
         [
@@ -369,7 +393,9 @@ def generate_report(
     should_fetch: bool,
     fetch_limit: int | None,
     timeout: int,
+    summary: dict | None = None,
 ) -> Path:
+    summary = summary if summary is not None else {}
     if should_fetch:
         rss_collector.collect(
             config=config_path,
@@ -378,22 +404,36 @@ def generate_report(
             timeout=timeout,
             limit=fetch_limit,
             default_date=report_date,
+            summary=summary,
         )
 
+    disabled_feeds = disabled_archive_names(config_path)
+    summary["disabled_feeds"] = sorted(disabled_feeds)
     articles = load_articles(
         input_dir,
         report_date,
         previous_date=previous_date(report_date),
+        disabled_feeds=disabled_feeds,
     )
+    summary["article_count"] = len(articles)
     if not articles:
         path = write_no_articles_report(output_dir, report_date, input_dir)
+        summary["report_path"] = str(path)
         print(f"No articles found for {report_date}. Wrote {path}.")
         return path
 
     config = load_openai_config()
-    batches = build_batches(articles)
+    summary["model"] = {"model": config.model, "base_url": config.base_url}
+    batches = build_batches(
+        articles,
+        max_chars_per_article=config.max_chars_per_article,
+        max_chars_per_batch=config.max_chars_per_batch,
+    )
+    summary["batch_count"] = len(batches)
     if len(batches) == 1:
-        source_material = "\n\n---\n\n".join(article_to_prompt(article) for article in articles)
+        source_material = "\n\n---\n\n".join(
+            article_to_prompt(article, max_chars=config.max_chars_per_article) for article in articles
+        )
     else:
         summaries = []
         for index, batch in enumerate(batches, start=1):
@@ -408,43 +448,95 @@ def generate_report(
     output_dir.mkdir(parents=True, exist_ok=True)
     path = output_dir / f"{report_date}.md"
     path.write_text(report, encoding="utf-8")
+    summary["report_path"] = str(path)
     print(f"Wrote {path}.")
     return path
 
 
-def build_parser() -> argparse.ArgumentParser:
+def build_parser(settings_obj: settings_module.Settings | None = None) -> argparse.ArgumentParser:
+    settings_obj = settings_obj or settings_module.load_settings()
     parser = argparse.ArgumentParser(description="Generate a daily RSS report with an OpenAI-compatible model.")
-    parser.add_argument("--date", default=today_local(), help="Report date in YYYY-MM-DD format. Defaults to today.")
-    parser.add_argument("--input", type=Path, default=DEFAULT_INPUT, help="RSS Markdown input directory.")
-    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT, help="Report output directory.")
-    parser.add_argument("--config", type=Path, default=rss_collector.DEFAULT_CONFIG, help="RSS feed config file.")
-    parser.add_argument("--db", type=Path, default=rss_collector.DEFAULT_DB, help="RSS deduplication SQLite file.")
-    parser.add_argument("--timeout", type=int, default=60, help="Network timeout in seconds.")
-    parser.add_argument("--fetch-limit", type=int, help="Maximum entries to fetch per feed before reporting.")
+    parser.add_argument(
+        "--date",
+        default=settings_obj.default_report_date(),
+        help="Report date in YYYY-MM-DD format. Defaults to today minus run.date_offset.",
+    )
+    parser.add_argument(
+        "--input", type=Path, default=settings_obj.resolve_path("paths.archive_dir"), help="RSS Markdown input directory."
+    )
+    parser.add_argument(
+        "--output", type=Path, default=settings_obj.resolve_path("paths.report_dir"), help="Report output directory."
+    )
+    parser.add_argument("--config", type=Path, default=settings_obj.feeds_path, help="RSS feed config file.")
+    parser.add_argument(
+        "--db", type=Path, default=settings_obj.resolve_path("paths.db_path"), help="RSS deduplication SQLite file."
+    )
+    parser.add_argument(
+        "--timeout", type=int, default=int(settings_obj.get("run.timeout")), help="Network timeout in seconds."
+    )
+    parser.add_argument(
+        "--fetch-limit",
+        type=int,
+        default=int(settings_obj.get("run.fetch_limit")),
+        help="Maximum entries to fetch per feed before reporting. Use 0 for unlimited.",
+    )
     parser.add_argument("--no-fetch", action="store_true", help="Skip RSS fetching and only analyze local Markdown.")
+    parser.add_argument("--summary-json", type=Path, help="Write a structured run summary to this JSON file.")
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = build_parser()
+    settings_obj = settings_module.load_settings()
+    parser = build_parser(settings_obj)
     args = parser.parse_args(argv)
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", args.date):
         parser.exit(2, "error: --date must use YYYY-MM-DD format\n")
+    summary: dict = {
+        "ok": True,
+        "mode": "report",
+        "started_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
+    }
 
     try:
-        generate_report(
-            report_date=args.date,
-            input_dir=args.input,
-            output_dir=args.output,
-            config_path=args.config,
-            db_path=args.db,
-            should_fetch=not args.no_fetch,
-            fetch_limit=args.fetch_limit,
-            timeout=args.timeout,
-        )
-    except (FileNotFoundError, RuntimeError, ValueError) as exc:
+        with RunLock(lock_path(settings_obj.base_dir), label="仅日报", metadata={"mode": "report"}):
+            path = generate_report(
+                report_date=args.date,
+                input_dir=args.input,
+                output_dir=args.output,
+                config_path=args.config,
+                db_path=args.db,
+                should_fetch=not args.no_fetch,
+                fetch_limit=args.fetch_limit,
+                timeout=args.timeout,
+                summary=summary,
+            )
+        summary["report_path"] = str(path)
+    except LockBusy as exc:
+        summary.update({"ok": False, "error": str(exc)})
+        _write_summary(args.summary_json, summary)
         parser.exit(1, f"error: {exc}\n")
+    except (FileNotFoundError, RuntimeError, ValueError, OSError) as exc:
+        summary.update({"ok": False, "error": str(exc)})
+        _write_summary(args.summary_json, summary)
+        parser.exit(1, f"error: {exc}\n")
+    except KeyboardInterrupt:
+        summary.update({"ok": False, "error": "用户中断"})
+        _write_summary(args.summary_json, summary)
+        return 130
+    finally:
+        summary["finished_at"] = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
+    _write_summary(args.summary_json, summary)
     return 0
+
+
+def _write_summary(path: Path | None, summary: dict) -> None:
+    if not path:
+        return
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        atomic_write(path, json.dumps(summary, ensure_ascii=False, indent=2) + "\n")
+    except OSError:
+        pass
 
 
 if __name__ == "__main__":

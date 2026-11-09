@@ -11,7 +11,7 @@ services:
       CACHE_TYPE: redis
       REDIS_URL: redis://127.0.0.1:6379/
       PUPPETEER_WS_ENDPOINT: ws://127.0.0.1:3000
-      PROXY_URI: http://127.0.0.1:7897
+      PROXY_URI: ${RSSHUB_PROXY:-}
       LISTEN_INADDR_ANY: "false"
     depends_on:
       redis:
