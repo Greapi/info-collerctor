@@ -11,6 +11,7 @@ const state = {
   tab: 'overview',
   feeds: null,
   feedsDirty: false,
+  activityRunning: false,
   pendingRename: null,
   feedsErrors: [],
   integrations: null,
@@ -509,6 +510,9 @@ async function handleClick(event) {
       case 'feed-test':
         await testFeedAt(Number(trigger.dataset.index));
         break;
+      case 'feeds-activity':
+        await runFeedActivity();
+        break;
       case 'feeds-save':
         await saveFeeds();
         break;
@@ -650,7 +654,53 @@ async function loadFeeds() {
   state.feedsDirty = false;
   state.feedsErrors = [];
   state.pendingRename = null;
+  state.activityRunning = false;
   renderFeeds();
+}
+
+function activityLabel(value) {
+  return {
+    active: '活跃',
+    stale: '低活跃',
+    dormant: '停更',
+    failed: '不可用',
+    unknown: '无法判断',
+  }[value] || '未检测';
+}
+
+function activityClass(value) {
+  return { active: 'ok', stale: 'warn', dormant: 'warn', failed: 'error', unknown: 'neutral' }[value] || 'neutral';
+}
+
+async function runFeedActivity() {
+  if (!state.feeds || state.activityRunning) return;
+  state.activityRunning = true;
+  renderFeeds();
+  try {
+    const result = await api('/api/feeds/activity', { method: 'POST', body: { timeout: 15 } });
+    const items = new Map((result.items || []).map((item) => [normalizeFeedUrl(item.url), item]));
+    for (const feed of state.feeds.feeds) {
+      feed.activity = items.get(normalizeFeedUrl(feed.url)) || null;
+    }
+    state.feeds.activity = {
+      checked_at: result.checked_at,
+      duration_ms: result.duration_ms,
+      thresholds: result.thresholds,
+      summary: result.summary,
+      disabled: result.disabled,
+    };
+    const summary = result.summary || {};
+    toast(
+      `活性检测完成：活跃 ${summary.active || 0} · 低活跃 ${summary.stale || 0} · 停更 ${summary.dormant || 0} · 不可用 ${summary.failed || 0}`,
+      summary.failed ? 'warn' : 'ok',
+      6000,
+    );
+  } catch (error) {
+    toast(error.message || '活性检测失败', 'error', 6000);
+  } finally {
+    state.activityRunning = false;
+    renderFeeds();
+  }
 }
 
 function slugify(value) {
@@ -730,8 +780,16 @@ function renderFeeds() {
           : badge('error', '失败')
         : badge('neutral', '未测试');
       const resultText = status
-        ? `<div class="small muted">${esc(formatRelative(status.at))}${status.count !== undefined ? ` · ${status.count} 条` : ''}${status.error ? ` · ${esc(status.error)}` : ''}</div>`
-        : '<div class="small muted">—</div>';
+        ? `抓取：${esc(formatRelative(status.at))}${status.count !== undefined ? ` · ${status.count} 条` : ''}${status.error ? ` · ${esc(status.error)}` : ''}`
+        : '抓取：—';
+      const activityBadge = !feed.enabled
+        ? badge('neutral', '已禁用')
+        : feed.activity
+          ? badge(activityClass(feed.activity.activity), feed.activity.activity_label || activityLabel(feed.activity.activity))
+          : badge('neutral', '未检测');
+      const activityMeta = feed.enabled && feed.activity
+        ? `<div class="small muted">活性：${feed.activity.status_code ? `HTTP ${feed.activity.status_code}` : '—'} · ${feed.activity.latency_ms ?? 0}ms${feed.activity.latest_published ? ` · 最近条目 ${esc(feed.activity.latest_published)}${feed.activity.age_days !== null && feed.activity.age_days !== undefined ? `（${feed.activity.age_days} 天前）` : ''}` : ''}</div>${feed.activity.error ? `<div class="field-error">${esc(feed.activity.error)}</div>` : ''}`
+        : '';
       return `<tr class="${messages.length ? 'row-error' : ''} ${feed.enabled ? '' : 'row-disabled'}">
         <td class="row-index">${index + 1}</td>
         <td><label class="check"><input type="checkbox" data-feed-enabled="${index}" ${feed.enabled ? 'checked' : ''} ${writable ? '' : 'disabled'}>${feed.enabled ? '启用' : '跳过'}</label></td>
@@ -740,8 +798,8 @@ function renderFeeds() {
           ${messages.length ? `<div class="field-error mt-8">${messages.map(esc).join('；')}</div>` : ''}
         </td>
         <td><div class="feed-url">${esc(feed.url)}</div><div class="row mt-8">${badge('neutral', feed.source_type || 'RSS/Atom')} ${feed.valid_url === false ? badge('error', 'URL 无效') : ''}</div></td>
-        <td><div>${feed.archived ?? 0} 条</div><div class="small muted">${feed.last_saved_at ? esc(formatRelative(feed.last_saved_at)) : '尚无归档'}</div></td>
-        <td>${resultBadge}${resultText}</td>
+        <td><div>${feed.archived ?? 0} 条</div><div class="small muted">${feed.last_saved_at ? esc(formatRelative(feed.last_saved_at)) : '无归档'}</div></td>
+        <td class="result-cell"><div class="row">${resultBadge}${activityBadge}</div><div class="small muted">${resultText}</div>${activityMeta}</td>
         <td><div class="cell-actions">
           <button class="btn small" data-action="feed-test" data-index="${index}" ${writable ? '' : 'disabled'}>测试抓取</button>
           <button class="btn small" data-action="feed-edit" data-index="${index}">编辑</button>
@@ -765,6 +823,7 @@ function renderFeeds() {
         <div class="card-actions">
           <button class="btn" data-action="feeds-import" ${writable ? '' : 'disabled'}>导入</button>
           <button class="btn" data-action="feeds-export">导出</button>
+          <button class="btn" data-action="feeds-activity" ${!writable || !rows.length || state.activityRunning ? 'disabled' : ''}>${state.activityRunning ? '检测中…' : '活性检测'}</button>
           <button class="btn" data-action="feed-add" ${writable ? '' : 'disabled'}>新增订阅源</button>
           <button class="btn primary" data-action="feeds-save" ${!writable || !state.feedsDirty ? 'disabled' : ''}>保存到 feeds.txt</button>
         </div>
@@ -772,9 +831,23 @@ function renderFeeds() {
       ${errors.length ? `<div class="notice error mb-12">${errors.map(esc).join('<br>')}</div>` : ''}
       ${pending}
       ${envWarnings.length ? `<div class="notice warn mt-12">${envWarnings.map((item) => `环境变量 ${esc(item.env_name)} 正在覆盖路径 ${esc(item.label)}，在界面保存后仍会以环境变量为准。`).join('<br>')}</div>` : ''}
+      ${data.activity ? `<div class="activity-panel mt-12">
+        <div class="row-between">
+          <div class="row">
+            <strong>订阅活性</strong>
+            ${badge('ok', `活跃 ${data.activity.summary?.active ?? 0}`)}
+            ${badge('warn', `低活跃 ${data.activity.summary?.stale ?? 0}`)}
+            ${badge('warn', `停更 ${data.activity.summary?.dormant ?? 0}`)}
+            ${badge('error', `不可用 ${data.activity.summary?.failed ?? 0}`)}
+            ${(data.activity.summary?.unknown ?? 0) ? badge('neutral', `无法判断 ${data.activity.summary.unknown}`) : ''}
+          </div>
+          <span class="small muted">检测于 ${esc(formatRelative(data.activity.checked_at))} · ${data.activity.duration_ms}ms${data.activity.disabled ? ` · 跳过 ${data.activity.disabled} 个禁用源` : ''}</span>
+        </div>
+        <div class="small muted mt-8">阈值：活跃 ≤ ${data.activity.thresholds?.active_days ?? 14} 天，低活跃 ≤ ${data.activity.thresholds?.stale_days ?? 60} 天，更久为停更。只读探测，不写归档和去重库。</div>
+      </div>` : '<div class="notice info mt-12">尚未检测订阅活性。点击「活性检测」只读探测所有启用源，不会写归档或去重库。</div>'}
       <div class="table-wrap mt-12">
         <table>
-          <thead><tr><th>#</th><th>状态</th><th>名称 / 备注</th><th>URL / 类型</th><th>已归档</th><th>最近抓取结果</th><th>操作</th></tr></thead>
+          <thead><tr><th>#</th><th>状态</th><th>名称 / 备注</th><th>URL / 类型</th><th>已归档</th><th>最近抓取 / 活性</th><th>操作</th></tr></thead>
           <tbody>${rowHtml || '<tr><td colspan="7" class="muted">还没有订阅源，点击右上角「新增订阅源」。</td></tr>'}</tbody>
         </table>
       </div>

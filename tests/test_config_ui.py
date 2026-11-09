@@ -236,6 +236,25 @@ class ConfigUiHttpTests(unittest.TestCase):
         finally:
             lock.release()
 
+    def test_feed_activity_detection_is_read_only(self):
+        self.confirm()
+        status, result = self.client.call("POST", "/api/feeds/activity", {"timeout": 5})
+        self.assertEqual(status, 200, result)
+        self.assertEqual(result["summary"]["total"], 1)
+        self.assertEqual(len(result["items"]), 1)
+        item = result["items"][0]
+        self.assertTrue(item["ok"], item)
+        self.assertEqual(item["status_code"], 200)
+        self.assertEqual(item["item_count"], 2)
+        self.assertIn(item["activity"], config_ui.ACTIVITY_LABELS)
+        self.assertFalse((self.root / "rss-downloads").exists())
+        self.assertFalse((self.root / ".rss_collector.sqlite3").exists())
+        status, feeds = self.client.call("GET", "/api/feeds")
+        self.assertEqual(status, 200)
+        self.assertIsNotNone(feeds["activity"])
+        self.assertIsNotNone(feeds["feeds"][0]["activity"])
+        self.assertEqual(feeds["activity"]["summary"]["total"], 1)
+
     def test_model_test_and_integration_save_preserves_unknown_env_key(self):
         self.confirm()
         status, payload = self.client.call("GET", "/api/integrations")

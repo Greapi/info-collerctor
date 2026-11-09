@@ -10,7 +10,9 @@ layer on top of them.
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import datetime as dt
+import email.utils
 import hmac
 import json
 import mimetypes
@@ -70,6 +72,19 @@ RUN_MODES = {
     "site": "仅构建站点",
 }
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+ACTIVITY_ACTIVE_DAYS = 14
+ACTIVITY_STALE_DAYS = 60
+ACTIVITY_LABELS = {
+    "active": "活跃",
+    "stale": "低活跃",
+    "dormant": "停更",
+    "failed": "不可用",
+    "unknown": "无法判断",
+}
+ACTIVITY_THRESHOLDS = {
+    "active_days": ACTIVITY_ACTIVE_DAYS,
+    "stale_days": ACTIVITY_STALE_DAYS,
+}
 
 
 class ApiError(Exception):
@@ -96,6 +111,68 @@ def parse_date(value: str) -> str | None:
 
 def looks_like_email(value: str) -> bool:
     return bool(re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", value.strip()))
+
+
+def activity_date(value: str) -> dt.date | None:
+    """Extract a date from an RSS/Atom timestamp or a YYYY-MM-DD fragment."""
+    if not value:
+        return None
+    text = str(value).strip()
+    try:
+        return dt.datetime.fromisoformat(text.replace("Z", "+00:00")).date()
+    except ValueError:
+        pass
+    try:
+        return email.utils.parsedate_to_datetime(text).date()
+    except (TypeError, ValueError):
+        pass
+    match = re.search(r"\d{4}-\d{2}-\d{2}", text)
+    if match:
+        try:
+            return dt.date.fromisoformat(match.group(0))
+        except ValueError:
+            return None
+    return None
+
+
+def classify_activity(entries: list[Any], today: dt.date | None = None) -> dict[str, Any]:
+    """Classify a feed by the newest dated entry.
+
+    The result is intentionally independent of storage: callers can use it for
+    the UI, tests, or future scripts without touching archives or the dedupe DB.
+    """
+    today = today or dt.date.today()
+    latest_date: dt.date | None = None
+    latest_entry: Any | None = None
+    for entry in entries:
+        parsed = activity_date(getattr(entry, "published", "") or "")
+        if parsed is None:
+            continue
+        if latest_date is None or parsed > latest_date:
+            latest_date = parsed
+            latest_entry = entry
+    if latest_date is None:
+        return {
+            "activity": "unknown",
+            "activity_label": ACTIVITY_LABELS["unknown"],
+            "latest_published": "",
+            "latest_title": "",
+            "age_days": None,
+        }
+    age_days = max(0, (today - latest_date).days)
+    if age_days <= ACTIVITY_ACTIVE_DAYS:
+        status = "active"
+    elif age_days <= ACTIVITY_STALE_DAYS:
+        status = "stale"
+    else:
+        status = "dormant"
+    return {
+        "activity": status,
+        "activity_label": ACTIVITY_LABELS[status],
+        "latest_published": latest_date.isoformat(),
+        "latest_title": str(getattr(latest_entry, "title", "") or ""),
+        "age_days": age_days,
+    }
 
 
 def tail(value: str, lines: int = 30) -> str:
@@ -793,6 +870,10 @@ class UiContext:
         results = self.state.data.get("feeds", {}) if isinstance(self.state.data.get("feeds"), dict) else {}
         if self._test_results:
             results = {**results, **self._test_results}
+        activity_record = self.state.data.get("activity") if isinstance(self.state.data.get("activity"), dict) else {}
+        activity_items = (
+            activity_record.get("items", {}) if isinstance(activity_record.get("items"), dict) else {}
+        )
         feeds = []
         for feed in document.feeds:
             stat = by_feed.get(feed.archive_name, {})
@@ -820,12 +901,14 @@ class UiContext:
                     "last_result": last_result,
                     "source_type": feed_config.source_type(feed.url, rsshub.host, rsshub.port),
                     "valid_url": not bool(feed_config.validate_url(feed.url)),
+                    "activity": activity_items.get(feed.url_key),
                 }
             )
         validation = validate_feeds(document.feeds, source=str(s.feeds_path)) if document.feeds else []
         return {
             "ok": True,
             "feeds": feeds,
+            "activity": self._activity_public(activity_record),
             "revision": file_revision(s.feeds_path),
             "errors": list(document.errors),
             "validation": validation,
@@ -834,6 +917,130 @@ class UiContext:
             "total_feeds": len(feeds),
             "enabled_feeds": sum(1 for feed in feeds if feed["enabled"]),
             "path": str(s.feeds_path),
+        }
+
+
+    def _activity_public(self, record: dict[str, Any] | None) -> dict[str, Any] | None:
+        if not isinstance(record, dict) or not record.get("checked_at"):
+            return None
+        return {
+            "checked_at": record.get("checked_at"),
+            "duration_ms": record.get("duration_ms"),
+            "thresholds": record.get("thresholds") or dict(ACTIVITY_THRESHOLDS),
+            "summary": record.get("summary") or {},
+            "disabled": int(record.get("disabled") or 0),
+        }
+
+    def _probe_activity(self, feed: Feed, timeout: int) -> dict[str, Any]:
+        started = time.monotonic()
+        item: dict[str, Any] = {
+            "name": feed.name,
+            "url": feed.url,
+            "enabled": feed.enabled,
+            "ok": False,
+            "status_code": None,
+            "latency_ms": 0,
+            "item_count": 0,
+            "error": "",
+            "activity": "failed",
+            "activity_label": ACTIVITY_LABELS["failed"],
+            "latest_published": "",
+            "latest_title": "",
+            "age_days": None,
+            "checked_at": now_iso(),
+        }
+        try:
+            request = urllib.request.Request(feed.url, headers={"User-Agent": rss_collector.USER_AGENT})
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                item["status_code"] = int(getattr(response, "status", 200) or 200)
+                payload = response.read()
+            item["latency_ms"] = int((time.monotonic() - started) * 1000)
+            if len(payload) > 20_000_000:
+                raise ValueError("响应超过 20MB，疑似不是 RSS/Atom")
+            entries = rss_collector.parse_feed(Feed(name=feed.archive_name, url=feed.url), payload)
+            classification = classify_activity(entries)
+            item.update(
+                {
+                    "ok": True,
+                    "item_count": len(entries),
+                    "activity": classification["activity"],
+                    "activity_label": classification["activity_label"],
+                    "latest_published": classification["latest_published"],
+                    "latest_title": classification["latest_title"],
+                    "age_days": classification["age_days"],
+                }
+            )
+        except urllib.error.HTTPError as exc:
+            item["status_code"] = int(exc.code)
+            item["latency_ms"] = int((time.monotonic() - started) * 1000)
+            item["error"] = rss_collector.describe_fetch_error(exc)
+        except Exception as exc:
+            item["latency_ms"] = int((time.monotonic() - started) * 1000)
+            item["error"] = rss_collector.describe_fetch_error(exc)
+        return item
+
+    def detect_activity(self, body: dict[str, Any]) -> dict[str, Any]:
+        s = self.load_settings()
+        try:
+            feeds = feed_config.read_feeds(s.feeds_path)
+        except (OSError, ValueError) as exc:
+            raise ApiError(400, f"无法读取 feeds.txt：{exc}") from exc
+        enabled = [feed for feed in feeds if feed.enabled]
+        try:
+            timeout = max(5, min(30, int(body.get("timeout") or 15)))
+        except (TypeError, ValueError):
+            timeout = 15
+        started = time.monotonic()
+        results: list[dict[str, Any]] = []
+        if enabled:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=min(6, len(enabled))) as pool:
+                futures = {
+                    pool.submit(self._probe_activity, feed, timeout): index
+                    for index, feed in enumerate(enabled)
+                }
+                results = [{} for _ in enabled]
+                for future in concurrent.futures.as_completed(futures):
+                    index = futures[future]
+                    try:
+                        results[index] = future.result()
+                    except Exception as exc:  # defensive; probe catches normally
+                        feed = enabled[index]
+                        results[index] = {
+                            "name": feed.name,
+                            "url": feed.url,
+                            "enabled": True,
+                            "ok": False,
+                            "status_code": None,
+                            "latency_ms": 0,
+                            "item_count": 0,
+                            "error": rss_collector.describe_fetch_error(exc),
+                            "activity": "failed",
+                            "activity_label": ACTIVITY_LABELS["failed"],
+                            "latest_published": "",
+                            "latest_title": "",
+                            "age_days": None,
+                            "checked_at": now_iso(),
+                        }
+        duration_ms = int((time.monotonic() - started) * 1000)
+        summary = {key: 0 for key in ACTIVITY_LABELS}
+        for item in results:
+            summary[item.get("activity", "unknown")] = summary.get(item.get("activity", "unknown"), 0) + 1
+        summary["total"] = len(results)
+        checked_at = now_iso()
+        record = {
+            "checked_at": checked_at,
+            "duration_ms": duration_ms,
+            "thresholds": dict(ACTIVITY_THRESHOLDS),
+            "summary": summary,
+            "disabled": len(feeds) - len(enabled),
+            "items": {feed.url_key: item for feed, item in zip(enabled, results)},
+        }
+        self.state.update(lambda data: data.__setitem__("activity", record))
+        payload = self._activity_public(record) or {}
+        return {
+            "ok": True,
+            **payload,
+            "items": results,
         }
 
     def _feeds_from_body(self, payload: Any) -> list[Feed]:
@@ -2703,6 +2910,8 @@ class ConfigUiHandler(BaseHTTPRequestHandler):
                 return context.test_feed(body)
             if normalized == "/api/feeds/import":
                 return context.import_feeds(body)
+            if normalized == "/api/feeds/activity":
+                return context.detect_activity(body)
             if normalized == "/api/feeds":
                 if method != "PUT":
                     raise ApiError(405, "请使用 PUT 保存订阅源")
